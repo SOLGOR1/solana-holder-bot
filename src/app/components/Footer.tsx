@@ -1,12 +1,14 @@
 export default function Footer() {
     return (
-      <footer className="bg-gray-900 text-white py-8">
+      <footer className="bg-black text-gray-300 py-6 border-t border-gray-700">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} Solana Holder Bot. Alle Rechte vorbehalten.</p>
-          <div className="mt-4">
-            <a href="#" className="text-gray-300 hover:text-white mx-2">Kontakt</a>
-            <a href="#" className="text-gray-300 hover:text-white mx-2">Impressum</a>
-          </div>
+          <p className="text-sm leading-relaxed">
+            $LEEK is a memecoin that holds no intrinsic value or expectation of financial return. All cryptocurrencies are subject to fluctuations creating a possibility for both profit and losses.
+          </p>
+          <p className="mt-2 text-sm">
+            © Copyright 2025 – All rights reserved by{' '}
+            <span className="text-blue-400 font-semibold">$LEEK</span>
+          </p>
         </div>
       </footer>
     );
