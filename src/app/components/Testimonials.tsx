@@ -36,7 +36,7 @@ export default function Testimonials() {
                 className="group p-6 bg-gray-800/50 rounded-2xl border-4 border-gray-700 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-500/40 text-center"
               >
                 <p className="text-gray-200 italic leading-relaxed group-hover:text-blue-400 transition-colors">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot; {/* Escaped mit &quot; */}
                 </p>
                 <p className="mt-4 text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
                   - {testimonial.name}
