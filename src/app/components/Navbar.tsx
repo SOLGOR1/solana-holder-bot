@@ -27,7 +27,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8">
+        <ul className="hidden lg:flex space-x-8"> {/* md:flex zu lg:flex */}
           <li>
             <a href="#header" className="text-lg hover:text-blue-400 transition-colors">
               Home
@@ -62,7 +62,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white focus:outline-none"
+          className="lg:hidden text-white focus:outline-none"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
@@ -82,7 +82,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gradient-to-b from-gray-900 to-black w-full absolute top-full left-0 shadow-lg">
+        <div className="lg:hidden bg-gradient-to-b from-gray-900 to-black w-full absolute top-full left-0 shadow-lg"> {/* md:hidden zu lg:hidden */}
           <ul className="flex flex-col items-center space-y-6 py-6">
             <li>
               <a
