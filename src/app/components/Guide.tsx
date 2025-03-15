@@ -6,72 +6,72 @@ import { useState, useEffect } from 'react';
 export default function Guide() {
   const steps = [
     {
-      title: "Step 1: Get Your Token Contract Address",
-      desc: "Start by copying the CA (Contract Address) of your Solana token you want to generate holders for.",
+      title: "Step 1: Get Your Solana Token CA",
+      desc: "Kick off your holder boost by copying the Contract Address (CA) of your Solana token for permanent holder generation.",
       image: "/CA.gif",
-      alt: "Step 1: Copy Solana Token Contract Address for Holder Generation",
+      alt: "Step 1: Copy Solana Token Contract Address for Permanent Holder Boost",
     },
     {
-      title: "Step 2: Launch the Solana Holder Bot",
+      title: "Step 2: Launch the Holder Bot",
       desc: (
         <>
-          Open the{' '}
+          Fire up the{' '}
           <a href="https://t.me/Degen_wg_bot" className="text-blue-400 hover:text-blue-600 underline">
             Solana Holder Creator Bot
           </a>{' '}
-          on Telegram and hit the Start button.
+          on Telegram and smash that Start button to boost your Solana token.
         </>
       ),
       image: "/Screen2.gif",
-      alt: "Step 2: Launch Solana Holder Bot on Telegram",
+      alt: "Step 2: Launch Solana Holder Bot for Holder Increase on Telegram",
     },
     {
-      title: "Step 3: Choose Your Package",
-      desc: "Select the perfect package for your needs: 10, 50, 100, 500, or 1000 new permanent holders.",
+      title: "Step 3: Pick Your Holder Package",
+      desc: "Choose a package for your memecoin: 10, 50, 100, 500, or 1000 permanent holders to skyrocket your holder rise.",
       image: "/Screen3.gif",
-      alt: "Step 3: Select Holder Package in Solana Holder Bot",
+      alt: "Step 3: Select Permanent Holder Package in Solana Holder Bot",
     },
     {
-      title: "Step 4: Enter Your Token CA",
-      desc: "Input the Contract Address (CA) of the Solana token you want to boost.",
+      title: "Step 4: Input Your Token CA",
+      desc: "Enter the CA of your Solana token to kickstart that holder increase process.",
       image: "/Screen4.gif",
-      alt: "Step 4: Enter Solana Token CA in Bot",
+      alt: "Step 4: Enter Solana Token CA for Holder Boost in Bot",
     },
     {
-      title: "Step 5: Send Your Project Tokens",
-      desc: "Transfer the specified amount of your project’s tokens to the provided Solana address.",
+      title: "Step 5: Send Project Tokens",
+      desc: "Transfer your project’s tokens to the given Solana address for a seamless holder boost.",
       image: "/TOK.gif",
-      alt: "Step 5: Send Project Tokens to Solana Address",
+      alt: "Step 5: Send Project Tokens for Permanent Holders on Solana",
     },
     {
-      title: "Step 6: Confirm Token Transaction",
-      desc: "Verify the token transfer in the bot to proceed.",
+      title: "Step 6: Confirm Token Transfer",
+      desc: "Verify your token transfer in the bot to keep the holder rise rolling.",
       image: "/Screen6.gif",
-      alt: "Step 6: Confirm Token Transaction in Solana Holder Bot",
+      alt: "Step 6: Confirm Token Transaction for Solana Holder Increase",
     },
     {
       title: "Step 7: Send SOL Fees",
-      desc: "Send the displayed amount of SOL to the provided address to cover processing fees.",
+      desc: "Send the listed SOL amount to cover fees and fuel your permanent holder generation.",
       image: "/SOL.gif",
-      alt: "Step 7: Send SOL Fees for Holder Generation",
+      alt: "Step 7: Send SOL Fees for Permanent Holder Boost",
     },
     {
-      title: "Step 8: Confirm SOL Transaction",
-      desc: "Confirm the SOL transaction in the bot to finalize setup.",
+      title: "Step 8: Confirm SOL Payment",
+      desc: "Confirm your SOL transaction to lock in that holder boost for your Solana token.",
       image: "/Screen8.gif",
-      alt: "Step 8: Confirm SOL Transaction in Bot",
+      alt: "Step 8: Confirm SOL Transaction for Holder Rise in Bot",
     },
     {
-      title: "Step 9: Start Distribution",
-      desc: "Hit the Start button to begin generating your permanent holders.",
+      title: "Step 9: Start Holder Distribution",
+      desc: "Hit Start and watch the bot stack permanent holders for your memecoin.",
       image: "/Screen9.gif",
-      alt: "Step 9: Start Permanent Holder Distribution",
+      alt: "Step 9: Start Permanent Holder Distribution for Solana Token",
     },
     {
-      title: "Step 10: Watch It Happen",
-      desc: "Done! The distribution is underway – track progress with the loading bar in the bot.",
+      title: "Step 10: Track Your Holder Growth",
+      desc: "Done! Monitor the holder increase with the bot’s loading bar—your Solana token’s on the rise!",
       image: "/Screen10.gif",
-      alt: "Step 10: Track Holder Distribution Progress in Solana Holder Bot",
+      alt: "Step 10: Track Permanent Holder Growth in Solana Holder Bot",
     },
   ];
 
@@ -92,12 +92,12 @@ export default function Guide() {
   const toggleAutoPlay = () => setAutoPlay(!autoPlay);
 
   return (
-    <section id="guide" className="py-16 bg-black text-white"> {/* Gradient zu bg-black */}
+    <section id="guide" className="py-16 bg-black text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 tracking-tight">
-          How to Boost Your Solana Token Volume with Solana Holder Bot
+          How to Boost Your Solana Token Volume with Permanent Holders
         </h2>
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-4xl mx-auto lg:max-w-5xl">
           {/* Fortschrittsbalken */}
           <div className="w-full h-1 bg-gray-800 rounded-full mb-4 relative overflow-hidden">
             <div
@@ -112,17 +112,17 @@ export default function Guide() {
           </div>
 
           {/* Container */}
-          <div className="bg-black border border-gray-700/30 rounded-2xl p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-lg"> {/* bg-gray-800/20 zu bg-black */}
+          <div className="bg-black border border-gray-700/30 rounded-2xl p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-lg">
             {/* Bild */}
             <div className="flex justify-center">
               <Image
                 src={steps[currentStep].image}
-                alt={steps[currentStep].alt} // SEO-optimierter Alt-Text
+                alt={steps[currentStep].alt}
                 width={300}
                 height={500}
                 className="rounded-lg object-cover"
-                unoptimized={steps[currentStep].image.endsWith('.gif')} // Für GIFs
-                loading="lazy" // Lazy Loading hinzugefügt
+                unoptimized={steps[currentStep].image.endsWith('.gif')}
+                loading="lazy"
               />
             </div>
             {/* Text */}
@@ -137,11 +137,11 @@ export default function Guide() {
           </div>
 
           {/* Navigation */}
-          <div className="flex justify-center items-center mt-8 gap-4">
+          <div className="flex justify-center items-center mt-8 gap-4 lg:absolute lg:inset-y-0 lg:w-full lg:flex-row lg:justify-between">
             {/* Pfeil links */}
             <button
               onClick={prevStep}
-              className="hover:text-blue-800 transition-colors md:absolute md:left-[-60px] md:top-1/2 md:-translate-y-1/2 order-1 md:order-none"
+              className="hover:text-blue-800 transition-colors lg:static lg:-translate-y-0 lg:order-1"
             >
               <svg
                 className="w-10 h-10 text-blue-500 animate-pulse hover:text-blue-400 transition-colors"
@@ -173,7 +173,7 @@ export default function Guide() {
             {/* Pfeil rechts */}
             <button
               onClick={nextStep}
-              className="hover:text-blue-800 transition-colors md:absolute md:right-[-60px] md:top-1/2 md:-translate-y-1/2 order-3 md:order-none"
+              className="hover:text-blue-800 transition-colors lg:static lg:-translate-y-0 lg:order-3"
             >
               <svg
                 className="w-10 h-10 text-blue-500 animate-pulse hover:text-blue-400 transition-colors"
