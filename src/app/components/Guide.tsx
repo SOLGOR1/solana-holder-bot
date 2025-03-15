@@ -137,7 +137,7 @@ export default function Guide() {
           </div>
 
           {/* Navigation */}
-          <div className="flex justify-center items-center mt-8 gap-4 lg:absolute lg:inset-y-0 lg:w-full lg:flex-row lg:justify-between">
+          <div className="flex justify-center items-center mt-8 gap-4">
             {/* Pfeil links */}
             <button
               onClick={prevStep}
