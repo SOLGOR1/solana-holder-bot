@@ -9,6 +9,7 @@ import Script from 'next/script';
 import HyperVolumeBanner from './components/HyperVolumeBanner';
 import Head from 'next/head';
 import Footer from './components/Footer';
+import WhySolanaHolderBot from './components/WhySolanaHolderBot';
 
 export default function Home() {
   return (
@@ -22,10 +23,10 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="Solana Holder Bot, Hyper Volume Bot, crypto volume bot, boost Solana token, volume bot Solana, how to boost Solana token volume, best volume bot 2025, increase holder, boost your solana project, ETH, SOL, BSC, BASE, TON"
+          content="Solana Holder Bot, Hyper Volume Bot, crypto volume bot, boost Solana token, volume bot Solana, boost holder, how to boost Solana token volume, best volume bot 2025, increase holder, boost your solana project, ETH, SOL, BSC, BASE, TON"
         />
         <meta name="robots" content="index, follow" />
-        <meta charSet="UTF-8" /> {/* Hier war der Fehler: charset -> charSet */}
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="Solana Holder Bot & Hyper Volume Bot - Boost Your Crypto Project" />
         <meta
@@ -69,6 +70,9 @@ export default function Home() {
           <Header />
         </div>
         <main className="flex-grow">
+        <div id="why-solana-holder-bot" className="scroll-mt-16">
+          <WhySolanaHolderBot />
+        </div>
           <div id="benefits" className="scroll-mt-16">
             <Benefits />
           </div>
