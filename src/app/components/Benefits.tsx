@@ -62,7 +62,7 @@ export default function Benefits() {
       <section id="benefits" className="py-16 bg-gradient-to-b from-black to-gray-900 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-            Why Choose Solana Holder Bot?
+            Why Choose Our Solana Bot?
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (

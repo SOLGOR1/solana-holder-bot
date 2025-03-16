@@ -23,7 +23,7 @@ export default function Guide() {
         </>
       ),
       image: "/Screen2.gif",
-      alt: "Step 2: Launch Solana Holder Bot for Holder Increase on Telegram",
+      alt: "Step 2: Launch the Bot for Holder Increase on Telegram",
     },
     {
       title: "Step 3: Pick Your Holder Package",
