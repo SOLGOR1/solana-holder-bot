@@ -32,19 +32,12 @@ export default function Header() {
           />
         </div>
         <div className="md:w-1/2 text-center md:text-left">
+        <h1 className="text-4xl md:text-5xl font-bold mt-2">
+            SOLANA HOLDER BOT
+        </h1>       
           <h2 className="text-xl md:text-2xl font-semibold text-gray-300">
             Automate Holder Generation with Our Telegram Bot
           </h2>
-          <h1 className="text-4xl md:text-5xl font-bold mt-2">
-            Boost Your Memecoin
-            <span className="block text-3xl md:text-4xl mt-1">
-              with Permanent Solana Holders
-            </span>
-          </h1>
-          <p className="mt-6 text-gray-300">
-            Elevate your Solana memecoin’s ranking effortlessly. <br />
-            This Telegram bot creates random wallets and distributes tokens for secure, permanent holders.
-          </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-6">
             <Link
               href="https://t.me/Degen_wg_bot"
@@ -64,6 +57,37 @@ export default function Header() {
                 <path d="M3 22V2l18 10L3 22z" />
               </svg>
             </button>
+          </div>
+          <p className='mt-10'></p>
+          <h3 className="text-4xl md:text-5xl font-bold mt-2">
+            Boost Your Memecoin
+            <span className="block text-3xl md:text-4xl mt-1">
+              with Permanent Solana Holders
+            </span>
+          </h3>
+          <p className="mt-6 text-gray-300">
+            Elevate your Solana memecoin’s ranking effortlessly. <br />
+            This Telegram bot creates random wallets and distributes tokens for secure, permanent holders.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-6">
+            <Link
+              href="https://t.me/Degen_wg_bot"
+              className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-3 border border-blue-400 hover:from-blue-600 hover:to-blue-800 transition-all text-lg"
+            >
+              HOLDER BOT
+              <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+              </svg>
+            </Link>
+            <Link
+              href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v"
+              className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-3 border border-blue-400 hover:from-blue-600 hover:to-blue-800 transition-all text-lg"
+            >
+              VOLUME BOT
+              <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/>
+              </svg>
+            </Link>
           </div>
         </div>
       </div>
