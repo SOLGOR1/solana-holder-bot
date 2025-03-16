@@ -11,9 +11,13 @@ export default function FAQs() {
 
   const faqs = [
     {
-      q: "What’s the Solana Holder Bot?",
+      q: "What’s the Holder Bot?",
       a: "A slick tool to auto-stack permanent holders for your Solana token – no stress, all gains.",
     },
+    {
+        q: "What’s the Volume Bot?",
+        a: "The best Volume Bot on the market to generate massive Volume for your Solana token – no stress, all automated.",
+      },
     {
       q: "Is it safe to use?",
       a: "Hell yeah, built with top-tier security standards to keep your project locked down.",

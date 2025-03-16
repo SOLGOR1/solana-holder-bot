@@ -32,7 +32,7 @@ export default function WhySolanaHolderBot() {
                 A Holder Gamechanger
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Solana Holder Bot isn’t a pump-and-dump scam—it stacks <span className="text-blue-400">permanent holders</span> fast. Boost your Solana token volume with <span className="text-blue-400">longterm holders</span>, and watch your rankings pop. Real memecoins and SLP tokens finally shine, not buried under low-holder filters.
+                This Telegram Bot isn’t a pump-and-dump scam—it stacks <span className="text-blue-400">permanent holders</span> fast. Boost your Solana token volume with <span className="text-blue-400">longterm holders</span>, and watch your rankings pop. Real memecoins and SLP tokens finally shine, not buried under low-holder filters.
               </p>
             </div>
           </div>
