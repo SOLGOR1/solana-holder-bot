@@ -7,15 +7,11 @@ import { notFound } from "next/navigation";
 import MarkdownRenderer from "../../components/MarkDownRenderer";
 
 // Define the params shape for the dynamic route
-interface Params {
-  slug: string;
-}
-
-// Define the props for the page component
 interface BlogPostPageProps {
-  params: Params;
+  params: { slug: string };
 }
 
+// Page component with proper typing
 export default function BlogPostPage({ params }: BlogPostPageProps) {
   const post: BlogPost | undefined = blogPosts.find((p) => p.slug === params.slug);
 
@@ -85,7 +81,12 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   );
 }
 
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
+// Define the return type for generateStaticParams
+interface StaticParams {
+  slug: string;
+}
+
+export async function generateStaticParams(): Promise<StaticParams[]> {
   return blogPosts.map((post) => ({
     slug: post.slug,
   }));
