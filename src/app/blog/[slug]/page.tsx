@@ -6,11 +6,16 @@ import Head from "next/head";
 import { notFound } from "next/navigation";
 import MarkdownRenderer from "../../components/MarkDownRenderer";
 
-type BlogPostPageProps = {
-  params: { slug: string };
+// Import Next.js types for better type safety
+import type { NextPage } from "next";
+
+// Define the expected params shape
+type Params = {
+  slug: string;
 };
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
+// Use NextPage to type the page component, specifying the params type
+const BlogPostPage: NextPage<{ params: Params }> = ({ params }) => {
   const post: BlogPost | undefined = blogPosts.find((p) => p.slug === params.slug);
 
   if (!post) {
@@ -24,6 +29,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         <meta name="description" content={post.excerpt} />
         <meta name="keywords" content="Solana Holder Bot, Generate Solana Holders, Boost Solana Project, LEEK Project, Crypto Liquidity" />
         <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={`${post.title} - Solana Holder Bot`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={post.image} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://solanaholderbot.com/blog/${post.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -42,9 +52,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               name: "Solana Holder Bot",
               logo: {
                 "@type": "ImageObject",
-                url: "http://solanaholderbot.com/logo.png", // Replace with your logo URL
+                url: "http://solanaholderbot.com/logo.png",
               },
             },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://solanaholderbot.com/blog/${post.slug}`,
+            },
+            keywords: "Solana Holder Bot, Generate Solana Holders, Boost Solana Project, LEEK Project, Crypto Liquidity",
           })}
         </script>
       </Head>
@@ -67,7 +82,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       </div>
     </>
   );
-}
+};
+
+export default BlogPostPage;
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
