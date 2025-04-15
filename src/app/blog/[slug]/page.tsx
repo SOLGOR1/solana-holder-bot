@@ -1,18 +1,19 @@
-import { blogPosts, BlogPost } from "../../data/blogs";
+import { blogPosts } from "../../data/blogs";
 import BlogNavbar from "../../components/BlogNavbar";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import MarkdownRenderer from "../../components/MarkDownRenderer";
-
-// Optional: SEO Metadata Support
 import { Metadata } from "next";
 
-interface BlogPostPageProps {
-  params: { slug: string };
-}
+// Next.js generiert `params` so:
+type Props = {
+  params: {
+    slug: string;
+  };
+};
 
-// ✅ Optional: generateMetadata für bessere SEO
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+// ✅ SEO Metadata (optional)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === params.slug);
 
   if (!post) {
@@ -35,9 +36,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
-// ✅ Fix: Page muss async sein
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post: BlogPost | undefined = blogPosts.find((p) => p.slug === params.slug);
+// ✅ Async Page-Komponente
+export default async function BlogPostPage({ params }: Props) {
+  const post = blogPosts.find((p) => p.slug === params.slug);
 
   if (!post) {
     notFound();
@@ -64,12 +65,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   );
 }
 
-// ✅ Static Params (bleibt gleich)
-interface StaticParams {
-  slug: string;
-}
-
-export async function generateStaticParams(): Promise<StaticParams[]> {
+// ✅ Static Paths
+export async function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
   }));
