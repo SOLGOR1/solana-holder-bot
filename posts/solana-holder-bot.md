@@ -1,7 +1,6 @@
 ---
 title: "Solana Holder Bot: 5x Faster RPC, More Holders, and LEEK Growth in 2025"
 excerpt: "Discover how Solana Holder Bot, created by the LEEK Team, helps you generate Solana holders and boost your Solana project with a 5x faster RPC, a new blog, and exciting $LEEK project updates."
-description: "Discover how Solana Holder Bot, created by the LEEK Team, helps you generate Solana holders and boost your Solana project with a 5x faster RPC, a new blog, and exciting $LEEK project updates."
 image: "/solhold1.jpg"
 imageAlt: "Solana Holder Bot interface showcasing tools to generate Solana holders in 2025"
 date: "2025-04-10"

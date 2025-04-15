@@ -10,7 +10,6 @@ export type BlogPost = {
   imageAlt: string;
   date: string;
   slug: string;
-  description: string;
   content: string;
 };
 
@@ -42,7 +41,6 @@ export function getAllBlogPosts(): BlogPost[] {
         imageAlt: data.imageAlt || "Default image for blog post",
         date: data.date || "1970-01-01",
         slug: data.slug,
-        description: data.description || "",
         content,
       };
     })
