@@ -1,10 +1,10 @@
-// src/components/Navbar.tsx
+// src/components/BlogNavbar.tsx
 "use client";
 
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function BlogNavbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -30,34 +30,34 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden lg:flex space-x-8">
           <li>
-            <a href="#header" className="text-lg hover:text-blue-400 transition-colors">
+            <Link href="/#header" className="text-lg hover:text-blue-400 transition-colors">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#benefits" className="text-lg hover:text-blue-400 transition-colors">
+            <Link href="/#benefits" className="text-lg hover:text-blue-400 transition-colors">
               Benefits
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#guide" className="text-lg hover:text-blue-400 transition-colors">
+            <Link href="/#guide" className="text-lg hover:text-blue-400 transition-colors">
               Guide
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#how-it-works" className="text-lg hover:text-blue-400 transition-colors">
+            <Link href="/#how-it-works" className="text-lg hover:text-blue-400 transition-colors">
               How It Works
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#testimonials" className="text-lg hover:text-blue-400 transition-colors">
+            <Link href="/#testimonials" className="text-lg hover:text-blue-400 transition-colors">
               Testimonials
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#faqs" className="text-lg hover:text-blue-400 transition-colors">
+            <Link href="/#faqs" className="text-lg hover:text-blue-400 transition-colors">
               FAQs
-            </a>
+            </Link>
           </li>
           <li>
             <Link href="/blog" className="text-lg hover:text-blue-400 transition-colors">
@@ -91,58 +91,58 @@ export default function Navbar() {
         <div className="lg:hidden bg-gradient-to-b from-gray-900 to-black w-full absolute top-full left-0 shadow-lg">
           <ul className="flex flex-col items-center space-y-6 py-6">
             <li>
-              <a
-                href="#header"
+              <Link
+                href="/#header"
                 className="text-lg hover:text-blue-400 transition-colors"
                 onClick={toggleMobileMenu}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#benefits"
+              <Link
+                href="/#benefits"
                 className="text-lg hover:text-blue-400 transition-colors"
                 onClick={toggleMobileMenu}
               >
                 Benefits
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#guide"
+              <Link
+                href="/#guide"
                 className="text-lg hover:text-blue-400 transition-colors"
                 onClick={toggleMobileMenu}
               >
                 Guide
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#how-it-works"
+              <Link
+                href="/#how-it-works"
                 className="text-lg hover:text-blue-400 transition-colors"
                 onClick={toggleMobileMenu}
               >
                 How It Works
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#testimonials"
+              <Link
+                href="/#testimonials"
                 className="text-lg hover:text-blue-400 transition-colors"
                 onClick={toggleMobileMenu}
               >
                 Testimonials
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#faqs"
+              <Link
+                href="/#faqs"
                 className="text-lg hover:text-blue-400 transition-colors"
                 onClick={toggleMobileMenu}
               >
                 FAQs
-              </a>
+              </Link>
             </li>
             <li>
               <Link

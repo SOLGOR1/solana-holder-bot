@@ -10,6 +10,8 @@ import HyperVolumeBanner from './components/HyperVolumeBanner';
 import Head from 'next/head';
 import Footer from './components/Footer';
 import WhySolanaHolderBot from './components/WhySolanaHolderBot';
+import BlogSnippet from "./components/BlogSnippet";
+import { blogPosts } from "./data/blogs";
 
 export default function Home() {
   return (
@@ -91,6 +93,7 @@ export default function Home() {
           <div id="faqs" className="scroll-mt-16">
             <FAQs />
           </div>
+          <BlogSnippet posts={blogPosts} />
         </main>
         <Footer />
       </div>
