@@ -6,16 +6,17 @@ import Head from "next/head";
 import { notFound } from "next/navigation";
 import MarkdownRenderer from "../../components/MarkDownRenderer";
 
-// Import Next.js types for better type safety
-import type { NextPage } from "next";
-
-// Define the expected params shape
-type Params = {
+// Define the params shape for the dynamic route
+interface Params {
   slug: string;
-};
+}
 
-// Use NextPage to type the page component, specifying the params type
-const BlogPostPage: NextPage<{ params: Params }> = ({ params }) => {
+// Define the props for the page component
+interface BlogPostPageProps {
+  params: Params;
+}
+
+export default function BlogPostPage({ params }: BlogPostPageProps) {
   const post: BlogPost | undefined = blogPosts.find((p) => p.slug === params.slug);
 
   if (!post) {
@@ -82,11 +83,9 @@ const BlogPostPage: NextPage<{ params: Params }> = ({ params }) => {
       </div>
     </>
   );
-};
+}
 
-export default BlogPostPage;
-
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return blogPosts.map((post) => ({
     slug: post.slug,
   }));
