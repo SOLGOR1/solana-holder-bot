@@ -1,5 +1,5 @@
 // app/sitemap.js
-import { blogPosts } from "@/data/blogs";
+import { blogPosts } from "./data/blogs";
 
 export default function sitemap() {
   // Base URL of your site
