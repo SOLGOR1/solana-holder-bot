@@ -29,7 +29,7 @@ slug: "solana-holder-bot"
     </p>
     <img src="/solhold6.jpg" alt="Solana Holder Bot blog page with tips to boost your Solana project" class="w-full h-auto rounded-lg mb-4" />
     <p class="text-gray-300">
-      Check out our <a href="/blog" class="text-blue-400 hover:text-blue-300 underline">blog overview</a> to explore more articles, like our guide on <a href="/blog/hyper-volume-bot" class="text-blue-400 hover:text-blue-300 underline">Hyper Volume Bot</a>.
+      Check out our <a href="/blog" class="text-blue-400 hover:text-blue-300 underline">blog overview</a> to explore more articles, like our guide on <a href="/blog/mellow-man-hyper-volume-bot" class="text-blue-400 hover:text-blue-300 underline">Hyper Volume Bot</a>.
     </p>
   </section>
 
