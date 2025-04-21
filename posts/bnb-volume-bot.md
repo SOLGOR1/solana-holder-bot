@@ -171,7 +171,7 @@ slug: "bnb-volume-bot"
         </div>
       </li>
     </ul>
-    <img src="/mellow-bnb3.jpg" alt="Mellow Man BNB Volume Bot withdrawal interface for BSC" class="w-full h-auto rounded-lg mb-6" />
+    <img src="/bnb-volume-bot-2.jpg" alt="Mellow Man BNB Volume Bot withdrawal interface for BSC" class="w-full h-auto rounded-lg mb-6" />
   </section>
 
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
