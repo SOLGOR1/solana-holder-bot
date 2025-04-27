@@ -15,7 +15,7 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {posts.slice(0, 2).map((post) => (
             <Link
-              key={post.slug} // Changed from post.id to post.slug
+              key={post.slug}
               href={`/blog/${post.slug}`}
               className="block bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-blue-500/50 transition-all cursor-pointer"
             >
@@ -34,6 +34,33 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
             </Link>
           ))}
         </div>
+        {posts.length > 2 && (
+          <div className="mt-12">
+            <h3 className="text-2xl font-semibold text-white mb-6 text-center">More Posts</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {posts.slice(2).map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group relative block py-3 px-4 bg-gray-800/50 rounded-md border border-gray-700/50 hover:bg-gray-700/80 hover:border-blue-500/50 transition-all duration-300"
+                >
+                  <span className="text-gray-200 group-hover:text-blue-400 font-medium text-base transition-colors">
+                    {post.title}
+                  </span>
+                  <span className="absolute inset-y-0 left-0 w-1 bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </Link>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link
+                href="/blog"
+                className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 hover:shadow-blue-500/50 transition-all duration-300"
+              >
+                Explore All Posts
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
