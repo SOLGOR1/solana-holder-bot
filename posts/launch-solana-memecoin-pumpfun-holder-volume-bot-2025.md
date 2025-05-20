@@ -319,7 +319,7 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">Can bots get my token banned?</h3>
-      <p class="text-lg text-gray-300">⚠️ Use responsibly to comply with platform terms, as discussed on <a href="https://www.reddit.com/r/solana/comments/1ee2rth/is_there_a_bot_to_increase_the_amount_of_holders/" class="text-blue-400 hover:underline">Reddit</a>.</p>
+      <p class="text-lg text-gray-300">⚠️ No but use it responsibly to comply with platform terms, as discussed on <a href="https://www.reddit.com/r/solana/comments/1ee2rth/is_there_a_bot_to_increase_the_amount_of_holders/" class="text-blue-400 hover:underline">Reddit</a>.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">How many holders for CoinMarketCap?</h3>
