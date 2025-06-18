@@ -15,21 +15,21 @@ import BlogSnippet from './components/BlogSnippet';
 import { blogPosts } from './data/blogs';
 
 export default function Home() {
-  // Define canonical URL
   const canonicalUrl = 'https://www.solanaholderbot.com';
+  const ogImageUrl = '/og-image.jpg'; // Relative path in public folder
 
   return (
     <>
       {/* Enhanced SEO Meta-Tags and Schema */}
       <Head>
-        <title>Solana Holder Bot & Booster Bot - Amplify Your Token in 2025</title>
+        <title>Solana Volume Bot - Boost SOL Stats & Holders in 2025</title>
         <meta
           name="description"
-          content="Skyrocket your Solana token with Solana Holder Bot and Booster Bot. Boost organic holders and volume for SOL, ETH, BSC, and TON projects in 2025."
+          content="Maximize your Solana token with Solana Volume Bot, the top SOL volume booster. Drive organic holders and stats with our moonshot volume bot in 2025."
         />
         <meta
           name="keywords"
-          content="Solana Holder Bot, Solana Booster Bot, crypto volume bot, Solana token growth, organic holders, volume boosting, best crypto bot 2025"
+          content="solana volume bot, sol volume bot, solana volume booster, volume bot solana, moonshot volume bot, volume solana bot, sol volume booster, solana stats boost, sol stats boost, solana holder boost, sol holder boost"
         />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="$LEEK Team" />
@@ -37,36 +37,38 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href={canonicalUrl} />
         {/* Open Graph Tags */}
-        <meta property="og:title" content="Solana Holder Bot & Booster Bot - Amplify Your Token" />
+        <meta property="og:title" content="Solana Volume Bot - Boost SOL Stats & Holders" />
         <meta
           property="og:description"
-          content="Boost your Solana token with Solana Holder Bot and Booster Bot. Drive organic holders and volume for SOL, ETH, BSC, and TON in 2025."
+          content="Skyrocket your Solana token with Solana Volume Bot, the ultimate SOL volume booster for organic holder growth and stats boost in 2025."
         />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.solanaholderbot.com/images/og-image.jpg" /> {/* Replace with actual image */}
-        <meta property="og:image:alt" content="Solana Holder Bot interface" />
-        <meta property="og:site_name" content="Solana Holder Bot" />
+        <meta property="og:image" content={`${canonicalUrl}${ogImageUrl}`} />
+        <meta property="og:image:alt" content="Solana Volume Bot dashboard boosting token stats" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Solana Volume Bot" />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@solanaholderbot" />
-        <meta name="twitter:title" content="Solana Holder Bot & Booster Bot - Amplify Your Token" />
-        <meta name="twitter:description" content="Drive organic holders and volume for your Solana token with Solana Holder Bot and Booster Bot in 2025." />
-        <meta name="twitter:image" content="https://www.solanaholderbot.com/images/og-image.jpg" /> {/* Replace with actual image */}
+        <meta name="twitter:title" content="Solana Volume Bot - Boost SOL Stats & Holders" />
+        <meta name="twitter:description" content="Drive organic holders and volume with Solana Volume Bot, the leading SOL stats booster in 2025." />
+        <meta name="twitter:image" content={`${canonicalUrl}${ogImageUrl}`} />
         {/* Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "Solana Holder Bot",
+            "name": "Solana Volume Bot",
             "url": canonicalUrl,
-            "description": "Boost your Solana token with Solana Holder Bot and Booster Bot for organic holders and volume in 2025.",
+            "description": "Maximize your Solana token with Solana Volume Bot, the leading SOL volume booster for 2025.",
             "publisher": {
               "@type": "Organization",
               "name": "$LEEK Team",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.solanaholderbot.com/images/logo.png" // Replace with actual logo
+                "url": `${canonicalUrl}/images/logo.png` // Replace with actual logo
               }
             },
             "potentialAction": {
@@ -156,8 +158,8 @@ export default function Home() {
   );
 }
 
-// Export metadata for Next.js 13+ App Router (optional, if using newer metadata API)
+// Export metadata for Next.js 13+ App Router
 export const metadata = {
-  title: 'Solana Holder Bot & Booster Bot - Amplify Your Token in 2025',
-  description: 'Skyrocket your Solana token with Solana Holder Bot and Booster Bot. Boost organic holders and volume for SOL, ETH, BSC, and TON projects in 2025.',
+  title: 'Solana Volume Bot - Boost SOL Stats & Holders in 2025',
+  description: 'Maximize your Solana token with Solana Volume Bot, the top SOL volume booster. Drive organic holders and stats with our moonshot volume bot in 2025.',
 };
