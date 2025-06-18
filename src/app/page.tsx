@@ -1,3 +1,4 @@
+// src/app/page.tsx
 import Header from './components/Header';
 import Benefits from './components/Benefits';
 import Guide from './components/Guide';
@@ -10,43 +11,86 @@ import HyperVolumeBanner from './components/HyperVolumeBanner';
 import Head from 'next/head';
 import Footer from './components/Footer';
 import WhySolanaHolderBot from './components/WhySolanaHolderBot';
-import BlogSnippet from "./components/BlogSnippet";
-import { blogPosts } from "./data/blogs";
+import BlogSnippet from './components/BlogSnippet';
+import { blogPosts } from './data/blogs';
 
 export default function Home() {
+  // Define canonical URL
+  const canonicalUrl = 'https://www.solanaholderbot.com';
+
   return (
     <>
-      {/* SEO Meta-Tags und Schema */}
+      {/* Enhanced SEO Meta-Tags and Schema */}
       <Head>
-        <title>Solana Holder Bot & Hyper Volume Bot - Boost Solana Token Holders & Volume</title>
+        <title>Solana Holder Bot & Booster Bot - Amplify Your Token in 2025</title>
         <meta
           name="description"
-          content="Boost your Solana token holders and volume with Solana Holder Bot and Hyper Volume Bot. Generate holders and increase volume – the best holder and volume bot in 2025!"
+          content="Skyrocket your Solana token with Solana Holder Bot and Booster Bot. Boost organic holders and volume for SOL, ETH, BSC, and TON projects in 2025."
         />
         <meta
           name="keywords"
-          content="Solana Holder Bot, Hyper Volume Bot, crypto volume bot, boost Solana token, volume bot Solana, boost holder, how to boost Solana token volume, best volume bot 2025, increase holder, boost your solana project, ETH, SOL, BSC, BASE, TON"
+          content="Solana Holder Bot, Solana Booster Bot, crypto volume bot, Solana token growth, organic holders, volume boosting, best crypto bot 2025"
         />
         <meta name="robots" content="index, follow" />
+        <meta name="author" content="$LEEK Team" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Solana Holder Bot & Hyper Volume Bot - Boost Your Crypto Project" />
+        <link rel="canonical" href={canonicalUrl} />
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Solana Holder Bot & Booster Bot - Amplify Your Token" />
         <meta
           property="og:description"
-          content="Skyrocket your token with Solana Holder Bot and Hyper Volume Bot – the ultimate crypto volume bot for Solana, ETH, BSC, BASE, TON."
+          content="Boost your Solana token with Solana Holder Bot and Booster Bot. Drive organic holders and volume for SOL, ETH, BSC, and TON in 2025."
         />
-        <meta property="og:url" content="https://www.solanaholderbot.com" />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.solanaholderbot.com/images/og-image.jpg" /> {/* Replace with actual image */}
+        <meta property="og:image:alt" content="Solana Holder Bot interface" />
+        <meta property="og:site_name" content="Solana Holder Bot" />
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@solanaholderbot" />
+        <meta name="twitter:title" content="Solana Holder Bot & Booster Bot - Amplify Your Token" />
+        <meta name="twitter:description" content="Drive organic holders and volume for your Solana token with Solana Holder Bot and Booster Bot in 2025." />
+        <meta name="twitter:image" content="https://www.solanaholderbot.com/images/og-image.jpg" /> {/* Replace with actual image */}
+        {/* Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "Solana Holder Bot & Hyper Volume Bot",
-            "applicationCategory": "Finance",
-            "operatingSystem": "Web",
-            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-            "description": "Boost Solana token volume and holders with Solana Holder Bot and Hyper Volume Bot – the best volume bot for ETH, SOL, BSC, BASE, TON in 2025.",
-            "url": "https://www.solanaholderbot.com",
+            "@type": "WebSite",
+            "name": "Solana Holder Bot",
+            "url": canonicalUrl,
+            "description": "Boost your Solana token with Solana Holder Bot and Booster Bot for organic holders and volume in 2025.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "$LEEK Team",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.solanaholderbot.com/images/logo.png" // Replace with actual logo
+              }
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": `${canonicalUrl}/search?q={search_term_string}`
+              },
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": canonicalUrl
+              }
+            ]
           })}
         </script>
       </Head>
@@ -65,16 +109,27 @@ export default function Home() {
         `}
       </Script>
 
-      {/* Restlicher Inhalt */}
+      {/* Bing Webmaster Tools Verification */}
+      <Script id="bing-verification" strategy="afterInteractive">
+        {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-XXXXXXX'); // Replace with your Bing verification ID
+        `}
+      </Script>
+
+      {/* Content */}
       <div className="flex flex-col min-h-screen pt-16">
         <Navbar />
         <div id="header" className="scroll-mt-16">
           <Header />
         </div>
-        <main className="flex-grow">
-        <div id="why-solana-holder-bot" className="scroll-mt-16">
-          <WhySolanaHolderBot />
-        </div>
+        <main className="flex-grow" role="main">
+          <div id="why-solana-holder-bot" className="scroll-mt-16">
+            <WhySolanaHolderBot />
+          </div>
           <div id="benefits" className="scroll-mt-16">
             <Benefits />
           </div>
@@ -100,3 +155,9 @@ export default function Home() {
     </>
   );
 }
+
+// Export metadata for Next.js 13+ App Router (optional, if using newer metadata API)
+export const metadata = {
+  title: 'Solana Holder Bot & Booster Bot - Amplify Your Token in 2025',
+  description: 'Skyrocket your Solana token with Solana Holder Bot and Booster Bot. Boost organic holders and volume for SOL, ETH, BSC, and TON projects in 2025.',
+};
