@@ -34,3 +34,11 @@ button,
 a {
   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.10; }
+  50% { opacity: 0.20; }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
