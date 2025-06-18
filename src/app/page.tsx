@@ -16,20 +16,21 @@ import { blogPosts } from './data/blogs';
 
 export default function Home() {
   const canonicalUrl = 'https://www.solanaholderbot.com';
-  const ogImageUrl = '/og-image.jpg'; // Relative path in public folder
+  const ogImageUrl = '/og-image.jpg'; // Points to public/og-image.jpg
+  const logoUrl = '/logo.png'; // Points to public/logo.png
 
   return (
     <>
-      {/* Enhanced SEO Meta-Tags and Schema */}
+      {/* SEO Meta Tags and Schema */}
       <Head>
-        <title>Solana Volume Bot - Boost SOL Stats & Holders in 2025</title>
+        <title>Solana Volume Bot - Boost SOL Stats & Holders</title>
         <meta
           name="description"
           content="Maximize your Solana token with Solana Volume Bot, the top SOL volume booster. Drive organic holders and stats with our moonshot volume bot in 2025."
         />
         <meta
           name="keywords"
-          content="solana volume bot, sol volume bot, solana volume booster, volume bot solana, moonshot volume bot, volume solana bot, sol volume booster, solana stats boost, sol stats boost, solana holder boost, sol holder boost"
+          content="solana volume bot, sol volume bot, solana volume booster, volume bot solana, moonshot volume bot, volume solana, sol volume booster, solana stats boost, sol stats boost, solana holder boost, sol holder boost"
         />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="$LEEK Team" />
@@ -40,7 +41,7 @@ export default function Home() {
         <meta property="og:title" content="Solana Volume Bot - Boost SOL Stats & Holders" />
         <meta
           property="og:description"
-          content="Skyrocket your Solana token with Solana Volume Bot, the ultimate SOL volume booster for organic holder growth and stats boost in 2025."
+          content="Skyrocket your Solana token with Solana Volume Bot, the ultimate SOL volume booster for organic holders and volume in 2025."
         />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
@@ -48,13 +49,18 @@ export default function Home() {
         <meta property="og:image:alt" content="Solana Volume Bot dashboard boosting token stats" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:site_name" content="Solana Volume Bot" />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@solanaholderbot" />
         <meta name="twitter:title" content="Solana Volume Bot - Boost SOL Stats & Holders" />
-        <meta name="twitter:description" content="Drive organic holders and volume with Solana Volume Bot, the leading SOL stats booster in 2025." />
+        <meta
+          name="twitter:description"
+          content="Drive organic holders and volume with Solana Volume Bot, the top SOL volume booster in 2025."
+        />
         <meta name="twitter:image" content={`${canonicalUrl}${ogImageUrl}`} />
+        <meta name="twitter:image:alt" content="Solana Volume Bot dashboard boosting token stats" />
         {/* Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -68,7 +74,7 @@ export default function Home() {
               "name": "$LEEK Team",
               "logo": {
                 "@type": "ImageObject",
-                "url": `${canonicalUrl}/images/logo.png` // Replace with actual logo
+                "url": `${canonicalUrl}${logoUrl}`
               }
             },
             "potentialAction": {
@@ -160,6 +166,6 @@ export default function Home() {
 
 // Export metadata for Next.js 13+ App Router
 export const metadata = {
-  title: 'Solana Volume Bot - Boost SOL Stats & Holders in 2025',
+  title: 'Solana Volume Bot - Boost SOL Stats & Holders',
   description: 'Maximize your Solana token with Solana Volume Bot, the top SOL volume booster. Drive organic holders and stats with our moonshot volume bot in 2025.',
 };
