@@ -61,6 +61,9 @@ export default function Home() {
         />
         <meta name="twitter:image" content={`${canonicalUrl}${ogImageUrl}`} />
         <meta name="twitter:image:alt" content="Solana Volume Bot dashboard boosting token stats" />
+        {/* Telegram/Discord Compatibility */}
+        <meta name="telegram:image" content={`${canonicalUrl}${ogImageUrl}`} />
+        <meta name="discord:image" content={`${canonicalUrl}${ogImageUrl}`} />
         {/* Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({
