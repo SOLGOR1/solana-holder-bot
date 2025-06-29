@@ -42,3 +42,12 @@ a {
 .animate-pulse-slow {
   animation: pulse-slow 8s ease-in-out infinite;
 }
+
+.group-hover:animate-shine {
+  animation: shine 2s infinite;
+}
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
