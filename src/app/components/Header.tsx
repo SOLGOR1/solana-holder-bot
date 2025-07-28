@@ -22,7 +22,7 @@ export default function Header() {
             </div>
           )}
           <Image
-            src="/solholder.gif"
+            src="/solholderbot.png"
             alt="Solana Holder Bot for Memecoin Rankings"
             width={400}
             height={600}
