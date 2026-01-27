@@ -130,8 +130,7 @@ export default function Header() {
                   transition-all duration-400 ease-out
                   hover:border-blue-800/80 
                   hover:shadow-2xl hover:shadow-blue-500/60 
-                  hover:ring-4 hover:ring-blue-400/40 
-                  hover:shadow-inner hover:shadow-blue-900/50
+                  hover:ring-4 hover:ring-blue-400/40
                   overflow-hidden"
                   whileTap={{ scale: 0.95 }}
                 >
@@ -209,8 +208,7 @@ export default function Header() {
                   transition-all duration-400 ease-out
                   hover:border-green-800/80 
                   hover:shadow-2xl hover:shadow-green-500/60 
-                  hover:ring-4 hover:ring-green-400/40 
-                  hover:shadow-inner hover:shadow-green-900/50
+                  hover:ring-4 hover:ring-green-400/40
                   overflow-hidden"
                   whileTap={{ scale: 0.95 }}
                 >
