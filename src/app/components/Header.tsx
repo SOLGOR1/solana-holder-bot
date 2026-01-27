@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { SiTelegram } from 'react-icons/si';
-import { FaUsers, FaShieldAlt, FaCoins, FaChartLine, FaExchangeAlt, FaArrowRight } from 'react-icons/fa';
+import { FaUsers, FaShieldAlt, FaCoins, FaChartLine, FaExchangeAlt, } from 'react-icons/fa';
 
 export default function Header() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);

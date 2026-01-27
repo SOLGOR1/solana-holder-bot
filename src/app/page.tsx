@@ -7,7 +7,6 @@ import Testimonials from './components/Testimonials';
 import FAQs from './components/FAQs';
 import Navbar from './components/Navbar';
 import Script from 'next/script';
-import HyperVolumeBanner from './components/HyperVolumeBanner';
 import Head from 'next/head';
 import Footer from './components/Footer';
 import WhySolanaHolderBot from './components/WhySolanaHolderBot';

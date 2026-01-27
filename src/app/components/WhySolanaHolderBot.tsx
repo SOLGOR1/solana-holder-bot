@@ -16,7 +16,7 @@ export default function WhySolanaVolumeBot() {
           </p>
           <p className="mt-5 mb-5"></p>
           <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed">
-            Whether you're launching on Pump.fun, Bonk.fun, Bags, Raydium, Meteora, Orca or Moonshot, explosive <span className="text-green-400 font-semibold">Solana volume booster</span> performance pushes you to the top of DexScreener, Birdeye, and trending charts. 
+            Whether youre launching on Pump.fun, Bonk.fun, Bags, Raydium, Meteora, Orca or Moonshot, explosive <span className="text-green-400 font-semibold">Solana volume booster</span> performance pushes you to the top of DexScreener, Birdeye, and trending charts. 
             No more getting buried, dominate rankings with authentic activity that lasts.
           </p>
         </div>
@@ -62,7 +62,7 @@ export default function WhySolanaVolumeBot() {
               Built for Raydium, Pump.fun & Moonshot
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              No matter if you're on Raydium, Pump.fun, or Moonshot — our <span className="text-green-400">Solana volume booster</span> is engineered to explode your visibility. 
+              No matter if youre on Raydium, Pump.fun, or Moonshot — our <span className="text-green-400">Solana volume booster</span> is engineered to explode your visibility. 
               Real trades = real momentum = real community growth. 
               This is the <span className="text-green-400">best Solana volume bot</span> for serious projects, ideally combined with the <span className="text-blue-400">Solana holder booster</span>.
             </p>
