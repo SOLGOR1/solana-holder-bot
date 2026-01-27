@@ -4,188 +4,275 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { SiTelegram } from 'react-icons/si';
+import { FaUsers, FaShieldAlt, FaCoins, FaChartLine, FaExchangeAlt, FaArrowRight } from 'react-icons/fa';
 
 export default function Header() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [isGifLoaded, setIsGifLoaded] = useState(false);
 
   const openVideo = () => setIsVideoOpen(true);
   const closeVideo = () => setIsVideoOpen(false);
 
-  const textVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.4 },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-      },
+      transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
-  const buttonVariants: Variants = {
-    hover: {
-      scale: 1.05,
-      boxShadow: '0px 4px 15px rgba(59, 130, 246, 0.5)',
-      transition: { duration: 0.2, ease: 'easeOut' },
-    },
-    tap: { scale: 0.95 },
-  };
+  const ShineEffect = () => (
+    <div className="pointer-events-none absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1200 ease-linear" />
+  );
 
   return (
-    <header className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white py-16 md:py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.2)_0%,_transparent_70%)] animate-pulse-slow" />
+    <header className="relative min-h-screen bg-black text-white overflow-hidden flex items-center">
+      {/* Ultra-minimal background glows */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(59,130,246,0.06)_0%,_transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,197,94,0.06)_0%,_transparent_70%)]" />
 
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+        {/* Subtle centered mascot in background */}
         <motion.div
-          className="md:w-1/2 relative"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 1.5 }}
         >
-          {!isGifLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-12 h-12 border-4 border-blue-400 border-t-transparent rounded-full animate-spin" />
-            </div>
-          )}
           <Image
             src="/solholderbot.png"
-            alt="Solana Holder Bot for Memecoin Rankings"
-            width={500}
-            height={500}
-            className="mx-auto rounded-lg shadow-2xl"
-            unoptimized
-            onLoad={() => setIsGifLoaded(true)}
+            alt="Solana Growth Mascot"
+            width={900}
+            height={900}
+            className="drop-shadow-2xl opacity-35"
+            priority
           />
         </motion.div>
 
-        <div className="md:w-1/2 text-center md:text-left">
-          <motion.h1
-            className="text-5xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600"
-            variants={textVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            Solana Holder Bot
-          </motion.h1>
-          <motion.h2
-            className="text-2xl md:text-3xl font-medium text-gray-300 mt-4"
-            variants={textVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.2 }}
-          >
-            Skyrocket Your Memecoin with Automated Holder Growth
-          </motion.h2>
-          <motion.p
-            className="mt-6 text-lg text-gray-400 max-w-lg mx-auto md:mx-0"
-            variants={textVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.4 }}
-          >
-            Boost rankings effortlessly with secure, permanent Solana holders. Start in minutes with our Telegram bot!
-          </motion.p>
+        {/* Grid mit zwei Hauptspalten */}
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start relative z-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Left Glass Container – Holder Bot */}
+          <motion.div className="lg:col-span-5 lg:col-start-1" variants={itemVariants}>
+            <div className="relative p-10 lg:p-12 backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 shadow-2xl">
+              {/* Logo Circle – immer zentriert (Mobile + Desktop) */}
+              <div className="relative mx-auto w-36 h-36 mb-10">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 opacity-30 blur-xl" />
+                <div className="relative w-full h-full rounded-full bg-black/50 border-4 border-blue-500/50 p-4 flex items-center justify-center">
+                  <Image
+                    src="/holderbot.png"
+                    alt="Solana Holder Bot"
+                    width={120}
+                    height={120}
+                    className="rounded-full"
+                  />
+                  <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center border-4 border-black">
+                    <SiTelegram className="w-6 h-6 text-white" />
+                  </div>
+                </div>
+              </div>
 
-          <motion.div
-            className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start gap-4"
-            variants={textVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.6 }}
-          >
-            <Link href="https://t.me/Degen_wg_bot">
-              <motion.button
-                className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3 shadow-lg hover:shadow-blue-500/50 transition-shadow group-hover:animate-shine"
-                variants={buttonVariants}
-                whileHover="hover"
-                whileTap="tap"
-              >
-                Holder Bot
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                </svg>
-              </motion.button>
-            </Link>
-            <Link href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v">
-              <motion.button
-                className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3 shadow-lg hover:shadow-blue-500/50 transition-shadow group-hover:animate-shine"
-                variants={buttonVariants}
-                whileHover="hover"
-                whileTap="tap"
-              >
-                Volume Bot
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z" />
-                </svg>
-              </motion.button>
-            </Link>
-            <motion.button
-              onClick={openVideo}
-              className="border border-blue-400 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3 hover:bg-blue-500/10 transition-colors"
-              variants={buttonVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              Watch Demo
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M3 22V2l18 10L3 22z" />
-              </svg>
-            </motion.button>
+              {/* Alles zentriert (auch auf Desktop) */}
+              <div className="space-y-8 text-center">
+                <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
+                  <span className="block text-gray-400">Solana</span>
+                  <span className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-500 font-normal">
+                    Holder Bot
+                  </span>
+                </h2>
+
+                <p className="text-lg lg:text-xl text-gray-400 leading-relaxed">
+                  Permanently boost your holder count with authentic Solana wallets. Rise to the top of every major ranking.
+                </p>
+
+                <ul className="space-y-6">
+                  <li className="flex items-center justify-center gap-5">
+                    <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
+                      <FaUsers className="w-6 h-6 text-blue-400" />
+                    </div>
+                    <span className="text-gray-300">Real & Permanent Holders</span>
+                  </li>
+                  <li className="flex items-center justify-center gap-5">
+                    <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
+                      <FaShieldAlt className="w-6 h-6 text-blue-400" />
+                    </div>
+                    <span className="text-gray-300">Fully Automated & Secure</span>
+                  </li>
+                  <li className="flex items-center justify-center gap-5">
+                    <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center ring-4 ring-blue-400/30">
+                      <FaCoins className="w-7 h-7 text-blue-300" />
+                    </div>
+                    <span className="text-xl font-semibold text-white">Start from just 0.1 SOL</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Button – zentriert, neuer permanenter + Hover-Effekt */}
+              <Link href="https://t.me/Degen_wg_bot">
+                <motion.button
+                  className="group relative mt-12 w-full max-w-md mx-auto px-12 py-5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl font-medium text-lg 
+                  border-2 border-blue-400/60 
+                  shadow-2xl shadow-blue-500/30 
+                  transition-all duration-400 ease-out
+                  hover:border-blue-800/80 
+                  hover:shadow-2xl hover:shadow-blue-500/60 
+                  hover:ring-4 hover:ring-blue-400/40 
+                  hover:shadow-inner hover:shadow-blue-900/50
+                  overflow-hidden"
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="relative z-10 flex items-center justify-center gap-3">
+                    Launch Holder Bot
+                  
+                  </span>
+                  <ShineEffect />
+                </motion.button>
+              </Link>
+            </div>
           </motion.div>
 
-          <motion.div
-            className="mt-12 p-6 bg-gray-800/50 rounded-xl border border-blue-500/30 group"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, ease: 'easeOut' }}
-          >
-            <h3 className="text-3xl font-bold text-blue-400">
-              ✨ NEW: All-in-One Booster Bot (Beta) ✨
-            </h3>
-            <p className="mt-3 text-gray-300">
-              Supercharge your memecoin with volume, holders, and transactions—all in one bot. Start from just 0.5 SOL!
-            </p>
-            <Link href="https://t.me/LeekRevenue_bot">
-              <motion.button
-                className="relative mt-6 bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-4 rounded-xl font-semibold flex items-center gap-3 shadow-lg hover:shadow-blue-600/50 transition-shadow group-hover:animate-shine"
-                variants={buttonVariants}
-                whileHover="hover"
-                whileTap="tap"
-              >
-                <span className="relative z-10">Try Booster Bot Now</span>
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-                </svg>
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 group-hover:animate-shine" />
-              </motion.button>
-            </Link>
+          {/* Right Glass Container – Volume Bot */}
+          <motion.div className="lg:col-span-5 lg:col-start-8" variants={itemVariants}>
+            <div className="relative p-10 lg:p-12 backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 shadow-2xl">
+              {/* Logo Circle – immer zentriert */}
+              <div className="relative mx-auto w-36 h-36 mb-10">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500 to-green-600 opacity-30 blur-xl" />
+                <div className="relative w-full h-full rounded-full bg-black/50 border-4 border-green-500/50 p-4 flex items-center justify-center">
+                  <Image
+                    src="/volumebot.png"
+                    alt="Solana Volume Bot"
+                    width={120}
+                    height={120}
+                    className="rounded-full"
+                  />
+                  <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-green-600 flex items-center justify-center border-4 border-black">
+                    <SiTelegram className="w-6 h-6 text-white" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Alles zentriert (auch auf Desktop) */}
+              <div className="space-y-8 text-center">
+                <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
+                  <span className="block text-gray-400">Solana</span>
+                  <span className="block bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-500 font-normal">
+                    Volume Bot
+                  </span>
+                </h2>
+
+                <p className="text-lg lg:text-xl text-gray-400 leading-relaxed">
+                  Create genuine on-chain trading volume. Dominate trending charts across all major platforms.
+                </p>
+
+                <ul className="space-y-6">
+                  <li className="flex items-center justify-center gap-5">
+                    <span className="text-gray-300">Explosive Real Volume</span>
+                    <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
+                      <FaChartLine className="w-6 h-6 text-green-400" />
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-center gap-5">
+                    <span className="text-gray-300">100% On-Chain Trades</span>
+                    <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
+                      <FaExchangeAlt className="w-6 h-6 text-green-400" />
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-center gap-5">
+                    <span className="text-xl font-semibold text-white">Start from just 0.1 SOL</span>
+                    <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center ring-4 ring-green-400/30">
+                      <FaCoins className="w-7 h-7 text-green-300" />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Button – zentriert, gleicher neuer Effekt (grün) */}
+              <Link href="https://t.me/leektradingbot">
+                <motion.button
+                  className="group relative mt-12 w-full max-w-md mx-auto px-12 py-5 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-2xl font-medium text-lg 
+                  border-2 border-green-400/60 
+                  shadow-2xl shadow-green-500/30 
+                  transition-all duration-400 ease-out
+                  hover:border-green-800/80 
+                  hover:shadow-2xl hover:shadow-green-500/60 
+                  hover:ring-4 hover:ring-green-400/40 
+                  hover:shadow-inner hover:shadow-green-900/50
+                  overflow-hidden"
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="relative z-10 flex items-center justify-center gap-3">
+                    Launch Volume Bot
+                  </span>
+                  <ShineEffect />
+                </motion.button>
+              </Link>
+            </div>
           </motion.div>
-        </div>
+        </motion.div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          className="text-center mt-32 lg:mt-40 space-y-10 relative z-10"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 1.2 }}
+        >
+          <h1 className="text-5xl lg:text-6xl font-light tracking-tight">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400">
+              Premium Solana Growth Suite
+            </span>
+          </h1>
+          <p className="text-xl lg:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            Authentic holders. Massive real volume. Simple Telegram interface. Engineered for moonshots.
+          </p>
+
+          <motion.button
+            onClick={openVideo}
+            className="mt-6 mb-6 border border-gray-700/50 text-white px-14 py-5 rounded-2xl font-medium text-lg hover:bg-white/10 hover:border-gray-600 transition-all duration-500"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Watch Demo
+          </motion.button>
+        </motion.div>
       </div>
 
+      {/* Video Modal */}
       <AnimatePresence>
         {isVideoOpen && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="relative bg-gray-900 p-4 rounded-xl max-w-4xl w-full"
-              initial={{ scale: 0.8 }}
+              className="relative max-w-6xl w-full bg-black rounded-3xl overflow-hidden shadow-2xl"
+              initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
+              exit={{ scale: 0.95 }}
             >
               <button
                 onClick={closeVideo}
-                className="absolute -top-4 -right-4 text-white text-2xl font-bold bg-gray-800 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-700"
+                className="absolute top-8 right-8 z-10 text-white/70 hover:text-white text-4xl transition-colors"
               >
                 ×
               </button>
-              <div className="relative" style={{ paddingTop: '56.25%' }}>
+              <div className="aspect-video">
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
                   src="https://www.youtube.com/embed/7jdOvbVwZeI?autoplay=1"

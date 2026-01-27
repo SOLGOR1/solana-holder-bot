@@ -150,9 +150,6 @@ export default function Home() {
           <div id="how-it-works" className="scroll-mt-16">
             <HowItWorks />
           </div>
-          <div id="hyper-volume" className="scroll-mt-16">
-            <HyperVolumeBanner />
-          </div>
           <div id="testimonials" className="scroll-mt-16">
             <Testimonials />
           </div>
