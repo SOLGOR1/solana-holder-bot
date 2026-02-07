@@ -45,7 +45,7 @@ export default function Footer() {
                 <FaXTwitter className="text-lg" />
               </a>
               <a
-                href="https://www.reddit.com/r/solana_holder_bot/"
+                href="https://www.reddit.com/r/holana_holder_bot/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white bg-gray-800/50 rounded-full p-3 hover:bg-blue-600/50 transition-all duration-300 transform hover:scale-110"
@@ -106,7 +106,7 @@ export default function Footer() {
             <h3 className="text-xl font-semibold text-white mb-4 tracking-wide">Get in Touch</h3>
             <div className="flex justify-center md:justify-end gap-6">
               <a
-                href="https://t.me/Letro86"
+                href="https://t.me/+3XCV3c958XwyYjE8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors duration-200"
