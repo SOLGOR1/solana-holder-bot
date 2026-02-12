@@ -163,7 +163,6 @@ const animations = [
 ];
 
 export default function BotAnime() {
-  const [currentAnimIndex, setCurrentAnimIndex] = useState(0);
   const [currentImage, setCurrentImage] = useState("/hbot/hbot1.png");
   const [isVisible, setIsVisible] = useState(false);
 
@@ -171,7 +170,6 @@ export default function BotAnime() {
 
   useEffect(() => {
     let animIndex = chooseRandomAnimation();
-    setCurrentAnimIndex(animIndex);
     setIsVisible(true);
 
     const runAnimation = () => {
@@ -191,7 +189,6 @@ export default function BotAnime() {
           const nextDelay = 10000 + Math.random() * 15000;
           setTimeout(() => {
             animIndex = chooseRandomAnimation();
-            setCurrentAnimIndex(animIndex);
             setCurrentImage("/hbot/hbot1.png");
             setIsVisible(true);
             runAnimation();
