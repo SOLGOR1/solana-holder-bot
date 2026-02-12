@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Guide() {
   const steps = [
@@ -82,7 +83,7 @@ export default function Guide() {
     if (autoPlay) {
       const interval = setInterval(() => {
         setCurrentStep((prev) => (prev === steps.length - 1 ? 0 : prev + 1));
-      }, 16000); // 16 Sekunden pro Schritt
+      }, 10000); // Verkürzt auf 10s für dynamischeren Flow
       return () => clearInterval(interval);
     }
   }, [autoPlay, steps.length]);
@@ -92,71 +93,99 @@ export default function Guide() {
   const toggleAutoPlay = () => setAutoPlay(!autoPlay);
 
   return (
-    <section id="guide" className="py-16 bg-black text-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 tracking-tight">
-          How to Boost Your Solana Token Volume with Permanent Holders
-        </h2>
-        <div className="relative max-w-4xl mx-auto lg:max-w-5xl">
+    <section id="guide" className="relative bg-black py-20 overflow-hidden">
+      {/* Super dezenter Hintergrund – sanft pulsierende zentrale Blobs */}
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
+        animate={{ scale: [1, 1.15, 1] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
+        animate={{ scale: [1.1, 0.95, 1.1] }}
+        transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-center mb-12 tracking-tight text-white"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          How to Boost Your Solana Token with Permanent Holders
+        </motion.h2>
+
+        <div className="relative max-w-4xl mx-auto">
           {/* Fortschrittsbalken */}
-          <div className="w-full h-1 bg-gray-800 rounded-full mb-4 relative overflow-hidden">
-            <div
-              className="h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full transition-all duration-500 ease-in-out"
-              style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
+          <div className="w-full h-1 bg-white/10 rounded-full mb-6 relative overflow-hidden">
+            <motion.div
+              className="h-full bg-gradient-to-r from-blue-500 to-green-500 rounded-full"
+              initial={{ width: 0 }}
+              animate={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
             />
           </div>
 
           {/* Schritt-Anzeige */}
-          <div className="text-center mb-10 text-gray-400 text-sm">
+          <div className="text-center mb-8 text-gray-400 text-sm md:text-base">
             Step {currentStep + 1} of {steps.length}
           </div>
 
-          {/* Container */}
-          <div className="bg-black border border-gray-700/30 rounded-2xl p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-lg">
-            {/* Bild */}
-            <div className="flex justify-center">
+          {/* Cohesiver Container – flex row, no gap, shared styles */}
+          <motion.div
+            className="flex flex-col md:flex-row rounded-3xl overflow-hidden shadow-2xl border border-white/10" // Gemeinsamer Border und Shadow für Einheit
+            key={currentStep}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            {/* Linke Hälfte: GIF-Seite – black bg mit coolen border */}
+            <div className="flex-1 bg-black p-6 md:p-8 flex justify-center items-center relative">
+              {/* Cooler interner Border */}
+              <div className="absolute inset-0 border border-white/5 rounded-3xl pointer-events-none"></div>
               <Image
                 src={steps[currentStep].image}
                 alt={steps[currentStep].alt}
-                width={300}
-                height={500}
-                className="rounded-lg object-cover"
+                width={250}
+                height={450}
+                className="rounded-lg object-cover shadow-md"
                 unoptimized={steps[currentStep].image.endsWith('.gif')}
                 loading="lazy"
               />
             </div>
-            {/* Text */}
-            <div className="flex flex-col justify-center text-center md:text-left">
-              <h3 className="text-2xl font-semibold text-white tracking-tight">
+
+            {/* Rechte Hälfte: Text-Seite – glassmorph */}
+            <div className="flex-1 bg-white/5 backdrop-blur-xl p-6 md:p-8 flex flex-col justify-center">
+              <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight mb-4">
                 {steps[currentStep].title}
               </h3>
-              <p className="mt-4 text-gray-200 text-lg leading-relaxed">
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                 {steps[currentStep].desc}
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Navigation */}
-          <div className="flex justify-center items-center mt-8 gap-4">
+          <div className="flex justify-center items-center mt-10 gap-6">
             {/* Pfeil links */}
-            <button
+            <motion.button
               onClick={prevStep}
-              className="hover:text-blue-800 transition-colors lg:static lg:-translate-y-0 lg:order-1"
+              className="text-white hover:text-blue-400 transition-colors"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
-              <svg
-                className="w-10 h-10 text-blue-500 animate-pulse hover:text-blue-400 transition-colors"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
               </svg>
-            </button>
+            </motion.button>
 
             {/* Play/Pause */}
-            <button
+            <motion.button
               onClick={toggleAutoPlay}
-              className="flex items-center justify-center gap-2 px-5 py-2 bg-gray-700 border border-gray-600 rounded-full text-blue-400 hover:bg-blue-800 hover:text-white hover:shadow-blue-800/30 transition-all duration-300 order-2"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white/20 hover:border-white/40 transition-all duration-300 shadow-md hover:shadow-xl"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               {autoPlay ? (
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -168,22 +197,19 @@ export default function Guide() {
                 </svg>
               )}
               {autoPlay ? 'Pause' : 'Play'}
-            </button>
+            </motion.button>
 
             {/* Pfeil rechts */}
-            <button
+            <motion.button
               onClick={nextStep}
-              className="hover:text-blue-800 transition-colors lg:static lg:-translate-y-0 lg:order-3"
+              className="text-white hover:text-green-400 transition-colors"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
-              <svg
-                className="w-10 h-10 text-blue-500 animate-pulse hover:text-blue-400 transition-colors"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>

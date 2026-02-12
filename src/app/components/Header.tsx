@@ -5,9 +5,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { SiTelegram } from 'react-icons/si';
-import { FaUsers, FaShieldAlt, FaCoins, FaChartLine, FaExchangeAlt, } from 'react-icons/fa';
+import { FaUsers, FaShieldAlt, FaCoins, FaChartLine, FaExchangeAlt, FaBolt, FaEye, FaPauseCircle, FaLock, FaWallet, FaClock, FaChartBar, FaRobot, FaGlobe, FaKey } from 'react-icons/fa';
 
-export default function Header() {
+export default function WhyChoose() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const openVideo = () => setIsVideoOpen(true);
@@ -31,216 +31,286 @@ export default function Header() {
   };
 
   const ShineEffect = () => (
-    <div className="pointer-events-none absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1200 ease-linear" />
+    <motion.div
+      className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+      initial={{ x: "-100%" }}
+      animate={{ x: "100%" }}
+      transition={{ duration: 2, ease: "easeOut", repeat: Infinity, repeatDelay: 3 }}
+    />
   );
 
   return (
-    <header className="relative min-h-screen bg-black text-white overflow-hidden flex items-center">
-      {/* Ultra-minimal background glows */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(59,130,246,0.06)_0%,_transparent_70%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,197,94,0.06)_0%,_transparent_70%)]" />
+    <section className="relative bg-black py-16 overflow-hidden">
+      {/* Super dezenter Hintergrund – sanft pulsierende zentrale Blobs */}
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
+        animate={{ scale: [1, 1.15, 1] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
+        animate={{ scale: [1.1, 0.95, 1.1] }}
+        transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
+      />
 
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
-        {/* Subtle centered mascot in background */}
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
+        {/* Titel und Subtext */}
         <motion.div
-          className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 1.5 }}
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
-          <Image
-            src="/solholderbot.png"
-            alt="Solana Growth Mascot"
-            width={900}
-            height={900}
-            className="drop-shadow-2xl opacity-35"
-            priority
-          />
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+            Why Choose Solana Holder Volume Bot?
+          </h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            Unmatched volume and holder generation at the lowest price, starting at 0.1 SOL so that even small projects have a chance to stand out.
+          </p>
         </motion.div>
 
-        {/* Grid mit zwei Hauptspalten */}
-        <motion.div
-          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start relative z-10"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {/* Left Glass Container – Holder Bot */}
-          <motion.div className="lg:col-span-5 lg:col-start-1" variants={itemVariants}>
-            <div className="relative p-10 lg:p-12 backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 shadow-2xl">
-              {/* Logo Circle – immer zentriert (Mobile + Desktop) */}
-              <div className="relative mx-auto w-36 h-36 mb-10">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 opacity-30 blur-xl" />
-                <div className="relative w-full h-full rounded-full bg-black/50 border-4 border-blue-500/50 p-4 flex items-center justify-center">
-                  <Image
-                    src="/holderbot.png"
-                    alt="Solana Holder Bot"
-                    width={120}
-                    height={120}
-                    className="rounded-full"
-                  />
-                  <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center border-4 border-black">
-                    <SiTelegram className="w-6 h-6 text-white" />
+        {/* Grid mit zwei Glass Containern – zentriert und schmaler */}
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {/* Left Glass Container – Solana Holder Bot */}
+            <motion.div variants={itemVariants} className="max-w-md mx-auto w-full">
+              <div className="relative p-4 md:p-6 backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 shadow-2xl">
+                {/* Logo Circle – zentriert */}
+                <div className="relative mx-auto w-20 h-20 mb-4">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 opacity-30 blur-xl" />
+                  <div className="relative w-full h-full rounded-full bg-black/50 border-4 border-blue-500/50 p-2 flex items-center justify-center">
+                    <Image
+                      src="/holderbot.png"
+                      alt="Solana Holder Bot"
+                      width={60}
+                      height={60}
+                      className="rounded-full"
+                    />
+                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center border-2 border-black">
+                      <SiTelegram className="w-3 h-3 text-white" />
+                    </div>
                   </div>
                 </div>
+
+                <div className="space-y-3 text-center">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                    Solana Holder Bot
+                  </h3>
+
+                  <p className="text-sm md:text-md text-gray-400 leading-relaxed">
+                    Permanently boost your holder count with authentic Solana wallets. Rise to the top of every major ranking.
+                  </p>
+
+                  <ul className="space-y-2 text-left max-w-xs mx-auto">
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
+                        <FaUsers className="w-3 h-3 text-blue-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Creates Permanent Holders</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
+                        <FaShieldAlt className="w-3 h-3 text-blue-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Supports SPL and Token 2022 Standard</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
+                        <FaWallet className="w-3 h-3 text-blue-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Authentic Wallet Diversity for Natural Growth</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
+                        <FaClock className="w-3 h-3 text-blue-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Real Holder Addition to Mimic Organic Interest</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
+                        <FaChartBar className="w-3 h-3 text-blue-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Real-Time Holder Analytics and Growth Tracking</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
+                        <FaRobot className="w-3 h-3 text-blue-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Fully Automated Setup with Telegram Integration</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
+                        <FaGlobe className="w-3 h-3 text-blue-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Multi-DEX and Launchpad Compatibility</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
+                        <FaKey className="w-3 h-3 text-blue-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Enhanced Security: No Private Key Access Required</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
+                        <FaShieldAlt className="w-3 h-3 text-blue-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Predictive Ranking Impact Analysis</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center ring-2 ring-blue-400/30">
+                        <FaCoins className="w-3 h-3 text-blue-300" />
+                      </div>
+                      <span className="text-sm font-semibold text-white">Start from just 0.1 SOL</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Button */}
+                <Link href="https://t.me/Degen_wg_bot">
+                  <motion.button
+                    className="group relative mt-6 w-full px-6 py-2 bg-white/10 backdrop-blur-md text-white font-medium rounded-2xl border border-white/20 shadow-lg overflow-hidden transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:shadow-xl hover:ring-4 hover:ring-blue-400/20"
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <span className="relative z-10 flex items-center justify-center gap-2 text-sm">
+                      <SiTelegram className="w-4 h-4" />
+                      Launch Holder Bot
+                    </span>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100">
+                      <ShineEffect />
+                    </div>
+                  </motion.button>
+                </Link>
               </div>
+            </motion.div>
 
-              {/* Alles zentriert (auch auf Desktop) */}
-              <div className="space-y-8 text-center">
-                <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
-                  <span className="block text-gray-400">Solana</span>
-                  <span className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-500 font-normal">
-                    Holder Bot
-                  </span>
-                </h2>
-
-                <p className="text-lg lg:text-xl text-gray-400 leading-relaxed">
-                  Permanently boost your holder count with authentic Solana wallets. Rise to the top of every major ranking.
-                </p>
-
-                <ul className="space-y-6">
-                  <li className="flex items-center justify-center gap-5">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
-                      <FaUsers className="w-6 h-6 text-blue-400" />
+            {/* Right Glass Container – Solana Volume Bot */}
+            <motion.div variants={itemVariants} className="max-w-md mx-auto w-full">
+              <div className="relative p-4 md:p-6 backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 shadow-2xl">
+                {/* Logo Circle – zentriert */}
+                <div className="relative mx-auto w-20 h-20 mb-4">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500 to-green-600 opacity-30 blur-xl" />
+                  <div className="relative w-full h-full rounded-full bg-black/50 border-4 border-green-500/50 p-2 flex items-center justify-center">
+                    <Image
+                      src="/volumebot.png"
+                      alt="Solana Volume Bot"
+                      width={60}
+                      height={60}
+                      className="rounded-full"
+                    />
+                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-green-600 flex items-center justify-center border-2 border-black">
+                      <SiTelegram className="w-3 h-3 text-white" />
                     </div>
-                    <span className="text-gray-300">Real & Permanent Holders</span>
-                  </li>
-                  <li className="flex items-center justify-center gap-5">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
-                      <FaShieldAlt className="w-6 h-6 text-blue-400" />
-                    </div>
-                    <span className="text-gray-300">Fully Automated & Secure</span>
-                  </li>
-                  <li className="flex items-center justify-center gap-5">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center ring-4 ring-blue-400/30">
-                      <FaCoins className="w-7 h-7 text-blue-300" />
-                    </div>
-                    <span className="text-xl font-semibold text-white">Start from just 0.1 SOL</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Button – zentriert, neuer permanenter + Hover-Effekt */}
-              <Link href="https://t.me/Degen_wg_bot">
-                <motion.button
-                  className="group relative mt-12 w-full max-w-md mx-auto px-12 py-5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl font-medium text-lg 
-                  border-2 border-blue-400/60 
-                  shadow-2xl shadow-blue-500/30 
-                  transition-all duration-400 ease-out
-                  hover:border-blue-800/80 
-                  hover:shadow-2xl hover:shadow-blue-500/60 
-                  hover:ring-4 hover:ring-blue-400/40
-                  overflow-hidden"
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-3">
-                    Launch Holder Bot
-                  
-                  </span>
-                  <ShineEffect />
-                </motion.button>
-              </Link>
-            </div>
-          </motion.div>
-
-          {/* Right Glass Container – Volume Bot */}
-          <motion.div className="lg:col-span-5 lg:col-start-8" variants={itemVariants}>
-            <div className="relative p-10 lg:p-12 backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 shadow-2xl">
-              {/* Logo Circle – immer zentriert */}
-              <div className="relative mx-auto w-36 h-36 mb-10">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500 to-green-600 opacity-30 blur-xl" />
-                <div className="relative w-full h-full rounded-full bg-black/50 border-4 border-green-500/50 p-4 flex items-center justify-center">
-                  <Image
-                    src="/volumebot.png"
-                    alt="Solana Volume Bot"
-                    width={120}
-                    height={120}
-                    className="rounded-full"
-                  />
-                  <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-green-600 flex items-center justify-center border-4 border-black">
-                    <SiTelegram className="w-6 h-6 text-white" />
                   </div>
                 </div>
+
+                <div className="space-y-3 text-center">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                    Solana Volume Bot
+                  </h3>
+
+                  <p className="text-sm md:text-md text-gray-400 leading-relaxed">
+                    Create genuine on-chain trading volume. Dominate trending charts across all major platforms.
+                  </p>
+
+                  <ul className="space-y-2 text-left max-w-xs mx-auto">
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
+                        <FaChartLine className="w-3 h-3 text-green-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Highest volume at the best market price</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
+                        <FaExchangeAlt className="w-3 h-3 text-green-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">More buys than sells for bullish pressure</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
+                        <FaEye className="w-3 h-3 text-green-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Transparent, real-time volume stats</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
+                        <FaPauseCircle className="w-3 h-3 text-green-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Start, pause or withdraw</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
+                        <FaLock className="w-3 h-3 text-green-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">MEV Protection</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
+                        <FaBolt className="w-3 h-3 text-green-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Sub-Second Transaction Landing</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
+                        <FaShieldAlt className="w-3 h-3 text-green-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Predictive Execution & Real-Time Slippage Estimator</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
+                        <FaCoins className="w-3 h-3 text-green-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Gasless Support for Token2022 & Memecoin Swaps</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
+                        <FaExchangeAlt className="w-3 h-3 text-green-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">Just-In-Time Market Revival for Long-Tail Assets</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center ring-2 ring-green-400/30">
+                        <FaCoins className="w-3 h-3 text-green-300" />
+                      </div>
+                      <span className="text-sm font-semibold text-white">Start from just 0.1 SOL</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Button */}
+                <Link href="https://t.me/leektradingbot">
+                  <motion.button
+                    className="group relative mt-6 w-full px-6 py-2 bg-white/10 backdrop-blur-md text-white font-medium rounded-2xl border border-white/20 shadow-lg overflow-hidden transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:shadow-xl hover:ring-4 hover:ring-green-400/20"
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <span className="relative z-10 flex items-center justify-center gap-2 text-sm">
+                      <SiTelegram className="w-4 h-4" />
+                      Launch Volume Bot
+                    </span>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100">
+                      <ShineEffect />
+                    </div>
+                  </motion.button>
+                </Link>
               </div>
-
-              {/* Alles zentriert (auch auf Desktop) */}
-              <div className="space-y-8 text-center">
-                <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
-                  <span className="block text-gray-400">Solana</span>
-                  <span className="block bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-500 font-normal">
-                    Volume Bot
-                  </span>
-                </h2>
-
-                <p className="text-lg lg:text-xl text-gray-400 leading-relaxed">
-                  Create genuine on-chain trading volume. Dominate trending charts across all major platforms.
-                </p>
-
-                <ul className="space-y-6">
-                  <li className="flex items-center justify-center gap-5">
-                    <span className="text-gray-300">Explosive Real Volume</span>
-                    <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
-                      <FaChartLine className="w-6 h-6 text-green-400" />
-                    </div>
-                  </li>
-                  <li className="flex items-center justify-center gap-5">
-                    <span className="text-gray-300">100% On-Chain Trades</span>
-                    <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
-                      <FaExchangeAlt className="w-6 h-6 text-green-400" />
-                    </div>
-                  </li>
-                  <li className="flex items-center justify-center gap-5">
-                    <span className="text-xl font-semibold text-white">Start from just 0.1 SOL</span>
-                    <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center ring-4 ring-green-400/30">
-                      <FaCoins className="w-7 h-7 text-green-300" />
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Button – zentriert, gleicher neuer Effekt (grün) */}
-              <Link href="https://t.me/leektradingbot">
-                <motion.button
-                  className="group relative mt-12 w-full max-w-md mx-auto px-12 py-5 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-2xl font-medium text-lg 
-                  border-2 border-green-400/60 
-                  shadow-2xl shadow-green-500/30 
-                  transition-all duration-400 ease-out
-                  hover:border-green-800/80 
-                  hover:shadow-2xl hover:shadow-green-500/60 
-                  hover:ring-4 hover:ring-green-400/40
-                  overflow-hidden"
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-3">
-                    Launch Volume Bot
-                  </span>
-                  <ShineEffect />
-                </motion.button>
-              </Link>
-            </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom CTA – optional, falls gewünscht */}
         <motion.div
-          className="text-center mt-32 lg:mt-40 space-y-10 relative z-10"
+          className="text-center mt-16"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1.2 }}
         >
-          <h1 className="text-5xl lg:text-6xl font-light tracking-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400">
-              Premium Solana Growth Suite
-            </span>
-          </h1>
-          <p className="text-xl lg:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            Authentic holders. Massive real volume. Simple Telegram interface. Engineered for moonshots.
-          </p>
-
           <motion.button
             onClick={openVideo}
-            className="mt-6 mb-6 border border-gray-700/50 text-white px-14 py-5 rounded-2xl font-medium text-lg hover:bg-white/10 hover:border-gray-600 transition-all duration-500"
+            className="border border-gray-700/50 text-white px-10 py-3 rounded-2xl font-medium text-md hover:bg-white/10 hover:border-gray-600 transition-all duration-500"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -283,6 +353,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </section>
   );
 }

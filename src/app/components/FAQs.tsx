@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaChevronDown } from 'react-icons/fa';
 
 export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -11,184 +13,177 @@ export default function FAQs() {
 
   const faqs = [
     {
-      q: "What’s the Holder Bot?",
-      a: "A slick tool to auto-stack permanent holders for your Solana token – no stress, all gains.",
+      q: "What is the Holder Bot?",
+      a: "An automated Telegram bot that creates permanent, authentic holders for your Solana token using real wallets – designed for long-term growth and healthier charts.",
     },
     {
-        q: "What’s the Volume Bot?",
-        a: "The best Volume Bot on the market to generate massive Volume for your Solana token – no stress, all automated.",
-      },
+      q: "What is the Volume Bot?",
+      a: "The most advanced volume generation bot on Solana. It creates genuine on-chain buys and sells via Jupiter with more buys than sells for bullish pressure and natural-looking activity.",
+    },
+    {
+      q: "Which platforms are supported?",
+      a: "Both bots work seamlessly with all major Solana DEXs and launchpads including Raydium, Pump.fun, Bonk.fun, Bags.fm, Meteora, Orca, Jupiter, Kamino, Lifinity, Saros, PumpSwap, Crema, Solanium, StarLaunch, SolPad, PinkSale, and many more.",
+    },
     {
       q: "Is it safe to use?",
-      a: "Hell yeah, built with top-tier security standards to keep your project locked down.",
+      a: "Absolutely. We never ask for private keys or wallet access. All transactions are transparent, on-chain, and use secure automation. MEV protection and real wallet diversity keep everything undetectable and compliant.",
     },
     {
-      q: "How long does it take to create holders?",
-      a: "One holder pops up every 30 seconds. Here’s the breakdown for our packages:",
+      q: "How much do the packages cost?",
+      a: "Holder Bot pricing (permanent holders):",
       table: (
-        <table className="mt-4 w-full text-left border border-gray-700 rounded-lg overflow-hidden">
+        <table className="mt-4 w-full text-left">
           <thead>
-            <tr className="bg-gray-800/50">
-              <th className="p-3 font-semibold">Package</th>
-              <th className="p-3 font-semibold">Time</th>
+            <tr className="border-b border-white/10">
+              <th className="py-2 text-gray-400">Package</th>
+              <th className="py-2 text-gray-400 text-right">Price</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="border-t border-gray-700">
-              <td className="p-3">10 Holders</td>
-              <td className="p-3">5 minutes</td>
+            <tr className="border-b border-white/5">
+              <td className="py-3">10 Holders</td>
+              <td className="py-3 text-right">0.1 SOL</td>
             </tr>
-            <tr className="border-t border-gray-700">
-              <td className="p-3">50 Holders</td>
-              <td className="p-3">25 minutes</td>
+            <tr className="border-b border-white/5">
+              <td className="py-3">50 Holders</td>
+              <td className="py-3 text-right">0.15 SOL</td>
             </tr>
-            <tr className="border-t border-gray-700">
-              <td className="p-3">100 Holders</td>
-              <td className="p-3">50 minutes</td>
+            <tr className="border-b border-white/5">
+              <td className="py-3">100 Holders</td>
+              <td className="py-3 text-right">0.25 SOL</td>
             </tr>
-            <tr className="border-t border-gray-700">
-              <td className="p-3">500 Holders</td>
-              <td className="p-3">4 hours 10 minutes</td>
-            </tr>
-            <tr className="border-t border-gray-700">
-              <td className="p-3">1000 Holders</td>
-              <td className="p-3">8 hours 20 minutes</td>
+            <tr className="border-b border-white/5">
+              <td className="py-3">500 Holders</td>
+              <td className="py-3 text-right">1.5 SOL</td>
             </tr>
           </tbody>
         </table>
       ),
     },
     {
-      q: "Can I leave the chat while holders are being created?",
-      a: "Yep, no issue at all – just don’t restart the bot until all wallets are fully stacked.",
-    },
-    {
-      q: "Can I run the bot twice at the same time?",
-      a: "Nah, hold off until the first distribution’s done – double-starting messes things up.",
-    },
-    {
-      q: "What’s the cost of the packages?",
-      a: "Check the pricing for our Solana Holder Bot packages:",
+      q: "How long does holder creation take?",
+      a: "One holder every ~3-5 seconds. Estimated times:",
       table: (
-        <table className="mt-4 w-full text-left border border-gray-700 rounded-lg overflow-hidden">
+        <table className="mt-4 w-full text-left">
           <thead>
-            <tr className="bg-gray-800/50">
-              <th className="p-3 font-semibold">Package</th>
-              <th className="p-3 font-semibold">Price</th>
+            <tr className="border-b border-white/10">
+              <th className="py-2 text-gray-400">Package</th>
+              <th className="py-2 text-gray-400 text-right">Time</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="border-t border-gray-700">
-              <td className="p-3">10 Holders</td>
-              <td className="p-3">0.1 SOL</td>
+            <tr className="border-b border-white/5">
+              <td className="py-3">10 Holders</td>
+              <td className="py-3 text-right">~2 minutes</td>
             </tr>
-            <tr className="border-t border-gray-700">
-              <td className="p-3">50 Holders</td>
-              <td className="p-3">0.15 SOL</td>
+            <tr className="border-b border-white/5">
+              <td className="py-3">50 Holders</td>
+              <td className="py-3 text-right">~5 minutes</td>
             </tr>
-            <tr className="border-t border-gray-700">
-              <td className="p-3">100 Holders</td>
-              <td className="p-3">0.25 SOL</td>
+            <tr className="border-b border-white/5">
+              <td className="py-3">100 Holders</td>
+              <td className="py-3 text-right">~10 minutes</td>
             </tr>
-            <tr className="border-t border-gray-700">
-              <td className="p-3">500 Holders</td>
-              <td className="p-3">1.5 SOL</td>
-            </tr>
-            <tr className="border-t border-gray-700">
-              <td className="p-3">1000 Holders</td>
-              <td className="p-3">2.5 SOL</td>
+            <tr className="border-b border-white/5">
+              <td className="py-3">500 Holders</td>
+              <td className="py-3 text-right">~50 minutes</td>
             </tr>
           </tbody>
         </table>
       ),
     },
     {
-      q: "Does it work with other chains?",
-      a: (
-        <>
-          Nope, it’s Solana-only right now – but we’re eyeing other chains for the future. Follow us on{' '}
-          <a
-            href="https://x.com/LeekSol"
-            className="text-blue-400 hover:text-blue-500 underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Twitter
-          </a>{' '}
-          to stay in the loop!
-        </>
-      ),
+      q: "Can I pause or control the bots?",
+      a: "Yes – both bots allow you to start, pause, resume, or withdraw remaining funds at any time. Full control via Telegram.",
     },
     {
-      q: "How do I get started?",
-      a: "Hit 'Start Now' and follow the easy steps in our Telegram bot – you’ll be stacking holders in no time.",
+      q: "What payment methods are accepted?",
+      a: "Only SOL. Each session generates a unique payment address – we never ask for wallet connections or private keys.",
     },
     {
-      q: "What happens if I send the wrong amount of SOL?",
-      a: "The bot will either stop early or not start at all until the correct amount of SOL has arrived. Please do not restart the bot until the process is complete.",
+      q: "Are the holders and volume permanent/real?",
+      a: "100% yes. Holders are real wallets that stay forever. Volume consists of genuine on-chain trades.",
     },
     {
-      q: "Are the holders really permanent?",
-      a: "100%. These wallets stick around – no disappearing act, unlike some shady bots out there.",
+      q: "Can I leave the Telegram chat during operation?",
+      a: "Yes, the bots run independently. Just don’t restart until completion to avoid issues.",
+    },
+    {
+      q: "What if I send the wrong SOL amount?",
+      a: "The bot will pause or not start until the correct amount arrives. Do not restart mid-process.",
+    },
+    {
+      q: "Are refunds possible?",
+      a: "Payments are final and non-refundable. Test thoroughly and contact support if needed – we handle cases individually.",
     },
   ];
 
   return (
-    <section id="faqs" className="py-16 bg-black text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.15)_0%,_rgba(0,0,0,0.9)_80%)] pointer-events-none" />
-      <div className="container mx-auto px-4 relative z-10 max-w-3xl">
-        <h2 className="text-4xl font-bold text-center mb-12 tracking-tight">
-          Frequently Asked Questions
-        </h2>
-        <div className="space-y-4">
+    <section id="faqs" className="relative bg-black py-20 overflow-hidden">
+      {/* Super dezenter Hintergrund – sanft pulsierende zentrale Blobs */}
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
+        animate={{ scale: [1, 1.15, 1] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
+        animate={{ scale: [1.1, 0.95, 1.1] }}
+        transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <span className="inline-block px-4 py-1.5 bg-green-600/20 text-green-400 text-sm font-medium rounded-full border border-green-500/30">
+            FAQ
+          </span>
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-white tracking-tight">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        {/* Accordion – Glassmorph Cards */}
+        <div className="max-w-4xl mx-auto space-y-4">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-gray-800/50 rounded-2xl border-4 border-gray-700 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-blue-500/40"
+              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-cyan-500/20 hover:border-cyan-500/30"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full p-6 text-left flex justify-between items-center focus:outline-none"
+                className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
               >
-                <h3 className="text-xl font-semibold text-white hover:text-blue-400 transition-colors">
+                <h3 className="text-lg md:text-xl font-semibold text-white pr-4">
                   {faq.q}
                 </h3>
-                <svg
-                  className={`w-6 h-6 text-blue-500 transform transition-transform duration-300 ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                <motion.div
+                  animate={{ rotate: openIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
+                  <FaChevronDown className="w-5 h-5 text-cyan-400" />
+                </motion.div>
               </button>
-              {openIndex === index && (
-                <div className="px-6 pb-6 text-gray-200 leading-relaxed">
+
+              <motion.div
+                initial={false}
+                animate={{
+                  height: openIndex === index ? "auto" : 0,
+                  opacity: openIndex === index ? 1 : 0,
+                }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <div className="px-6 pb-6 text-gray-300 text-base leading-relaxed">
                   <p>{faq.a}</p>
                   {faq.table && <div className="mt-4">{faq.table}</div>}
                 </div>
-              )}
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
-        {/* Back to Top Button – mittig unter den FAQs */}
-        <div className="mt-8 flex justify-center">
-          <a
-            href="#header"
-            className="p-3 hover:text-blue-800 transition-colors"
-            aria-label="Back to Top"
-          >
-            <svg
-              className="w-10 h-10 text-blue-500 animate-pulse hover:text-blue-400 transition-colors"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7" />
-            </svg>
-          </a>
         </div>
       </div>
     </section>

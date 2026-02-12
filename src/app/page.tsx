@@ -1,17 +1,21 @@
 // src/app/page.tsx
 import Header from './components/Header';
-import Benefits from './components/Benefits';
+import Header1 from './components/Header1';
+import Widget1 from './components/Widget1';
+import Benefits2 from './components/Benefits2';
 import Guide from './components/Guide';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
 import FAQs from './components/FAQs';
 import Navbar from './components/Navbar';
 import Script from 'next/script';
-import Head from 'next/head';
 import Footer from './components/Footer';
 import WhySolanaHolderBot from './components/WhySolanaHolderBot';
 import BlogSnippet from './components/BlogSnippet';
 import { blogPosts } from './data/blogs';
+import SupportedPlatforms from './components/SupportedPlatforms';
+import Customer from './components/Customer';
+import Disclaimer from './components/Disclaimer';
 
 export default function Home() {
   const canonicalUrl = 'https://www.solanaholderbot.com';
@@ -20,8 +24,8 @@ export default function Home() {
 
   return (
     <>
-      {/* SEO Meta Tags and Schema */}
-      <Head>
+      {/* SEO Meta Tags – im App Router besser über metadata, aber Head funktioniert noch */}
+      <head>
         <title>Solana Volume Bot - Boost SOL Stats & Holders</title>
         <meta
           name="description"
@@ -63,9 +67,15 @@ export default function Home() {
         {/* Telegram/Discord Compatibility */}
         <meta name="telegram:image" content={`${canonicalUrl}${ogImageUrl}`} />
         <meta name="discord:image" content={`${canonicalUrl}${ogImageUrl}`} />
-        {/* Schema Markup */}
-        <script type="application/ld+json">
-          {JSON.stringify({
+      </head>
+
+      {/* Schema Markup direkt im Body (Next.js erlaubt script tags) */}
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Solana Volume Bot",
@@ -87,10 +97,15 @@ export default function Home() {
               },
               "query-input": "required name=search_term_string"
             }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
+          }),
+        }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -101,9 +116,9 @@ export default function Home() {
                 "item": canonicalUrl
               }
             ]
-          })}
-        </script>
-      </Head>
+          }),
+        }}
+      />
 
       {/* Google Analytics */}
       <Script
@@ -119,29 +134,31 @@ export default function Home() {
         `}
       </Script>
 
-      {/* Bing Webmaster Tools Verification */}
+      {/* Bing Webmaster Tools Verification – Placeholder */}
       <Script id="bing-verification" strategy="afterInteractive">
         {`
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-XXXXXXX'); // Replace with your Bing verification ID
+          // Replace with your actual Bing/GTM code if needed
         `}
       </Script>
 
       {/* Content */}
       <div className="flex flex-col min-h-screen pt-16">
         <Navbar />
+        <div id="header1" className="scroll-mt-5">
+          <Header1 />
+        </div>
+        <div id="sup" className="scroll-mt-5">
+          <SupportedPlatforms />
+        </div>
+        <div id="cust" className="scroll-mt-5">
+          <Customer />
+        </div>
         <div id="header" className="scroll-mt-16">
           <Header />
         </div>
         <main className="flex-grow" role="main">
-          <div id="why-solana-holder-bot" className="scroll-mt-16">
-            <WhySolanaHolderBot />
-          </div>
           <div id="benefits" className="scroll-mt-16">
-            <Benefits />
+            <Benefits2 />
           </div>
           <div id="guide" className="scroll-mt-16">
             <Guide />
@@ -152,19 +169,15 @@ export default function Home() {
           <div id="testimonials" className="scroll-mt-16">
             <Testimonials />
           </div>
+          <BlogSnippet posts={blogPosts} />
           <div id="faqs" className="scroll-mt-16">
             <FAQs />
           </div>
-          <BlogSnippet posts={blogPosts} />
         </main>
+        <Disclaimer />
         <Footer />
+        <Widget1 />
       </div>
     </>
   );
 }
-
-// Export metadata for Next.js 13+ App Router
-export const metadata = {
-  title: 'Solana Volume Bot - Boost SOL Stats & Holders',
-  description: 'Maximize your Solana token with Solana Volume Bot, the top SOL volume booster. Drive organic holders and stats with our moonshot volume bot in 2025.',
-};

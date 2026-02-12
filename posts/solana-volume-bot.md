@@ -136,10 +136,10 @@ slug: "solana-volume-bot"
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
     <h1 class="text-4xl font-bold text-white mb-6">🚀 The #1 Solana Volume Bot for 200x Volume in 2025</h1>
     <p class="text_gray-300 mb-6 leading-relaxed">
-      Want to <strong>supercharge your Solana project</strong>? The <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:text-blue-300 underline font-semibold">Solana Volume Bot</a> is the ultimate <strong>Solana volume bot</strong> designed to skyrocket <strong>trading volume</strong>, attract token holders, and dominate platforms like DexScreener, DexTools, and Birdeye. With a flat 4% fee and an astonishing <strong>200x volume boost</strong>, it’s the top <strong>volume bot Solana</strong> projects rely on in 2025.
+      Want to <strong>supercharge your Solana project</strong>? The <a href="https://t.me/leektradingbot" class="text-blue-400 hover:text-blue-300 underline font-semibold">Solana Volume Bot</a> is the ultimate <strong>Solana volume bot</strong> designed to skyrocket <strong>trading volume</strong>, attract token holders, and dominate platforms like DexScreener, DexTools, and Birdeye. With a flat 4% fee and an astonishing <strong>200x volume boost</strong>, it’s the top <strong>volume bot Solana</strong> projects rely on in 2025.
     </p>
     <div class="text-center mb-6">
-      <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-500 transition">Launch Your Solana Volume Boost Now! 🚀</a>
+      <a href="https://t.me/leektradingbot" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-500 transition">Launch Your Solana Volume Boost Now! 🚀</a>
     </div>
     <p class="text-gray-300 mb-6 leading-relaxed">
       In this guide, we’ll explore why the Solana Volume Bot is the best <strong>Solana volume booster</strong>, how it works, and how to set it up for instant results. Whether you’re aiming for a quick visibility spike or long-term growth, this <strong>Sol volume bot</strong> delivers unmatched value. Let’s make your Solana project trend! 🌟
@@ -171,7 +171,7 @@ slug: "solana-volume-bot"
       </div>
     </div>
     <div class="text-center">
-      <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-500 transition">Start Boosting Your Solana Volume! 📈</a>
+      <a href="https://t.me/leektradingbot" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-500 transition">Start Boosting Your Solana Volume! 📈</a>
     </div>
   </section>
 
@@ -212,7 +212,7 @@ slug: "solana-volume-bot"
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">1. Access the Bot</h3>
         <p class="text-gray-300 leading-relaxed">
-          Open the <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:text-blue-300 underline">Solana Volume Bot</a> on Telegram—no downloads needed!
+          Open the <a href="https://t.me/leektradingbot" class="text-blue-400 hover:text-blue-300 underline">Solana Volume Bot</a> on Telegram—no downloads needed!
         </p>
       </div>
       <div>
@@ -266,7 +266,7 @@ slug: "solana-volume-bot"
         🔥 <strong>Limited Offer:</strong> Get 15% extra volume on your first Solana campaign!
       </p>
       <p class="text-gray-300 mt-3">
-        Start now at <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:text-blue-300 underline">Solana Volume Bot</a>! 📈
+        Start now at <a href="https://t.me/leektradingbot" class="text-blue-400 hover:text-blue-300 underline">Solana Volume Bot</a>! 📈
       </p>
     </div>
   </section>
@@ -322,7 +322,7 @@ slug: "solana-volume-bot"
       </div>
     </div>
     <div class="text-center mt-6">
-      <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-500 transition">Join the Referral Program! 💼</a>
+      <a href="https://t.me/leektradingbot" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-500 transition">Join the Referral Program! 💼</a>
     </div>
   </section>
 
@@ -468,7 +468,7 @@ slug: "solana-volume-bot"
       Ready to make your Solana project a star? The <strong>Solana Volume Bot</strong> is the best <strong>Solana volume bot</strong> for <strong>200x volume boosts</strong>, trending status, and new holders. Don’t wait—start your <strong>Sol volume bot</strong> campaign now! 🌕🚀
     </p>
     <div class="text-center mt-6">
-      <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-500 transition">Boost Your Solana Project Now! 🚀</a>
+      <a href="https://t.me/leektradingbot" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-500 transition">Boost Your Solana Project Now! 🚀</a>
     </div>
     <p class="text-gray-300 mt-6">
       Explore more tools for your crypto journey on our <a href="https://www.solanaholderbot.com/blog" class="text-blue-400 hover:text-blue-300 underline">blog</a>, including guides on the <a href="https://www.solanaholderbot.com/blog/solana-holder-bot" class="text-blue-400 hover:text-blue-300 underline">Solana Holder Bot</a>, <a href="https://www.solanaholderbot.com/blog/bnb-volume-bot" class="text-blue-400 hover:text-blue-300 underline">BNB Volume Bot</a>, <a href="https://www.solanaholderbot.com/blog/ton-volume-bot" class="text-blue-400 hover:text-blue-300 underline">TON Volume Bot</a>, and <a href="https://www.solanaholderbot.com/blog/eth-volume-bot" class="text-blue-400 hover:text-blue-300 underline">ETH Volume Bot</a>.

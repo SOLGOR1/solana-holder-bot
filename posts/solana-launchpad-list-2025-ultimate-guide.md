@@ -74,11 +74,11 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
   <div class="relative z-10">
     <h1 class="text-5xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">Launch Your Solana Token</h1>
     <p class="text-lg md:text-xl mb-10 leading-relaxed max-w-4xl mx-auto font-light">
-      with our definitive guide to the top 20 launchpads in 2025. Compare costs, features, and security to find your perfect platform. Amplify your launch with <a href="https://t.me/Degen_wg_bot" class="text-blue-300 font-semibold hover:underline">Solana Holder Bot</a> for a thriving community and <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-300 font-semibold hover:underline">Solana Volume Bot</a> to dominate <a href="https://dexscreener.com" class="text-blue-300 hover:underline">DexScreener</a> rankings—your journey to viral success and exchange listings begins now!
+      with our definitive guide to the top 20 launchpads in 2025. Compare costs, features, and security to find your perfect platform. Amplify your launch with <a href="https://t.me/Degen_wg_bot" class="text-blue-300 font-semibold hover:underline">Solana Holder Bot</a> for a thriving community and <a href="https://t.me/leektradingbot" class="text-blue-300 font-semibold hover:underline">Solana Volume Bot</a> to dominate <a href="https://dexscreener.com" class="text-blue-300 hover:underline">DexScreener</a> rankings—your journey to viral success and exchange listings begins now!
     </p>
     <div class="flex flex-col md:flex-row justify-center gap-4">
       <a href="https://t.me/Degen_wg_bot" class="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-blue-600 transition duration-300 font-semibold text-lg shadow-md">Boost Holders Now</a>
-      <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="bg-gradient-to-r from-teal-600 to-teal-500 text-white px-8 py-4 rounded-full hover:from-teal-700 hover:to-teal-600 transition duration-300 font-semibold text-lg shadow-md">Spike Volume Now</a>
+      <a href="https://t.me/leektradingbot" class="bg-gradient-to-r from-teal-600 to-teal-500 text-white px-8 py-4 rounded-full hover:from-teal-700 hover:to-teal-600 transition duration-300 font-semibold text-lg shadow-md">Spike Volume Now</a>
       <a href="#comparison" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-blue-900 transition duration-300 font-semibold text-lg shadow-md">View Launchpad Comparison</a>
     </div>
   </div>
@@ -350,7 +350,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
   <p class="text-gray-400 text-sm mt-2 italic">Pump’s intuitive interface for launching Solana tokens.</p>
 </div>
 <div class="callout bg-blue-900 text-white p-6 rounded-lg mb-12 shadow-md border-l-4 border-blue-500">
-  <p class="text-lg font-semibold"><strong>Pro Tip</strong>: Launch on <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a> for unmatched reach, and use <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:underline">Solana Volume Bot</a> to trend instantly!</p>
+  <p class="text-lg font-semibold"><strong>Pro Tip</strong>: Launch on <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a> for unmatched reach, and use <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> to trend instantly!</p>
 </div>
 
 <div class="section-divider border-t border-gray-700 my-8"></div>
@@ -374,14 +374,14 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
   <p class="text-lg leading-relaxed mb-4">A successful launch on <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a> or <a href="https://believe.app" class="text-blue-400 hover:underline">Believe</a> is just the start. To stand out in Solana’s crowded ecosystem, use these strategies:</p>
   <ul class="list-disc pl-6 space-y-2 text-lg">
     <li><strong>Social Media Surge</strong>: Promote on <a href="https://x.com/solanaholderbot" class="text-blue-400 hover:underline">X</a> and <a href="https://www.reddit.com/r/solana" class="text-blue-400 hover:underline">Reddit</a> to spark organic interest.</li>
-    <li><strong>Volume Boost</strong>: Leverage <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:underline">Solana Volume Bot</a> to drive trades, boosting <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a> rankings. Start with 4 SOL.</li>
+    <li><strong>Volume Boost</strong>: Leverage <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> to drive trades, boosting <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a> rankings. Start with 4 SOL.</li>
     <li><strong>Holder Growth</strong>: Use <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> to increase holders, meeting <a href="https://coinmarketcap.com" class="text-blue-400 hover:underline">CoinMarketCap</a> listing criteria.</li>
     <li><strong>Liquidity Stability</strong>: Maintain robust pools on <a href="https://raydium.io" class="text-blue-400 hover:underline">Raydium</a> or <a href="https://meteora.ag" class="text-blue-400 hover:underline">Meteora</a>.</li>
     <li><strong>Community Engagement</strong>: Reward holders via <a href="https://letsbonk.fun" class="text-blue-400 hover:underline">LetsbonkFun</a> or engage through <a href="https://believe.app" class="text-blue-400 hover:underline">Believe</a>’s X tools.</li>
     <li><strong>Performance Tracking</strong>: Optimize with <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a> analytics, adjusting bot settings for organic patterns.</li>
     <li><strong>Transparency</strong>: Be open about bot usage to build trust, as outlined in our <a href="https://www.solanaholderbot.com/blog/solana-holder-bot" class="text-blue-400 hover:underline">holder bot guide</a>.</li>
   </ul>
-  <p class="text-lg leading-relaxed mb-4">Real-world success: A <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a> meme coin used <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:underline">Solana Volume Bot</a> to hit $150,000 daily volume and <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> to reach 1,200 holders, securing a <a href="https://coinmarketcap.com" class="text-blue-400 hover:underline">CoinMarketCap</a> listing in a week, per <a href="https://x.com/solanaholderbot" class="text-blue-400 hover:underline">X posts</a>.</p>
+  <p class="text-lg leading-relaxed mb-4">Real-world success: A <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a> meme coin used <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> to hit $150,000 daily volume and <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> to reach 1,200 holders, securing a <a href="https://coinmarketcap.com" class="text-blue-400 hover:underline">CoinMarketCap</a> listing in a week, per <a href="https://x.com/solanaholderbot" class="text-blue-400 hover:underline">X posts</a>.</p>
 </div>
 
 <div class="image-container mb-10">
@@ -389,7 +389,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
   <p class="text-gray-400 text-sm mt-2 italic">Track and optimize your token’s performance with DexScreener and bots.</p>
 </div>
 <div class="callout bg-green-900 text-white p-6 rounded-lg mb-12 shadow-md border-l-4 border-green-500">
-  <p class="text-lg font-semibold"><strong>Pro Tip</strong>: Pair <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:underline">Solana Volume Bot</a> with a major X announcement to turn volume into real investor interest!</p>
+  <p class="text-lg font-semibold"><strong>Pro Tip</strong>: Pair <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> with a major X announcement to turn volume into real investor interest!</p>
 </div>
 
 <div class="section-divider border-t border-gray-700 my-8"></div>
@@ -484,7 +484,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">How can I ensure my token gets listed after launch?</h3>
-      <p class="text-lg text-gray-300">Use <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> to increase holder count and <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:underline">Solana Volume Bot</a> to boost trading volume, meeting requirements for platforms like <a href="https://coinmarketcap.com" class="text-blue-400 hover:underline">CoinMarketCap</a> and <a href="https://www.coingecko.com" class="text-blue-400 hover:underline">CoinGecko</a>.</p>
+      <p class="text-lg text-gray-300">Use <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> to increase holder count and <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> to boost trading volume, meeting requirements for platforms like <a href="https://coinmarketcap.com" class="text-blue-400 hover:underline">CoinMarketCap</a> and <a href="https://www.coingecko.com" class="text-blue-400 hover:underline">CoinGecko</a>.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">Which launchpad offers the most features like burns and rewards?</h3>
@@ -501,7 +501,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
     <li><strong>Low Costs</strong>: Free or ~$2 token creation on leading platforms.</li>
     <li><strong>Massive Reach</strong>: <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a> attracts 572,000 users for instant exposure.</li>
     <li><strong>Advanced Features</strong>: Dynamic Bonding Curves, burns, and rewards on <a href="https://meteora.ag" class="text-blue-400 hover:underline">Meteora DBC</a> and <a href="https://letsbonk.fun" class="text-blue-400 hover:underline">LetsbonkFun</a>.</li>
-    <li><strong>Bot Amplification</strong>: Pair with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:underline">Solana Volume Bot</a> for trending and listings.</li>
+    <li><strong>Bot Amplification</strong>: Pair with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> for trending and listings.</li>
     <li><strong>Community Support</strong>: Platforms offer social media or app-based tools for post-launch tweaks.</li>
     <li><strong>Viral Potential</strong>: Sync with <a href="https://x.com/solanaholderbot" class="text-blue-400 hover:underline">X</a> campaigns for explosive hype.</li>
   </ul>
@@ -514,10 +514,10 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
 </div>
 <div class="final-cta bg-gradient-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mt-12 shadow-2xl">
   <h2 class="text-3xl font-extrabold mb-4 tracking-tight">Ready to Launch Your Solana Token to the Stars?</h2>
-  <p class="text-lg mb-8 max-w-2xl mx-auto">Launch on <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a>, amplify with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:underline">Solana Volume Bot</a>, and dominate the crypto market in 2025!</p>
+  <p class="text-lg mb-8 max-w-2xl mx-auto">Launch on <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a>, amplify with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a>, and dominate the crypto market in 2025!</p>
   <div class="flex justify-center space-x-4">
     <a href="https://t.me/Degen_wg_bot" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Boost Holders</a>
-    <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Boost Volume</a>
+    <a href="https://t.me/leektradingbot" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Boost Volume</a>
     <a href="https://www.solanaholderbot.com" class="bg-gray-700 text-white px-8 py-4 rounded-full hover:bg-gray-600 transition duration-300 font-semibold">Learn More</a>
   </div>
 </div>
