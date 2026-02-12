@@ -10,7 +10,6 @@ import FAQs from './components/FAQs';
 import Navbar from './components/Navbar';
 import Script from 'next/script';
 import Footer from './components/Footer';
-import WhySolanaHolderBot from './components/WhySolanaHolderBot';
 import BlogSnippet from './components/BlogSnippet';
 import { blogPosts } from './data/blogs';
 import SupportedPlatforms from './components/SupportedPlatforms';

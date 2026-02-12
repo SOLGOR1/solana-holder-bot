@@ -19,9 +19,9 @@ export default function Disclaimer() {
         <p className="text-gray-600 text-[10px] leading-tight max-w-4xl mx-auto">
           Solana Holder Bot and Solana Volume Bot is an automated trading simulation tool intended solely for testing and development purposes. It must not be used for live projects, public token launches, mainnet deployments, or any use case involving real users, public investors, or financial transactions. Use is permitted only in private liquidity pools for internal development or testing.
           <br /><br />
-          Users are solely responsible for disclosing the tool's intended purpose to any collaborators, partners, or third parties, and for ensuring its deployment does not misrepresent functionality or mislead others. Users must comply with all applicable laws and regulations relating to automated trading, financial activity, and cryptocurrency.
+          Users are solely responsible for disclosing the tool&apos;s intended purpose to any collaborators, partners, or third parties, and for ensuring its deployment does not misrepresent functionality or mislead others. Users must comply with all applicable laws and regulations relating to automated trading, financial activity, and cryptocurrency.
           <br /><br />
-          All use is at the user's own risk. Solana Holder Bot, its creators, operators, distributors, and affiliates expressly disclaim all liability for any misuse, misrepresentation, damages, losses, penalties, or consequences, whether legal, financial, or reputational, arising from use of the Service.
+          All use is at the user&apos;s own risk. Solana Holder Bot, its creators, operators, distributors, and affiliates expressly disclaim all liability for any misuse, misrepresentation, damages, losses, penalties, or consequences, whether legal, financial, or reputational, arising from use of the Service.
           <br /><br />
           By using Solana Holder Bot or the Solana Volume Bot, you agree to the{' '}
           <button

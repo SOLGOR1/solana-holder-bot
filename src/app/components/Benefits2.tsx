@@ -1,6 +1,6 @@
 "use client";
 
-import { FaChartLine, FaShieldAlt, FaRocket, FaCoins, FaUsers, FaBolt, FaRobot, FaWallet, FaLock, FaExchangeAlt } from 'react-icons/fa';
+import { FaChartLine, FaShieldAlt, FaRocket, FaCoins, FaUsers, FaBolt, FaRobot, } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 

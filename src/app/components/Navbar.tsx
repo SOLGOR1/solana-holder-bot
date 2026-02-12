@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { FaTelegramPlane, FaChevronDown, FaTimes } from "react-icons/fa";
+import { FaTelegramPlane, FaChevronDown, } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   HiHome,

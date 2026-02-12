@@ -1,5 +1,5 @@
 // src/app/blog/[slug]/page.tsx (Server Component)
-import { blogPosts, BlogPost } from "../../data/blogs";
+import { blogPosts } from "../../data/blogs";
 import Navbar from "../../components/Navbar";
 import BlogPostContent from "../../components/BlogPostContent";
 import { notFound } from "next/navigation";

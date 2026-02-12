@@ -88,7 +88,7 @@ export default function Widget1() {
               <div className="flex-1">
                 <p className="font-semibold text-white">Support</p>
                 <p className="text-white leading-relaxed mt-2">
-                  Need help? Let's Chat!
+                  Need help? Let&apos;s Chat!
                 </p>
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function Widget1() {
                   <div>
                     <p className="text-sm text-gray-400 mb-1">Support</p>
                     <div className="bg-white/10 backdrop-blur-md rounded-3xl px-5 py-4 text-white max-w-xs">
-                      GM! Let's chat on Telegram. I'm here to help! 🤜🤛
+                      GM! Let&apos;s chat on Telegram. I&apos;m here to help! 🤜🤛
                     </div>
                   </div>
                 </div>
