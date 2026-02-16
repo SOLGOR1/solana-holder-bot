@@ -38,11 +38,11 @@ export const metadata: Metadata = {
     title: "Solana Volume Bot - Boost SOL Stats & Holders",
     description:
       "Skyrocket your Solana token with Solana Volume Bot, the ultimate SOL volume booster for organic holders and volume in 2026.",
-    url: "https://solanaholderbot.com",
+    url: "https://www.solanaholderbot.com",
     type: "website",
     images: [
       {
-        url: "https://solanaholderbot.com/og-image.jpg",
+        url: "https://www.solanaholderbot.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Solana Volume Bot dashboard boosting token stats",
@@ -56,10 +56,10 @@ export const metadata: Metadata = {
     title: "Solana Volume Bot - Boost SOL Stats & Holders",
     description:
       "Drive organic holders and volume with Solana Volume Bot, the top SOL volume booster in 2026.",
-    images: "https://solanaholderbot.com/og-image.jpg",
+    images: "https://www.solanaholderbot.com/og-image.jpg",
   },
   alternates: {
-    canonical: "https://solanaholderbot.com",
+    canonical: "https://www.solanaholderbot.com",
   },
   robots: "index, follow",
 };
