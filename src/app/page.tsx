@@ -15,60 +15,63 @@ import { blogPosts } from './data/blogs';
 import SupportedPlatforms from './components/SupportedPlatforms';
 import Customer from './components/Customer';
 import Disclaimer from './components/Disclaimer';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Solana Volume Bot - Boost SOL Stats & Holders",
+  description:
+    "Maximize your Solana token with Solana Volume Bot, the top SOL volume booster. Drive organic holders and stats with our moonshot volume bot in 2026.",
+  keywords: [
+    "solana volume bot",
+    "sol volume bot",
+    "solana volume booster",
+    "volume bot solana",
+    "moonshot volume bot",
+    "volume solana",
+    "sol volume booster",
+    "solana stats boost",
+    "sol stats boost",
+    "solana holder boost",
+    "sol holder boost",
+  ],
+  openGraph: {
+    title: "Solana Volume Bot - Boost SOL Stats & Holders",
+    description:
+      "Skyrocket your Solana token with Solana Volume Bot, the ultimate SOL volume booster for organic holders and volume in 2026.",
+    url: "https://solanaholderbot.com",
+    type: "website",
+    images: [
+      {
+        url: "https://solanaholderbot.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Solana Volume Bot dashboard boosting token stats",
+      },
+    ],
+    siteName: "Solana Volume Bot",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@solanaholderbot",
+    title: "Solana Volume Bot - Boost SOL Stats & Holders",
+    description:
+      "Drive organic holders and volume with Solana Volume Bot, the top SOL volume booster in 2026.",
+    images: "https://solanaholderbot.com/og-image.jpg",
+  },
+  alternates: {
+    canonical: "https://solanaholderbot.com",
+  },
+  robots: "index, follow",
+};
 
 export default function Home() {
-  const canonicalUrl = 'https://www.solanaholderbot.com';
-  const ogImageUrl = '/og-image.jpg'; // Points to public/og-image.jpg
-  const logoUrl = '/logo.png'; // Points to public/logo.png
+  const canonicalUrl = "https://www.solanaholderbot.com";
+  const ogImageUrl = "/og-image.jpg";
+  const logoUrl = "/logo.png";
 
   return (
     <>
-      {/* SEO Meta Tags – im App Router besser über metadata, aber Head funktioniert noch */}
-      <head>
-        <title>Solana Volume Bot - Boost SOL Stats & Holders</title>
-        <meta
-          name="description"
-          content="Maximize your Solana token with Solana Volume Bot, the top SOL volume booster. Drive organic holders and stats with our moonshot volume bot in 2025."
-        />
-        <meta
-          name="keywords"
-          content="solana volume bot, sol volume bot, solana volume booster, volume bot solana, moonshot volume bot, volume solana, sol volume booster, solana stats boost, sol stats boost, solana holder boost, sol holder boost"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="$LEEK Team" />
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href={canonicalUrl} />
-        {/* Open Graph Tags */}
-        <meta property="og:title" content="Solana Volume Bot - Boost SOL Stats & Holders" />
-        <meta
-          property="og:description"
-          content="Skyrocket your Solana token with Solana Volume Bot, the ultimate SOL volume booster for organic holders and volume in 2025."
-        />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${canonicalUrl}${ogImageUrl}`} />
-        <meta property="og:image:alt" content="Solana Volume Bot dashboard boosting token stats" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:site_name" content="Solana Volume Bot" />
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@solanaholderbot" />
-        <meta name="twitter:title" content="Solana Volume Bot - Boost SOL Stats & Holders" />
-        <meta
-          name="twitter:description"
-          content="Drive organic holders and volume with Solana Volume Bot, the top SOL volume booster in 2025."
-        />
-        <meta name="twitter:image" content={`${canonicalUrl}${ogImageUrl}`} />
-        <meta name="twitter:image:alt" content="Solana Volume Bot dashboard boosting token stats" />
-        {/* Telegram/Discord Compatibility */}
-        <meta name="telegram:image" content={`${canonicalUrl}${ogImageUrl}`} />
-        <meta name="discord:image" content={`${canonicalUrl}${ogImageUrl}`} />
-      </head>
-
-      {/* Schema Markup direkt im Body (Next.js erlaubt script tags) */}
+      {/* Schema Markup & Google Analytics – bleiben im Body */}
       <Script
         id="website-schema"
         type="application/ld+json"
@@ -79,26 +82,27 @@ export default function Home() {
             "@type": "WebSite",
             "name": "Solana Volume Bot",
             "url": canonicalUrl,
-            "description": "Maximize your Solana token with Solana Volume Bot, the leading SOL volume booster for 2025.",
+            "description": "Maximize your Solana token with Solana Volume Bot, the leading SOL volume booster for 2026.",
             "publisher": {
               "@type": "Organization",
               "name": "$LEEK Team",
               "logo": {
                 "@type": "ImageObject",
-                "url": `${canonicalUrl}${logoUrl}`
-              }
+                "url": `${canonicalUrl}${logoUrl}`,
+              },
             },
             "potentialAction": {
               "@type": "SearchAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": `${canonicalUrl}/search?q={search_term_string}`
+                "urlTemplate": `${canonicalUrl}/search?q={search_term_string}`,
               },
-              "query-input": "required name=search_term_string"
-            }
+              "query-input": "required name=search_term_string",
+            },
           }),
         }}
       />
+
       <Script
         id="breadcrumb-schema"
         type="application/ld+json"
@@ -112,9 +116,9 @@ export default function Home() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": canonicalUrl
-              }
-            ]
+                "item": canonicalUrl,
+              },
+            ],
           }),
         }}
       />
@@ -133,7 +137,7 @@ export default function Home() {
         `}
       </Script>
 
-      {/* Bing Webmaster Tools Verification – Placeholder */}
+      {/* Bing Verification Placeholder */}
       <Script id="bing-verification" strategy="afterInteractive">
         {`
           // Replace with your actual Bing/GTM code if needed
