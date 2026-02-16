@@ -136,10 +136,10 @@ export default function BlogOverview() {
               Ready to Launch Your Solana Project?
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
-              Our blog is your go-to resource for mastering Solana memecoin launches in 2026 – from generating permanent holders to authentic volume boosting on Pump.fun, PumpSwap, Raydium, and DexScreener.
+              Our blog is your go-to resource for mastering Solana memecoin launches in 2026, from generating permanent holders to authentic volume boosting on Pump.fun, PumpSwap, Raydium, and DexScreener.
             </p>
             <p className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Explore our powerful Telegram bots and detailed documentation to give your token the edge it needs. Whether you're pushing bonding curves, building holder distribution, or trending on major platforms, we have the tools trusted by over 2,100 projects.
+              Explore our powerful Telegram bots and detailed documentation to give your token the edge it needs. Whether you&apos;re pushing bonding curves, building holder distribution, or trending on major platforms, we have the tools trusted by over 2,100 projects.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-8">
