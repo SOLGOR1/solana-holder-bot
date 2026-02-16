@@ -66,12 +66,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const canonicalUrl = "https://www.solanaholderbot.com";
-  const ogImageUrl = "/og-image.jpg";
   const logoUrl = "/logo.png";
 
   return (
     <>
-      {/* Schema Markup & Google Analytics – bleiben im Body */}
+      {/* Schema Markup & Google Analytics */}
       <Script
         id="website-schema"
         type="application/ld+json"
