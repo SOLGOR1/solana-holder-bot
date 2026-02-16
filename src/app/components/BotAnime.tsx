@@ -224,7 +224,7 @@ export default function BotAnime() {
       >
         <Image
           src={currentImage}
-          alt="Solana Holder Bot Mascot"
+          alt="Solana Holder Bot Mascot, Authentic Holder and Volume Booster Animation"
           width={400}
           height={400}
           className="w-full h-auto drop-shadow-2xl"
