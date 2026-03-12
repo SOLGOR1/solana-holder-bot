@@ -134,6 +134,14 @@ export default function Footer() {
             />
             </a>
 
+            <a href="https://uno.directory" target="_blank" rel="noopener">
+              <Image src="https://uno.directory/uno-directory.svg" 
+                alt="Listed on Uno Directory" 
+                width={120} 
+                height={30} 
+                className="h-7 w-auto" />
+            </a>
+
             <a href="https://www.aitoolzdir.com" target="_blank" >AI Toolz Dir </a>
 
             {/* ← Neue Backlink-Banner einfach hier rein */}
