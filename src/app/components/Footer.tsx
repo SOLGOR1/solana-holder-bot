@@ -49,6 +49,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        
 
           {/* Bots Links */}
           <div className="text-center md:text-left">
@@ -77,58 +78,101 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social Icons – rechts */}
-          <div className="flex justify-center md:justify-end gap-5">
-            <a
-              href="https://x.com/solanaholderbot"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-cyan-500/40 transition-all duration-300"
-            >
-              <FaXTwitter className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
-              <motion.div
-                className="absolute inset-0 rounded-2xl bg-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                initial={{ scale: 0.8 }}
-                whileHover={{ scale: 1.2 }}
-              />
-            </a>
+{/* Social Icons + Verification Banners – rechts */}
+<div className="flex flex-col items-center md:items-end gap-8">
+  
+  {/* ====================== SOCIAL ICONS ====================== */}
+  {/* Hier kommen die Social-Icons – wrappt automatisch in 2. Reihe bei mehr Icons */}
+  <div className="flex justify-center md:justify-end gap-5 flex-wrap">
+    
+    {/* X / Twitter */}
+    <a
+      href="https://x.com/solanaholderbot"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-cyan-500/40 transition-all duration-300"
+    >
+      <FaXTwitter className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+      <motion.div
+        className="absolute inset-0 rounded-2xl bg-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        initial={{ scale: 0.8 }}
+        whileHover={{ scale: 1.2 }}
+      />
+    </a>
 
-            <a
-              href="https://www.reddit.com/r/holana_holder_bot/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-orange-500/40 transition-all duration-300"
-            >
-              <FaRedditAlien className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors" />
-              <motion.div
-                className="absolute inset-0 rounded-2xl bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                initial={{ scale: 0.8 }}
-                whileHover={{ scale: 1.2 }}
-              />
-            </a>
+    {/* Reddit */}
+    <a
+      href="https://www.reddit.com/r/holana_holder_bot/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-orange-500/40 transition-all duration-300"
+    >
+      <FaRedditAlien className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors" />
+      <motion.div
+        className="absolute inset-0 rounded-2xl bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        initial={{ scale: 0.8 }}
+        whileHover={{ scale: 1.2 }}
+      />
+    </a>
 
-            <a
-              href="https://t.me/+3XCV3c958XwyYjE8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-emerald-500/40 transition-all duration-300"
-            >
-              <FaTelegram className="w-5 h-5 text-gray-400 group-hover:text-emerald-400 transition-colors" />
-              <motion.div
-                className="absolute inset-0 rounded-2xl bg-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                initial={{ scale: 0.8 }}
-                whileHover={{ scale: 1.2 }}
-              />
-            </a>
+    {/* Telegram */}
+    <a
+      href="https://t.me/+3XCV3c958XwyYjE8"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-emerald-500/40 transition-all duration-300"
+    >
+      <FaTelegram className="w-5 h-5 text-gray-400 group-hover:text-emerald-400 transition-colors" />
+      <motion.div
+        className="absolute inset-0 rounded-2xl bg-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        initial={{ scale: 0.8 }}
+        whileHover={{ scale: 1.2 }}
+      />
+    </a>
 
-          <a href="https://www.foundrlist.com/product/solanabots" target="_blank" rel="noopener noreferrer">
-          <img src="https://www.foundrlist.com/api/badge/solanabots" alt="Live on FoundrList" width={160} height={64} />
-          </a>
-          <a href="https://indiehunt.io/project/solana-volume-bot-boost-sol-stats-holders" target="_blank" rel="noopener">
-          <img src="https://indiehunt.io/badges/indiehunt-badge-dark.svg" alt="Featured on IndieHunt" width="265" height="58" />
-          </a>
-          </div>
-        </div>
+    {/* ← Hier einfach neue Social-Icons hinzufügen – sie rutschen automatisch in die 2. Reihe! */}
+    
+  </div>
+
+  {/* ====================== VERIFICATION BANNER ====================== */}
+  {/* Alle Banner darunter in einer eigenen Reihe – wrappt bei weiteren Bannern automatisch */}
+  <div className="flex justify-center md:justify-end gap-6 flex-wrap">
+    
+    <a href="https://www.foundrlist.com/product/solanabots" target="_blank" rel="noopener noreferrer">
+      <img 
+        src="https://www.foundrlist.com/api/badge/solanabots" 
+        alt="Live on FoundrList" 
+        width={160} 
+        height={64} 
+        className="h-6 w-auto"
+      />
+    </a>
+
+    <a href="https://indiehunt.io/project/solana-volume-bot-boost-sol-stats-holders" target="_blank" rel="noopener">
+      <img 
+        src="https://indiehunt.io/badges/indiehunt-badge-dark.svg" 
+        alt="Featured on IndieHunt" 
+        width={265} 
+        height={58} 
+        className="h-6 w-auto"
+      />
+    </a>
+
+    <a href="https://earlyhunt.com/project/solana-volume-bot-boost-sol-stats-holders" target="_blank" rel="noopener">
+      <img 
+        src="https://earlyhunt.com/badges/earlyhunt-badge-dark.svg" 
+        alt="Featured on EarlyHunt" 
+        width={265} 
+        height={58} 
+        className="h-6 w-auto"
+      />
+    </a>
+
+    {/* ← Neue Banner einfach hier reinkopieren – sie rutschen automatisch in die nächste Reihe */}
+
+  </div>
+</div>
+</div>
 
         {/* Disclaimer – sehr dezent */}
         <div className="mt-8 pt-6 border-t border-white/10 text-center">
