@@ -162,6 +162,8 @@ export default function Footer() {
             />
             </a>
 
+            <a href='https://aitooltrek.com' title='AI Tool Trek'>AI Tool Trek</a>
+
             <a href="https://www.aitoolzdir.com" target="_blank" >AI Toolz Dir </a>
 
             {/* ← Neue Backlink-Banner einfach hier rein */}
