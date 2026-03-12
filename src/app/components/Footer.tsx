@@ -115,6 +115,16 @@ export default function Footer() {
               />
             </a>
 
+            <a href="https://toolfame.com/item/solana-holder-volume-bot" target="_blank" rel="noopener noreferrer">
+             <Image 
+              src="https://toolfame.com/badge-dark.svg" 
+              alt="Featured on toolfame.com"
+              width={265} 
+              height={58} 
+              className="h-7 w-auto" 
+             />
+            </a>
+
             <a href="https://www.aitoolzdir.com" target="_blank" >AI Toolz Dir </a>
 
             {/* ← Neue Backlink-Banner einfach hier rein */}
