@@ -162,7 +162,9 @@ export default function Footer() {
             />
             </a>
 
-            <a href='https://aitooltrek.com' title='AI Tool Trek'>AI Tool Trek</a>
+            <a href='https://aitooltrek.com' title='AI Tool Trek' target='_blank'>
+              AI Tool Trek
+            </a>
 
             <a href="https://www.aitoolzdir.com" target="_blank" >AI Toolz Dir </a>
 
@@ -178,7 +180,8 @@ export default function Footer() {
 
             {/* Hover Tooltip */}
             <div className="pointer-events-none absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block w-80 bg-zinc-900/90 backdrop-blur-2xl border border-white/20 rounded-3xl p-5 text-left text-sm text-gray-300 shadow-2xl z-30">
-              <p className="font-medium">Our Domain Rating: <span className="text-cyan-400">29</span></p>
+              
+              <a href="https://frogdr.com/solanaholderbot.com?utm_source=solanaholderbot.com" target="_blank"><Image src="https://frogdr.com/solanaholderbot.com/badge-dark-sm.svg?round=1" alt="Monitor&#0032;your&#0032;Domain&#0032;Rating&#0032;with&#0032;FrogDR" width={249} height={36} /></a>
               <p className="mt-3 leading-relaxed">
                 We offer mutual Do-Follow backlinks! Looking for websites with DR 20-90, preferably crypto, blockchain or Solana related.
               </p>
