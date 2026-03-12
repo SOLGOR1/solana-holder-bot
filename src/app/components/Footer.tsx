@@ -3,6 +3,7 @@
 import { FaXTwitter, FaRedditAlien, FaTelegram } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";   // ← NEU hinzugefügt
 
 export default function Footer() {
   return (
@@ -64,37 +65,56 @@ export default function Footer() {
                 <FaTelegram className="w-5 h-5 text-gray-400 group-hover:text-emerald-400 transition-colors" />
                 <motion.div className="absolute inset-0 rounded-2xl bg-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial={{ scale: 0.8 }} whileHover={{ scale: 1.2 }} />
               </a>
-
-              {/* ← Neue Social-Icons einfach hier rein – wrappt automatisch */}
             </div>
           </div>
         </div>
 
-        {/* ====================== NEUE REIHE: ALLE BANNER + BACKLINKS ====================== */}
+        {/* ====================== BANNER + BACKLINKS REIHE ====================== */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <h4 className="text-sm font-medium text-gray-400 mb-5 uppercase tracking-wider text-center md:text-right">Featured On &amp; Backlinks</h4>
           
           <div className="flex justify-center md:justify-end gap-6 flex-wrap">
-            {/* Verification Banners */}
-            <a href="https://www.foundrlist.com/product/solanabots" target="_blank" rel="noopener noreferrer">
-              <img src="https://www.foundrlist.com/api/badge/solanabots" alt="Live on FoundrList" width={160} height={64} className="h-7 w-auto" />
+            <a href="https://foundrlist.com/product/solanabots" target="_blank" rel="noopener noreferrer">
+              <Image 
+                src="https://foundrlist.com/api/badge/solanabots" 
+                alt="Live on FoundrList" 
+                width={160} 
+                height={64} 
+                className="h-7 w-auto"
+              />
             </a>
 
             <a href="https://indiehunt.io/project/solana-volume-bot-boost-sol-stats-holders" target="_blank" rel="noopener">
-              <img src="https://indiehunt.io/badges/indiehunt-badge-dark.svg" alt="Featured on IndieHunt" width={265} height={58} className="h-7 w-auto" />
+              <Image 
+                src="https://indiehunt.io/badges/indiehunt-badge-dark.svg" 
+                alt="Featured on IndieHunt" 
+                width={265} 
+                height={58} 
+                className="h-7 w-auto"
+              />
             </a>
 
             <a href="https://earlyhunt.com/project/solana-volume-bot-boost-sol-stats-holders" target="_blank" rel="noopener">
-              <img src="https://earlyhunt.com/badges/earlyhunt-badge-dark.svg" alt="Featured on EarlyHunt" width={265} height={58} className="h-7 w-auto" />
+              <Image 
+                src="https://earlyhunt.com/badges/earlyhunt-badge-dark.svg" 
+                alt="Featured on EarlyHunt" 
+                width={265} 
+                height={58} 
+                className="h-7 w-auto"
+              />
             </a>
 
             <a href="https://www.aidirectori.es" target="_blank" rel="noopener">
-              <img src="https://cdn.aidirectori.es/ai-tools/badges/no-background.png" alt="Featured on AI Directories" width={265} height={58} className="h-7 w-auto" />
+              <Image 
+                src="https://cdn.aidirectori.es/ai-tools/badges/no-background.png" 
+                alt="Featured on AI Directories" 
+                width={265} 
+                height={58} 
+                className="h-7 w-auto"
+              />
             </a>
 
-            {/* ← HIER ALLE NEUEN BACKLINK-BANNER REINKOPIEREN (z.B. andere Crypto-Seiten) */}
-            {/* Beispiel-Platzhalter für neue Backlinks: */}
-            {/* <a href="https://deine-partner-seite.de" target="_blank"><img src="..." alt="..." className="h-14 w-auto" /></a> */}
+            {/* ← Neue Backlink-Banner einfach hier rein */}
           </div>
         </div>
 
