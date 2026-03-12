@@ -131,7 +131,7 @@ export default function Footer() {
               <p className="mt-3 leading-relaxed">
                 We offer mutual Do-Follow backlinks! Looking for websites with DR 20-90, preferably crypto, blockchain or Solana related.
               </p>
-              <p className="mt-4 text-xs text-gray-400">Just contact us and we'll set it up in 24h.</p>
+              <p className="mt-4 text-xs text-gray-400">Just contact us and we&apos;ll set it up in 24h.</p>
               <div className="mt-4 flex flex-col gap-1 text-[10px] text-cyan-400">
                 <a href="mailto:leek.sol@gmx.de" className="hover:underline">leek.sol@gmx.de</a>
                 <a href="https://t.me/+3XCV3c958XwyYjE8" className="hover:underline">Telegram Support</a>
