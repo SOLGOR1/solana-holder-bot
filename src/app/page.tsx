@@ -178,6 +178,9 @@ export default function Home() {
         </main>
         <Disclaimer />
         <Footer />
+        <a href="https://www.foundrlist.com/product/solanabots" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.foundrlist.com/api/badge/solanabots" alt="Live on FoundrList" width={160} height={64} />
+        </a>
         <Widget1 />
       </div>
     </>
