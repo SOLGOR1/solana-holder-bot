@@ -8,6 +8,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'indiehunt.io' },
       { protocol: 'https', hostname: 'earlyhunt.com' },
       { protocol: 'https', hostname: 'cdn.aidirectori.es' },
+      { protocol: 'https', hostname: 'www.uneed.best' },
     ],
   },
 };
