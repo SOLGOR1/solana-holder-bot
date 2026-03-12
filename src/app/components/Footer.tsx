@@ -124,7 +124,9 @@ export default function Footer() {
           <a href="https://www.foundrlist.com/product/solanabots" target="_blank" rel="noopener noreferrer">
           <img src="https://www.foundrlist.com/api/badge/solanabots" alt="Live on FoundrList" width={160} height={64} />
           </a>
-          
+          <a href="https://indiehunt.io/project/solana-volume-bot-boost-sol-stats-holders" target="_blank" rel="noopener">
+          <img src="https://indiehunt.io/badges/indiehunt-badge-dark.svg" alt="Featured on IndieHunt" width="265" height="58" />
+          </a>
           </div>
         </div>
 
