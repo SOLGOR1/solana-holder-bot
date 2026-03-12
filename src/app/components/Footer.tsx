@@ -125,6 +125,15 @@ export default function Footer() {
              />
             </a>
 
+            <a href="https://auraplusplus.com/projects/solana-volume-holder-growth-suite" target="_blank" rel="noopener">
+            <Image src="https://auraplusplus.com/images/badges/featured-on-dark.svg" 
+              alt="Featured on Aura++" 
+              width={265} 
+              height={58} 
+              className="h-7 w-auto" 
+            />
+            </a>
+
             <a href="https://www.aitoolzdir.com" target="_blank" >AI Toolz Dir </a>
 
             {/* ← Neue Backlink-Banner einfach hier rein */}
