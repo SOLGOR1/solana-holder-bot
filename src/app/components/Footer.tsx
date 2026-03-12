@@ -142,6 +142,16 @@ export default function Footer() {
                 className="h-7 w-auto" />
             </a>
 
+            <a href="https://www.producthunt.com/products/solana-volume-bot?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-solana-volume-bot" target="_blank" rel="noopener noreferrer">
+            <Image 
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1096594&amp;theme=dark&amp;t=1773327828427" 
+              alt="Solana Volume Bot - Unmatched volume and holder generation at the lowest price. | Product Hunt" 
+              width={250} 
+              height={54} 
+              className="h-7 w-auto" 
+            />
+            </a>
+
             <a href="https://www.aitoolzdir.com" target="_blank" >AI Toolz Dir </a>
 
             {/* ← Neue Backlink-Banner einfach hier rein */}
