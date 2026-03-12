@@ -81,6 +81,7 @@ export default function Footer() {
                 width={160} 
                 height={64} 
                 className="h-7 w-auto"
+                unoptimized
               />
             </a>
 
