@@ -12,7 +12,6 @@ import CtaVolume from '../components/solana-volume-bot/CtaVolume';
 
 
 import Script from 'next/script';
-import { motion } from 'framer-motion';   // ← Fix für die Errors!
 
 
 export default function SolanaVolumeBot() {

@@ -13,7 +13,6 @@ import FaqHolder from "../components/solana-holder-bot/FaqHolder";
 import CtaHolder from "../components/solana-holder-bot/CtaHolder";
 
 import Script from "next/script";
-import { motion } from "framer-motion";
 
 export default function SolanaHolderBot() {
   return (
