@@ -130,60 +130,106 @@ export default function BlogOverview() {
             <p className="text-center text-gray-400 text-lg">No additional posts yet. Stay tuned!</p>
           )}
 
-          {/* Erweiterte CTA unten – längerer Text, coole Buttons mit Shine-Effekt-Stil */}
-          <div className="mt-24 text-center max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Ready to Launch Your Solana Project?
-            </h2>
-            <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
-              Our blog is your go-to resource for mastering Solana memecoin launches in 2026, from generating permanent holders to authentic volume boosting on Pump.fun, PumpSwap, Raydium, and DexScreener.
-            </p>
-            <p className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Explore our powerful Telegram bots and detailed documentation to give your token the edge it needs. Whether you&apos;re pushing bonding curves, building holder distribution, or trending on major platforms, we have the tools trusted by over 2,100 projects.
-            </p>
+{/* Erweiterte CTA unten – jetzt mit Landingpage + Direkt-Launch für beide Bots */}
+<div className="mt-24 text-center max-w-5xl mx-auto">
+  <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+    Ready to Launch Your Solana Project?
+  </h2>
+  <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+    Our blog is your go-to resource for mastering Solana memecoin launches in 2026.
+  </p>
+  <p className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto">
+    Explore our powerful Telegram bots and detailed documentation to give your token the edge it needs.
+  </p>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-8">
-              {/* Holder Bot Button */}
-            <a
-              href="https://t.me/Degen_wg_bot"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative px-10 py-5 bg-cyan-600/20 backdrop-blur-md text-white font-medium rounded-2xl border border-cyan-500/30 shadow-lg overflow-hidden transition-all duration-500 hover:bg-cyan-600/30 hover:border-cyan-500/50 hover:shadow-xl"
-            >
-              <span className="relative z-10 flex items-center justify-center gap-3">
-                <FaTelegramPlane className="w-6 h-6" />
-                Solana Holder Bot
-              </span>
-            </a>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    
+    {/* === HOLDER BOT CARD === */}
+    <div className="group bg-zinc-900/70 backdrop-blur-xl border border-cyan-900/30 rounded-3xl p-8 hover:border-cyan-500/50 transition-all">
+      <div className="flex items-center justify-center gap-3 mb-6">
+        <FaTelegramPlane className="w-7 h-7 text-cyan-400" />
+        <h3 className="text-2xl font-bold text-white">Solana Holder Bot</h3>
+      </div>
 
-            <a
-              href="https://t.me/leektradingbot"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative px-10 py-5 bg-emerald-600/20 backdrop-blur-md text-white font-medium rounded-2xl border border-emerald-500/30 shadow-lg overflow-hidden transition-all duration-500 hover:bg-emerald-600/30 hover:border-emerald-500/50 hover:shadow-xl"
-            >
-              <span className="relative z-10 flex items-center justify-center gap-3">
-                <FaTelegramPlane className="w-6 h-6" />
-                Solana Volume Bot
-              </span>
-            </a>
+      <div className="flex flex-col gap-4">
+        {/* Primärer Button → Landingpage */}
+        <a
+          href="/solana-holder-bot"
+          className="group relative px-10 py-5 bg-cyan-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-cyan-500/40 shadow-lg overflow-hidden transition-all duration-500 hover:bg-cyan-600/30 hover:border-cyan-500/60 hover:shadow-xl"
+        >
+          <span className="relative z-10 flex items-center justify-center gap-3">
+            Visit Holder Bot Landingpage
+          </span>
+          <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-cyan-200/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+        </a>
 
+        {/* Sekundärer Button → Direkt Telegram */}
+        <a
+          href="https://t.me/Degen_wg_bot"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative px-10 py-4 bg-zinc-800/70 text-cyan-300 font-medium rounded-2xl border border-cyan-500/20 hover:bg-zinc-800 hover:border-cyan-400 transition-all"
+        >
+          <span className="relative z-10 flex items-center justify-center gap-3">
+            <FaTelegramPlane className="w-5 h-5" />
+            Launch Holder Bot Now
+          </span>
+        </a>
+      </div>
+    </div>
 
-              {/* Docs Button */}
-              <a
-                href="https://solana-holder-bot.gitbook.io/solana-holder-bot-docs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative px-10 py-5 bg-white/10 backdrop-blur-md text-white font-semibold rounded-2xl border border-white/20 shadow-xl overflow-hidden transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:shadow-2xl"
-              >
-                <span className="relative z-10 flex items-center justify-center gap-3">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
-                  </svg>
-                  View Documentation & Guides
-                </span>
-                <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-              </a>
+    {/* === VOLUME BOT CARD === */}
+    <div className="group bg-zinc-900/70 backdrop-blur-xl border border-emerald-900/30 rounded-3xl p-8 hover:border-emerald-500/50 transition-all">
+      <div className="flex items-center justify-center gap-3 mb-6">
+        <FaTelegramPlane className="w-7 h-7 text-emerald-400" />
+        <h3 className="text-2xl font-bold text-white">Solana Volume Bot</h3>
+      </div>
+
+      <div className="flex flex-col gap-4">
+        {/* Primärer Button → Landingpage */}
+        <a
+          href="/solana-volume-bot"
+          className="group relative px-10 py-5 bg-emerald-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-emerald-500/40 shadow-lg overflow-hidden transition-all duration-500 hover:bg-emerald-600/30 hover:border-emerald-500/60 hover:shadow-xl"
+        >
+          <span className="relative z-10 flex items-center justify-center gap-3">
+            Visit Volume Bot Landingpage
+          </span>
+          <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-emerald-200/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+        </a>
+
+        {/* Sekundärer Button → Direkt Telegram */}
+        <a
+          href="https://t.me/leektradingbot"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative px-10 py-4 bg-zinc-800/70 text-emerald-300 font-medium rounded-2xl border border-emerald-500/20 hover:bg-zinc-800 hover:border-emerald-400 transition-all"
+        >
+          <span className="relative z-10 flex items-center justify-center gap-3">
+            <FaTelegramPlane className="w-5 h-5" />
+            Launch Volume Bot Now
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* Docs Button bleibt unten – etwas kleiner */}
+  <div className="mt-12">
+    <a
+      href="https://solana-holder-bot.gitbook.io/solana-holder-bot-docs"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative inline-flex items-center gap-3 px-10 py-4 bg-white/10 backdrop-blur-md text-white font-semibold rounded-2xl border border-white/20 shadow-xl overflow-hidden transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:shadow-2xl"
+    >
+      <span className="relative z-10 flex items-center justify-center gap-3">
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
+        </svg>
+        View Documentation & Guides
+      </span>
+      <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+    </a>
+
             </div>
           </div>
         </div>

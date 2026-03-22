@@ -37,6 +37,21 @@ slug: "best-pump-fun-holder-bot-2026"
     <img src="/solhold-pump3.png" alt="Chart showing why holder count matters for best Pump.fun holder bot 2026 success on DexScreener" class="w-full h-auto rounded-lg mb-4" />
   </section>
 
+  <div className="my-10 p-6 bg-zinc-900/60 backdrop-blur-md border border-cyan-900/40 rounded-2xl">
+  <p className="text-lg text-cyan-300 font-medium mb-3">
+    Want to build exactly these permanent, rent-exempt holders in minutes?
+  </p>
+  <p className="text-gray-300 mb-4">
+    Our Solana Holder Bot landing page shows you all packages, live demos, pricing, and real 2026 project results.
+  </p>
+  <a 
+    href="/solana-holder-bot" 
+    className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold underline"
+  >
+    → Go to Solana Holder Bot overview
+  </a>
+</div>
+
   <section class="bg-gray-800 p-6 rounded-lg shadow-lg">
     <h2 class="text-2xl font-bold text-white mb-4">What Makes Solana Holder Bot the Undisputed Best Pump.fun Holder Bot in 2026?</h2>
     <p class="text-gray-300 mb-4">

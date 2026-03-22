@@ -111,6 +111,21 @@ No other tool delivers this many permanent holders at these prices. Pair with ou
 </p>
 </div>
 
+<div className="my-10 p-6 bg-zinc-900/60 backdrop-blur-md border border-cyan-900/40 rounded-2xl">
+  <p className="text-lg text-cyan-300 font-medium mb-3">
+    Want to build exactly these permanent, rent-exempt holders in minutes?
+  </p>
+  <p className="text-gray-300 mb-4">
+    Our Solana Holder Bot landing page shows you all packages, live demos, pricing, and real 2026 project results.
+  </p>
+  <a 
+    href="/solana-holder-bot" 
+    className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold underline"
+  >
+    → Go to Solana Holder Bot overview
+  </a>
+</div>
+
 <div>
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Step-by-Step: How to Get Started with SolanaHolderBot</h2>
 <p className="text-lg text-gray-300 leading-relaxed">

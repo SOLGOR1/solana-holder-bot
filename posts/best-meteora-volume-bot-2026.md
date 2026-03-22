@@ -184,6 +184,21 @@ Related guides: <a href="/blog/best-solana-trending-bot-2026" className="text-gr
 </ul>
 </div>
 
+<div className="my-10 p-6 bg-zinc-900/60 backdrop-blur-md border border-emerald-900/40 rounded-2xl">
+  <p className="text-lg text-emerald-300 font-medium mb-3">
+    Need natural, organic volume on top to climb pump.fun trending or DexScreener faster?
+  </p>
+  <p className="text-gray-300 mb-4">
+    Check out our Volume Bot page – with all modes (Fast/Medium/Slow), MEV protection, and real examples starting at 0.1 SOL.
+  </p>
+  <a 
+    href="/solana-volume-bot" 
+    className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-semibold underline"
+  >
+    → Go to Solana Volume Bot overview
+  </a>
+</div>
+
 <div>
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Frequently Asked Questions</h2>
 <div className="space-y-6">
