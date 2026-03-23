@@ -15,6 +15,29 @@ import Script from 'next/script';
 export default function SolanaVolumeBot() {
   return (
     <>
+{/* Google tag (gtag.js) event - delayed navigation helper */}
+<Script
+  id="gtag-send-event"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion_event_purchase', {
+          'event_callback': callback,
+          'event_timeout': 2000
+        });
+        return false;
+      }
+    `
+  }}
+/>
+
+
       {/* === FULL SoftwareApplication Schema (Rich Snippets + EEAT) === */}
       <Script
         id="schema-volume-app"
