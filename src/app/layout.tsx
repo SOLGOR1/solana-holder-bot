@@ -2,11 +2,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ReactNode } from "react";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
     default: "Solana Holder Bot – #1 Holder & Volume Bot for Solana in 2026",
-    template: "%s | Solana Holder Bot", // Für Unterseiten
+    template: "%s | Solana Holder Bot",
   },
   description:
     "Solana Holder Bot is the leading all-in-one Telegram bot suite for permanent holder creation and genuine on-chain volume boosting. The fastest, cheapest, and most reliable tools to dominate DexScreener, Pump.fun, Raydium trending charts in 2026 – starting at just 0.1 SOL, no private keys required.",
@@ -76,6 +77,25 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+
+        {/* === GOOGLE ADS TAG (genau wie Google es verlangt) === */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18035540031"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-ads"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18035540031');
+            `,
+          }}
+        />
       </head>
       <body className="bg-black text-white antialiased">{children}</body>
     </html>
