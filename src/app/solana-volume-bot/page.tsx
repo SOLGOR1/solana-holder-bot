@@ -10,16 +10,14 @@ import PackageVolume from '../components/solana-volume-bot/PackageVolume';
 import FaqVolume from '../components/solana-volume-bot/FaqVolume';
 import CtaVolume from '../components/solana-volume-bot/CtaVolume';
 
-
 import Script from 'next/script';
-
 
 export default function SolanaVolumeBot() {
   return (
     <>
-      {/* Schema Markup */}
+      {/* === FULL SoftwareApplication Schema (Rich Snippets + EEAT) === */}
       <Script
-        id="schema-volume"
+        id="schema-volume-app"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -28,8 +26,136 @@ export default function SolanaVolumeBot() {
             "@type": "SoftwareApplication",
             "name": "Solana Volume Bot",
             "applicationCategory": "UtilityApplication",
-            "offers": { "@type": "Offer", "price": "0.005", "priceCurrency": "SOL" },
+            "operatingSystem": "Telegram",
+            "url": "https://www.solanaholderbot.com/solana-volume-bot",
             "description": "The strongest Solana Volume Booster 2026 for Raydium, Pump.fun & DexScreener",
+            "offers": {
+              "@type": "Offer",
+              "price": "0.005",
+              "priceCurrency": "SOL",
+              "availability": "https://schema.org/InStock"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "2100"
+            },
+            "author": {
+              "@type": "Organization",
+              "name": "Solana Holder Bot",
+              "url": "https://www.solanaholderbot.com"
+            },
+            "screenshot": "https://www.solanaholderbot.com/og-volume.jpg",
+            "featureList": [
+              "Real on-chain Jupiter trades",
+              "MEV protection",
+              "Pause anytime",
+              "100% undetectable",
+              "Token-2022 & SPL support"
+            ]
+          }),
+        }}
+      />
+
+      {/* === COMPLETE FAQPage Schema (using your exact FAQs – ready for Google rich results) === */}
+      <Script
+        id="schema-faq"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the Solana Volume Bot?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A high-performance Telegram bot that generates real, organic on-chain volume on Solana DEXs. It uses Jupiter aggregation for natural buys/sells with bullish pressure, helping tokens trend on DexScreener, Birdeye and Raydium."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the volume real and undetectable?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes – 100% on-chain trades via real wallets and Jupiter. We maintain healthy buy/sell ratios, avoid patterns and include Jito MEV protection. No fake wallets, no wash trading – fully compliant and natural-looking."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which platforms and tokens are supported?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Works natively with Raydium, Pump.fun, Meteora, Jupiter, Orca, Kamino, PumpSwap, Bonk.fun, Bags.fm and all major Solana DEXs/launchpads. Supports both SPL and Token-2022 standards."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is it safe? Do you need private keys?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Completely safe. We never ask for private keys, seed phrases or wallet connections. All actions are user-initiated via Telegram, transactions are transparent on-chain and protected by MEV shielding."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much volume can I generate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Depends on package and pool fees, but examples: 0.1 SOL → up to 30 SOL (30 min – 1 hr); 0.5 SOL → up to 150 SOL (1–3 hr); 1 SOL → up to 300 SOL (2–5 hr); 5 SOL → up to 1500 SOL (6–12 hr); 25 SOL → up to 7500 SOL (12–36 hr)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will the bot automatically cause our token price to go up?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "On its own the bot provides price-neutral volume. When combined with market buyers or in a Solana uptrend phase, the bot will help push price up with volume."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you provide custom plans?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, contact support using the Telegram bot to start developing a detailed volume strategy, for any size project and budget."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I pause, resume or withdraw funds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes – full control via Telegram at any time: pause, resume, adjust speed or withdraw remaining SOL. No lock-ins."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What payment methods are accepted?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Only SOL. Each session creates a unique one-time payment address. No wallet connections or approvals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are there any refunds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Payments are final and non-refundable due to on-chain nature. We recommend starting with small packages to test. Support handles exceptional cases individually."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How fast does volume appear on DexScreener/Birdeye?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Usually within minutes in Fast/Medium modes. Slow mode spreads it naturally over hours for more organic chart behavior."
+                }
+              }
+            ]
           }),
         }}
       />

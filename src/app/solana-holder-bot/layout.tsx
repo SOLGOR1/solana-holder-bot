@@ -3,42 +3,30 @@ import type { Metadata } from "next";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Solana Holder Bot • #1 Holder Booster Raydium • Pump.fun • DexScreener 2026",
-  description: "Solana Holder Bot – The most affordable & powerful holder booster for Raydium, Pump.fun, Meteora, and PumpSwap. Create real organic permanent holders starting at just 0.005 SOL • Live stats • Pause anytime • 100% undetectable.",
-  keywords: [
-    "solana holder bot",
-    "holder bot solana",
-    "solana holders maker",
-    "holder booster solana",
-    "increase solana holders",
-    "raydium holder bot",
-    "pump.fun holder bot",
-    "meteora holder bot",
-    "organic holders solana",
-    "permanent holders solana",
-    "cheapest solana holder bot",
-    "real holders solana",
-    "solana holder maker",
-    "boost token holders",
-    "dexscreener holders",
-    "solana holder bot 2026",
-  ],
+  title: "Solana Holder Bot 2026 • #1 Raydium & Pump.fun Holder Booster starting at 0.1 SOL",
+  description: "The cheapest and most powerful Solana Holder Bot for Raydium, Pump.fun, Meteora & PumpSwap. Create real, permanent organic holders starting at just 0.1 SOL • Pause anytime • 100% undetectable • Full MEV protection.",
+  
   openGraph: {
-    title: "Solana Holder Bot – Raydium • Pump.fun • Meteora Holder Booster 2026",
-    description: "Create real, permanent holders for your Solana token and boost stats organically starting at just 0.005 SOL. The #1 Solana Holder Bot of 2026.",
+    title: "Solana Holder Bot 2026 – Raydium & Pump.fun Holder Booster",
+    description: "Real permanent holders and social proof for your Solana token starting at 0.1 SOL. The #1 Telegram Holder Bot of 2026.",
     url: "https://www.solanaholderbot.com/solana-holder-bot",
     images: [{ url: "https://www.solanaholderbot.com/og-holder.jpg", width: 1200, height: 630 }],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solana Holder Bot • #1 Holder Booster 2026",
+    title: "Solana Holder Bot 2026 • #1 Raydium & Pump.fun Holder Booster",
     images: "https://www.solanaholderbot.com/og-holder.jpg",
   },
-  alternates: { canonical: "https://www.solanaholderbot.com/solana-holder-bot" },
-  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.solanaholderbot.com/solana-holder-bot",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function HolderLayout({ children }: { children: React.ReactNode }) {
-  // KEIN <html> und KEIN <body> – Root-Layout übernimmt alles
   return <>{children}</>;
 }
