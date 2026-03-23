@@ -168,6 +168,7 @@ export default function FaqHolder() {
           <Link href="/solana-holder-bot" className="underline">→ Solana Holder Bot</Link> | 
           <Link href="/solana-volume-bot" className="underline">→ Solana Volume Bot</Link>
         </p>
+        <p className="text-xs text-gray-500">Last updated: March 23, 2026</p>
 
         {/* Contact Support Button – jetzt Cyan */}
         <div className="text-center mt-16">

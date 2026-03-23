@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // src/components/solana-volume-bot/ModesVolume.tsx
 export default function ModesVolume() {
   return (
@@ -171,6 +173,10 @@ export default function ModesVolume() {
 
         </div>
       </div>
+      <p className="text-center text-emerald-400 mt-8">
+        Combine with the other bot for maximum results
+        <Link href="/solana-holder-bot" className="underline">→ Solana Holder Bot</Link> | 
+      </p>
     </section>
   );
 }
