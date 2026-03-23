@@ -168,6 +168,12 @@ export default function FaqVolume() {
           ))}
         </div>
 
+        <p className="text-center text-emerald-400 mt-8">
+          Need the other tool? 
+          <Link href="/solana-holder-bot" className="underline">→ Solana Holder Bot</Link> | 
+          <Link href="/solana-volume-bot" className="underline">→ Solana Volume Bot</Link>
+        </p>
+
         {/* Contact Support Button – am Ende */}
         <div className="text-center mt-16">
           <Link
