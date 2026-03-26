@@ -17,9 +17,13 @@ export default function HeroVolume() {
       }
     };
 
-    // TypeScript-kompatibler Aufruf (gtag ist global vom Google Tag)
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("event", "conversion_event_outbound_click", {
+    // TypeScript-sicher ohne "any" (vermeidet den ESLint-Fehler)
+    const win = window as Window & {
+      gtag?: (key: string, event: string, params: Record<string, unknown>) => void;
+    };
+
+    if (typeof win.gtag === "function") {
+      win.gtag("event", "conversion_event_outbound_click", {
         event_callback: callback,
         event_timeout: 2000,
         // Optional: Wert pro Bot-Start (kann später angepasst werden)
