@@ -5,6 +5,33 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function HeroVolume() {
+  // === Google Conversion Handler für den Telegram Bot Klick ===
+  const handleLaunchBot = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); // verhindert die normale Navigation
+
+    const url = "https://t.me/leektradingbot";
+
+    const callback = () => {
+      if (typeof url === "string") {
+        window.location.href = url; // öffnet den Bot erst NACH dem Conversion-Event
+      }
+    };
+
+    // TypeScript-kompatibler Aufruf (gtag ist global vom Google Tag)
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "conversion_event_outbound_click", {
+        event_callback: callback,
+        event_timeout: 2000,
+        // Optional: Wert pro Bot-Start (kann später angepasst werden)
+        // value: 5.0,
+        // currency: "EUR",
+      });
+    } else {
+      // Fallback, falls gtag noch nicht geladen ist
+      window.location.href = url;
+    }
+  };
+
   return (
     <section className="relative min-h-[70dvh] flex flex-col items-center justify-center pt-4 pb-8 text-center">
       {/* Winziger Top-Text */}
@@ -39,9 +66,10 @@ export default function HeroVolume() {
         </p>
       </div>
 
-      {/* Button */}
+      {/* Button mit Conversion-Tracking */}
       <Link
         href="https://t.me/leektradingbot"
+        onClick={handleLaunchBot}
         className="group relative mt-4 inline-flex items-center px-9 py-3 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white font-semibold text-lg rounded-2xl shadow-[0_0_35px_#34d399] hover:shadow-[0_0_55px_#67e8f9] transition-all duration-300 hover:-translate-y-0.5 active:scale-95 overflow-hidden"
       >
         Launch Volume Bot
