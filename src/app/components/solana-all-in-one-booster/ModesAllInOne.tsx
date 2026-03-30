@@ -3,14 +3,6 @@
 
 import { motion, Variants } from "framer-motion";
 
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: { 
-    opacity: 1, 
-    transition: { staggerChildren: 0.12, delayChildren: 0.15 } 
-  },
-};
-
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { 

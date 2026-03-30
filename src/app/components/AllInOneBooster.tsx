@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 import { SiTelegram } from 'react-icons/si';
-import { FaFire, FaChartLine, FaUsers, FaBolt, FaShieldAlt, FaPauseCircle, FaRobot, FaGlobe } from 'react-icons/fa';
+import { FaFire, FaChartLine, FaUsers, FaBolt, FaPauseCircle, FaRobot, FaGlobe } from 'react-icons/fa';
 
 export default function AllInOneBooster() {
   const ShineEffect = () => (
