@@ -16,6 +16,7 @@ import SupportedPlatforms from './components/SupportedPlatforms';
 import Customer from './components/Customer';
 import Disclaimer from './components/Disclaimer';
 import type { Metadata } from "next";
+import AllInOneBooster from './components/AllInOneBooster';
 
 export const metadata: Metadata = {
   title: "Solana Volume Bot - Boost SOL Stats & Holders",
@@ -157,6 +158,9 @@ export default function Home() {
         </div>
         <div id="header" className="scroll-mt-16">
           <Header />
+        </div>
+        <div id="all-in-one-booster" className="scroll-mt-16">
+          <AllInOneBooster />
         </div>
         <main className="flex-grow" role="main">
           <div id="benefits" className="scroll-mt-16">

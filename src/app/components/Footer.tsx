@@ -92,6 +92,16 @@ export default function Footer() {
                   Solana Volume Bot
                 </a>
               </li>
+                            <li>
+                <a
+                  href="https://t.me/sol_volume_holder_bot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-yellow-400 transition-colors"
+                >
+                  Solana Volume + Holder Bot
+                </a>
+              </li>
               <li>
                 <a
                   href="https://t.me/+3XCV3c958XwyYjE8"

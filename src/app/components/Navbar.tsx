@@ -180,33 +180,47 @@ export default function Navbar() {
             </ul>
           </div>
 
-          {/* === DEZENTE BOT-BUTTONS (neu: kompakter & eleganter) === */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="https://t.me/Degen_wg_bot"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-cyan-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-cyan-500/30 hover:bg-cyan-600/40 hover:border-cyan-500/60 transition-all duration-300 shadow-lg"
-            >
-              <span className="flex items-center gap-3 text-sm">
-                <FaTelegramPlane className="w-5 h-5" />
-                Holder Bot
-              </span>
-            </a>
+{/* === DEZENTE BOT-BUTTONS (neu: 3 Buttons – kompakt & elegant) === */}
+<div className="hidden lg:flex items-center gap-3">
+  {/* Holder Bot */}
+  <a
+    href="https://t.me/Degen_wg_bot"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2.5 bg-cyan-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-cyan-500/30 hover:bg-cyan-600/40 hover:border-cyan-500/60 transition-all duration-300 shadow-lg"
+  >
+    <span className="flex items-center gap-2 text-sm">
+      <FaTelegramPlane className="w-4 h-4" />
+      Holder Bot
+    </span>
+  </a>
 
-            <a
-              href="https://t.me/leektradingbot"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-emerald-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-emerald-500/30 hover:bg-emerald-600/40 hover:border-emerald-500/60 transition-all duration-300 shadow-lg"
-            >
-              <span className="flex items-center gap-3 text-sm">
-                <FaTelegramPlane className="w-5 h-5" />
-                Volume Bot
-              </span>
-            </a>
-          </div>
+  {/* Volume Bot */}
+  <a
+    href="https://t.me/leektradingbot"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2.5 bg-emerald-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-emerald-500/30 hover:bg-emerald-600/40 hover:border-emerald-500/60 transition-all duration-300 shadow-lg"
+  >
+    <span className="flex items-center gap-2 text-sm">
+      <FaTelegramPlane className="w-4 h-4" />
+      Volume Bot
+    </span>
+  </a>
 
+  {/* NEU: Volume + Holder Bot (Gelb) */}
+  <a
+    href="https://t.me/sol_volume_holder_bot"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2.5 bg-amber-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-amber-500/30 hover:bg-amber-600/40 hover:border-amber-500/60 transition-all duration-300 shadow-lg"
+  >
+    <span className="flex items-center gap-2 text-sm">
+      <FaTelegramPlane className="w-4 h-4" />
+      Volume + Holder
+    </span>
+  </a>
+</div>
           {/* Mobile Hamburger */}
           <button
             onClick={toggleMobileMenu}
@@ -289,32 +303,48 @@ export default function Navbar() {
                 ))}
               </ul>
 
-              {/* === Mobile Bot-Buttons (ebenfalls dezent) === */}
-              <div className="space-y-4">
-                <a
-                  href="https://t.me/Degen_wg_bot"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-6 py-3 bg-cyan-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-cyan-500/40 hover:bg-cyan-600/30 hover:border-cyan-500/60 transition-all duration-300 text-center"
-                >
-                  <span className="flex items-center justify-center gap-3 text-sm">
-                    <FaTelegramPlane className="w-5 h-5" />
-                    Holder Bot
-                  </span>
-                </a>
+{/* === Mobile Bot-Buttons (kompakt & dezent) === */}
+<div className="space-y-3">
+  {/* Holder Bot */}
+  <a
+    href="https://t.me/Degen_wg_bot"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block px-4 py-2.5 bg-cyan-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-cyan-500/40 hover:bg-cyan-600/30 hover:border-cyan-500/60 transition-all duration-300 text-center"
+  >
+    <span className="flex items-center justify-center gap-2 text-sm">
+      <FaTelegramPlane className="w-4 h-4" />
+      Holder Bot
+    </span>
+  </a>
 
-                <a
-                  href="https://t.me/leektradingbot"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-6 py-3 bg-emerald-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-emerald-500/40 hover:bg-emerald-600/30 hover:border-emerald-500/60 transition-all duration-300 text-center"
-                >
-                  <span className="flex items-center justify-center gap-3 text-sm">
-                    <FaTelegramPlane className="w-5 h-5" />
-                    Volume Bot
-                  </span>
-                </a>
-              </div>
+  {/* Volume Bot */}
+  <a
+    href="https://t.me/leektradingbot"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block px-4 py-2.5 bg-emerald-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-emerald-500/40 hover:bg-emerald-600/30 hover:border-emerald-500/60 transition-all duration-300 text-center"
+  >
+    <span className="flex items-center justify-center gap-2 text-sm">
+      <FaTelegramPlane className="w-4 h-4" />
+      Volume Bot
+    </span>
+  </a>
+
+  {/* NEU: Volume + Holder Bot (Gelb) */}
+  <a
+    href="https://t.me/sol_volume_holder_bot"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block px-4 py-2.5 bg-amber-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-amber-500/40 hover:bg-amber-600/30 hover:border-amber-500/60 transition-all duration-300 text-center"
+  >
+    <span className="flex items-center justify-center gap-2 text-sm">
+      <FaTelegramPlane className="w-4 h-4" />
+      Volume + Holder
+    </span>
+  </a>
+</div>
+
             </div>
           </motion.div>
         )}
