@@ -106,11 +106,9 @@ export default function FaqAllInOne() {
 
         <p className="text-center text-amber-400 mt-8">
           Need more help?
-          <p><Link href="https://t.me/+3XCV3c958XwyYjE8" className="underline">→ Contact Support</Link></p> 
-          
-          <p><Link href="https://t.me/Degen_wg_bot" className="underline">→ Holder Bot</Link></p>
-          
-          <p><Link href="https://t.me/leektradingbot" className="underline">→ Volume Bot</Link></p>
+          <Link href="https://t.me/+3XCV3c958XwyYjE8" className="underline">→ Contact Support</Link> |     
+          <Link href="https://t.me/Degen_wg_bot" className="underline">→ Holder Bot</Link> |  
+          <Link href="https://t.me/leektradingbot" className="underline">→ Volume Bot</Link> |  
           
         </p>
         <p className="text-xs text-gray-500 text-center mt-2">Last updated: March 30, 2026</p>
