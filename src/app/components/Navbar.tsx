@@ -13,6 +13,9 @@ import {
   HiChatAlt2,
   HiQuestionMarkCircle,
   HiNewspaper,
+  HiTrendingUp,
+  HiUsers,
+  HiSparkles,
 } from "react-icons/hi";
 
 const mainLinks = [
@@ -29,8 +32,9 @@ const moreLinks = [
 ];
 
 const botLinks = [
-  { name: "Solana Volume Bot", href: "/solana-volume-bot", icon: HiChartBar },
-  { name: "Solana Holder Bot", href: "/solana-holder-bot", icon: HiHome },
+  { name: "Solana Volume Bot", href: "/solana-volume-bot", icon: HiTrendingUp },
+  { name: "Solana Holder Bot", href: "/solana-holder-bot", icon: HiUsers },
+  { name: "Solana All-in-One Booster", href: "/solana-all-in-one-booster", icon: HiSparkles },
 ];
 
 export default function Navbar() {
