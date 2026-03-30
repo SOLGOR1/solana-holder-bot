@@ -15,13 +15,19 @@ export default function sitemap() {
   const landingPages = [
     {
       url: `${baseUrl}/solana-volume-bot`,
-      lastModified: new Date("2026-03-23"),
+      lastModified: new Date("2026-03-30"),
       changeFrequency: "weekly",
       priority: 0.95,
     },
     {
       url: `${baseUrl}/solana-holder-bot`,
-      lastModified: new Date("2026-03-23"),
+      lastModified: new Date("2026-03-30"),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/solana-all-in-one-booster`,
+      lastModified: new Date("2026-03-30"),
       changeFrequency: "weekly",
       priority: 0.95,
     },

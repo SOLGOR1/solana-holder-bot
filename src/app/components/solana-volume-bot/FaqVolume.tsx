@@ -171,7 +171,8 @@ export default function FaqVolume() {
         <p className="text-center text-emerald-400 mt-8">
           Need the other tool? 
           <Link href="/solana-holder-bot" className="underline">→ Solana Holder Bot</Link> | 
-          <Link href="/solana-volume-bot" className="underline">→ Solana Volume Bot</Link>
+          <Link href="/solana-volume-bot" className="underline">→ Solana Volume Bot</Link> |
+          <Link href="/solana-all-in-one-booster" className="underline">→ Volume & Holder Bot</Link> | 
         </p>
         <p className="text-xs text-gray-500">Last updated: March 23, 2026</p>
 

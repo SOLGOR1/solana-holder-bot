@@ -38,6 +38,11 @@ export default function Footer() {
                   Solana Holder Bot
                 </Link>
               </li>
+                            <li>
+                <Link href="/solana-all-in-one-booster" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  Solana All-in-One Booster
+                </Link>
+              </li>
 
               {/* Original Quick Links (unverändert, nur FAQs bleibt drin – wichtig für User) */}
               <li>
