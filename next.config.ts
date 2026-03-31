@@ -12,9 +12,10 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // ← NEU: Render-blocking CSS fix (Next.js 15)
   experimental: {
     inlineCss: true,
+    // ← NEU: Framer Motion & Icons optimieren (spart zusätzlich JS)
+    optimizePackageImports: ["framer-motion", "react-icons"],
   },
 };
 
