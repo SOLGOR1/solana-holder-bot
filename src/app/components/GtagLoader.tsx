@@ -1,35 +1,36 @@
+// src/app/components/GtagLoader.tsx
 "use client";
+
 import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
 
 export default function GtagLoader() {
   useEffect(() => {
-    const loadGtag = () => {
+    const timer = setTimeout(() => {
+      // GTAG Script hinzufügen
       const script = document.createElement("script");
       script.src = "https://www.googletagmanager.com/gtag/js?id=AW-18035540031";
       script.async = true;
       document.head.appendChild(script);
 
-      const inline = document.createElement("script");
-      inline.innerHTML = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-18035540031');
-      `;
-      document.head.appendChild(inline);
+      // dataLayer initialisieren
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function (...args: any[]) {
+        window.dataLayer.push(args);
+      };
 
-      window.removeEventListener("scroll", loadGtag);
-      window.removeEventListener("mousemove", loadGtag);
-      window.removeEventListener("touchstart", loadGtag);
-    };
+      window.gtag("js", new Date());
+      window.gtag("config", "AW-18035540031");
+    }, 2000);
 
-    window.addEventListener("scroll", loadGtag);
-    window.addEventListener("mousemove", loadGtag);
-    window.addEventListener("touchstart", loadGtag);
-
-    const timeout = setTimeout(loadGtag, 5000);
-    return () => clearTimeout(timeout);
+    return () => clearTimeout(timer);
   }, []);
 
-  return null; // keine UI
+  return null;
 }
