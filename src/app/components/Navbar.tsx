@@ -80,7 +80,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3" aria-label="Solana Holder Bot Home">
               <svg
                 className="w-9 h-9 text-white flex-shrink-0"
                 fill="currentColor"
