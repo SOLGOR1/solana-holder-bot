@@ -1,8 +1,8 @@
+"use client";
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
 import { ReactNode, useEffect } from "react";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
