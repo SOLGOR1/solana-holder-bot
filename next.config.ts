@@ -12,10 +12,10 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  experimental: {
-    inlineCss: true,
-    optimizePackageImports: ["framer-motion", "react-icons"], // wichtig!
-  },
+experimental: {
+  optimizePackageImports: ["framer-motion", "react-icons"],
+  inlineCss: true,
+},
 
   // ← NEU: Das ist der stärkste Hebel gegen Legacy JS
   compiler: {

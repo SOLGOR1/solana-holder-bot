@@ -11,32 +11,26 @@ const finalText = "Solana Holder & Volume Bot";
 export default function Header1() {
   return (
     <section id="header" className="relative bg-black py-2 md:py-5 overflow-hidden">
-      {/* === OPTIMIERTE HINTERGRUND-GLOWS (kein CLS, keine Hydration-Probleme) === */}
+      {/* Hintergrund-Glows – sehr sanft und performant */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Cyan Glow */}
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl will-change-transform"
-          animate={{ scale: [1, 1.06, 1] }}
-          transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 32, repeat: Infinity, ease: "easeInOut" }}
           style={{ transformOrigin: "center center" }}
         />
-
-        {/* Emerald Glow */}
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl will-change-transform"
-          animate={{ scale: [1, 0.97, 1] }}
-          transition={{ duration: 32, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ scale: [1, 0.96, 1] }}
+          transition={{ duration: 36, repeat: Infinity, ease: "easeInOut" }}
           style={{ transformOrigin: "center center" }}
         />
       </div>
 
       <div className="relative z-10 container mx-auto px-2 md:px-3">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="relative max-w-5xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl px-6 md:px-12 py-12 md:py-16 text-center"
-        >
+        {/* Hero Card – ohne äußere motion.div für besseres LCP */}
+        <div className="max-w-5xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl px-6 md:px-12 py-12 md:py-16 text-center">
+          
           {/* Top Rated Badge */}
           <div className="inline-block mb-8 px-5 py-2 bg-green-900/40 border border-green-700/50 rounded-full text-green-400 text-xs uppercase tracking-widest font-medium">
             Top Rated Bot 2026
@@ -62,12 +56,12 @@ export default function Header1() {
             </h1>
           </div>
 
-          {/* Beschreibung */}
+          {/* Beschreibung – wichtig für LCP */}
           <p className="text-base md:text-xl font-bold text-gray-100 max-w-3xl mx-auto mb-12 leading-relaxed px-4">
             Boost your Solana volume, makers, and holders with the cheapest, most organic DEX-trending bot, delivering an unmatched, user-friendly Telegram experience for effortless growth.
           </p>
 
-          {/* === HAUPT-BUTTONS (TG) === */}
+          {/* Haupt-Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
             <motion.a
               href="https://t.me/Degen_wg_bot"
@@ -80,14 +74,12 @@ export default function Header1() {
                 <FaTelegramPlane className="w-5 h-5" />
                 Launch Holder Bot
               </span>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100">
-                <motion.div
-                  className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  initial={{ x: "-100%" }}
-                  animate={{ x: "100%" }}
-                  transition={{ duration: 2, ease: "easeOut", repeat: Infinity, repeatDelay: 3 }}
-                />
-              </div>
+              <motion.div
+                className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{ duration: 2.2, ease: "easeOut", repeat: Infinity, repeatDelay: 3.5 }}
+              />
             </motion.a>
 
             <motion.a
@@ -101,19 +93,17 @@ export default function Header1() {
                 <FaTelegramPlane className="w-5 h-5" />
                 Launch Volume Bot
               </span>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100">
-                <motion.div
-                  className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  initial={{ x: "-100%" }}
-                  animate={{ x: "100%" }}
-                  transition={{ duration: 2, ease: "easeOut", repeat: Infinity, repeatDelay: 3 }}
-                />
-              </div>
+              <motion.div
+                className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{ duration: 2.2, ease: "easeOut", repeat: Infinity, repeatDelay: 3.5 }}
+              />
             </motion.a>
           </div>
 
           {/* Interne Links */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 text-sm">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 text-sm mb-6">
             <Link
               href="/solana-holder-bot"
               className="group inline-flex items-center gap-2 px-8 py-3.5 bg-white/5 hover:bg-white/10 border border-white/30 hover:border-emerald-400 rounded-2xl transition-all duration-300 hover:shadow-[0_0_25px_#10b98130] text-emerald-400 font-medium"
@@ -131,7 +121,7 @@ export default function Header1() {
             </Link>
           </div>
 
-          <p className="text-[11px] text-gray-100 mt-4">
+          <p className="text-[11px] text-gray-100">
             Detailed features, pricing &amp; real examples on the dedicated pages
           </p>
 
@@ -152,8 +142,7 @@ export default function Header1() {
               <span>We Never Ask for Private Keys</span>
             </div>
           </div>
-        </motion.div>
-
+        </div>
       </div>
     </section>
   );
