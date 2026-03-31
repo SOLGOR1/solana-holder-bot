@@ -1,3 +1,4 @@
+'use client';
 // src/app/components/GtagLoader.tsx
 import Script from "next/script";
 

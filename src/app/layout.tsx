@@ -2,10 +2,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ReactNode } from "react";
-import dynamic from "next/dynamic";
 
-// Lazy-load GTAG to avoid Server Component issues
-const GtagLoader = dynamic(() => import("./components/GtagLoader"), { ssr: false });
+// ← NEU: normaler Import (kein dynamic mehr nötig)
+import GtagLoader from "./components/GtagLoader";
 
 export const metadata: Metadata = {
   title: {
@@ -82,7 +81,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className="bg-black text-white antialiased">
         {children}
-        <GtagLoader />
+        <GtagLoader />   {/* ← bleibt gleich */}
       </body>
     </html>
   );
