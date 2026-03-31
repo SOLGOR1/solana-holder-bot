@@ -14,9 +14,16 @@ const nextConfig: NextConfig = {
 
   experimental: {
     inlineCss: true,
-    // ← NEU: Framer Motion & Icons optimieren (spart zusätzlich JS)
-    optimizePackageImports: ["framer-motion", "react-icons"],
+    optimizePackageImports: ["framer-motion", "react-icons"], // wichtig!
   },
+
+  // ← NEU: Das ist der stärkste Hebel gegen Legacy JS
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+
+  // SWC-Transpiler aggressiver machen (moderne Browser)
+  swcMinify: true,
 };
 
 export default nextConfig;
