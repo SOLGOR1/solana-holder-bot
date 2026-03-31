@@ -8,10 +8,10 @@ import { FaFire, FaChartLine, FaUsers, FaBolt, FaPauseCircle, FaRobot, FaGlobe }
 export default function AllInOneBooster() {
   const ShineEffect = () => (
     <motion.div
-      className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+      className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent"  // opacity von 20% auf 10% reduziert
       initial={{ x: "-120%" }}
       animate={{ x: "120%" }}
-      transition={{ duration: 2.8, ease: "easeOut", repeat: Infinity, repeatDelay: 3 }}
+      transition={{ duration: 3, ease: "easeOut", repeat: Infinity, repeatDelay: 4 }}
     />
   );
 

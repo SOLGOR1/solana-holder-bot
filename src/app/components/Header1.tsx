@@ -5,61 +5,38 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaTelegramPlane, FaShieldAlt } from "react-icons/fa";
 import Link from "next/link";           // ← WICHTIG: Next.js Link für interne SEO-Links
+import Image from "next/image";
 import BotAnime from "./BotAnime";
 
 const scrambleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?!@#$%^&*()_+-=[]{}|;:'\",.<>?/0123456789";
 
 const finalText = "Solana Holder & Volume Bot";
 
+// Ersetze die komplette ScrambleText-Komponente durch diese optimierte Version:
 const ScrambleText = () => {
-  const [displayText, setDisplayText] = useState(finalText.split(""));
-  const [revealedCount, setRevealedCount] = useState(finalText.length);
+  const [displayText, setDisplayText] = useState(finalText);
 
   useEffect(() => {
-    setRevealedCount(0);
-
-    let scrambleTicks = 0;
-    const maxScrambleTicks = 15;
-
-    const scrambleInterval = setInterval(() => {
-      scrambleTicks++;
+    // Nur einmalig scramble + reveal (kein Dauer-Update mehr)
+    let timeout: NodeJS.Timeout;
+    const scramble = () => {
       setDisplayText(
-        finalText.split("").map(() => scrambleChars[Math.floor(Math.random() * scrambleChars.length)])
+        finalText.split("").map(() => scrambleChars[Math.floor(Math.random() * scrambleChars.length)]).join("")
       );
+    };
 
-      if (scrambleTicks >= maxScrambleTicks) {
-        clearInterval(scrambleInterval);
+    // 3 schnelle Scrambles
+    scramble();
+    timeout = setTimeout(() => { scramble(); }, 40);
+    timeout = setTimeout(() => { setDisplayText(finalText); }, 180); // final reveal
 
-        let current = 0;
-        const revealInterval = setInterval(() => {
-          current++;
-          setRevealedCount(current);
-
-          setDisplayText(
-            finalText.split("").map((char, i) =>
-              i < current ? char : scrambleChars[Math.floor(Math.random() * scrambleChars.length)]
-            )
-          );
-
-          if (current >= finalText.length) {
-            clearInterval(revealInterval);
-          }
-        }, 50);
-      }
-    }, 50);
-
-    return () => clearInterval(scrambleInterval);
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
     <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-center">
-      {displayText.map((char, i) => (
-        <span
-          key={i}
-          className={`inline-block transition-all duration-300 ${
-            i < revealedCount ? "" : "text-cyan-500 opacity-70"
-          }`}
-        >
+      {displayText.split("").map((char, i) => (
+        <span key={i} className="inline-block">
           {char === " " ? "\u00A0" : char}
         </span>
       ))}
@@ -191,11 +168,15 @@ export default function Header1() {
           {/* Solana + Safety */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-14">
             <a href="https://solana.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-              <img
-                src="https://solana.com/src/img/branding/solanaLogo.svg"
-                alt="Powered by Solana, Solana Holder and Volume Bot"
-                className="h-10"
-              />
+          <Image
+            src="https://solana.com/src/img/branding/solanaLogo.svg"
+            alt="Powered by Solana"
+            width={140}          
+            height={40}        
+            className="h-10 w-auto"
+            priority            
+            loading="eager"
+          />
             </a>
 
             <div className="flex items-center gap-2.5 bg-green-900/40 px-5 py-2.5 rounded-full text-green-400 text-sm font-medium border border-green-700/50">

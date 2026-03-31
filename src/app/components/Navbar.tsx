@@ -192,6 +192,7 @@ export default function Navbar() {
     target="_blank"
     rel="noopener noreferrer"
     className="px-4 py-2.5 bg-cyan-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-cyan-500/30 hover:bg-cyan-600/40 hover:border-cyan-500/60 transition-all duration-300 shadow-lg"
+    aria-label="Solana Holder Bot on Telegram"
   >
     <span className="flex items-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />
@@ -205,6 +206,7 @@ export default function Navbar() {
     target="_blank"
     rel="noopener noreferrer"
     className="px-4 py-2.5 bg-emerald-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-emerald-500/30 hover:bg-emerald-600/40 hover:border-emerald-500/60 transition-all duration-300 shadow-lg"
+    aria-label="Solana Volume Bot on Telegram"
   >
     <span className="flex items-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />
@@ -218,6 +220,7 @@ export default function Navbar() {
     target="_blank"
     rel="noopener noreferrer"
     className="px-4 py-2.5 bg-amber-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-amber-500/30 hover:bg-amber-600/40 hover:border-amber-500/60 transition-all duration-300 shadow-lg"
+    aria-label="Solana Volume + Holder Bot on Telegram"
   >
     <span className="flex items-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />
@@ -229,6 +232,8 @@ export default function Navbar() {
           <button
             onClick={toggleMobileMenu}
             className="lg:hidden relative p-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all"
+            aria-label="Mobile Menü open/close"
+            aria-expanded={isMobileMenuOpen}        
           >
             <motion.svg
               className="w-8 h-8 text-white"
@@ -315,6 +320,7 @@ export default function Navbar() {
     target="_blank"
     rel="noopener noreferrer"
     className="block px-4 py-2.5 bg-cyan-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-cyan-500/40 hover:bg-cyan-600/30 hover:border-cyan-500/60 transition-all duration-300 text-center"
+    aria-label="Solana Holder Bot on Telegram"
   >
     <span className="flex items-center justify-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />
@@ -328,6 +334,7 @@ export default function Navbar() {
     target="_blank"
     rel="noopener noreferrer"
     className="block px-4 py-2.5 bg-emerald-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-emerald-500/40 hover:bg-emerald-600/30 hover:border-emerald-500/60 transition-all duration-300 text-center"
+    aria-label="Solana Volume Bot on Telegram"
   >
     <span className="flex items-center justify-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />
@@ -341,6 +348,7 @@ export default function Navbar() {
     target="_blank"
     rel="noopener noreferrer"
     className="block px-4 py-2.5 bg-amber-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-amber-500/40 hover:bg-amber-600/30 hover:border-amber-500/60 transition-all duration-300 text-center"
+    aria-label="Solana Volume + Holder Bot on Telegram"
   >
     <span className="flex items-center justify-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />

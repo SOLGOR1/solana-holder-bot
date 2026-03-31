@@ -26,6 +26,13 @@ const platforms = [
   { name: "Boop", link: "https://boop.fun/", logo: "/partners/partner18.png" },
 ];
 
+// Für bessere LCP + CLS
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function SupportedPlatforms() {
   const marqueeRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
@@ -81,45 +88,47 @@ export default function SupportedPlatforms() {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isPaused, speed]);
+}, [isPaused, speed]);
 
-  return (
+return (
     <section className="bg-black py-5">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Marquee – oben */}
-        <div className="relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
-          <div 
-            ref={marqueeRef} 
-            className="will-change-transform"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
-            <div className="marquee-inner flex whitespace-nowrap gap-20">
-              {platforms.map((platform, i) => (
-                <a
-                  key={i}
-                  href={platform.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center transition-all duration-300 hover:scale-110 flex-shrink-0"
-                >
-                  <div className="w-[50px] h-[50px] flex items-center justify-center bg-white/5 rounded-2xl">
-                    <Image
-                      src={platform.logo}
-                      alt={`${platform.name} logo`}
-                      width={50}
-                      height={50}
-                      className="max-w-full max-h-full object-contain"
-                      loading="eager"
-                    />
-                  </div>
-                </a>
-              ))}
-            </div>
+      <div className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
+        
+        <div 
+          ref={marqueeRef} 
+          className="will-change-transform"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div className="marquee-inner flex whitespace-nowrap gap-20">
+            {platforms.map((platform, i) => (
+              <a
+                key={i}
+                href={platform.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center transition-all duration-300 hover:scale-110 flex-shrink-0"
+                aria-label={`Go to the ${platform.name} website`}
+              >
+                <div className="w-[50px] h-[50px] flex items-center justify-center bg-white/5 rounded-2xl">
+                  <Image
+                    src={platform.logo}
+                    alt={`${platform.name} Logo`}
+                    width={50}
+                    height={50}
+                    className="max-w-full max-h-full object-contain"
+                    loading="eager"
+                  />
+                </div>
+              </a>
+            ))}
           </div>
         </div>
+      </div>
 
         {/* Text – darunter */}
         <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-5 mt-10">

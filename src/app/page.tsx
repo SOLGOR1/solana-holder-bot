@@ -137,6 +137,17 @@ export default function Home() {
         `}
       </Script>
 
+      {/* Füge direkt nach den bestehenden Scripts hinzu */}
+      <Script id="preload-hero" strategy="beforeInteractive">
+        {`
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.as = 'image';
+          link.href = '/logo.png';           // oder dein größtes Hero-Bild
+          document.head.appendChild(link);
+        `}
+      </Script>
+
       {/* Bing Verification Placeholder */}
       <Script id="bing-verification" strategy="afterInteractive">
         {`
