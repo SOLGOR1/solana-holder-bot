@@ -29,34 +29,34 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {/* === NEU: Beide Bot-Landingpages (aus "Our Bots" + neue Seiten) === */}
               <li>
-                <Link href="/solana-volume-bot" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/solana-volume-bot" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Solana Volume Bot landing page with features and pricing">
                   Solana Volume Bot
                 </Link>
               </li>
               <li>
-                <Link href="/solana-holder-bot" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/solana-holder-bot" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Solana Holder Bot landing page with features and pricing">
                   Solana Holder Bot
                 </Link>
               </li>
                             <li>
-                <Link href="/solana-all-in-one-booster" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/solana-all-in-one-booster" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Solana All-in-One Booster landing page with features and pricing">
                   Solana All-in-One Booster
                 </Link>
               </li>
 
               {/* Original Quick Links (unverändert, nur FAQs bleibt drin – wichtig für User) */}
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Blog">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="#faqs" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="#faqs" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Frequently Asked Questions">
                   FAQs
                 </Link>
               </li>
               <li>
-                <Link href="#guide" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="#guide" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="User Guide">
                   Guide
                 </Link>
               </li>
@@ -66,6 +66,8 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  aria-label="Documentation (GitBook)"
+
                 >
                   Docs (GitBook)
                 </a>
@@ -83,6 +85,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
+                  aria-label="Launch Solana Holder Bot on Telegram"
                 >
                   Solana Holder Bot
                 </a>
@@ -93,6 +96,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-green-400 transition-colors"
+                  aria-label="Launch Solana Volume Bot on Telegram"
                 >
                   Solana Volume Bot
                 </a>
@@ -103,6 +107,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-yellow-400 transition-colors"
+                  aria-label="Launch Solana All-in-One Booster on Telegram"
                 >
                   Solana Volume + Holder Bot
                 </a>
@@ -113,6 +118,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-emerald-400 transition-colors"
+                  aria-label="Join Telegram Support Group"
                 >
                   Telegram Support
                 </a>
@@ -134,6 +140,8 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-cyan-500/40 transition-all duration-300"
+                aria-label="Follow us on Twitter"
+
               >
                 <FaXTwitter className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                 <motion.div
@@ -149,6 +157,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-orange-500/40 transition-all duration-300"
+                aria-label="Join our Reddit Community"
               >
                 <FaRedditAlien className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors" />
                 <motion.div
@@ -164,6 +173,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-emerald-500/40 transition-all duration-300"
+                aria-label="Join our Telegram Group"
               >
                 <FaTelegram className="w-5 h-5 text-gray-400 group-hover:text-emerald-400 transition-colors" />
                 <motion.div
@@ -279,13 +289,20 @@ export default function Footer() {
               />
             </a>
 
-            <a href="https://aitooltrek.com" title="AI Tool Trek" target="_blank">
+            <a
+              href="https://aitooltrek.com"
+              aria-label="Listed on AI Tool Trek directory" 
+            >
               AI Tool Trek
             </a>
 
-            <a href="https://www.aitoolzdir.com" target="_blank">
+            <a
+              href="https://www.aitoolzdir.com"
+              aria-label="Listed on AI Toolz Dir directory"
+            >
               AI Toolz Dir
             </a>
+
           </div>
         </div>
 
