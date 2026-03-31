@@ -72,7 +72,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-2xl border-b border-white/10">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black backdrop-blur-2xl border-b border-white/10">
       {/* Firefox-Fix: 1px solider schwarzer Streifen oben */}
       <div className="absolute inset-x-0 top-0 h-px bg-black pointer-events-none" />
 
