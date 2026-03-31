@@ -171,6 +171,7 @@ export default function Guide() {
             {/* Pfeil links */}
             <motion.button
               onClick={prevStep}
+              aria-label="Previous step"
               className="text-white hover:text-blue-400 transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -183,6 +184,7 @@ export default function Guide() {
             {/* Play/Pause */}
             <motion.button
               onClick={toggleAutoPlay}
+              aria-label={autoPlay ? "Pause auto-play" : "Start auto-play"}
               className="flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white/20 hover:border-white/40 transition-all duration-300 shadow-md hover:shadow-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -202,6 +204,7 @@ export default function Guide() {
             {/* Pfeil rechts */}
             <motion.button
               onClick={nextStep}
+              aria-label="Next step"
               className="text-white hover:text-green-400 transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

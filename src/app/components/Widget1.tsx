@@ -120,6 +120,7 @@ export default function Widget1() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
+                aria-label="Close chat"
                 className="text-gray-400 hover:text-white transition"
               >
                 <FaTimes className="w-5 h-5" />
@@ -186,6 +187,7 @@ export default function Widget1() {
       {!isOpen && (
         <motion.button
           onClick={() => setIsOpen(true)}
+          aria-label="Open support chat"
           className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full shadow-2xl flex items-center justify-center"
           whileHover={{ scale: 1.15 }}
           whileTap={{ scale: 0.95 }}
