@@ -14,32 +14,49 @@ const finalText = "Solana Holder & Volume Bot";
 
 // Ersetze die komplette ScrambleText-Komponente durch diese optimierte Version:
 const ScrambleText = () => {
-  const [displayText, setDisplayText] = useState(finalText);
+  const [displayText, setDisplayText] = useState("");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Nur einmalig scramble + reveal (kein Dauer-Update mehr)
-    let timeout: NodeJS.Timeout;
+    setMounted(true);
+
     const scramble = () => {
       setDisplayText(
-        finalText.split("").map(() => scrambleChars[Math.floor(Math.random() * scrambleChars.length)]).join("")
+        finalText
+          .split("")
+          .map(
+            () =>
+              scrambleChars[
+                Math.floor(Math.random() * scrambleChars.length)
+              ]
+          )
+          .join("")
       );
     };
 
-    // 3 schnelle Scrambles
     scramble();
-    timeout = setTimeout(() => { scramble(); }, 40);
-    timeout = setTimeout(() => { setDisplayText(finalText); }, 180); // final reveal
 
-    return () => clearTimeout(timeout);
+    const t1 = setTimeout(scramble, 40);
+    const t2 = setTimeout(() => setDisplayText(finalText), 180);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
   }, []);
+
+  // ← verhindert hydration mismatch
+  if (!mounted) {
+    return (
+      <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-center">
+        {finalText}
+      </h1>
+    );
+  }
 
   return (
     <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-center">
-      {displayText.split("").map((char, i) => (
-        <span key={i} className="inline-block">
-          {char === " " ? "\u00A0" : char}
-        </span>
-      ))}
+      {displayText}
     </h1>
   );
 };
