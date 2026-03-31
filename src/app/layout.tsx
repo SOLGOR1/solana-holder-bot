@@ -1,7 +1,7 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -69,6 +69,40 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  useEffect(() => {
+    // Lazy load gtag only after user interaction
+    const loadGtag = () => {
+      const script = document.createElement("script");
+      script.src = "https://www.googletagmanager.com/gtag/js?id=AW-18035540031";
+      script.async = true;
+      document.head.appendChild(script);
+
+      const inline = document.createElement("script");
+      inline.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18035540031');
+      `;
+      document.head.appendChild(inline);
+
+      // Remove event listeners after loading
+      window.removeEventListener("scroll", loadGtag);
+      window.removeEventListener("mousemove", loadGtag);
+      window.removeEventListener("touchstart", loadGtag);
+    };
+
+    // Load on first interaction
+    window.addEventListener("scroll", loadGtag);
+    window.addEventListener("mousemove", loadGtag);
+    window.addEventListener("touchstart", loadGtag);
+
+    // Optional: fallback after 5s in case user doesn't interact
+    const timeout = setTimeout(loadGtag, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <html lang="en">
       <head>
@@ -77,25 +111,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-
-        {/* === GOOGLE ADS TAG (genau wie Google es verlangt) === */}
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18035540031"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-ads"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-18035540031');
-            `,
-          }}
-        />
       </head>
       <body className="bg-black text-white antialiased">{children}</body>
     </html>
