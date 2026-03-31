@@ -19,7 +19,6 @@ const ScrambleText = () => {
   useEffect(() => {
     setMounted(true);
 
-    // Sehr kurzer, einmaliger Scramble – kein Dauer-Loop mehr
     const scramble = () => {
       setDisplayText(
         finalText
@@ -29,7 +28,6 @@ const ScrambleText = () => {
       );
     };
 
-    // Nur 2 schnelle Scrambles + final reveal (max. 180ms)
     scramble();
     const t1 = setTimeout(scramble, 35);
     const t2 = setTimeout(() => setDisplayText(finalText), 160);
@@ -40,7 +38,6 @@ const ScrambleText = () => {
     };
   }, []);
 
-  // Sofort finalen Text rendern (verhindert LCP-Delay)
   if (!mounted) {
     return (
       <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-center">
@@ -68,20 +65,24 @@ const ShineEffect = () => (
 export default function Header1() {
   return (
     <section id="header" className="relative bg-black py-2 md:py-5 overflow-hidden">
-      {/* === OPTIMIERTE HINTERGRUND-GLOWS (CLS-FIX) === */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Cyan Glow */}
+      {/* === STARK OPTIMIERTE HINTERGRUND-GLOWS (CLS-FIX + LCP) === */}
+      {/* Neuer Wrapper mit contain: layout paint – verhindert jeglichen Layout-Shift */}
+      <div
+        className="absolute inset-0 pointer-events-none overflow-hidden"
+        style={{ contain: "layout paint" }}
+      >
+        {/* Cyan Glow – nur Opacity-Animation (kein scale mehr → kein CLS) */}
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl will-change-transform"
-          animate={{ scale: [1, 1.08, 1] }}
+          animate={{ opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
           style={{ transformOrigin: "center center" }}
         />
-        
-        {/* Emerald Glow */}
+
+        {/* Emerald Glow – nur Opacity-Animation (kein scale mehr → kein CLS) */}
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl will-change-transform"
-          animate={{ scale: [1.05, 0.98, 1.05] }}
+          animate={{ opacity: [0.65, 1, 0.65] }}
           transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
           style={{ transformOrigin: "center center" }}
         />
@@ -89,9 +90,9 @@ export default function Header1() {
 
       <div className="relative z-10 container mx-auto px-2 md:px-3">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative max-w-5xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl px-6 md:px-12 py-12 md:py-16 text-center"
         >
           {/* Top Rated Badge */}
@@ -119,7 +120,7 @@ export default function Header1() {
             </div>
           </div>
 
-          {/* Beschreibung */}
+          {/* Beschreibung – jetzt früher gerendert (LCP-Fix) */}
           <p className="text-base md:text-xl font-bold text-gray-100 max-w-3xl mx-auto mb-12 leading-relaxed px-4">
             Boost your Solana volume, makers, and holders with the cheapest, most organic DEX-trending bot, delivering an unmatched, user-friendly Telegram experience for effortless growth.
           </p>
