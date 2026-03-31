@@ -8,34 +8,21 @@ import Link from "next/link";
 import Image from "next/image";
 import BotAnime from "./BotAnime";
 
-const scrambleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?!@#$%^&*()_+-=[]{}|;:'\",.<>?/0123456789";
-
 const finalText = "Solana Holder & Volume Bot";
 
+// ScrambleText jetzt extrem schlank – rendert sofort den finalen Text (kein Scramble mehr)
 const ScrambleText = () => {
   const [displayText, setDisplayText] = useState(finalText);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    // Nur ein extrem kurzer Fake-Scramble (max. 80ms) – fast nicht spürbar
+    const timer = setTimeout(() => {
+      setDisplayText(finalText);
+    }, 80);
 
-    const scramble = () => {
-      setDisplayText(
-        finalText
-          .split("")
-          .map(() => scrambleChars[Math.floor(Math.random() * scrambleChars.length)])
-          .join("")
-      );
-    };
-
-    scramble();
-    const t1 = setTimeout(scramble, 35);
-    const t2 = setTimeout(() => setDisplayText(finalText), 160);
-
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   if (!mounted) {
@@ -65,34 +52,31 @@ const ShineEffect = () => (
 export default function Header1() {
   return (
     <section id="header" className="relative bg-black py-2 md:py-5 overflow-hidden">
-      {/* === STARK OPTIMIERTE HINTERGRUND-GLOWS (CLS-FIX + LCP) === */}
-      {/* Neuer Wrapper mit contain: layout paint – verhindert jeglichen Layout-Shift */}
-      <div
-        className="absolute inset-0 pointer-events-none overflow-hidden"
-        style={{ contain: "layout paint" }}
-      >
-        {/* Cyan Glow – nur Opacity-Animation (kein scale mehr → kein CLS) */}
+      {/* === OPTIMIERTE HINTERGRUND-GLOWS (CLS + LCP + BotAnime-Sichtbarkeit) === */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Cyan Glow */}
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl will-change-transform"
-          animate={{ opacity: [0.7, 1, 0.7] }}
-          transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ scale: [1, 1.06, 1] }}
+          transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
           style={{ transformOrigin: "center center" }}
         />
 
-        {/* Emerald Glow – nur Opacity-Animation (kein scale mehr → kein CLS) */}
+        {/* Emerald Glow */}
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl will-change-transform"
-          animate={{ opacity: [0.65, 1, 0.65] }}
-          transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ scale: [1, 0.97, 1] }}
+          transition={{ duration: 32, repeat: Infinity, ease: "easeInOut" }}
           style={{ transformOrigin: "center center" }}
         />
       </div>
 
       <div className="relative z-10 container mx-auto px-2 md:px-3">
+        {/* Haupt-Content – Animation stark beschleunigt für besseren LCP */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}  
           className="relative max-w-5xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl px-6 md:px-12 py-12 md:py-16 text-center"
         >
           {/* Top Rated Badge */}
@@ -120,7 +104,7 @@ export default function Header1() {
             </div>
           </div>
 
-          {/* Beschreibung – jetzt früher gerendert (LCP-Fix) */}
+          {/* Beschreibung – LCP-Killer */}
           <p className="text-base md:text-xl font-bold text-gray-100 max-w-3xl mx-auto mb-12 leading-relaxed px-4">
             Boost your Solana volume, makers, and holders with the cheapest, most organic DEX-trending bot, delivering an unmatched, user-friendly Telegram experience for effortless growth.
           </p>
