@@ -2,7 +2,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import { FaTelegramPlane, FaShieldAlt } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
@@ -10,49 +9,10 @@ import BotAnime from "./BotAnime";
 
 const finalText = "Solana Holder & Volume Bot";
 
-// ScrambleText jetzt extrem schlank – rendert sofort den finalen Text (kein Scramble mehr)
-const ScrambleText = () => {
-  const [displayText, setDisplayText] = useState(finalText);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    // Nur ein extrem kurzer Fake-Scramble (max. 80ms) – fast nicht spürbar
-    const timer = setTimeout(() => {
-      setDisplayText(finalText);
-    }, 80);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-center">
-        {finalText}
-      </h1>
-    );
-  }
-
-  return (
-    <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-center">
-      {displayText}
-    </h1>
-  );
-};
-
-const ShineEffect = () => (
-  <motion.div
-    className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-    initial={{ x: "-100%" }}
-    animate={{ x: "100%" }}
-    transition={{ duration: 2, ease: "easeOut", repeat: Infinity, repeatDelay: 3 }}
-  />
-);
-
 export default function Header1() {
   return (
     <section id="header" className="relative bg-black py-2 md:py-5 overflow-hidden">
-      {/* === OPTIMIERTE HINTERGRUND-GLOWS (CLS + LCP + BotAnime-Sichtbarkeit) === */}
+      {/* === OPTIMIERTE HINTERGRUND-GLOWS (kein CLS, keine Hydration-Probleme) === */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Cyan Glow */}
         <motion.div
@@ -72,11 +32,10 @@ export default function Header1() {
       </div>
 
       <div className="relative z-10 container mx-auto px-2 md:px-3">
-        {/* Haupt-Content – Animation stark beschleunigt für besseren LCP */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}  
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="relative max-w-5xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl px-6 md:px-12 py-12 md:py-16 text-center"
         >
           {/* Top Rated Badge */}
@@ -99,17 +58,17 @@ export default function Header1() {
               </svg>
             </Link>
 
-            <div className="order-1 md:order-2">
-              <ScrambleText />
-            </div>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-center">
+              {finalText}
+            </h1>
           </div>
 
-          {/* Beschreibung – LCP-Killer */}
+          {/* Beschreibung */}
           <p className="text-base md:text-xl font-bold text-gray-100 max-w-3xl mx-auto mb-12 leading-relaxed px-4">
             Boost your Solana volume, makers, and holders with the cheapest, most organic DEX-trending bot, delivering an unmatched, user-friendly Telegram experience for effortless growth.
           </p>
 
-          {/* === HAUPT-BUTTONS (TG) – bleiben für maximale Conversion === */}
+          {/* === HAUPT-BUTTONS (TG) === */}
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
             <motion.a
               href="https://t.me/Degen_wg_bot"
@@ -123,7 +82,12 @@ export default function Header1() {
                 Launch Holder Bot
               </span>
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100">
-                <ShineEffect />
+                <motion.div
+                  className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  initial={{ x: "-100%" }}
+                  animate={{ x: "100%" }}
+                  transition={{ duration: 2, ease: "easeOut", repeat: Infinity, repeatDelay: 3 }}
+                />
               </div>
             </motion.a>
 
@@ -139,12 +103,17 @@ export default function Header1() {
                 Launch Volume Bot
               </span>
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100">
-                <ShineEffect />
+                <motion.div
+                  className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  initial={{ x: "-100%" }}
+                  animate={{ x: "100%" }}
+                  transition={{ duration: 2, ease: "easeOut", repeat: Infinity, repeatDelay: 3 }}
+                />
               </div>
             </motion.a>
           </div>
 
-          {/* === NEU: STYLISH INTERNE LINKS (SEO-Boost) – direkt darunter === */}
+          {/* Interne Links */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 text-sm">
             <Link
               href="/solana-holder-bot"
@@ -163,7 +132,6 @@ export default function Header1() {
             </Link>
           </div>
 
-          {/* Kleiner Hinweis unter den Links */}
           <p className="text-[11px] text-gray-100 mt-4">
             Detailed features, pricing &amp; real examples on the dedicated pages
           </p>
