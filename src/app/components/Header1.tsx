@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaTelegramPlane, FaShieldAlt } from "react-icons/fa";
-import Link from "next/link";           // ← WICHTIG: Next.js Link für interne SEO-Links
+import Link from "next/link";
 import Image from "next/image";
 import BotAnime from "./BotAnime";
 
@@ -12,7 +12,6 @@ const scrambleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?!@#$%^&*()_+-=[]{}|;:'\",.<>?/
 
 const finalText = "Solana Holder & Volume Bot";
 
-// Ersetze die komplette ScrambleText-Komponente durch diese optimierte Version:
 const ScrambleText = () => {
   const [displayText, setDisplayText] = useState("");
   const [mounted, setMounted] = useState(false);
@@ -24,18 +23,12 @@ const ScrambleText = () => {
       setDisplayText(
         finalText
           .split("")
-          .map(
-            () =>
-              scrambleChars[
-                Math.floor(Math.random() * scrambleChars.length)
-              ]
-          )
+          .map(() => scrambleChars[Math.floor(Math.random() * scrambleChars.length)])
           .join("")
       );
     };
 
     scramble();
-
     const t1 = setTimeout(scramble, 40);
     const t2 = setTimeout(() => setDisplayText(finalText), 180);
 
@@ -45,7 +38,6 @@ const ScrambleText = () => {
     };
   }, []);
 
-  // ← verhindert hydration mismatch
   if (!mounted) {
     return (
       <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-center">
@@ -73,17 +65,24 @@ const ShineEffect = () => (
 export default function Header1() {
   return (
     <section id="header" className="relative bg-black py-2 md:py-5 overflow-hidden">
-      {/* Hintergrund unverändert */}
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
-        animate={{ scale: [1, 1.15, 1] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
-        animate={{ scale: [1.1, 0.95, 1.1] }}
-        transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
-      />
+      {/* === OPTIMIERTE HINTERGRUND-GLOWS (CLS-FIX) === */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Cyan Glow */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl will-change-transform"
+          animate={{ scale: [1, 1.08, 1] }}
+          transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+          style={{ transformOrigin: "center center" }}
+        />
+        
+        {/* Emerald Glow */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl will-change-transform"
+          animate={{ scale: [1.05, 0.98, 1.05] }}
+          transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
+          style={{ transformOrigin: "center center" }}
+        />
+      </div>
 
       <div className="relative z-10 container mx-auto px-2 md:px-3">
         <motion.div
@@ -107,7 +106,6 @@ export default function Header1() {
                 xmlns="http://www.w3.org/2000/svg"
                 aria-label="Solana Holder & Volume Bot Logo"
               >
-                {/* Dein SVG-Path bleibt gleich */}
                 <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135" />
                 <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5" />
               </svg>
@@ -184,15 +182,15 @@ export default function Header1() {
 
           {/* Solana + Safety */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-14">
-<div className="relative h-10 w-[200px]">
-  <Image
-    src="https://solana.com/src/img/branding/solanaLogo.svg"
-    alt="Powered by Solana"
-    fill
-    className="object-contain"
-    priority
-  />
-</div>
+            <div className="relative h-10 w-[200px]">
+              <Image
+                src="https://solana.com/src/img/branding/solanaLogo.svg"
+                alt="Powered by Solana"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
 
             <div className="flex items-center gap-2.5 bg-green-900/40 px-5 py-2.5 rounded-full text-green-400 text-sm font-medium border border-green-700/50">
               <FaShieldAlt className="w-5 h-5" />
