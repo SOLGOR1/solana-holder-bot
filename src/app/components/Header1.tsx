@@ -184,16 +184,15 @@ export default function Header1() {
 
           {/* Solana + Safety */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-14">
-            <a href="https://solana.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-          <Image
-            src="https://solana.com/src/img/branding/solanaLogo.svg"
-            alt="Powered by Solana"
-            width={0}
-            height={0}
-            className="h-10 w-auto"
-            priority
-          />
-            </a>
+<div className="relative h-10 w-[200px]">
+  <Image
+    src="https://solana.com/src/img/branding/solanaLogo.svg"
+    alt="Powered by Solana"
+    fill
+    className="object-contain"
+    priority
+  />
+</div>
 
             <div className="flex items-center gap-2.5 bg-green-900/40 px-5 py-2.5 rounded-full text-green-400 text-sm font-medium border border-green-700/50">
               <FaShieldAlt className="w-5 h-5" />
