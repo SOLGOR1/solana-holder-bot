@@ -241,6 +241,7 @@ export default function Navbar() {
               stroke="currentColor"
               viewBox="0 0 24 24"
               animate={isMobileMenuOpen ? "open" : "closed"}
+              initial={false}  
             >
               <motion.path variants={{ closed: { d: "M4 6h16" }, open: { d: "M6 18L18 6" } }} strokeWidth="2" strokeLinecap="round" />
               <motion.path variants={{ closed: { d: "M4 12h16", opacity: 1 }, open: { opacity: 0 } }} strokeWidth="2" strokeLinecap="round" />

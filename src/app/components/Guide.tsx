@@ -144,15 +144,17 @@ export default function Guide() {
             <div className="flex-1 bg-black p-6 md:p-8 flex justify-center items-center relative">
               {/* Cooler interner Border */}
               <div className="absolute inset-0 border border-white/5 rounded-3xl pointer-events-none"></div>
-              <Image
-                src={steps[currentStep].image}
-                alt={steps[currentStep].alt}
-                width={0}
-                height={0}
-                className="rounded-lg object-cover shadow-md h-120 w-auto"
-                unoptimized={steps[currentStep].image.endsWith('.gif')}
-                loading="lazy"
-              />
+            <Image
+              src={steps[currentStep].image}
+              alt={steps[currentStep].alt}
+              width={0}
+              height={0}
+              className="rounded-lg object-cover shadow-md h-[420px] w-auto max-w-full"  
+              unoptimized={steps[currentStep].image.endsWith('.gif')}
+              loading={currentStep === 0 ? "eager" : "lazy"}   
+              priority={currentStep === 0}                    
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
             </div>
 
             {/* Rechte Hälfte: Text-Seite – glassmorph */}
