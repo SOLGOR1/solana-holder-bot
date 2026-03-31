@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { FaTelegramPlane, FaShieldAlt } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-import BotAnime from "./BotAnime";
 
 const finalText = "Solana Holder & Volume Bot";
 
@@ -155,7 +154,6 @@ export default function Header1() {
           </div>
         </motion.div>
 
-        {/* <BotAnime /> */}
       </div>
     </section>
   );
