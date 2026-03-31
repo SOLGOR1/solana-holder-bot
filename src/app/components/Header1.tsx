@@ -13,12 +13,13 @@ const scrambleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?!@#$%^&*()_+-=[]{}|;:'\",.<>?/
 const finalText = "Solana Holder & Volume Bot";
 
 const ScrambleText = () => {
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState(finalText);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
 
+    // Sehr kurzer, einmaliger Scramble – kein Dauer-Loop mehr
     const scramble = () => {
       setDisplayText(
         finalText
@@ -28,9 +29,10 @@ const ScrambleText = () => {
       );
     };
 
+    // Nur 2 schnelle Scrambles + final reveal (max. 180ms)
     scramble();
-    const t1 = setTimeout(scramble, 40);
-    const t2 = setTimeout(() => setDisplayText(finalText), 180);
+    const t1 = setTimeout(scramble, 35);
+    const t2 = setTimeout(() => setDisplayText(finalText), 160);
 
     return () => {
       clearTimeout(t1);
@@ -38,6 +40,7 @@ const ScrambleText = () => {
     };
   }, []);
 
+  // Sofort finalen Text rendern (verhindert LCP-Delay)
   if (!mounted) {
     return (
       <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-center">
