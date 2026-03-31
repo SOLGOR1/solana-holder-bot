@@ -155,7 +155,7 @@ export default function Header1() {
           </div>
         </motion.div>
 
-        <BotAnime />
+        {/* <BotAnime /> */}
       </div>
     </section>
   );
