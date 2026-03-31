@@ -12,26 +12,16 @@ export default function sitemap() {
   };
 
   // ← NEU: Die beiden Landingpages (wichtigster Teil!)
-  const landingPages = [
-    {
-      url: `${baseUrl}/solana-volume-bot`,
-      lastModified: new Date("2026-03-30"),
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/solana-holder-bot`,
-      lastModified: new Date("2026-03-30"),
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/solana-all-in-one-booster`,
-      lastModified: new Date("2026-03-30"),
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-  ];
+const landingPages = [
+  "/solana-volume-bot",
+  "/solana-holder-bot",
+  "/solana-all-in-one-booster",
+].map((path) => ({
+  url: `${baseUrl}${path}`,
+  lastModified: new Date(),
+  changeFrequency: "weekly",
+  priority: 0.95,
+}));
 
   const blogEntries = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,

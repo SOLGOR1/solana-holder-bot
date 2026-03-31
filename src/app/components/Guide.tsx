@@ -147,9 +147,9 @@ export default function Guide() {
               <Image
                 src={steps[currentStep].image}
                 alt={steps[currentStep].alt}
-                width={250}
-                height={450}
-                className="rounded-lg object-cover shadow-md"
+                width={0}
+                height={0}
+                className="rounded-lg object-cover shadow-md h-120 w-auto"
                 unoptimized={steps[currentStep].image.endsWith('.gif')}
                 loading="lazy"
               />

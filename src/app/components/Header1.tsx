@@ -171,11 +171,10 @@ export default function Header1() {
           <Image
             src="https://solana.com/src/img/branding/solanaLogo.svg"
             alt="Powered by Solana"
-            width={140}          
-            height={40}        
+            width={0}
+            height={0}
             className="h-10 w-auto"
-            priority            
-            loading="eager"
+            priority
           />
             </a>
 
