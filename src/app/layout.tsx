@@ -1,7 +1,8 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
+import GtagLoader from "./components/GtagLoader";
 
 export const metadata: Metadata = {
   title: {
@@ -68,40 +69,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  useEffect(() => {
-    // Lazy load gtag only after user interaction
-    const loadGtag = () => {
-      const script = document.createElement("script");
-      script.src = "https://www.googletagmanager.com/gtag/js?id=AW-18035540031";
-      script.async = true;
-      document.head.appendChild(script);
-
-      const inline = document.createElement("script");
-      inline.innerHTML = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-18035540031');
-      `;
-      document.head.appendChild(inline);
-
-      // Remove event listeners after loading
-      window.removeEventListener("scroll", loadGtag);
-      window.removeEventListener("mousemove", loadGtag);
-      window.removeEventListener("touchstart", loadGtag);
-    };
-
-    // Load on first interaction
-    window.addEventListener("scroll", loadGtag);
-    window.addEventListener("mousemove", loadGtag);
-    window.addEventListener("touchstart", loadGtag);
-
-    // Optional: fallback after 5s in case user doesn't interact
-    const timeout = setTimeout(loadGtag, 5000);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <html lang="en">
       <head>
@@ -111,7 +78,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className="bg-black text-white antialiased">{children}</body>
+      <body className="bg-black text-white antialiased">
+        {children}
+        {/* Lazy load Google Ads / GTAG */}
+        <GtagLoader />
+      </body>
     </html>
   );
 }
