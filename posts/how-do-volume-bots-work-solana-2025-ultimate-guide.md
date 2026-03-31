@@ -75,16 +75,16 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
   <a href="https://t.me/leektradingbot" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Boost with Solana Volume Bot</a>
 </div>
 
-<div class="intro-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="intro-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
   <h1 class="text-3xl font-bold text-white mb-6">How Do Volume Bots Work in 2025? Your Ultimate Guide</h1>
   <p class="text-lg leading-relaxed mb-4">Imagine your Solana token <span class="text-blue-400">rocketing up DexScreener</span>, with <span class="text-blue-400">massive trading volume</span> pulling in investors like moths to a flame. In 2025, <strong>volume bots</strong> like <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> are the secret sauce for boosting token visibility and credibility on platforms like <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a> and <a href="https://coinmarketcap.com" class="text-blue-400 hover:underline">CoinMarketCap</a>.</p>
   <p class="text-lg leading-relaxed mb-4">This ultimate guide dives deep into <strong>how volume bots work</strong>, their mechanics, benefits, risks, and a step-by-step playbook to dominate the Solana ecosystem. We’ll compare top bots, share pro tips, and highlight legal pitfalls, backed by data from <a href="https://x.com/solanaholderbot" class="text-blue-400 hover:underline">X</a>, <a href="https://www.smithii.tools/en/blog/solana-volume-bot" class="text-blue-400 hover:underline">Smithii</a>, <a href="https://www.hypersol.app/volume-bot" class="text-blue-400 hover:underline">HyperSol</a>, and our <a href="https://www.solanaholderbot.com/blog" class="text-blue-400 hover:underline">blog</a>.</p>
   <p class="text-lg font-semibold text-blue-400">Ready to make your token a crypto legend? 🌟 Dive in or visit <a href="https://www.solanaholderbot.com" class="text-blue-400 hover:underline">www.solanaholderbot.com</a>!</p>
 </div>
 
-<div class="table-of-contents bg-gray-900 text-gray-200 p-6 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="table-of-contents bg-gray-900 text-gray-100 p-6 rounded-lg mb-12 shadow-md border border-gray-700">
   <h2 class="text-2xl font-bold text-white mb-4">📑 Table of Contents</h2>
-  <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-300">
+  <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-100">
     <li><a href="#what-are-volume-bots" class="text-blue-400 hover:underline flex items-center"><span class="mr-2">→</span> 1. What Are Volume Bots?</a></li>
     <li><a href="#how-they-work" class="text-blue-400 hover:underline flex items-center"><span class="mr-2">→</span> 2. How Do Volume Bots Work?</a></li>
     <li><a href="#why-use" class="text-blue-400 hover:underline flex items-center"><span class="mr-2">→</span> 3. Why Use Volume Bots?</a></li>
@@ -96,14 +96,14 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
   </ul>
 </div>
 
-<div class="why-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="why-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
   <h2 class="text-2xl font-bold text-white mb-6">Why Volume Bots Are a 2025 Must-Have</h2>
   <p class="text-lg leading-relaxed mb-4">The Solana memecoin market is a <span class="text-blue-400">cutthroat jungle</span>. With over <strong>6 million tokens</strong> launched on platforms like <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump.fun</a>, standing out demands <strong>volume</strong>, <strong>visibility</strong>, and <strong>credibility</strong>.</p>
   <p class="text-lg leading-relaxed mb-4">Volume bots like <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> can blast your token to the top of <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a>, but legal risks—like platform bans—require a smart approach. This guide is your <strong>blueprint</strong> to leverage volume bots, compare the best tools, and avoid pitfalls while building a crypto empire.</p>
   <p class="text-lg font-semibold text-blue-400">Ready to make your token a 2025 legend? Let’s dive in!</p>
 </div>
 
-<div class="infobox bg-gray-800 text-gray-200 p-6 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="infobox bg-gray-800 text-gray-100 p-6 rounded-lg mb-12 shadow-md border border-gray-700">
   <h2 class="text-2xl font-bold mb-4 text-white">📌 Quick Snapshot</h2>
   <ul class="space-y-4">
     <li class="flex items-start">
@@ -133,7 +133,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 
 ## 🌟 <span id="what-are-volume-bots">1. What Are Volume Bots?</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4"><strong>Volume bots</strong> are automated tools designed to inflate a token’s trading volume by executing a barrage of small buy and sell orders on decentralized exchanges (DEXs) like <a href="https://raydium.io" class="text-blue-400 hover:underline">Raydium</a> or <a href="https://orca.so" class="text-blue-400 hover:underline">Orca</a>. Unlike trading bots chasing profits, volume bots focus on creating the <span class="text-blue-400">illusion of high activity</span>, making tokens appear liquid and in-demand.</p>
   <p class="text-lg leading-relaxed mb-4">Why they’re huge: Solana’s blazing-fast blockchain and ultra-low fees (~$0.00025 per transaction) make it the perfect playground for volume bots. Tools like <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> can generate thousands of trades in minutes, boosting rankings on trackers like <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a>. Per <a href="https://www.smithii.tools/en/blog/solana-volume-bot" class="text-blue-400 hover:underline">Smithii</a>, 1 SOL can create over $70,000 in volume through high-frequency trades.</p>
   <p class="text-lg leading-relaxed mb-4">They’re not just hype machines—volume bots signal credibility, attract organic traders, and help meet exchange listing requirements. But they come with risks, which we’ll cover later.</p>
@@ -141,7 +141,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 
 <div class="image-container mb-10">
   <img src="/volumebot1.jpg" alt="Volume bot boosting Solana token on DexScreener" class="rounded-lg shadow-md">
-  <p class="text-gray-400 text-sm mt-2 italic">Volume bots in action, spiking token activity on DexScreener.</p>
+  <p class="text-gray-100 text-sm mt-2 italic">Volume bots in action, spiking token activity on DexScreener.</p>
 </div>
 
 <div class="callout bg-blue-900 text-white p-6 rounded-lg mb-12 shadow-md border-l-4 border-blue-500">
@@ -152,7 +152,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 
 ## ⚙️ <span id="how-they-work">2. How Do Volume Bots Work?</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">The Mechanics of Volume Bots</h3>
   <p class="text-lg leading-relaxed mb-4">Volume bots are like caffeine shots for your token’s trading activity. Here’s a detailed look at <strong>how volume bots work</strong> on Solana:</p>
   <ul class="list-disc pl-6 space-y-2 text-lg">
@@ -166,7 +166,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 
 <div class="code-block bg-gray-800 p-6 rounded-lg mb-8">
   <h3 class="text-xl font-semibold text-white mb-4">Sample Volume Bot Configuration</h3>
-  <pre class="text-gray-300"><code>
+  <pre class="text-gray-100"><code>
 {
   "tokenAddress": "YOUR_TOKEN_ADDRESS",
   "dex": "Raydium",
@@ -178,12 +178,12 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
   "maxPriceImpact": 0.1
 }
   </code></pre>
-  <p class="text-gray-400 text-sm mt-2 italic">Example JSON config for a Solana volume bot, balancing volume and stability.</p>
+  <p class="text-gray-100 text-sm mt-2 italic">Example JSON config for a Solana volume bot, balancing volume and stability.</p>
 </div>
 
 <div class="image-container mb-10">
   <img src="/volumebot2.jpg" alt="Configuring a volume bot for Solana token" class="rounded-lg shadow-md">
-  <p class="text-gray-400 text-sm mt-2 italic">Setting up a volume bot to boost your token’s activity.</p>
+  <p class="text-gray-100 text-sm mt-2 italic">Setting up a volume bot to boost your token’s activity.</p>
 </div>
 
 <div class="callout bg-green-900 text-white p-6 rounded-lg mb-12 shadow-md border-l-4 border-green-500">
@@ -194,7 +194,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 
 ## 🤖 <span id="why-use">3. Why Use Volume Bots?</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">The Power of Volume Bots</h3>
   <p class="text-lg leading-relaxed mb-4">In the wild Solana ecosystem, volume bots are your cheat code to cut through the noise. Here’s why they’re essential:</p>
   <ul class="list-disc pl-6 space-y-2 text-lg">
@@ -214,14 +214,14 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 <div class="section-divider border-t border-gray-700 my-8"></div>
 
 ##  <span id="bot-comparison">4. Comparing Top Volume Bots</span>
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Which Volume Bot Dominates in 2025?</h3>
   <p class="text-lg leading-relaxed mb-4">Picking the right volume bot is critical to skyrocketing your Solana token on <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a>. With varying performance, usability, and features, not all bots are equal. We’ve analyzed six leading Solana volume bots based on platform, volume output, fees, features (rated by stars), and ideal use case to help you choose the best tool for 2025.</p>
   <p class="text-lg leading-relaxed mb-4">The verdict? <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> takes the crown, with <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Mellow Man Hyper Volume Bot</a> as a close runner-up. Others lag behind. Let’s break it down.</p>
 </div>
 <div class="comparison-table bg-gray-800 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Volume Bot Showdown: The Ultimate Comparison</h3>
-  <table class="w-full text-lg text-gray-300 border-collapse">
+  <table class="w-full text-lg text-gray-100 border-collapse">
     <thead>
       <tr class="bg-gray-700">
         <th class="p-4 text-left">Bot</th>
@@ -238,7 +238,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
         <td class="p-4">Telegram</td>
         <td class="p-4"><span class="bg-green-700 text-white px-2 py-1 rounded">Very High</span></td>
         <td class="p-4"><span class="bg-green-700 text-white px-2 py-1 rounded">Low</span> 
-<span class="text-gray-400 text-sm">(Unused gas fees refunded)</span></td>
+<span class="text-gray-100 text-sm">(Unused gas fees refunded)</span></td>
         <td class="p-4">⭐⭐⭐⭐⭐</td>
         <td class="p-4">Beginners, rapid DexScreener trending</td>
       </tr>
@@ -285,7 +285,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
     </tbody>
   </table>
 </div>
-<div class="ranking-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="ranking-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Our Official Ranking: The Best Volume Bots of 2025</h3>
   <p class="text-lg leading-relaxed mb-4">After rigorous testing and analysis, here’s our definitive ranking of Solana volume bots for 2025, based on performance, usability, and value:</p>
   <ol class="list-decimal pl-6 space-y-4 text-lg">
@@ -302,13 +302,13 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 </div>
 <div class="image-container mb-10">
   <img src="/volumebot3.jpg" alt="Comparing Solana volume bots for token boosting" class="rounded-lg shadow-md">
-  <p class="text-gray-400 text-sm mt-2 italic">Choose the best volume bot to skyrocket your Solana token in 2025.</p>
+  <p class="text-gray-100 text-sm mt-2 italic">Choose the best volume bot to skyrocket your Solana token in 2025.</p>
 </div>
 
 <div class="section-divider border-t border-gray-700 my-8"></div>
 
 ##  <span id="setup-guide">5. Step-by-Step Setup Guide</span>
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-6">How to Deploy a Volume Bot</h3>
   <p class="text-lg leading-relaxed mb-6">Ready to supercharge your Solana token’s volume and climb the <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a> ranks? Setting up a volume bot is straightforward with the right steps. Follow this detailed guide to deploy a volume bot on Solana, and take your token to the moon!</p>
   <ol class="list-decimal pl-6 space-y-4 text-lg">
@@ -320,13 +320,13 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
     <li><strong>Scale Strategically</strong>: Gradually increase your SOL budget for more volume, or pair with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> to boost both volume and holder count for a powerful combo.</li>
   </ol>
 </div>
-<div class="video-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="video-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Watch: Step-by-Step Volume Bot Setup Guide</h3>
   <p class="text-lg leading-relaxed mb-4">Need a visual walkthrough? Check out this detailed YouTube guide that breaks down the entire process of setting up a volume bot for your Solana token. From choosing a bot to monitoring your token’s performance on <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a>, this video has you covered!</p>
   <div class="video-container relative w-full h-0 pb-[56.25%]">
     <iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="https://www.youtube.com/embed/5UOMkg51Avg?si=8hlAvYDkYf8qtuQP" title="Step-by-Step Guide to Setting Up a Solana Volume Bot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-  <p class="text-gray-400 text-sm mt-2 italic">Follow along with this video to master volume bot setup in minutes!</p>
+  <p class="text-gray-100 text-sm mt-2 italic">Follow along with this video to master volume bot setup in minutes!</p>
 </div>
 <div class="callout bg-green-900 text-white p-6 rounded-lg mb-12 shadow-md border-l-4 border-green-500">
   <p class="text-lg font-semibold"> <strong>Pro Tip</strong>: Test your bot with a small SOL budget (e.g., 4 SOL) to optimize settings before scaling up for maximum impact!</p>
@@ -337,7 +337,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 
 ## ⚖️ <span id="risks">6. Risks & Ethical Considerations</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Navigating the Dark Side of Volume Bots</h3>
   <p class="text-lg leading-relaxed mb-4">Volume bots can be a game-changer, but they’re not without risks. Here’s what to watch out for:</p>
   <ul class="list-disc pl-6 space-y-2 text-lg">
@@ -356,7 +356,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 
 ## 📈 <span id="best-practices">7. Best Practices for Success</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">How to Win with Volume Bots</h3>
   <p class="text-lg leading-relaxed mb-4">To maximize your volume bot’s impact and stay safe, follow these best practices:</p>
   <ul class="list-disc pl-6 space-y-2 text-lg">
@@ -371,7 +371,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 
 <div class="image-container mb-10">
   <img src="/volumebot4.jpg" alt="Monitoring volume bot performance on Solana DEX" class="rounded-lg shadow-md">
-  <p class="text-gray-400 text-sm mt-2 italic">Track and optimize your volume bot’s performance.</p>
+  <p class="text-gray-100 text-sm mt-2 italic">Track and optimize your volume bot’s performance.</p>
 </div>
 
 <div class="callout bg-green-900 text-white p-6 rounded-lg mb-12 shadow-md border-l-4 border-green-500">
@@ -439,32 +439,32 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 }
 </script>
 
-<div class="faq bg-gray-900 text-gray-200 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="faq bg-gray-900 text-gray-100 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
   <h2 class="text-2xl font-bold text-white mb-6">Got Questions? We’ve Got Answers!</h2>
   <div class="space-y-6">
     <div>
       <h3 class="text-xl font-semibold text-white">How do volume bots work on Solana?</h3>
-      <p class="text-lg text-gray-300">✅ They execute rapid buy/sell orders on DEXs like <a href="https://raydium.io" class="text-blue-400 hover:underline">Raydium</a>, spiking reported trading volume to boost rankings.</p>
+      <p class="text-lg text-gray-100">✅ They execute rapid buy/sell orders on DEXs like <a href="https://raydium.io" class="text-blue-400 hover:underline">Raydium</a>, spiking reported trading volume to boost rankings.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">Are volume bots legal?</h3>
-      <p class="text-lg text-gray-300">⚖️ Check local regulations, especially in the US or UK, to stay compliant!</p>
+      <p class="text-lg text-gray-100">⚖️ Check local regulations, especially in the US or UK, to stay compliant!</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">How much volume can a bot generate?</h3>
-      <p class="text-lg text-gray-300">✅ With 4 SOL, bots like <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> can generate up to 200x in Volume.</p>
+      <p class="text-lg text-gray-100">✅ With 4 SOL, bots like <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> can generate up to 200x in Volume.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">Can volume bots get my token banned?</h3>
-      <p class="text-lg text-gray-300">⚠️ Yes, if overused or detected as unnatural. Mimic organic patterns with Bots like Solana Volume Bot or Mellowman Hyper Volume Bot to stay safe.</p>
+      <p class="text-lg text-gray-100">⚠️ Yes, if overused or detected as unnatural. Mimic organic patterns with Bots like Solana Volume Bot or Mellowman Hyper Volume Bot to stay safe.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">Do volume bots affect token price?</h3>
-      <p class="text-lg text-gray-300">🔄 Indirectly, by attracting real traders via higher visibility, but they don’t directly pump price.</p>
+      <p class="text-lg text-gray-100">🔄 Indirectly, by attracting real traders via higher visibility, but they don’t directly pump price.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">How do I choose the best volume bot?</h3>
-      <p class="text-lg text-gray-300">✅ Compare ease of use, cost, and features. <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> is great for beginners; <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Mellowmans Hyper Volume Bot</a> suits analytics fans.</p>
+      <p class="text-lg text-gray-100">✅ Compare ease of use, cost, and features. <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> is great for beginners; <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Mellowmans Hyper Volume Bot</a> suits analytics fans.</p>
     </div>
   </div>
 </div>
@@ -473,7 +473,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 
 ## 🎯 Why Volume Bots Are Your 2025 Crypto Superpower
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4">In 2025, Solana’s memecoin mania is a <span class="text-blue-400">gold rush</span>. <strong>Volume bots</strong> like <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> give you the edge to:</p>
   <ul class="list-disc pl-6 space-y-2 text-lg mb-4">
     <li><strong>Pump Volume</strong>: Generate thousands of trades in hours for massive visibility.</li>
@@ -488,7 +488,7 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
 
 <div class="image-container mb-10">
   <img src="/volumebot5.jpg" alt="BEST VOLUME BOT RANKING, Orca, Meteora, Raydium, PumpSwap, PumpFun, Moonit" class="rounded-lg shadow-md">
-  <p class="text-gray-400 text-sm mt-2 italic">Track the BEST volume bot’s performance.</p>
+  <p class="text-gray-100 text-sm mt-2 italic">Track the BEST volume bot’s performance.</p>
 </div>
 
 <div class="final-cta bg-gradient-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mt-12 shadow-2xl">

@@ -16,7 +16,7 @@ export default function CtaHolder() {
             <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-3">
               Ready to dominate the charts?
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 max-w-xl">
+            <p className="text-lg md:text-xl text-gray-100 max-w-xl">
               Start now and see what our Solana Holder Bot can do for your project.
             </p>
           </div>

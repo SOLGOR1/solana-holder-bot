@@ -34,10 +34,10 @@ export default function BlogOverview() {
 
           {/* Kurzes, fokussiertes Intro – leicht erweitert für Word Count, aber nicht dominant */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-xl md:text-2xl font-light text-gray-200">
+            <p className="text-xl md:text-2xl font-light text-gray-100">
               Unlock the secrets of successful Solana volume and holder strategies
             </p>
-            <p className="text-base md:text-lg text-gray-400 mt-3">
+            <p className="text-base md:text-lg text-gray-100 mt-3">
               In-depth guides, expert insights, and proven tactics for PumpFun, Raydium, DexScreener, and the best Solana tools in 2026.
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function BlogOverview() {
                     </div>
                   </div>
                   <div className="p-5 md:p-6">
-                    <p className="text-gray-400 text-sm mb-2">
+                    <p className="text-gray-100 text-sm mb-2">
                       {new Date(featured.date).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
@@ -82,7 +82,7 @@ export default function BlogOverview() {
                     <h3 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors line-clamp-2">
                       {featured.title}
                     </h3>
-                    <p className="text-gray-300 text-base leading-relaxed line-clamp-2">
+                    <p className="text-gray-100 text-base leading-relaxed line-clamp-2">
                       {featured.excerpt}
                     </p>
                   </div>
@@ -108,7 +108,7 @@ export default function BlogOverview() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     </div>
                     <div className="p-4 md:p-5 flex flex-col flex-grow">
-                      <p className="text-gray-400 text-xs mb-2">
+                      <p className="text-gray-100 text-xs mb-2">
                         {new Date(post.date).toLocaleDateString("en-US", {
                           month: "short",
                           day: "numeric",
@@ -118,7 +118,7 @@ export default function BlogOverview() {
                       <h3 className="text-lg md:text-xl font-semibold text-white mb-2 group-hover:text-emerald-300 transition-colors line-clamp-2">
                         {post.title}
                       </h3>
-                      <p className="text-gray-300 text-sm leading-relaxed line-clamp-2 flex-grow">
+                      <p className="text-gray-100 text-sm leading-relaxed line-clamp-2 flex-grow">
                         {post.excerpt}
                       </p>
                     </div>
@@ -127,7 +127,7 @@ export default function BlogOverview() {
               ))}
             </div>
           ) : (
-            <p className="text-center text-gray-400 text-lg">No additional posts yet. Stay tuned!</p>
+            <p className="text-center text-gray-100 text-lg">No additional posts yet. Stay tuned!</p>
           )}
 
 {/* Erweiterte CTA unten – jetzt mit Landingpage + Direkt-Launch für beide Bots */}
@@ -135,10 +135,10 @@ export default function BlogOverview() {
   <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
     Ready to Launch Your Solana Project?
   </h2>
-  <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+  <p className="text-lg md:text-xl text-gray-100 mb-6 leading-relaxed">
     Our blog is your go-to resource for mastering Solana memecoin launches in 2026.
   </p>
-  <p className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto">
+  <p className="text-base md:text-lg text-gray-100 mb-12 leading-relaxed max-w-3xl mx-auto">
     Explore our powerful Telegram bots and detailed documentation to give your token the edge it needs.
   </p>
 

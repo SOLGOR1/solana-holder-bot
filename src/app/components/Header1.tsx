@@ -119,7 +119,7 @@ export default function Header1() {
           </div>
 
           {/* Beschreibung */}
-          <p className="text-base md:text-xl font-bold text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed px-4">
+          <p className="text-base md:text-xl font-bold text-gray-100 max-w-3xl mx-auto mb-12 leading-relaxed px-4">
             Boost your Solana volume, makers, and holders with the cheapest, most organic DEX-trending bot, delivering an unmatched, user-friendly Telegram experience for effortless growth.
           </p>
 
@@ -178,7 +178,7 @@ export default function Header1() {
           </div>
 
           {/* Kleiner Hinweis unter den Links */}
-          <p className="text-[11px] text-gray-500 mt-4">
+          <p className="text-[11px] text-gray-100 mt-4">
             Detailed features, pricing &amp; real examples on the dedicated pages
           </p>
 

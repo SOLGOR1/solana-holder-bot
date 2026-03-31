@@ -69,7 +69,7 @@ export default function BlogPostContent({ post, prevSlug, nextSlug }: BlogPostCo
         >
           {post.title}
         </motion.h1>
-        <p className="text-gray-400 text-lg text-center mb-12">
+        <p className="text-gray-100 text-lg text-center mb-12">
           {new Date(post.date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
@@ -79,7 +79,7 @@ export default function BlogPostContent({ post, prevSlug, nextSlug }: BlogPostCo
 
         {/* Markdown Content */}
         <motion.div
-          className="prose prose-invert prose-headings:text-white prose-a:text-cyan-400 prose-a:hover:text-cyan-300 prose-p:text-gray-300 prose-li:text-gray-300 prose-code:text-pink-400 prose-pre:bg-black/50 prose-pre:border prose-pre:border-white/10 prose-pre:rounded-2xl prose-pre:shadow-lg max-w-none"
+          className="prose prose-invert prose-headings:text-white prose-a:text-cyan-400 prose-a:hover:text-cyan-300 prose-p:text-gray-100 prose-li:text-gray-100 prose-code:text-pink-400 prose-pre:bg-black/50 prose-pre:border prose-pre:border-white/10 prose-pre:rounded-2xl prose-pre:shadow-lg max-w-none"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}

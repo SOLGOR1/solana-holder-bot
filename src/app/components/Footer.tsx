@@ -13,50 +13,50 @@ export default function Footer() {
           {/* Brand Info – links */}
           <div className="text-center md:text-left">
             <Link href="https://www.leeksol.online" target="_blank" rel="noopener noreferrer">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-300 mb-3 tracking-tight hover:text-white transition-colors">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-100 mb-3 tracking-tight hover:text-white transition-colors">
                 $LEEK
               </h3>
             </Link>
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-100 leading-relaxed">
               Next-gen tools for Solana growth: Holder & Volume Bots.
             </p>
-            <p className="text-xs text-gray-600 mt-6">© 2026 $LEEK. All rights reserved.</p>
+            <p className="text-xs text-gray-100 mt-6">© 2026 $LEEK. All rights reserved.</p>
           </div>
 
           {/* Quick Links – jetzt mit beiden Bot-Landingpages integriert */}
           <div className="text-center md:text-left">
-            <h4 className="text-sm font-medium text-gray-400 mb-4 uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-sm font-medium text-gray-100 mb-4 uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               {/* === NEU: Beide Bot-Landingpages (aus "Our Bots" + neue Seiten) === */}
               <li>
-                <Link href="/solana-volume-bot" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Solana Volume Bot landing page with features and pricing">
+                <Link href="/solana-volume-bot" className="text-gray-100 hover:text-cyan-400 transition-colors" aria-label="Solana Volume Bot landing page with features and pricing">
                   Solana Volume Bot
                 </Link>
               </li>
               <li>
-                <Link href="/solana-holder-bot" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Solana Holder Bot landing page with features and pricing">
+                <Link href="/solana-holder-bot" className="text-gray-100 hover:text-cyan-400 transition-colors" aria-label="Solana Holder Bot landing page with features and pricing">
                   Solana Holder Bot
                 </Link>
               </li>
                             <li>
-                <Link href="/solana-all-in-one-booster" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Solana All-in-One Booster landing page with features and pricing">
+                <Link href="/solana-all-in-one-booster" className="text-gray-100 hover:text-cyan-400 transition-colors" aria-label="Solana All-in-One Booster landing page with features and pricing">
                   Solana All-in-One Booster
                 </Link>
               </li>
 
               {/* Original Quick Links (unverändert, nur FAQs bleibt drin – wichtig für User) */}
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Blog">
+                <Link href="/blog" className="text-gray-100 hover:text-cyan-400 transition-colors" aria-label="Blog">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="#faqs" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Frequently Asked Questions">
+                <Link href="#faqs" className="text-gray-100 hover:text-cyan-400 transition-colors" aria-label="Frequently Asked Questions">
                   FAQs
                 </Link>
               </li>
               <li>
-                <Link href="#guide" className="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="User Guide">
+                <Link href="#guide" className="text-gray-100 hover:text-cyan-400 transition-colors" aria-label="User Guide">
                   Guide
                 </Link>
               </li>
@@ -65,7 +65,7 @@ export default function Footer() {
                   href="https://solana-holder-bot.gitbook.io/solana-holder-bot-docs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  className="text-gray-100 hover:text-cyan-400 transition-colors"
                   aria-label="Documentation (GitBook)"
 
                 >
@@ -77,14 +77,14 @@ export default function Footer() {
 
           {/* Our Bots – bleibt erhalten (Telegram-Direktlinks + Support) */}
           <div className="text-center md:text-left">
-            <h4 className="text-sm font-medium text-gray-400 mb-4 uppercase tracking-wider">Our Bots</h4>
+            <h4 className="text-sm font-medium text-gray-100 mb-4 uppercase tracking-wider">Our Bots</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   href="https://t.me/Degen_wg_bot"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                  className="text-gray-100 hover:text-blue-400 transition-colors"
                   aria-label="Launch Solana Holder Bot on Telegram"
                 >
                   Solana Holder Bot
@@ -95,7 +95,7 @@ export default function Footer() {
                   href="https://t.me/leektradingbot"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-green-400 transition-colors"
+                  className="text-gray-100 hover:text-green-400 transition-colors"
                   aria-label="Launch Solana Volume Bot on Telegram"
                 >
                   Solana Volume Bot
@@ -106,7 +106,7 @@ export default function Footer() {
                   href="https://t.me/sol_volume_holder_bot"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-yellow-400 transition-colors"
+                  className="text-gray-100 hover:text-yellow-400 transition-colors"
                   aria-label="Launch Solana All-in-One Booster on Telegram"
                 >
                   Solana Volume + Holder Bot
@@ -117,14 +117,14 @@ export default function Footer() {
                   href="https://t.me/+3XCV3c958XwyYjE8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-emerald-400 transition-colors"
+                  className="text-gray-100 hover:text-emerald-400 transition-colors"
                   aria-label="Join Telegram Support Group"
                 >
                   Telegram Support
                 </a>
               </li>
               <li>
-                <a href="mailto:leek.sol@gmx.de" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href="mailto:leek.sol@gmx.de" className="text-gray-100 hover:text-cyan-400 transition-colors">
                   Contact Us
                 </a>
               </li>
@@ -143,7 +143,7 @@ export default function Footer() {
                 aria-label="Follow us on Twitter"
 
               >
-                <FaXTwitter className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                <FaXTwitter className="w-5 h-5 text-gray-100 group-hover:text-cyan-400 transition-colors" />
                 <motion.div
                   className="absolute inset-0 rounded-2xl bg-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   initial={{ scale: 0.8 }}
@@ -159,7 +159,7 @@ export default function Footer() {
                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-orange-500/40 transition-all duration-300"
                 aria-label="Join our Reddit Community"
               >
-                <FaRedditAlien className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors" />
+                <FaRedditAlien className="w-5 h-5 text-gray-100 group-hover:text-orange-400 transition-colors" />
                 <motion.div
                   className="absolute inset-0 rounded-2xl bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   initial={{ scale: 0.8 }}
@@ -175,7 +175,7 @@ export default function Footer() {
                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-emerald-500/40 transition-all duration-300"
                 aria-label="Join our Telegram Group"
               >
-                <FaTelegram className="w-5 h-5 text-gray-400 group-hover:text-emerald-400 transition-colors" />
+                <FaTelegram className="w-5 h-5 text-gray-100 group-hover:text-emerald-400 transition-colors" />
                 <motion.div
                   className="absolute inset-0 rounded-2xl bg-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   initial={{ scale: 0.8 }}
@@ -188,7 +188,7 @@ export default function Footer() {
 
         {/* ====================== BANNER + BACKLINKS REIHE ====================== */}
         <div className="mt-12 pt-8 border-t border-white/10">
-          <h4 className="text-sm font-medium text-gray-400 mb-5 uppercase tracking-wider text-center md:text-right">
+          <h4 className="text-sm font-medium text-gray-100 mb-5 uppercase tracking-wider text-center md:text-right">
             Featured On &amp; Backlinks
           </h4>
 
@@ -314,7 +314,7 @@ export default function Footer() {
               ↗
             </motion.span>
 
-            <div className="pointer-events-none absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block w-80 bg-zinc-900/90 backdrop-blur-2xl border border-white/20 rounded-3xl p-5 text-left text-sm text-gray-300 shadow-2xl z-30">
+            <div className="pointer-events-none absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover:block w-80 bg-zinc-900/90 backdrop-blur-2xl border border-white/20 rounded-3xl p-5 text-left text-sm text-gray-100 shadow-2xl z-30">
               <a href="https://frogdr.com/solanaholderbot.com?utm_source=solanaholderbot.com" target="_blank">
                 <Image
                   src="https://frogdr.com/solanaholderbot.com/badge-dark-sm.svg?round=1"
@@ -326,7 +326,7 @@ export default function Footer() {
               <p className="mt-3 leading-relaxed">
                 We offer mutual Do-Follow backlinks! Looking for websites with DR 20-90, preferably crypto, blockchain or Solana related.
               </p>
-              <p className="mt-4 text-xs text-gray-400">Just contact us and we&apos;ll set it up in 24h.</p>
+              <p className="mt-4 text-xs text-gray-100">Just contact us and we&apos;ll set it up in 24h.</p>
               <div className="mt-4 flex flex-col gap-1 text-[10px] text-cyan-400">
                 <a href="mailto:leek.sol@gmx.de" className="hover:underline">
                   leek.sol@gmx.de
@@ -341,7 +341,7 @@ export default function Footer() {
 
         {/* Disclaimer */}
         <div className="mt-10 pt-6 border-t border-white/10 text-center">
-          <p className="text-xs text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xs text-gray-100 leading-relaxed max-w-3xl mx-auto">
             $LEEK is a memecoin with no intrinsic value or expectation of financial return. All cryptocurrencies are subject to fluctuations, creating possibilities for both profit and loss.
           </p>
         </div>

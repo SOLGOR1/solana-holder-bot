@@ -76,7 +76,7 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
                 </div>
               </div>
               <div className="p-6 md:p-8">
-                <p className="text-gray-400 text-sm mb-2">
+                <p className="text-gray-100 text-sm mb-2">
                   {new Date(featured.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
@@ -86,7 +86,7 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors line-clamp-2">
                   {featured.title}
                 </h3>
-                <p className="text-gray-300 text-base leading-relaxed line-clamp-3">
+                <p className="text-gray-100 text-base leading-relaxed line-clamp-3">
                   {featured.excerpt}
                 </p>
               </div>
@@ -129,7 +129,7 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
                       </div>
                     </div>
                     <div className="p-5 md:p-6">
-                      <p className="text-gray-400 text-sm mb-2">
+                      <p className="text-gray-100 text-sm mb-2">
                         {new Date(post.date).toLocaleDateString("en-US", {
                           month: "long",
                           day: "numeric",
@@ -139,7 +139,7 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
                       <h3 className="text-xl md:text-2xl font-semibold text-white mb-2 group-hover:text-emerald-300 transition-colors line-clamp-2">
                         {post.title}
                       </h3>
-                      <p className="text-gray-300 text-base line-clamp-2">
+                      <p className="text-gray-100 text-base line-clamp-2">
                         {post.excerpt}
                       </p>
                     </div>

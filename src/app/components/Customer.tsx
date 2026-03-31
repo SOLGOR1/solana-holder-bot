@@ -46,8 +46,8 @@ export default function GrowthStats() {
   return (
     <section className="bg-black py-5">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <p className="text-2xl md:text-2xl text-gray-500 mb-4 animate-fade-in">We help you grow your project</p>
-        <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-10">Join hundreds of satisfied customers who have seen real results.</p>
+        <p className="text-2xl md:text-2xl text-gray-100 mb-4 animate-fade-in">We help you grow your project</p>
+        <p className="text-lg text-gray-100 max-w-3xl mx-auto mb-10">Join hundreds of satisfied customers who have seen real results.</p>
 
         <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-8">
           {/* Kästchen 1: Projects – Glasscontainer */}
@@ -62,7 +62,7 @@ export default function GrowthStats() {
               {formatNumber(projects)}+
               <span className="absolute inset-0 bg-cyan-500/10 rounded-full blur-md opacity-50"></span>
             </h3>
-            <p className="text-gray-400 text-sm md:text-base">Projects Boosted</p>
+            <p className="text-gray-100 text-sm md:text-base">Projects Boosted</p>
           </motion.div>
 
           {/* Kästchen 2: Holders – Glasscontainer */}
@@ -77,7 +77,7 @@ export default function GrowthStats() {
               {formatNumber(holders, true)}+
               <span className="absolute inset-0 bg-cyan-500/10 rounded-full blur-md opacity-50"></span>
             </h3>
-            <p className="text-gray-400 text-sm md:text-base">Holders Added</p>
+            <p className="text-gray-100 text-sm md:text-base">Holders Added</p>
           </motion.div>
 
           {/* Kästchen 3: Volume – Glasscontainer */}
@@ -92,7 +92,7 @@ export default function GrowthStats() {
               {formatNumber(volume, true)}+
               <span className="absolute inset-0 bg-cyan-500/10 rounded-full blur-md opacity-50"></span>
             </h3>
-            <p className="text-gray-400 text-sm md:text-base">Volume Generated</p>
+            <p className="text-gray-100 text-sm md:text-base">Volume Generated</p>
           </motion.div>
         </div>
       </div>

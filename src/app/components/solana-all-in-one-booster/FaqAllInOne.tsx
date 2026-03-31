@@ -32,11 +32,11 @@ export default function FaqAllInOne() {
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b border-amber-900/20"><td className="py-4 px-5 text-gray-200">0.15 SOL</td><td className="py-4 px-5 text-right text-gray-200">up to 40 SOL</td><td className="py-4 px-5 text-right text-gray-200">50–120</td></tr>
-              <tr className="border-b border-amber-900/20"><td className="py-4 px-5 text-gray-200">0.5 SOL</td><td className="py-4 px-5 text-right text-gray-200">up to 150 SOL</td><td className="py-4 px-5 text-right text-gray-200">150–350</td></tr>
-              <tr className="border-b border-amber-900/20"><td className="py-4 px-5 text-gray-200">1 SOL</td><td className="py-4 px-5 text-right text-gray-200">up to 300 SOL</td><td className="py-4 px-5 text-right text-gray-200">300–700</td></tr>
-              <tr className="border-b border-amber-900/20"><td className="py-4 px-5 text-gray-200">5 SOL</td><td className="py-4 px-5 text-right text-gray-200">up to 1500 SOL</td><td className="py-4 px-5 text-right text-gray-200">1,500+</td></tr>
-              <tr><td className="py-4 px-5 text-gray-200">25+ SOL</td><td className="py-4 px-5 text-right text-gray-200">up to 7500+ SOL</td><td className="py-4 px-5 text-right text-gray-200">Massive long-term growth</td></tr>
+              <tr className="border-b border-amber-900/20"><td className="py-4 px-5 text-gray-100">0.15 SOL</td><td className="py-4 px-5 text-right text-gray-100">up to 40 SOL</td><td className="py-4 px-5 text-right text-gray-100">50–120</td></tr>
+              <tr className="border-b border-amber-900/20"><td className="py-4 px-5 text-gray-100">0.5 SOL</td><td className="py-4 px-5 text-right text-gray-100">up to 150 SOL</td><td className="py-4 px-5 text-right text-gray-100">150–350</td></tr>
+              <tr className="border-b border-amber-900/20"><td className="py-4 px-5 text-gray-100">1 SOL</td><td className="py-4 px-5 text-right text-gray-100">up to 300 SOL</td><td className="py-4 px-5 text-right text-gray-100">300–700</td></tr>
+              <tr className="border-b border-amber-900/20"><td className="py-4 px-5 text-gray-100">5 SOL</td><td className="py-4 px-5 text-right text-gray-100">up to 1500 SOL</td><td className="py-4 px-5 text-right text-gray-100">1,500+</td></tr>
+              <tr><td className="py-4 px-5 text-gray-100">25+ SOL</td><td className="py-4 px-5 text-right text-gray-100">up to 7500+ SOL</td><td className="py-4 px-5 text-right text-gray-100">Massive long-term growth</td></tr>
             </tbody>
           </table>
         </div>
@@ -64,7 +64,7 @@ export default function FaqAllInOne() {
           Got Questions?
         </h2>
 
-        <p className="text-center text-gray-400 text-base md:text-lg max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-center text-gray-100 text-base md:text-lg max-w-3xl mx-auto mb-12 leading-relaxed">
           Everything you need to know about the Solana All-in-One Booster — safety, features and performance.
         </p>
 
@@ -95,7 +95,7 @@ export default function FaqAllInOne() {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="px-6 pb-6 md:pb-8 text-gray-300 text-base leading-relaxed">
+                <div className="px-6 pb-6 md:pb-8 text-gray-100 text-base leading-relaxed">
                   {faq.a && <p>{faq.a}</p>}
                   {faq.table && <div className="mt-5">{faq.table}</div>}
                 </div>
@@ -111,7 +111,7 @@ export default function FaqAllInOne() {
           <Link href="https://t.me/leektradingbot" className="underline">→ Volume Bot</Link> |  
           
         </p>
-        <p className="text-xs text-gray-500 text-center mt-2">Last updated: March 30, 2026</p>
+        <p className="text-xs text-gray-100 text-center mt-2">Last updated: March 30, 2026</p>
       </div>
     </section>
   );

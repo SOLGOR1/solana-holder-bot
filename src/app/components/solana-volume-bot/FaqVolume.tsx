@@ -45,29 +45,29 @@ export default function FaqVolume() {
             </thead>
             <tbody>
               <tr className="border-b border-emerald-900/20">
-                <td className="py-4 px-5 text-gray-200">0.1 SOL</td>
-                <td className="py-4 px-5 text-right text-gray-200">up to 30 SOL</td>
-                <td className="py-4 px-5 text-right text-gray-200">30 min – 1 hr</td>
+                <td className="py-4 px-5 text-gray-100">0.1 SOL</td>
+                <td className="py-4 px-5 text-right text-gray-100">up to 30 SOL</td>
+                <td className="py-4 px-5 text-right text-gray-100">30 min – 1 hr</td>
               </tr>
               <tr className="border-b border-emerald-900/20">
-                <td className="py-4 px-5 text-gray-200">0.5 SOL</td>
-                <td className="py-4 px-5 text-right text-gray-200">up to 150 SOL</td>
-                <td className="py-4 px-5 text-right text-gray-200">1–3 hr</td>
+                <td className="py-4 px-5 text-gray-100">0.5 SOL</td>
+                <td className="py-4 px-5 text-right text-gray-100">up to 150 SOL</td>
+                <td className="py-4 px-5 text-right text-gray-100">1–3 hr</td>
               </tr>
               <tr className="border-b border-emerald-900/20">
-                <td className="py-4 px-5 text-gray-200">1 SOL</td>
-                <td className="py-4 px-5 text-right text-gray-200">up to 300 SOL</td>
-                <td className="py-4 px-5 text-right text-gray-200">2–5 hr</td>
+                <td className="py-4 px-5 text-gray-100">1 SOL</td>
+                <td className="py-4 px-5 text-right text-gray-100">up to 300 SOL</td>
+                <td className="py-4 px-5 text-right text-gray-100">2–5 hr</td>
               </tr>
               <tr className="border-b border-emerald-900/20">
-                <td className="py-4 px-5 text-gray-200">5 SOL</td>
-                <td className="py-4 px-5 text-right text-gray-200">up to 1500 SOL</td>
-                <td className="py-4 px-5 text-right text-gray-200">6–12 hr</td>
+                <td className="py-4 px-5 text-gray-100">5 SOL</td>
+                <td className="py-4 px-5 text-right text-gray-100">up to 1500 SOL</td>
+                <td className="py-4 px-5 text-right text-gray-100">6–12 hr</td>
               </tr>
               <tr>
-                <td className="py-4 px-5 text-gray-200">25 SOL</td>
-                <td className="py-4 px-5 text-right text-gray-200">up to 7500 SOL</td>
-                <td className="py-4 px-5 text-right text-gray-200">12–36 hr</td>
+                <td className="py-4 px-5 text-gray-100">25 SOL</td>
+                <td className="py-4 px-5 text-right text-gray-100">up to 7500 SOL</td>
+                <td className="py-4 px-5 text-right text-gray-100">12–36 hr</td>
               </tr>
             </tbody>
           </table>
@@ -117,7 +117,7 @@ export default function FaqVolume() {
           Got Questions?
         </h2>
 
-        <p className="text-center text-gray-400 text-base md:text-lg max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-center text-gray-100 text-base md:text-lg max-w-3xl mx-auto mb-12 leading-relaxed">
           Everything you need to know about Solana Volume Bot – safety, features, pricing and performance.
         </p>
 
@@ -159,7 +159,7 @@ export default function FaqVolume() {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="px-6 pb-6 md:pb-8 text-gray-300 text-base leading-relaxed">
+                <div className="px-6 pb-6 md:pb-8 text-gray-100 text-base leading-relaxed">
                   {faq.a && <p>{faq.a}</p>}
                   {faq.table && <div className="mt-5">{faq.table}</div>}
                 </div>
@@ -174,7 +174,7 @@ export default function FaqVolume() {
           <Link href="/solana-volume-bot" className="underline">→ Solana Volume Bot</Link> |
           <Link href="/solana-all-in-one-booster" className="underline">→ Volume & Holder Bot</Link> | 
         </p>
-        <p className="text-xs text-gray-500">Last updated: March 23, 2026</p>
+        <p className="text-xs text-gray-100">Last updated: March 23, 2026</p>
 
         {/* Contact Support Button – am Ende */}
         <div className="text-center mt-16">

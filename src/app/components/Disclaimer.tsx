@@ -16,7 +16,7 @@ export default function Disclaimer() {
         </span>
 
         {/* Haupt-Disclaimer – extrem klein und dezent */}
-        <p className="text-gray-600 text-[10px] leading-tight max-w-4xl mx-auto">
+        <p className="text-gray-100 text-[10px] leading-tight max-w-4xl mx-auto">
           Solana Holder Bot and Solana Volume Bot is an automated trading simulation tool intended solely for testing and development purposes. It must not be used for live projects, public token launches, mainnet deployments, or any use case involving real users, public investors, or financial transactions. Use is permitted only in private liquidity pools for internal development or testing.
           <br /><br />
           Users are solely responsible for disclosing the tool&apos;s intended purpose to any collaborators, partners, or third parties, and for ensuring its deployment does not misrepresent functionality or mislead others. Users must comply with all applicable laws and regulations relating to automated trading, financial activity, and cryptocurrency.
@@ -26,7 +26,7 @@ export default function Disclaimer() {
           By using Solana Holder Bot or the Solana Volume Bot, you agree to the{' '}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="text-gray-500 underline hover:text-gray-400 transition-colors"
+            className="text-gray-100 underline hover:text-gray-100 transition-colors"
           >
             Terms & Conditions
           </button>{' '}
@@ -58,7 +58,7 @@ export default function Disclaimer() {
               </h2>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-100 hover:text-white transition-colors"
               >
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -66,11 +66,11 @@ export default function Disclaimer() {
               </button>
             </div>
 
-            <p className="text-gray-400 text-sm mb-8">
+            <p className="text-gray-100 text-sm mb-8">
               Last Updated: February 9, 2026
             </p>
 
-            <div className="text-gray-300 text-base leading-relaxed space-y-8">
+            <div className="text-gray-100 text-base leading-relaxed space-y-8">
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">1. Agreement to Terms</h3>
                 <p>

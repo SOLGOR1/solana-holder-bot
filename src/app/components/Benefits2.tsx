@@ -61,10 +61,10 @@ export default function Benefits() {
       <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
         {/* Intro Block – keyword-optimiert, natürlich */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed mb-6">
+          <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed mb-6">
             In the hyper-competitive Solana ecosystem, real <span className="text-green-400 font-semibold">on-chain trading volume</span> and <span className="text-blue-400 font-semibold">permanent holders</span> are the ultimate game-changers.
           </p>
-          <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed">
+          <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed">
             Whether launching on Pump.fun, Raydium, Meteora, or Orca, our bots deliver explosive growth to top DexScreener and Birdeye charts. No more getting buried, dominate with authentic, lasting activity.
           </p>
         </div>
@@ -83,7 +83,7 @@ export default function Benefits() {
               <h3 className={`text-xl font-semibold text-white group-hover:text-${benefit.color}-400 transition-colors mb-3 text-center`}>
                 {benefit.title}
               </h3>
-              <p className="text-gray-300 leading-relaxed text-center text-sm md:text-base">
+              <p className="text-gray-100 leading-relaxed text-center text-sm md:text-base">
                 {benefit.desc}
               </p>
             </motion.div>
@@ -92,10 +92,10 @@ export default function Benefits() {
 
         {/* Abschluss CTA Block – zwei Buttons */}
         <div className="max-w-4xl mx-auto mt-20 text-center space-y-8">
-          <p className="text-2xl lg:text-3xl text-gray-300 leading-relaxed font-light">
+          <p className="text-2xl lg:text-3xl text-gray-100 leading-relaxed font-light">
             Stop watching your token sit flat. Unlock explosive <span className="text-green-400 font-semibold">volume boost</span> and <span className="text-blue-400 font-semibold">holder growth</span> today.
           </p>
-          <p className="text-2xl lg:text-3xl text-gray-300 leading-relaxed font-bold">
+          <p className="text-2xl lg:text-3xl text-gray-100 leading-relaxed font-bold">
             HOLDERS + MASSIVE VOLUME = UNSTOPPABLE MOMENTUM.
           </p>
 

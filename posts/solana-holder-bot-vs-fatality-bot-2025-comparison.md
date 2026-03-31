@@ -75,7 +75,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   <a href="https://t.me/Degen_wg_bot" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Launch with Solana Holder Bot</a>
 </div>
 
-<div class="intro-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="intro-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
   <h1 class="text-3xl font-bold text-white mb-6">Solana Holder Bot vs Fatality Bot: The Ultimate 2025 Crypto Showdown</h1>
   <p class="text-lg leading-relaxed mb-4">Picture your crypto project soaring to the top of <strong>DexScreener</strong>, with <span class="text-blue-400">new holders</span> pouring in and <span class="text-blue-400">trading volume</span> hitting all-time highs. In 2025, the right <strong>Telegram/DeFi bot</strong> can make this happen—but choose wrong, and you’re risking everything.</p>
   <p class="text-lg leading-relaxed mb-4">Meet <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <strong>Fatality Bot</strong>, two heavyweights fighting for your project’s future on <span class="text-blue-400">Solana</span>, <span class="text-blue-400">ETH</span>, <span class="text-blue-400">BNB</span>, and <span class="text-blue-400">TON</span>. We’ve analyzed both across <strong>seven critical categories</strong>, scoring them from <strong>0–100</strong> based on user reviews, expert insights, and even a nod from <a href="https://chat.openai.com/" class="text-blue-400 hover:underline">ChatGPT</a>.</p>
@@ -83,9 +83,9 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   <p class="text-lg font-semibold text-blue-400">Ready to make your project a 2025 legend? 🌟 Keep reading or jump straight to <a href="https://www.solanaholderbot.com" class="text-blue-400 hover:underline">www.solanaholderbot.com</a>!</p>
 </div>
 
-<div class="table-of-contents bg-gray-900 text-gray-200 p-6 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="table-of-contents bg-gray-900 text-gray-100 p-6 rounded-lg mb-12 shadow-md border border-gray-700">
   <h2 class="text-2xl font-bold text-white mb-4">📑 Table of Contents</h2>
-  <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-300">
+  <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-100">
     <li><a href="#functionality" class="text-blue-400 hover:underline flex items-center"><span class="mr-2">→</span> 1. Functionality</a></li>
     <li><a href="#security" class="text-blue-400 hover:underline flex items-center"><span class="mr-2">→</span> 2. Security & Trust</a></li>
     <li><a href="#effectiveness" class="text-blue-400 hover:underline flex items-center"><span class="mr-2">→</span> 3. Effectiveness & Retention</a></li>
@@ -98,7 +98,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   </ul>
 </div>
 
-<div class="why-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="why-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
   <h2 class="text-2xl font-bold text-white mb-6">Why This Showdown Matters in 2025</h2>
   <p class="text-lg leading-relaxed mb-4">The crypto market is a <span class="text-blue-400">battlefield</span>. Thousands of tokens are fighting for the spotlight, and <strong>holder counts</strong>, <strong>trading volume</strong>, and <strong>platform rankings</strong> are your weapons.</p>
   <p class="text-lg leading-relaxed mb-4">Bots like <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <strong>Fatality Bot</strong> promise to boost your metrics, but one misstep could lead to <span class="text-red-400">lost funds</span>, <span class="text-red-400">hacked wallets</span>, or a <span class="text-red-400">ruined reputation</span>.</p>
@@ -106,7 +106,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   <p class="text-lg font-semibold text-blue-400">Ready to dominate? Let’s get started!</p>
 </div>
 
-<div class="infobox bg-gray-800 text-gray-200 p-6 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="infobox bg-gray-800 text-gray-100 p-6 rounded-lg mb-12 shadow-md border border-gray-700">
   <h2 class="text-2xl font-bold mb-4 text-white">📌 Quick Snapshot</h2>
   <ul class="space-y-4">
     <li class="flex items-start">
@@ -128,11 +128,11 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 
 ## 📊 <span id="functionality">1. Functionality: Your Growth Powerhouse</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4">Both bots pack a punch, but their approaches are worlds apart. Here’s how they stack up:</p>
 </div>
 
-<div class="feature-table bg-gray-900 text-gray-200 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="feature-table bg-gray-900 text-gray-100 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
   <table class="w-full text-lg">
     <thead>
       <tr class="bg-gray-800 text-white">
@@ -176,7 +176,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   </table>
 </div>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Why Solana Holder Bot Rules</h3>
   <ul class="list-disc pl-6 space-y-2 text-lg">
     <li><strong>Permanent Holders</strong>: <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> secures holders for life, unlike <strong>Fatality Bot’s</strong> 7-day rentals, driving <span class="text-blue-400">organic growth</span>.</li>
@@ -193,7 +193,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   <p class="text-lg leading-relaxed"><a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> is the <strong>sustainable powerhouse</strong>, while <strong>Fatality Bot</strong> is a risky sprint. Go big with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a>.</p>
 </div>
 
-<div class="scores bg-gray-800 text-gray-200 p-6 rounded-lg mb-8 shadow-md">
+<div class="scores bg-gray-800 text-gray-100 p-6 rounded-lg mb-8 shadow-md">
   <p class="text-lg font-semibold"><strong>Scores:</strong></p>
   <ul class="list-none pl-0 space-y-2 text-lg">
     <li><span class="text-blue-400">Solana Holder Bot</span>: 96/100</li>
@@ -203,7 +203,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 
 <div class="image-container mb-10">
   <img src="/SolanaHolderBot_Fatality_1.jpg" alt="Sleek dashboard comparing Solana Holder Bot vs Fatality Bot for crypto success in 2025" class="rounded-lg shadow-md">
-  <p class="text-gray-400 text-sm mt-2 italic">Sleek dashboard showcasing Solana Holder Bot vs Fatality Bot’s features.</p>
+  <p class="text-gray-100 text-sm mt-2 italic">Sleek dashboard showcasing Solana Holder Bot vs Fatality Bot’s features.</p>
 </div>
 
 <div class="callout bg-blue-900 text-white p-6 rounded-lg mb-12 shadow-md border-l-4 border-blue-500">
@@ -214,11 +214,11 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 
 ## 🔐 <span id="security">2. Security & Trust: Your Wallet’s Safe Zone</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4">In DeFi, one hack can wipe you out. Here’s how the bots compare on safety:</p>
 </div>
 
-<div class="feature-table bg-gray-900 text-gray-200 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="feature-table bg-gray-900 text-gray-100 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
   <table class="w-full text-lg">
     <thead>
       <tr class="bg-gray-800 text-white">
@@ -252,7 +252,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   </table>
 </div>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Solana Holder Bot’s Iron Wall</h3>
   <ul class="list-disc pl-6 space-y-2 text-lg">
     <li><strong>Key-Free Zone</strong>: Runs via <span class="text-blue-400">Telegram</span>, no private keys, no risks. Check the <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" class="text-blue-400 hover:underline">Guide Video</a> for setup.</li>
@@ -268,7 +268,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   <p class="text-lg leading-relaxed"><a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> is a <strong>security fortress</strong>, while <strong>Fatality Bot</strong> is a gamble. Protect your project with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a>.</p>
 </div>
 
-<div class="scores bg-gray-800 text-gray-200 p-6 rounded-lg mb-8 shadow-md">
+<div class="scores bg-gray-800 text-gray-100 p-6 rounded-lg mb-8 shadow-md">
   <p class="text-lg font-semibold"><strong>Scores:</strong></p>
   <ul class="list-none pl-0 space-y-2 text-lg">
     <li><span class="text-blue-400">Solana Holder Bot</span>: 98/100</li>
@@ -276,7 +276,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   </ul>
 </div>
 
-<div class="quote bg-gray-800 p-6 rounded-lg mb-12 italic text-gray-200 shadow-sm border-l-4 border-gray-600">
+<div class="quote bg-gray-800 p-6 rounded-lg mb-12 italic text-gray-100 shadow-sm border-l-4 border-gray-600">
   <p>“<a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> boosted my project’s holders by 80% with zero security drama. Fatality? A nightmare.” — ETH dev on <a href="https://x.com" class="text-blue-400 hover:underline">X</a></p>
 </div>
 
@@ -284,11 +284,11 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 
 ## 📈 <span id="effectiveness">3. Effectiveness & Retention: Growth That Sticks</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4">You want results that last, not a quick flash. Here’s the breakdown:</p>
 </div>
 
-<div class="feature-table bg-gray-900 text-gray-200 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="feature-table bg-gray-900 text-gray-100 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
   <table class="w-full text-lg">
     <thead>
       <tr class="bg-gray-800 text-white">
@@ -317,7 +317,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   </table>
 </div>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Solana Holder Bot’s Long-Term Win</h3>
   <ul class="list-disc pl-6 space-y-2 text-lg">
     <li><strong>Forever Holders</strong>: Holders stay, signaling a <span class="text-blue-400">thriving project</span>. Get started at <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a>.</li>
@@ -333,7 +333,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   <p class="text-lg leading-relaxed"><a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> drives <strong>sustainable growth</strong>, while <strong>Fatality Bot</strong> fizzles fast. Build lasting success with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a>.</p>
 </div>
 
-<div class="scores bg-gray-800 text-gray-200 p-6 rounded-lg mb-8 shadow-md">
+<div class="scores bg-gray-800 text-gray-100 p-6 rounded-lg mb-8 shadow-md">
   <p class="text-lg font-semibold"><strong>Scores:</strong></p>
   <ul class="list-none pl-0 space-y-2 text-lg">
     <li><span class="text-blue-400">Solana Holder Bot</span>: 94/100</li>
@@ -343,18 +343,18 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 
 <div class="image-container mb-12">
   <img src="/sol2.jpg" alt="Solana Holder Bot interface showcasing permanent holders and volume boosts" class="rounded-lg shadow-md">
-  <p class="text-gray-400 text-sm mt-2 italic">Solana Holder Bot’s interface, highlighting permanent holder growth.</p>
+  <p class="text-gray-100 text-sm mt-2 italic">Solana Holder Bot’s interface, highlighting permanent holder growth.</p>
 </div>
 
 <div class="section-divider border-t border-gray-700 my-8"></div>
 
 ## 💬 <span id="reputation">4. Reputation & Community: Who’s Got the Cred?</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4">In crypto, trust is everything. Let’s see who’s got the community’s back:</p>
 </div>
 
-<div class="feature-table bg-gray-900 text-gray-200 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="feature-table bg-gray-900 text-gray-100 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
   <table class="w-full text-lg">
     <thead>
       <tr class="bg-gray-800 text-white">
@@ -383,7 +383,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   </table>
 </div>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Solana Holder Bot’s Fanbase</h3>
   <ul class="list-disc pl-6 space-y-2 text-lg">
     <li><strong>Community Love</strong>: <a href="https://x.com" class="text-blue-400 hover:underline">X</a> and Telegram rave about its <span class="text-blue-400">reliability</span>. More on our <a href="https://www.solanaholderbot.com/blog" class="text-blue-400 hover:underline">blog</a>.</li>
@@ -399,7 +399,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   <p class="text-lg leading-relaxed"><a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> is the <strong>community king</strong>, while <strong>Fatality Bot</strong> struggles. Join the hype at <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a>.</p>
 </div>
 
-<div class="scores bg-gray-800 text-gray-200 p-6 rounded-lg mb-8 shadow-md">
+<div class="scores bg-gray-800 text-gray-100 p-6 rounded-lg mb-8 shadow-md">
   <p class="text-lg font-semibold"><strong>Scores:</strong></p>
   <ul class="list-none pl-0 space-y-2 text-lg">
     <li><span class="text-blue-400">Solana Holder Bot</span>: 93/100</li>
@@ -411,11 +411,11 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 
 ## ⚙️ <span id="customization">5. Customization: Your Project, Your Rules</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4">Flexibility lets you shape your campaign. Here’s the comparison:</p>
 </div>
 
-<div class="feature-table bg-gray-900 text-gray-200 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="feature-table bg-gray-900 text-gray-100 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
   <table class="w-full text-lg">
     <thead>
       <tr class="bg-gray-800 text-white">
@@ -444,7 +444,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   </table>
 </div>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Solana Holder Bot’s Precision</h3>
   <ul class="list-disc pl-6 space-y-2 text-lg">
     <li><strong>Total Control</strong>: Tweak <span class="text-blue-400">holder</span>, <span class="text-blue-400">volume</span>, or <span class="text-blue-400">rank</span> campaigns. See how in the <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" class="text-blue-400 hover:underline">Guide Video</a>.</li>
@@ -460,7 +460,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   <p class="text-lg leading-relaxed"><a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> offers <strong>safe, tailored control</strong>, while <strong>Fatality Bot</strong> leans on risky automation.</p>
 </div>
 
-<div class="scores bg-gray-800 text-gray-200 p-6 rounded-lg mb-8 shadow-md">
+<div class="scores bg-gray-800 text-gray-100 p-6 rounded-lg mb-8 shadow-md">
   <p class="text-lg font-semibold"><strong>Scores:</strong></p>
   <ul class="list-none pl-0 space-y-2 text-lg">
     <li><span class="text-blue-400">Solana Holder Bot</span>: 86/100</li>
@@ -472,11 +472,11 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 
 ## 🔬 <span id="innovation">6. Innovation: Future-Proof Your Project</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4">Who’s pushing the boundaries in 2025? Let’s find out:</p>
 </div>
 
-<div class="feature-table bg-gray-900 text-gray-200 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="feature-table bg-gray-900 text-gray-100 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
   <table class="w-full text-lg">
     <thead>
       <tr class="bg-gray-800 text-white">
@@ -505,7 +505,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   </table>
 </div>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Solana Holder Bot’s Smart Play</h3>
   <ul class="list-disc pl-6 space-y-2 text-lg">
     <li><strong>Multi-Chain Leader</strong>: Covers <span class="text-blue-400">Solana</span>, <span class="text-blue-400">ETH</span>, <span class="text-blue-400">BNB</span>, and <span class="text-blue-400">TON</span>.</li>
@@ -521,7 +521,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   <p class="text-lg leading-relaxed"><a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> blends <strong>innovation</strong> and <strong>stability</strong>, while <strong>Fatality Bot</strong> overreaches.</p>
 </div>
 
-<div class="scores bg-gray-800 text-gray-200 p-6 rounded-lg mb-8 shadow-md">
+<div class="scores bg-gray-800 text-gray-100 p-6 rounded-lg mb-8 shadow-md">
   <p class="text-lg font-semibold"><strong>Scores:</strong></p>
   <ul class="list-none pl-0 space-y-2 text-lg">
     <li><span class="text-blue-400">Solana Holder Bot</span>: 84/100</li>
@@ -533,11 +533,11 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 
 ## 💰 <span id="pricing">7. Pricing & Value: Max ROI, Minimal Cost</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4">Your budget deserves the best deal. Here’s the cost breakdown:</p>
 </div>
 
-<div class="feature-table bg-gray-900 text-gray-200 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="feature-table bg-gray-900 text-gray-100 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
   <table class="w-full text-lg">
     <thead>
       <tr class="bg-gray-800 text-white">
@@ -566,7 +566,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   </table>
 </div>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Solana Holder Bot’s Value King</h3>
   <ul class="list-disc pl-6 space-y-2 text-lg">
     <li><strong>Transparent Fees</strong>: Flat rates, <span class="text-blue-400">85% gas fee refunds</span>. More on our <a href="https://www.solanaholderbot.com/blog" class="text-blue-400 hover:underline">blog</a>.</li>
@@ -582,7 +582,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   <p class="text-lg leading-relaxed"><a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> is a <strong>budget hero</strong>, while <strong>Fatality Bot</strong> burns cash.</p>
 </div>
 
-<div class="scores bg-gray-800 text-gray-200 p-6 rounded-lg mb-8 shadow-md">
+<div class="scores bg-gray-800 text-gray-100 p-6 rounded-lg mb-8 shadow-md">
   <p class="text-lg font-semibold"><strong>Scores:</strong></p>
   <ul class="list-none pl-0 space-y-2 text-lg">
     <li><span class="text-blue-400">Solana Holder Bot</span>: 96/100</li>
@@ -592,7 +592,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 
 <div class="image-container mb-12">
   <img src="/sol3.jpg" alt="Solana Holder Bot’s budget-friendly pricing for permanent holders and volume boosts" class="rounded-lg shadow-md">
-  <p class="text-gray-400 text-sm mt-2 italic">Solana Holder Bot’s pricing, built for max value.</p>
+  <p class="text-gray-100 text-sm mt-2 italic">Solana Holder Bot’s pricing, built for max value.</p>
 </div>
 
 <div class="callout bg-green-900 text-white p-6 rounded-lg mb-12 shadow-md border-l-4 border-green-500">
@@ -603,11 +603,11 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 
 ## 🏁 <span id="scorecard">Final Scorecard: Solana Holder Bot Dominates</span>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4">Here’s the final tally, showcasing why one bot reigns supreme:</p>
 </div>
 
-<div class="scorecard-table bg-gray-900 text-gray-200 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="scorecard-table bg-gray-900 text-gray-100 p-6 rounded-lg mb-8 shadow-md border border-gray-700">
   <table class="w-full text-center text-lg">
     <thead>
       <tr class="bg-gray-800 text-white">
@@ -661,7 +661,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   </table>
 </div>
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <h3 class="text-xl font-semibold text-white mb-4">Winner: Solana Holder Bot 🏆</h3>
   <p class="text-lg leading-relaxed mb-4">With <span class="text-blue-400">permanent holders</span>, <span class="text-blue-400">rock-solid security</span>, <span class="text-blue-400">multi-chain power</span>, and <span class="text-blue-400">unbeatable value</span>, <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> is your 2025 MVP.</p>
   <p class="text-lg leading-relaxed mb-4">Ready to crush it? Launch at <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> or turbocharge volume with <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a>!</p>
@@ -736,36 +736,36 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 }
 </script>
 
-<div class="faq bg-gray-900 text-gray-200 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="faq bg-gray-900 text-gray-100 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
   <h2 class="text-2xl font-bold text-white mb-6">Got Questions? We’ve Got Answers!</h2>
   <div class="space-y-6">
     <div>
       <h3 class="text-xl font-semibold text-white">Are Solana Holder Bot’s holders permanent?</h3>
-      <p class="text-lg text-gray-300">✅ Yes! <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> secures holders for life, boosting your project’s cred without re-buys.</p>
+      <p class="text-lg text-gray-100">✅ Yes! <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> secures holders for life, boosting your project’s cred without re-buys.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">Is Solana Holder Bot safe?</h3>
-      <p class="text-lg text-gray-300">✅ 100%. No private keys, no hacks. See the <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" class="text-blue-400 hover:underline">Guide Video</a> for a secure setup.</p>
+      <p class="text-lg text-gray-100">✅ 100%. No private keys, no hacks. See the <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" class="text-blue-400 hover:underline">Guide Video</a> for a secure setup.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">What chains does it support?</h3>
-      <p class="text-lg text-gray-300">✅ <strong>Solana</strong>, <strong>ETH</strong>, <strong>BNB</strong>, and <strong>TON</strong>. Boost with <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">ETH</a>, <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">BNB</a>, or <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">TON Volume Bot</a>.</p>
+      <p class="text-lg text-gray-100">✅ <strong>Solana</strong>, <strong>ETH</strong>, <strong>BNB</strong>, and <strong>TON</strong>. Boost with <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">ETH</a>, <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">BNB</a>, or <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">TON Volume Bot</a>.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">How fast are results?</h3>
-      <p class="text-lg text-gray-300">✅ Lightning-fast! <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> can trend on <strong>DexScreener</strong> in minutes.</p>
+      <p class="text-lg text-gray-100">✅ Lightning-fast! <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> can trend on <strong>DexScreener</strong> in minutes.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">What’s Fatality Bot’s biggest risk?</h3>
-      <p class="text-lg text-gray-300">⚠️ <strong>Key leaks</strong> and <strong>temporary holders</strong>. <a href="https://x.com" class="text-blue-400 hover:underline">X</a> users report <strong>wallet drains</strong>.</p>
+      <p class="text-lg text-gray-100">⚠️ <strong>Key leaks</strong> and <strong>temporary holders</strong>. <a href="https://x.com" class="text-blue-400 hover:underline">X</a> users report <strong>wallet drains</strong>.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">Is Solana Holder Bot cheaper long-term?</h3>
-      <p class="text-lg text-gray-300">✅ Big time. One-time payment for <strong>permanent holders</strong> vs. Fatality’s weekly costs.</p>
+      <p class="text-lg text-gray-100">✅ Big time. One-time payment for <strong>permanent holders</strong> vs. Fatality’s weekly costs.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">Can I earn with Solana Holder Bot?</h3>
-      <p class="text-lg text-gray-300">✅ Yup! Get <strong>5% referral cash</strong>. Learn more on our <a href="https://www.solanaholderbot.com/blog" class="text-blue-400 hover:underline">blog</a>.</p>
+      <p class="text-lg text-gray-100">✅ Yup! Get <strong>5% referral cash</strong>. Learn more on our <a href="https://www.solanaholderbot.com/blog" class="text-blue-400 hover:underline">blog</a>.</p>
     </div>
   </div>
 </div>
@@ -774,7 +774,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 
 ## 🎯 Why Solana Holder Bot is Your 2025 Game-Changer
 
-<div class="text-section bg-gray-900 text-gray-200 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
+<div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4">In 2025, crypto success hinges on <span class="text-blue-400">visibility</span>, <span class="text-blue-400">trust</span>, and <span class="text-blue-400">growth</span>. <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> delivers the ultimate edge:</p>
   <ul class="list-disc pl-6 space-y-2 text-lg mb-4">
     <li><strong>Permanent Holders</strong>: Build a community that lasts, no weekly re-buys.</li>

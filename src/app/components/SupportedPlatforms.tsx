@@ -131,7 +131,7 @@ return (
       </div>
 
         {/* Text – darunter */}
-        <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-5 mt-10">
+        <p className="text-xl text-gray-100 max-w-3xl mx-auto mb-5 mt-10">
           Works with SLP & Token2022 Standard on every Solana DEX and Launchpad.
         </p>
         <h2 className="text-5xl md:text-6xl font-bold text-white mt-10">

@@ -128,7 +128,7 @@ export default function Guide() {
           </div>
 
           {/* Schritt-Anzeige */}
-          <div className="text-center mb-8 text-gray-400 text-sm md:text-base">
+          <div className="text-center mb-8 text-gray-100 text-sm md:text-base">
             Step {currentStep + 1} of {steps.length}
           </div>
 
@@ -160,7 +160,7 @@ export default function Guide() {
               <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight mb-4">
                 {steps[currentStep].title}
               </h3>
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+              <p className="text-gray-100 text-base md:text-lg leading-relaxed">
                 {steps[currentStep].desc}
               </p>
             </div>

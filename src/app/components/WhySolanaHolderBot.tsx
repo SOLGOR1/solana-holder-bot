@@ -11,11 +11,11 @@ export default function WhySolanaVolumeBot() {
 
         {/* Intro Block – stark keyword-optimiert, aber natürlich und überzeugend */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed">
+          <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed">
             In the hyper-competitive Solana ecosystem, real <span className="text-green-400 font-semibold">on-chain trading volume</span> is the ultimate game-changer. A <span className="text-green-400 font-semibold">Solana volume bot</span> that delivers massive Volume is what separates moonshots from ghosts.
           </p>
           <p className="mt-5 mb-5"></p>
-          <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed">
+          <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed">
             Whether youre launching on Pump.fun, Bonk.fun, Bags, Raydium, Meteora, Orca or Moonshot, explosive <span className="text-green-400 font-semibold">Solana volume booster</span> performance pushes you to the top of DexScreener, Birdeye, and trending charts. 
             No more getting buried, dominate rankings with authentic activity that lasts.
           </p>
@@ -31,7 +31,7 @@ export default function WhySolanaVolumeBot() {
             <h3 className="text-2xl lg:text-3xl font-semibold text-white group-hover:text-green-400 transition-colors mb-4">
               Dominate Trending Charts
             </h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-100 leading-relaxed">
               Platforms like DexScreener and Birdeye prioritize tokens with massive <span className="text-green-400">real volume</span>. 
               Our <span className="text-green-400">Solana volume bot</span> generates 100% on-chain trades that catapult your project to the top. 
               Pair it with our <span className="text-blue-400">Solana holder bot</span> for permanent holders and unbeatable visibility.
@@ -46,7 +46,7 @@ export default function WhySolanaVolumeBot() {
             <h3 className="text-2xl lg:text-3xl font-semibold text-white group-hover:text-green-400 transition-colors mb-4">
               100% Genuine & Undetectable
             </h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-100 leading-relaxed">
               Unlike cheap wash-trading bots that risk bans, our <span className="text-green-400">volume bot Solana</span> uses real wallets and authentic trades. 
               Completely safe, undetectable, and compliant — boost your <span className="text-green-400">Solana trading volume</span> without any risk. 
               Perfectly complemented by the <span className="text-blue-400">Solana holder bot</span> for long-term stability.
@@ -61,7 +61,7 @@ export default function WhySolanaVolumeBot() {
             <h3 className="text-2xl lg:text-3xl font-semibold text-white group-hover:text-green-400 transition-colors mb-4">
               Built for Raydium, Pump.fun & Moonshot
             </h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-100 leading-relaxed">
               No matter if youre on Raydium, Pump.fun, or Moonshot — our <span className="text-green-400">Solana volume booster</span> is engineered to explode your visibility. 
               Real trades = real momentum = real community growth. 
               This is the <span className="text-green-400">best Solana volume bot</span> for serious projects, ideally combined with the <span className="text-blue-400">Solana holder booster</span>.
@@ -76,7 +76,7 @@ export default function WhySolanaVolumeBot() {
             <h3 className="text-2xl lg:text-3xl font-semibold text-white group-hover:text-green-400 transition-colors mb-4">
               Start from Just 0.1 SOL
             </h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-100 leading-relaxed">
               The most affordable and effective <span className="text-green-400">volume bot for Solana</span> on the market. 
               Scale as big as you need — from early launches to massive pumps. 
               No subscriptions, no hidden fees. Unlock the full suite power: <span className="text-green-400">Solana volume bot</span> + <span className="text-blue-400">Solana holder bot</span> = unstoppable growth.
@@ -86,11 +86,11 @@ export default function WhySolanaVolumeBot() {
 
         {/* Abschluss CTA Block – zwei Buttons, starke Conversion-Optimierung */}
         <div className="max-w-4xl mx-auto mt-20 text-center space-y-12">
-          <p className="text-2xl lg:text-3xl text-gray-300 leading-relaxed font-light">
+          <p className="text-2xl lg:text-3xl text-gray-100 leading-relaxed font-light">
             Stop watching your token sit flat. Unlock explosive <span className="text-green-400 font-semibold">Solana volume boost</span> and real trending power today. 
             Pair it with our Holder Bot for the ultimate growth suite:
           </p>
-          <p className="text-2xl lg:text-3xl text-gray-300 leading-relaxed font-bold">
+          <p className="text-2xl lg:text-3xl text-gray-100 leading-relaxed font-bold">
             HOLDERS + MASSIVE VOLUME = UNSTOPPABLE MOMENTUM.
           </p>
 

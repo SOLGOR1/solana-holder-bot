@@ -70,7 +70,7 @@ export default function HowItWorks() {
             className={`px-6 py-2 rounded-xl font-medium text-sm transition-all duration-300 ${
               selectedBot === 'holder'
                 ? `bg-blue-600/80 text-white shadow-blue-500/20`
-                : 'bg-white/10 text-gray-400 hover:bg-white/20'
+                : 'bg-white/10 text-gray-100 hover:bg-white/20'
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -82,7 +82,7 @@ export default function HowItWorks() {
             className={`px-6 py-2 rounded-xl font-medium text-sm transition-all duration-300 ${
               selectedBot === 'volume'
                 ? `bg-green-600/80 text-white shadow-green-500/20`
-                : 'bg-white/10 text-gray-400 hover:bg-white/20'
+                : 'bg-white/10 text-gray-100 hover:bg-white/20'
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -119,7 +119,7 @@ export default function HowItWorks() {
                 <div className="flex-shrink-0 w-10 text-right">
                   <motion.span
                     className={`text-3xl font-bold transition-colors duration-500 ${
-                      highlightedStep === index ? `text-${botColor}-400` : 'text-gray-500'
+                      highlightedStep === index ? `text-${botColor}-400` : 'text-gray-100'
                     }`}
                     animate={{
                       scale: highlightedStep === index ? 1.2 : 1,
@@ -165,8 +165,8 @@ export default function HowItWorks() {
                   }`}>
                     {step.title}
                   </h3>
-                  <p className={`text-gray-400 text-sm leading-relaxed transition-colors duration-500 ${
-                    highlightedStep === index ? 'text-gray-200' : ''
+                  <p className={`text-gray-100 text-sm leading-relaxed transition-colors duration-500 ${
+                    highlightedStep === index ? 'text-gray-100' : ''
                   }`}>
                     {step.desc}
                   </p>

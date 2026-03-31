@@ -28,7 +28,7 @@ export default function ModesAllInOne() {
           SELECT YOUR BOOST SPEED
         </h2>
 
-        <p className="text-center text-gray-400 max-w-xl mx-auto mb-16">
+        <p className="text-center text-gray-100 max-w-xl mx-auto mb-16">
           Four carefully tuned speeds. Real volume and permanent holders in perfect harmony.
         </p>
 
@@ -49,7 +49,7 @@ export default function ModesAllInOne() {
 
             <h3 className="text-4xl font-bold text-white mb-8">Fast</h3>
 
-            <ul className="space-y-4 text-gray-300">
+            <ul className="space-y-4 text-gray-100">
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Instant volume spikes</li>
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Perfect for launch day</li>
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Strong buy-heavy pressure</li>
@@ -75,7 +75,7 @@ export default function ModesAllInOne() {
 
             <h3 className="text-4xl font-bold text-white mb-8">Medium</h3>
 
-            <ul className="space-y-4 text-gray-300">
+            <ul className="space-y-4 text-gray-100">
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Balanced &amp; steady growth</li>
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Ideal for maintaining rank</li>
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Natural buy/sell ratio</li>
@@ -101,7 +101,7 @@ export default function ModesAllInOne() {
 
             <h3 className="text-4xl font-bold text-white mb-8">Slow</h3>
 
-            <ul className="space-y-4 text-gray-300">
+            <ul className="space-y-4 text-gray-100">
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Spread-out natural activity</li>
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Very organic looking</li>
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Long-term holder growth</li>
@@ -127,7 +127,7 @@ export default function ModesAllInOne() {
 
             <h3 className="text-4xl font-bold text-white mb-8">Ultra Slow</h3>
 
-            <ul className="space-y-4 text-gray-300">
+            <ul className="space-y-4 text-gray-100">
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Maximum stealth mode</li>
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Ultra natural behavior</li>
               <li className="flex items-center gap-3"><span className="text-amber-400">→</span> Long-term holder focus</li>

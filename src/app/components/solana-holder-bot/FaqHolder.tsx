@@ -45,24 +45,24 @@ export default function FaqHolder() {
             </thead>
             <tbody>
               <tr className="border-b border-cyan-900/20">
-                <td className="py-4 px-5 text-gray-200">Test Drive (0.1 SOL)</td>
-                <td className="py-4 px-5 text-right text-gray-200">10 holders</td>
-                <td className="py-4 px-5 text-right text-gray-200">~30 seconds</td>
+                <td className="py-4 px-5 text-gray-100">Test Drive (0.1 SOL)</td>
+                <td className="py-4 px-5 text-right text-gray-100">10 holders</td>
+                <td className="py-4 px-5 text-right text-gray-100">~30 seconds</td>
               </tr>
               <tr className="border-b border-cyan-900/20">
-                <td className="py-4 px-5 text-gray-200">Start Boost (0.15 SOL)</td>
-                <td className="py-4 px-5 text-right text-gray-200">50 holders</td>
-                <td className="py-4 px-5 text-right text-gray-200">~1 minute</td>
+                <td className="py-4 px-5 text-gray-100">Start Boost (0.15 SOL)</td>
+                <td className="py-4 px-5 text-right text-gray-100">50 holders</td>
+                <td className="py-4 px-5 text-right text-gray-100">~1 minute</td>
               </tr>
               <tr className="border-b border-cyan-900/20">
-                <td className="py-4 px-5 text-gray-200">Super Boost (0.25 SOL)</td>
-                <td className="py-4 px-5 text-right text-gray-200">100 holders</td>
-                <td className="py-4 px-5 text-right text-gray-200">~2 minutes</td>
+                <td className="py-4 px-5 text-gray-100">Super Boost (0.25 SOL)</td>
+                <td className="py-4 px-5 text-right text-gray-100">100 holders</td>
+                <td className="py-4 px-5 text-right text-gray-100">~2 minutes</td>
               </tr>
               <tr className="border-b border-cyan-900/20">
-                <td className="py-4 px-5 text-gray-200">Massive Growth (1.5 SOL)</td>
-                <td className="py-4 px-5 text-right text-gray-200">500 holders</td>
-                <td className="py-4 px-5 text-right text-gray-200">~5 minutes</td>
+                <td className="py-4 px-5 text-gray-100">Massive Growth (1.5 SOL)</td>
+                <td className="py-4 px-5 text-right text-gray-100">500 holders</td>
+                <td className="py-4 px-5 text-right text-gray-100">~5 minutes</td>
               </tr>
             </tbody>
           </table>
@@ -112,7 +112,7 @@ export default function FaqHolder() {
           Got Questions?
         </h2>
 
-        <p className="text-center text-gray-400 text-base md:text-lg max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-center text-gray-100 text-base md:text-lg max-w-3xl mx-auto mb-12 leading-relaxed">
           Everything you need to know about the Solana Holder Bot – safety, real holders, pricing and results.
         </p>
 
@@ -154,7 +154,7 @@ export default function FaqHolder() {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="px-6 pb-6 md:pb-8 text-gray-300 text-base leading-relaxed">
+                <div className="px-6 pb-6 md:pb-8 text-gray-100 text-base leading-relaxed">
                   {faq.a && <p>{faq.a}</p>}
                   {faq.table && <div className="mt-5">{faq.table}</div>}
                 </div>
@@ -169,7 +169,7 @@ export default function FaqHolder() {
           <Link href="/solana-volume-bot" className="underline">→ Solana Volume Bot</Link> | 
           <Link href="/solana-all-in-one-booster" className="underline">→ Volume & Holder Bot</Link> | 
         </p>
-        <p className="text-xs text-gray-500">Last updated: March 23, 2026</p>
+        <p className="text-xs text-gray-100">Last updated: March 23, 2026</p>
 
         {/* Contact Support Button – jetzt Cyan */}
         <div className="text-center mt-16">

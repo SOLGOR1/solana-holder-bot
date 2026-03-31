@@ -39,7 +39,7 @@ export default function BlogCard({ post }: BlogCardProps) {
 
         {/* Inhalt – kompakter Padding, übersichtlicher */}
         <div className="p-6">
-          <p className="text-gray-400 text-sm mb-3">
+          <p className="text-gray-100 text-sm mb-3">
             {new Date(post.date).toLocaleDateString("en-US", {
               year: "numeric",
               month: "long",
@@ -49,7 +49,7 @@ export default function BlogCard({ post }: BlogCardProps) {
           <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors line-clamp-2">
             {post.title}
           </h3>
-          <p className="text-gray-300 text-base leading-relaxed line-clamp-3">
+          <p className="text-gray-100 text-base leading-relaxed line-clamp-3">
             {post.excerpt}
           </p>
         </div>

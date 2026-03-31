@@ -67,7 +67,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-400 text-xl">No posts yet. Stay tuned!</p>
+          <p className="text-center text-gray-100 text-xl">No posts yet. Stay tuned!</p>
         )}
       </motion.div>
     </>

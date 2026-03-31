@@ -59,7 +59,7 @@ export default function PackageHolder() {
           Choose Your Holder Tier
         </h2>
 
-        <p className="text-center text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-14 leading-relaxed">
+        <p className="text-center text-gray-100 text-base md:text-lg max-w-2xl mx-auto mb-14 leading-relaxed">
           Real wallets. Instant results.<br className="hidden sm:inline" />
           From test to trending in minutes.
         </p>
@@ -111,10 +111,10 @@ export default function PackageHolder() {
 
               {/* Titel + Subtitle – kürzer & sauber */}
               <h3 className="text-2xl font-bold text-white text-center mb-1">{pkg.title}</h3>
-              <p className="text-gray-400 text-sm text-center mb-6">{pkg.subtitle}</p>
+              <p className="text-gray-100 text-sm text-center mb-6">{pkg.subtitle}</p>
 
               {/* Features – kompakter Abstand */}
-              <ul className="space-y-2.5 text-gray-300 text-sm mb-8 flex-grow">
+              <ul className="space-y-2.5 text-gray-100 text-sm mb-8 flex-grow">
                 {features.map((f, i) => (
                   <li key={i} className="flex items-start">
                     <span className="text-cyan-400 mr-3 mt-1 text-base">•</span>

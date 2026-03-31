@@ -21,7 +21,7 @@ export default function ModesHolder() {
         </h2>
 
         {/* Kurzer, starker Erklärtext */}
-        <p className="text-center text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
+        <p className="text-center text-gray-100 text-base md:text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
           No setup. No complicated settings.
           Just 3 clicks and you get real, permanent holders on Raydium, Pump.fun &amp; DexScreener.
         </p>
@@ -36,7 +36,7 @@ export default function ModesHolder() {
               <h3 className="text-2xl font-bold text-cyan-400">Send Token CA</h3>
             </div>
 
-            <p className="text-gray-300 text-base leading-relaxed">
+            <p className="text-gray-100 text-base leading-relaxed">
               Copy &amp; paste the token CA you want to boost.
             </p>
 
@@ -59,7 +59,7 @@ export default function ModesHolder() {
               <h3 className="text-2xl font-bold text-cyan-400">Fund the Bot</h3>
             </div>
 
-            <p className="text-gray-300 text-base leading-relaxed">
+            <p className="text-gray-100 text-base leading-relaxed">
               Send 0.1 SOL + your tokens to the bot wallet.
             </p>
 
@@ -82,7 +82,7 @@ export default function ModesHolder() {
               <h3 className="text-2xl font-bold text-cyan-400">Press Start</h3>
             </div>
 
-            <p className="text-gray-300 text-base leading-relaxed">
+            <p className="text-gray-100 text-base leading-relaxed">
               Watch real holders appear instantly on DexScreener.
             </p>
 

@@ -91,20 +91,20 @@ export default function Testimonials() {
                         <path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.148-1.897-.121-.634-.481-1.216-1.012-1.643-.531-.427-1.18-.643-1.862-.643-.68 0-1.332.216-1.863.643-.531.427-.891 1.009-1.012 1.643-.121.633-.075 1.29.148 1.897-.586.274-1.084.706-1.438 1.246-.355.541-.552 1.17-.57 1.816-.018.647.155 1.276.509 1.816.354.54.852.972 1.438 1.246-.223.607-.27 1.264-.148 1.897.121.634.481 1.216 1.012 1.643.531.427 1.18.643 1.862.643.68 0 1.332-.216 1.863-.643.531-.427.891-1.009 1.012-1.643.121-.633.075-1.29-.148-1.897.586-.274 1.084-.706 1.438-1.246.355-.541.552-1.17.57-1.816z" />
                       </svg>
                     </div>
-                    <p className="text-gray-500 text-sm truncate">{t.handle}</p>
+                    <p className="text-gray-100 text-sm truncate">{t.handle}</p>
                   </div>
                 </div>
               </div>
 
               {/* Post Text – natürlicher, ohne Anführungszeichen */}
               <div className="px-4 pb-3">
-                <p className="text-gray-200 leading-relaxed text-base">
+                <p className="text-gray-100 leading-relaxed text-base">
                   {t.text}
                 </p>
               </div>
 
               {/* Engagement Bar – realistisch mit randomisierten Zahlen + Retweet */}
-              <div className="px-4 py-3 border-t border-gray-800/50 flex items-center justify-between text-gray-500 text-sm">
+              <div className="px-4 py-3 border-t border-gray-800/50 flex items-center justify-between text-gray-100 text-sm">
                 <span className="flex items-center gap-1.5 hover:text-cyan-500 transition-colors cursor-pointer">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -127,7 +127,7 @@ export default function Testimonials() {
                   {t.likes > 1000 ? `${(t.likes / 1000).toFixed(1)}K` : t.likes}
                 </span>
 
-                <span className="text-gray-500">
+                <span className="text-gray-100">
                   {t.views}
                 </span>
               </div>

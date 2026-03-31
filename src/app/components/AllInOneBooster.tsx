@@ -75,7 +75,7 @@ export default function AllInOneBooster() {
 
             <motion.p
               variants={itemVariants}
-              className="text-base text-gray-400 max-w-md lg:max-w-none mx-auto lg:mx-0 leading-relaxed"
+              className="text-base text-gray-100 max-w-md lg:max-w-none mx-auto lg:mx-0 leading-relaxed"
             >
               Real trading volume and permanent holders — at the same time.<br />
               Starting from just 0.15 SOL. The most powerful Solana launch tool of 2026.
@@ -92,7 +92,7 @@ export default function AllInOneBooster() {
                 </div>
                 <div className="text-sm">
                   <p className="text-white font-medium">Volume + Holders simultaneously</p>
-                  <p className="text-gray-500 text-xs">One bot. Two powerful effects.</p>
+                  <p className="text-gray-100 text-xs">One bot. Two powerful effects.</p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -101,7 +101,7 @@ export default function AllInOneBooster() {
                 </div>
                 <div className="text-sm">
                   <p className="text-white font-medium">Authentic wallets</p>
-                  <p className="text-gray-500 text-xs">Natural organic growth</p>
+                  <p className="text-gray-100 text-xs">Natural organic growth</p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -110,7 +110,7 @@ export default function AllInOneBooster() {
                 </div>
                 <div className="text-sm">
                   <p className="text-white font-medium">Sub-second execution</p>
-                  <p className="text-gray-500 text-xs">Full MEV protection</p>
+                  <p className="text-gray-100 text-xs">Full MEV protection</p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -119,7 +119,7 @@ export default function AllInOneBooster() {
                 </div>
                 <div className="text-sm">
                   <p className="text-white font-medium">Pause anytime</p>
-                  <p className="text-gray-500 text-xs">Total control</p>
+                  <p className="text-gray-100 text-xs">Total control</p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -128,7 +128,7 @@ export default function AllInOneBooster() {
                 </div>
                 <div className="text-sm">
                   <p className="text-white font-medium">Telegram full-auto</p>
-                  <p className="text-gray-500 text-xs">One click to launch</p>
+                  <p className="text-gray-100 text-xs">One click to launch</p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -137,7 +137,7 @@ export default function AllInOneBooster() {
                 </div>
                 <div className="text-sm">
                   <p className="text-white font-medium">Multi-DEX ready</p>
-                  <p className="text-gray-500 text-xs">Perfect for any token</p>
+                  <p className="text-gray-100 text-xs">Perfect for any token</p>
                 </div>
               </div>
             </motion.div>
@@ -147,7 +147,7 @@ export default function AllInOneBooster() {
               variants={itemVariants}
               className="mt-7 flex items-center justify-center lg:justify-start gap-3 text-amber-200"
             >
-              <span className="uppercase text-xs font-medium tracking-widest text-gray-400">Starting at</span>
+              <span className="uppercase text-xs font-medium tracking-widest text-gray-100">Starting at</span>
               <div className="px-5 py-2 bg-white/5 border border-amber-400/25 rounded-3xl font-semibold text-xl flex items-center gap-2">
                 <FaFire className="text-amber-400" />
                 0.15 SOL

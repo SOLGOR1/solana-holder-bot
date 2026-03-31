@@ -46,7 +46,7 @@ export default function CtaAllInOne() {
             <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-[-1.2px] leading-tight mb-4">
               Ready to dominate the charts?
             </h2>
-            <p className="text-lg text-gray-300 max-w-md">
+            <p className="text-lg text-gray-100 max-w-md">
               Real volume + permanent holders at the same time.<br />
               Starting at just 0.15 SOL.
             </p>

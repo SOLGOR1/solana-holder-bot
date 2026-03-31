@@ -64,7 +64,7 @@ export default function WhyChoose() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
             Why Choose Solana Holder Volume Bot?
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-100 max-w-2xl mx-auto leading-relaxed">
             Unmatched volume and holder generation at the lowest price, starting at 0.1 SOL so that even small projects have a chance to stand out.
           </p>
         </motion.div>
@@ -102,7 +102,7 @@ export default function WhyChoose() {
                     Solana Holder Bot
                   </h3>
 
-                  <p className="text-sm md:text-md text-gray-400 leading-relaxed">
+                  <p className="text-sm md:text-md text-gray-100 leading-relaxed">
                     Permanently boost your holder count with authentic Solana wallets. Rise to the top of every major ranking.
                   </p>
 
@@ -111,55 +111,55 @@ export default function WhyChoose() {
                       <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
                         <FaUsers className="w-3 h-3 text-blue-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Creates Permanent Holders</span>
+                      <span className="text-gray-100 text-sm">Creates Permanent Holders</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
                         <FaShieldAlt className="w-3 h-3 text-blue-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Supports SPL and Token 2022 Standard</span>
+                      <span className="text-gray-100 text-sm">Supports SPL and Token 2022 Standard</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
                         <FaWallet className="w-3 h-3 text-blue-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Authentic Wallet Diversity for Natural Growth</span>
+                      <span className="text-gray-100 text-sm">Authentic Wallet Diversity for Natural Growth</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
                         <FaClock className="w-3 h-3 text-blue-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Real Holder Addition to Mimic Organic Interest</span>
+                      <span className="text-gray-100 text-sm">Real Holder Addition to Mimic Organic Interest</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
                         <FaChartBar className="w-3 h-3 text-blue-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Real-Time Holder Analytics and Growth Tracking</span>
+                      <span className="text-gray-100 text-sm">Real-Time Holder Analytics and Growth Tracking</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
                         <FaRobot className="w-3 h-3 text-blue-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Fully Automated Setup with Telegram Integration</span>
+                      <span className="text-gray-100 text-sm">Fully Automated Setup with Telegram Integration</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
                         <FaGlobe className="w-3 h-3 text-blue-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Multi-DEX and Launchpad Compatibility</span>
+                      <span className="text-gray-100 text-sm">Multi-DEX and Launchpad Compatibility</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
                         <FaKey className="w-3 h-3 text-blue-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Enhanced Security: No Private Key Access Required</span>
+                      <span className="text-gray-100 text-sm">Enhanced Security: No Private Key Access Required</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
                         <FaShieldAlt className="w-3 h-3 text-blue-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Predictive Ranking Impact Analysis</span>
+                      <span className="text-gray-100 text-sm">Predictive Ranking Impact Analysis</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center ring-2 ring-blue-400/30">
@@ -213,7 +213,7 @@ export default function WhyChoose() {
                     Solana Volume Bot
                   </h3>
 
-                  <p className="text-sm md:text-md text-gray-400 leading-relaxed">
+                  <p className="text-sm md:text-md text-gray-100 leading-relaxed">
                     Create genuine on-chain trading volume. Dominate trending charts across all major platforms.
                   </p>
 
@@ -222,55 +222,55 @@ export default function WhyChoose() {
                       <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
                         <FaChartLine className="w-3 h-3 text-green-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Highest volume at the best market price</span>
+                      <span className="text-gray-100 text-sm">Highest volume at the best market price</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
                         <FaExchangeAlt className="w-3 h-3 text-green-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">More buys than sells for bullish pressure</span>
+                      <span className="text-gray-100 text-sm">More buys than sells for bullish pressure</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
                         <FaEye className="w-3 h-3 text-green-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Transparent, real-time volume stats</span>
+                      <span className="text-gray-100 text-sm">Transparent, real-time volume stats</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
                         <FaPauseCircle className="w-3 h-3 text-green-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Start, pause or withdraw</span>
+                      <span className="text-gray-100 text-sm">Start, pause or withdraw</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
                         <FaLock className="w-3 h-3 text-green-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">MEV Protection</span>
+                      <span className="text-gray-100 text-sm">MEV Protection</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
                         <FaBolt className="w-3 h-3 text-green-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Sub-Second Transaction Landing</span>
+                      <span className="text-gray-100 text-sm">Sub-Second Transaction Landing</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
                         <FaShieldAlt className="w-3 h-3 text-green-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Predictive Execution & Real-Time Slippage Estimator</span>
+                      <span className="text-gray-100 text-sm">Predictive Execution & Real-Time Slippage Estimator</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
                         <FaCoins className="w-3 h-3 text-green-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Gasless Support for Token2022 & Memecoin Swaps</span>
+                      <span className="text-gray-100 text-sm">Gasless Support for Token2022 & Memecoin Swaps</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center">
                         <FaExchangeAlt className="w-3 h-3 text-green-400" />
                       </div>
-                      <span className="text-gray-300 text-sm">Just-In-Time Market Revival for Long-Tail Assets</span>
+                      <span className="text-gray-100 text-sm">Just-In-Time Market Revival for Long-Tail Assets</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center ring-2 ring-green-400/30">

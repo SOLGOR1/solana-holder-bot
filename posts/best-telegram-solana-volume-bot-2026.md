@@ -191,7 +191,7 @@ slug: "best-telegram-solana-volume-bot-2026"
   <p className="text-lg text-emerald-300 font-medium mb-3">
     Need natural, organic volume on top to climb pump.fun trending or DexScreener faster?
   </p>
-  <p className="text-gray-300 mb-4">
+  <p className="text-gray-100 mb-4">
     Check out our Volume Bot page – with all modes (Fast/Medium/Slow), MEV protection, and real examples starting at 0.1 SOL.
   </p>
   <a 

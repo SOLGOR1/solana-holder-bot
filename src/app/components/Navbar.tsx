@@ -101,7 +101,7 @@ export default function Navbar() {
             <ul className="flex items-center space-x-12">
               {/* Home Dropdown */}
               <li className="relative" onMouseEnter={handleHomeMouseEnter} onMouseLeave={handleHomeMouseLeave}>
-                <button className="flex items-center gap-2 text-lg text-gray-200 hover:text-white transition-colors">
+                <button className="flex items-center gap-2 text-lg text-gray-100 hover:text-white transition-colors">
                   Home
                   <FaChevronDown className={`w-4 h-4 transition-transform ${isHomeOpen ? "rotate-180" : ""}`} />
                 </button>
@@ -118,7 +118,7 @@ export default function Navbar() {
                           <li key={link.name}>
                             <Link
                               href={link.href}
-                              className="flex items-center gap-4 px-6 py-4 text-lg text-gray-200 hover:text-white hover:bg-white/10 transition-all rounded-2xl"
+                              className="flex items-center gap-4 px-6 py-4 text-lg text-gray-100 hover:text-white hover:bg-white/10 transition-all rounded-2xl"
                             >
                               <link.icon className="w-6 h-6 text-cyan-400" />
                               {link.name}
@@ -135,11 +135,11 @@ export default function Navbar() {
               {mainLinks.map((link) => (
                 <li key={link.name}>
                   {link.href.startsWith("#") ? (
-                    <a href={link.href} className="text-lg text-gray-200 hover:text-white transition-colors">
+                    <a href={link.href} className="text-lg text-gray-100 hover:text-white transition-colors">
                       {link.name}
                     </a>
                   ) : (
-                    <Link href={link.href} className="text-lg text-gray-200 hover:text-white transition-colors">
+                    <Link href={link.href} className="text-lg text-gray-100 hover:text-white transition-colors">
                       {link.name}
                     </Link>
                   )}
@@ -148,7 +148,7 @@ export default function Navbar() {
 
               {/* More Dropdown (unverändert) */}
               <li className="relative" onMouseEnter={handleMoreMouseEnter} onMouseLeave={handleMoreMouseLeave}>
-                <button className="flex items-center gap-2 text-lg text-gray-200 hover:text-white transition-colors">
+                <button className="flex items-center gap-2 text-lg text-gray-100 hover:text-white transition-colors">
                   More
                   <FaChevronDown className={`w-4 h-4 transition-transform ${isMoreOpen ? "rotate-180" : ""}`} />
                 </button>
@@ -164,12 +164,12 @@ export default function Navbar() {
                         {moreLinks.map((link) => (
                           <li key={link.name}>
                             {link.href.startsWith("#") ? (
-                              <a href={link.href} className="flex items-center gap-4 px-6 py-4 text-lg text-gray-200 hover:text-white hover:bg-white/10 transition-all rounded-2xl">
+                              <a href={link.href} className="flex items-center gap-4 px-6 py-4 text-lg text-gray-100 hover:text-white hover:bg-white/10 transition-all rounded-2xl">
                                 <link.icon className="w-6 h-6 text-cyan-400" />
                                 {link.name}
                               </a>
                             ) : (
-                              <Link href={link.href} className="flex items-center gap-4 px-6 py-4 text-lg text-gray-200 hover:text-white hover:bg-white/10 transition-all rounded-2xl">
+                              <Link href={link.href} className="flex items-center gap-4 px-6 py-4 text-lg text-gray-100 hover:text-white hover:bg-white/10 transition-all rounded-2xl">
                                 <link.icon className="w-6 h-6 text-cyan-400" />
                                 {link.name}
                               </Link>
@@ -281,7 +281,7 @@ export default function Navbar() {
                         <ul className="pl-10 space-y-1 pt-1">
                           {botLinks.map((link) => (
                             <li key={link.name}>
-                              <a href={link.href} onClick={closeMobileMenu} className="flex items-center gap-4 px-5 py-3.5 text-lg font-medium text-gray-200 hover:text-white hover:bg-white/10 rounded-2xl transition-all">
+                              <a href={link.href} onClick={closeMobileMenu} className="flex items-center gap-4 px-5 py-3.5 text-lg font-medium text-gray-100 hover:text-white hover:bg-white/10 rounded-2xl transition-all">
                                 <link.icon className="w-6 h-6 text-cyan-400" />
                                 {link.name}
                               </a>
@@ -304,7 +304,7 @@ export default function Navbar() {
                 ))}
                 {moreLinks.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} onClick={closeMobileMenu} className="flex items-center gap-4 px-5 py-3.5 text-lg font-medium text-gray-200 hover:text-white hover:bg-white/10 rounded-2xl transition-all">
+                    <a href={link.href} onClick={closeMobileMenu} className="flex items-center gap-4 px-5 py-3.5 text-lg font-medium text-gray-100 hover:text-white hover:bg-white/10 rounded-2xl transition-all">
                       <link.icon className="w-6 h-6 text-cyan-400" />
                       {link.name}
                     </a>

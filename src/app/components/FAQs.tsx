@@ -35,8 +35,8 @@ export default function FAQs() {
         <table className="mt-4 w-full text-left">
           <thead>
             <tr className="border-b border-white/10">
-              <th className="py-2 text-gray-400">Package</th>
-              <th className="py-2 text-gray-400 text-right">Price</th>
+              <th className="py-2 text-gray-100">Package</th>
+              <th className="py-2 text-gray-100 text-right">Price</th>
             </tr>
           </thead>
           <tbody>
@@ -67,8 +67,8 @@ export default function FAQs() {
         <table className="mt-4 w-full text-left">
           <thead>
             <tr className="border-b border-white/10">
-              <th className="py-2 text-gray-400">Package</th>
-              <th className="py-2 text-gray-400 text-right">Time</th>
+              <th className="py-2 text-gray-100">Package</th>
+              <th className="py-2 text-gray-100 text-right">Time</th>
             </tr>
           </thead>
           <tbody>
@@ -177,7 +177,7 @@ export default function FAQs() {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="px-6 pb-6 text-gray-300 text-base leading-relaxed">
+                <div className="px-6 pb-6 text-gray-100 text-base leading-relaxed">
                   <p>{faq.a}</p>
                   {faq.table && <div className="mt-4">{faq.table}</div>}
                 </div>

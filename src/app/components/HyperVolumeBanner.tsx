@@ -32,7 +32,7 @@ export default function HyperVolumeBanner() {
               <h2 className="text-4xl font-bold mb-6 tracking-tight">
                 Boost Your Project with Hyper Volume Bot
               </h2>
-              <p className="text-xl text-gray-200 leading-relaxed mb-6">
+              <p className="text-xl text-gray-100 leading-relaxed mb-6">
                 Meet the <strong>Hyper Volume Bot</strong> – crafted by our partners, it’s the ultimate add-on to our Solana Holder Bot. 
                 Power up your project across <strong>ETH, SOL, BSC, BASE, TON</strong> with the market’s <em>best-priced volume bot</em>. 
                 Fast, reliable, and insanely effective – your community will love it!

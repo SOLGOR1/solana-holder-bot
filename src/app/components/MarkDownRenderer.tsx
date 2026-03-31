@@ -13,7 +13,7 @@ type MarkdownRendererProps = {
 
 export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
   return (
-    <div className="text-gray-300">
+    <div className="text-gray-100">
       <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
     </div>
   );

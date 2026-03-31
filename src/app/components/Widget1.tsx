@@ -121,7 +121,7 @@ export default function Widget1() {
               <button
                 onClick={() => setIsOpen(false)}
                 aria-label="Close chat"
-                className="text-gray-400 hover:text-white transition"
+                className="text-gray-100 hover:text-white transition"
               >
                 <FaTimes className="w-5 h-5" />
               </button>
@@ -158,7 +158,7 @@ export default function Widget1() {
                 <div className="flex items-start gap-4">
                   <LogoAvatar size="10" showPulse={false} />
                   <div>
-                    <p className="text-sm text-gray-400 mb-1">Support</p>
+                    <p className="text-sm text-gray-100 mb-1">Support</p>
                     <div className="bg-white/10 backdrop-blur-md rounded-3xl px-5 py-4 text-white max-w-xs">
                       GM! Let&apos;s chat on Telegram. I&apos;m here to help! 🤜🤛
                     </div>

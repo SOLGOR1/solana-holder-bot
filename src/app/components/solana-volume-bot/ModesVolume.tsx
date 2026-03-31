@@ -21,7 +21,7 @@ export default function ModesVolume() {
         </h2>
 
         {/* Ausgewogener, kürzerer Erklärtext */}
-        <p className="text-center text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
+        <p className="text-center text-gray-100 text-base md:text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
           Solana Volume Bot is engineered for consistent performance in any market environment.
           Choose fast, medium or slow mode to match your strategy and accelerate Dex visibility.
         </p>
@@ -32,7 +32,7 @@ export default function ModesVolume() {
           {/* FAST */}
           <div className="group relative bg-zinc-900/70 backdrop-blur-xl border border-emerald-900/30 rounded-3xl p-8 transition-all duration-300 hover:border-emerald-600/50 hover:shadow-xl hover:shadow-emerald-950/40">
             <h3 className="text-2xl font-bold text-emerald-400 mb-6">Fast</h3>
-            <ul className="space-y-3 text-gray-300 text-base">
+            <ul className="space-y-3 text-gray-100 text-base">
               <li className="flex items-start">
                 <span className="text-emerald-400 mr-3 mt-1.5">•</span>
                 Maximum speed
@@ -80,7 +80,7 @@ export default function ModesVolume() {
           {/* MEDIUM – gleiches Muster */}
           <div className="group relative bg-zinc-900/70 backdrop-blur-xl border border-emerald-900/30 rounded-3xl p-8 transition-all duration-300 hover:border-emerald-600/50 hover:shadow-xl hover:shadow-emerald-950/40">
             <h3 className="text-2xl font-bold text-emerald-400 mb-6">Medium</h3>
-            <ul className="space-y-3 text-gray-300 text-base">
+            <ul className="space-y-3 text-gray-100 text-base">
               <li className="flex items-start">
                 <span className="text-emerald-400 mr-3 mt-1.5">•</span>
                 Steady increase
@@ -127,7 +127,7 @@ export default function ModesVolume() {
           {/* SLOW – gleiches Muster */}
           <div className="group relative bg-zinc-900/70 backdrop-blur-xl border border-emerald-900/30 rounded-3xl p-8 transition-all duration-300 hover:border-emerald-600/50 hover:shadow-xl hover:shadow-emerald-950/40">
             <h3 className="text-2xl font-bold text-emerald-400 mb-6">Slow</h3>
-            <ul className="space-y-3 text-gray-300 text-base">
+            <ul className="space-y-3 text-gray-100 text-base">
               <li className="flex items-start">
                 <span className="text-emerald-400 mr-3 mt-1.5">•</span>
                 Spreaded volume

@@ -10,13 +10,13 @@ slug: "ton-volume-bot"
 <div class="space-y-12">
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
     <h1 class="text-4xl font-bold text-white mb-6">📱 The Ultimate Telegram TON Volume Bot for 2025</h1>
-    <p class="text-gray-300 mb-6 leading-relaxed">
+    <p class="text-gray-100 mb-6 leading-relaxed">
       Want to <strong>ignite your Telegram-native TON project</strong>? The <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:text-blue-300 underline font-semibold">Mellow Man Hyper Volume Bot</a>, a <strong>Telegram-based TON volume bot</strong>, delivers <strong>200x trading volume</strong> to boost your Jetton token’s visibility on Tonscan, Jetton, and DeDust. With a low 4% fee and seamless Telegram integration, it’s the go-to <strong>volume bot TON</strong> developers trust in 2025.
     </p>
     <div class="text-center mb-6">
       <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-500 transition">Ignite Your TON Token Now! 🔥</a>
     </div>
-    <p class="text-gray-300 mb-6 leading-relaxed">
+    <p class="text-gray-100 mb-6 leading-relaxed">
       Discover why Mellow Man is the top <strong>TON volume booster</strong>, how its Telegram Mini App-like experience simplifies volume boosting, and how to set it up in minutes. Whether you’re launching a new TON token or scaling an existing one, this <strong>Telegram TON volume bot</strong> drives results. Let’s make your project shine! 💎
     </p>
     <img src="/ton-volume-bot.jpg" alt="Mellow Man TON Volume Bot Telegram dashboard boosting trading volume in 2025" class="w-full h-auto rounded-lg mb-6" />
@@ -24,25 +24,25 @@ slug: "ton-volume-bot"
 
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-white mb-6">💎 Why Choose Mellow Man’s TON Volume Bot?</h2>
-    <p class="text-gray-300 mb-6 leading-relaxed">
+    <p class="text-gray-100 mb-6 leading-relaxed">
       Designed for Telegram’s TON blockchain, the <strong>Mellow Man Hyper Volume Bot</strong> is the premier <strong>TON volume bot</strong>. It combines a <strong>200x volume multiplier</strong>, a flat 4% fee, and 85% gas fee refunds with a Telegram-native interface that feels like a TON Mini App. Outshine competitors and make your Jetton token trend on DeDust and Jetton.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
       <div class="bg-gray-700 p-4 rounded-lg">
         <p class="text-blue-400 font-semibold mb-2">💥 200x Volume Surge</p>
-        <p class="text-gray-300">Multiply your TON trading volume by 200x for unmatched visibility.</p>
+        <p class="text-gray-100">Multiply your TON trading volume by 200x for unmatched visibility.</p>
       </div>
       <div class="bg-gray-700 p-4 rounded-lg">
         <p class="text-blue-400 font-semibold mb-2">💸 Only 4% Fee</p>
-        <p class="text-gray-300">Low-cost with 85% of unused gas fees returned.</p>
+        <p class="text-gray-100">Low-cost with 85% of unused gas fees returned.</p>
       </div>
       <div class="bg-gray-700 p-4 rounded-lg">
         <p class="text-blue-400 font-semibold mb-2">📱 Telegram-Native</p>
-        <p class="text-gray-300">Run the bot entirely within Telegram for ease and speed.</p>
+        <p class="text-gray-100">Run the bot entirely within Telegram for ease and speed.</p>
       </div>
       <div class="bg-gray-700 p-4 rounded-lg">
         <p class="text-blue-400 font-semibold mb-2">🌐 Trend on Jetton</p>
-        <p class="text-gray-300">Climb rankings on Tonscan, Jetton, and DeDust.</p>
+        <p class="text-gray-100">Climb rankings on Tonscan, Jetton, and DeDust.</p>
       </div>
     </div>
     <div class="text-center">
@@ -52,10 +52,10 @@ slug: "ton-volume-bot"
 
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-white mb-6">⚙️ How Mellow Man’s TON Volume Bot Works</h2>
-    <p class="text-gray-300 mb-6 leading-relaxed">
+    <p class="text-gray-100 mb-6 leading-relaxed">
       The <strong>Mellow Man Hyper Volume Bot</strong> powers <strong>TON volume boosts</strong> by simulating organic trades across multiple TON wallets, creating a dynamic order book. Running entirely within Telegram, it offers customizable schedules to spread volume over minutes for a quick <strong>volume bot TON</strong> spike or days for steady momentum.
     </p>
-    <ul class="list-none space-y-4 text-gray-300 mb-6">
+    <ul class="list-none space-y-4 text-gray-100 mb-6">
       <li class="flex items-start">
         <span class="text-blue-400 mr-3 text-2xl">🚀</span>
         <div>
@@ -80,10 +80,10 @@ slug: "ton-volume-bot"
 
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-white mb-6">🌍 TON’s Telegram Ecosystem Advantage</h2>
-    <p class="text-gray-300 mb-6 leading-relaxed">
+    <p class="text-gray-100 mb-6 leading-relaxed">
       TON, built by Telegram, is the blockchain for Telegram’s 900M+ users. The <strong>Mellow Man TON Volume Bot</strong> leverages this ecosystem by:
     </p>
-    <ul class="list-none space-y-4 text-gray-300 mb-6">
+    <ul class="list-none space-y-4 text-gray-100 mb-6">
       <li class="flex items-start">
         <span class="text-blue-400 mr-3 text-2xl">📱</span>
         <div>
@@ -107,67 +107,67 @@ slug: "ton-volume-bot"
 
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-white mb-6">📱 Step-by-Step: Using the Telegram TON Volume Bot</h2>
-    <p class="text-gray-300 mb-6 leading-relaxed">
+    <p class="text-gray-100 mb-6 leading-relaxed">
       Setting up the <strong>Mellow Man Hyper Volume Bot</strong> for your TON project is as easy as sending a Telegram message. Here’s how to launch your <strong>TON volume booster</strong>:
     </p>
     <div class="space-y-6">
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">1. Launch the Telegram Bot</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           Open the <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:text-blue-300 underline">Mellow Man Hyper Volume Bot</a> on Telegram—no app downloads required!
         </p>
       </div>
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">2. Activate the Bot</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           Tap /Start in the Telegram menu to begin with a sleek, Mini App-like interface.
         </p>
       </div>
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">3. Choose TON</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           Select TON as your blockchain to target Telegram’s ecosystem.
         </p>
       </div>
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">4. Provide Contract Address</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           Enter your Jetton token’s contract address (check <a href="https://tonscan.org" class="text-blue-400 hover:text-blue-300 underline">Tonscan</a> for accuracy).
         </p>
       </div>
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">5. Pick a Schedule</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           Set a short burst for a <strong>volume bot TON</strong> spike or a longer campaign for growth.
         </p>
       </div>
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">6. Choose a Volume Plan</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           Select a plan that aligns with your TON project’s ambitions.
         </p>
       </div>
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">7. Send TON Crystals</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           Transfer TON to the bot, adding extra for gas fees (85% refunded if unused).
         </p>
       </div>
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">8. Track Live Results</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           Monitor volume and trades in real-time via Telegram’s dashboard.
         </p>
       </div>
     </div>
-    <p class="text-gray-300 mt-6">
+    <p class="text-gray-100 mt-6">
       New to TON? Watch our <a href="https://youtu.be/9hqVecv1Y2M" class="text-blue-400 hover:text-blue-300 underline">Telegram tutorial</a> for a quick setup guide! 🎥
     </p>
     <div class="bg-blue-900 p-6 rounded-lg mt-6">
       <p class="text-blue-300 font-semibold text-lg">
         💥 <strong>Launch Offer:</strong> Unlock 20% extra volume for your first TON campaign!
       </p>
-      <p class="text-gray-300 mt-3">
+      <p class="text-gray-100 mt-3">
         Get started at <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:text-blue-300 underline">Mellow Man Hyper Volume Bot</a>! 📱
       </p>
     </div>
@@ -225,10 +225,10 @@ slug: "ton-volume-bot"
 
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-white mb-6">💸 Clear and Fair Fund Management</h2>
-    <p class="text-gray-300 mb-6 leading-relaxed">
+    <p class="text-gray-100 mb-6 leading-relaxed">
       The <strong>Mellow Man TON Volume Bot</strong> handles your funds with transparency:
     </p>
-    <ul class="list-none space-y-4 text-gray-300 mb-6">
+    <ul class="list-none space-y-4 text-gray-100 mb-6">
       <li class="flex items-start">
         <span class="text-blue-400 mr-3 text-2xl">💰</span>
         <div>
@@ -252,14 +252,14 @@ slug: "ton-volume-bot"
 
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-white mb-6">💬 Referral Estimator: Earn TON via Telegram</h2>
-    <p class="text-gray-300 mb-6 leading-relaxed">
+    <p class="text-gray-100 mb-6 leading-relaxed">
       Invite friends to the <strong>Mellow Man TON Volume Bot</strong> and earn 5% of their campaign funds in TON. Estimate your earnings with our Telegram-inspired tool:
     </p>
     <div class="bg-gray-700 p-4 rounded-lg">
       <label for="referral-input" class="text-white font-semibold">Number of Referrals:</label>
       <input id="referral-input" type="number" placeholder="e.g., 5" class="p-2 rounded-lg mt-2 w-full text-black" />
-      <p class="text-gray-300 mt-2">Estimated Earnings: <span id="referral-output">0 TON</span></p>
-      <p class="text-gray-500 text-sm mt-2">*Assumes $500 campaign per referral, 5% commission.</p>
+      <p class="text-gray-100 mt-2">Estimated Earnings: <span id="referral-output">0 TON</span></p>
+      <p class="text-gray-100 text-sm mt-2">*Assumes $500 campaign per referral, 5% commission.</p>
     </div>
     <script>
       document.getElementById("referral-input").addEventListener("input", function () {
@@ -268,17 +268,17 @@ slug: "ton-volume-bot"
         document.getElementById("referral-output").textContent = `${earnings.toFixed(2)} TON`;
       });
     </script>
-    <p class="text-gray-300 mt-4">
+    <p class="text-gray-100 mt-4">
       To start, go to Menu > Referral in the <a href="https://t.me/MellowHyperVolumeBot?start=ref_xSR5v" class="text-blue-400 hover:text-blue-300 underline">Telegram bot</a>, add your TON wallet, and share your link!
     </p>
   </section>
 
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-white mb-6">📊 Why TON Volume Boosting is Critical in 2025</h2>
-    <p class="text-gray-300 mb-6 leading-relaxed">
+    <p class="text-gray-100 mb-6 leading-relaxed">
       Without strong trading volume, your TON project risks fading in Telegram’s vibrant crypto scene. The <strong>Mellow Man TON Volume Booster</strong> unlocks:
     </p>
-    <ul class="list-none space-y-4 text-gray-300 mb-6">
+    <ul class="list-none space-y-4 text-gray-100 mb-6">
       <li class="flex items-start">
         <span class="text-blue-400 mr-3 text-2xl">🔝</span>
         <div>
@@ -304,11 +304,11 @@ slug: "ton-volume-bot"
     <h2 class="text-3xl font-bold text-white mb-6">🌟 What TON Developers Say</h2>
     <div class="space-y-6">
       <div class="bg-gray-700 p-4 rounded-lg">
-        <p class="text-gray-300 italic">"Mellow Man’s Telegram bot transformed my Jetton token’s visibility on DeDust overnight. The 200x volume is unreal!"</p>
+        <p class="text-gray-100 italic">"Mellow Man’s Telegram bot transformed my Jetton token’s visibility on DeDust overnight. The 200x volume is unreal!"</p>
         <p class="text-blue-400 font-semibold mt-2">– TelegramJetton</p>
       </div>
       <div class="bg-gray-700 p-4 rounded-lg">
-        <p class="text-gray-300 italic">"Running everything in Telegram makes Mellow Man the easiest TON volume bot. The 4% fee is a steal!"</p>
+        <p class="text-gray-100 italic">"Running everything in Telegram makes Mellow Man the easiest TON volume bot. The 4% fee is a steal!"</p>
         <p class="text-blue-400 font-semibold mt-2">– TON_MiniAppDev</p>
       </div>
     </div>
@@ -316,11 +316,11 @@ slug: "ton-volume-bot"
 
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-white mb-6">⚖️ Why Mellow Man Outshines Other TON Bots</h2>
-    <p class="text-gray-300 mb-6 leading-relaxed">
+    <p class="text-gray-100 mb-6 leading-relaxed">
       See how Mellow Man stacks up against other <strong>TON volume bots</strong> in this infographic:
     </p>
     <img src="/ton-volume-bot-2.jpg" alt="Infographic comparing Mellow Man TON Volume Bot to competitors" class="w-full h-auto rounded-lg mb-6" />
-    <p class="text-gray-300 text-sm">*Create an infographic showing 200x volume, 4% fee, 85% refunds, and Telegram ease vs. competitors’ 50-100x volume, 10-20% fees, and complex setups.</p>
+    <p class="text-gray-100 text-sm">*Create an infographic showing 200x volume, 4% fee, 85% refunds, and Telegram ease vs. competitors’ 50-100x volume, 10-20% fees, and complex setups.</p>
   </section>
 
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
@@ -328,25 +328,25 @@ slug: "ton-volume-bot"
     <div class="space-y-6">
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">What is a TON volume bot?</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           A <strong>TON volume bot</strong> automates trades to boost your Jetton token’s trading volume on Telegram’s TON blockchain, increasing visibility on platforms like Jetton and DeDust.
         </p>
       </div>
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">Why use a Telegram TON volume booster?</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           It draws Telegram investors, enhances liquidity, and boosts rankings, making your TON project stand out.
         </p>
       </div>
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">How quickly do I see results?</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           Your token can trend on Tonscan or Jetton within minutes, depending on your campaign settings.
         </p>
       </div>
       <div>
         <h3 class="text-xl font-semibold text-white mb-3">What are the costs?</h3>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-100 leading-relaxed">
           A flat 4% fee, with 85% of unused gas fees refunded—more affordable than most <strong>volume bot TON</strong> options.
         </p>
       </div>
@@ -395,7 +395,7 @@ slug: "ton-volume-bot"
 
   <section class="bg-gray-800 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-white mb-6">🔥 Transform Your TON Project Today!</h2>
-    <p class="text-gray-300 mb-6 leading-relaxed">
+    <p class="text-gray-100 mb-6 leading-relaxed">
       Ready to dominate Telegram’s TON blockchain? The <strong>Mellow Man Hyper Volume Bot</strong> is the leading <strong>TON volume bot</strong> for <strong>200x volume surges</strong>, trending rankings, and growing your Telegram community. Start your <strong>volume bot TON</strong> campaign now! 📱💎
     </p>
     <div class="text-center mt-6">

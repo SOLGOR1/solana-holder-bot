@@ -78,7 +78,7 @@ export default function Benefits() {
                 <h3 className="text-xl font-semibold text-white text-center group-hover:text-blue-400 transition-colors">
                   {benefit.title}
                 </h3>
-                <p className="mt-2 text-gray-300 text-center">{benefit.desc}</p>
+                <p className="mt-2 text-gray-100 text-center">{benefit.desc}</p>
               </div>
             ))}
           </div>

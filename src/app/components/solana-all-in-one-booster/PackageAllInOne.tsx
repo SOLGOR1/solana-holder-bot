@@ -29,7 +29,7 @@ export default function PackageAllInOne() {
           Choose Your Boost Tier
         </h2>
 
-        <p className="text-center text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-14 leading-relaxed">
+        <p className="text-center text-gray-100 text-base md:text-lg max-w-2xl mx-auto mb-14 leading-relaxed">
           Real volume and permanent holders in every package.<br className="hidden sm:inline" />
           Pay-as-you-go – the more you send, the bigger the impact.
         </p>
@@ -62,9 +62,9 @@ export default function PackageAllInOne() {
               </div>
 
               <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-1">{pkg.title}</h3>
-              <p className="text-gray-400 text-xs md:text-sm text-center mb-4">{pkg.subtitle}</p>
+              <p className="text-gray-100 text-xs md:text-sm text-center mb-4">{pkg.subtitle}</p>
 
-              <ul className="space-y-2 text-gray-300 text-sm mb-6 flex-grow">
+              <ul className="space-y-2 text-gray-100 text-sm mb-6 flex-grow">
                 {pkg.features.map((f, i) => (
                   <li key={i} className="flex items-center">
                     <span className="text-amber-400 mr-2 text-base">•</span>
@@ -102,9 +102,9 @@ export default function PackageAllInOne() {
               </div>
 
               <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-1">{pkg.title}</h3>
-              <p className="text-gray-400 text-xs md:text-sm text-center mb-4">{pkg.subtitle}</p>
+              <p className="text-gray-100 text-xs md:text-sm text-center mb-4">{pkg.subtitle}</p>
 
-              <ul className="space-y-2 text-gray-300 text-sm mb-6 flex-grow">
+              <ul className="space-y-2 text-gray-100 text-sm mb-6 flex-grow">
                 {pkg.features.map((f, i) => (
                   <li key={i} className="flex items-center">
                     <span className="text-amber-400 mr-2 text-base">•</span>
