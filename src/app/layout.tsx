@@ -4,7 +4,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import dynamic from "next/dynamic";
 
-// Google Tag Manager lazy loader, nur client-side
+// Lazy-load GTAG to avoid Server Component issues
 const GtagLoader = dynamic(() => import("./components/GtagLoader"), { ssr: false });
 
 export const metadata: Metadata = {
@@ -40,7 +40,9 @@ export const metadata: Metadata = {
   creator: "Solana Holder Bot",
   publisher: "Solana Holder Bot",
   robots: "index, follow",
-  alternates: { canonical: "https://www.solanaholderbot.com" },
+  alternates: {
+    canonical: "https://www.solanaholderbot.com",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -73,19 +75,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* Favicons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-
-        {/* Preconnect / preload wichtige Ressourcen */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
       </head>
       <body className="bg-black text-white antialiased">
         {children}
-        {/* GTAG nur client-side, lazy */}
         <GtagLoader />
       </body>
     </html>
