@@ -1,26 +1,35 @@
-'use client';
 // src/app/components/GtagLoader.tsx
+'use client';
 import Script from "next/script";
+import { useEffect } from "react";
+
+const GTAG_ID = 'AW-18035540031';
 
 export default function GtagLoader() {
+  useEffect(() => {
+    // Type-safe Fix für TypeScript (vermeidet TS2339)
+    const w = window as any;
+
+    w.dataLayer = w.dataLayer || [];
+    
+    function gtag(...args: any[]) {
+      w.dataLayer.push(arguments);
+    }
+    
+    // gtag global verfügbar machen
+    w.gtag = gtag;
+
+    // gtag initialisieren
+    gtag('js', new Date());
+    gtag('config', GTAG_ID);
+  }, []);
+
   return (
     <>
-      {/* GTAG Script laden */}
+      {/* Google gtag.js laden */}
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-18035540031"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_ID}`}
         strategy="afterInteractive"
-      />
-      <Script
-        id="google-ads"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-18035540031');
-          `,
-        }}
       />
     </>
   );
