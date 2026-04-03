@@ -15,8 +15,8 @@ import { blogPosts } from './data/blogs';
 import SupportedPlatforms from './components/SupportedPlatforms';
 import Customer from './components/Customer';
 import Disclaimer from './components/Disclaimer';
-import type { Metadata } from "next";
 import AllInOneBooster from './components/AllInOneBooster';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Solana Volume Bot - Boost SOL Stats & Holders",
@@ -71,7 +71,7 @@ export default function Home() {
 
   return (
     <>
-      {/* Schema Markup & Google Analytics */}
+      {/* Schema Markup – jetzt sicherer */}
       <Script
         id="website-schema"
         type="application/ld+json"
@@ -123,26 +123,8 @@ export default function Home() {
         }}
       />
 
-      {/* Google Analytics */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-8FMSTEXF0Z"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-8FMSTEXF0Z');
-        `}
-      </Script>
-
-      {/* Bing Verification Placeholder */}
-      <Script id="bing-verification" strategy="afterInteractive">
-        {`
-          // Replace with your actual Bing/GTM code if needed
-        `}
-      </Script>
+      {/* Google Analytics – jetzt hydrationssicher als separate Client-Komponente */}
+      <GoogleAnalytics />
 
       {/* Content */}
       <div className="flex flex-col min-h-screen pt-16">
@@ -184,6 +166,26 @@ export default function Home() {
         <Footer />
         <Widget1 />
       </div>
+    </>
+  );
+}
+
+// Neue Client-Komponente für Google Analytics (verhindert Hydration Error)
+function GoogleAnalytics() {
+  return (
+    <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-8FMSTEXF0Z"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8FMSTEXF0Z');
+        `}
+      </Script>
     </>
   );
 }
