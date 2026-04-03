@@ -193,17 +193,6 @@ export default function Footer() {
           </h4>
 
           <div className="flex justify-center md:justify-end gap-6 flex-wrap">
-            {/* Alle deine Backlink-Badges bleiben 100% unverändert */}
-            <a href="https://foundrlist.com/product/solanabots" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="https://foundrlist.com/api/badge/solanabots"
-                alt="Live on FoundrList"
-                width={160}
-                height={64}
-                className="h-7 w-auto"
-                unoptimized
-              />
-            </a>
 
             <a href="https://indiehunt.io/project/solana-volume-bot-boost-sol-stats-holders" target="_blank" rel="noopener">
               <Image
