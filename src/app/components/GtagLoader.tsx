@@ -7,21 +7,27 @@ const GTAG_ID = 'AW-18035540031';
 
 export default function GtagLoader() {
   useEffect(() => {
-    // Type-safe Fix für TypeScript (vermeidet TS2339)
-    const w = window as any;
+    // Type-safe ohne "any" – erfüllt alle ESLint-Regeln
+    const w = window as Window & {
+      dataLayer?: unknown[];
+      gtag?: (...args: unknown[]) => void;
+    };
 
+    // dataLayer initialisieren
     w.dataLayer = w.dataLayer || [];
-    
-    function gtag(...args: any[]) {
-      w.dataLayer.push(arguments);
-    }
-    
-    // gtag global verfügbar machen
-    w.gtag = gtag;
+
+    // gtag Funktion (rest parameters + korrektes push)
+    const gtagFn = (...args: unknown[]) => {
+      if (w.dataLayer) {
+        w.dataLayer.push(args);
+      }
+    };
+
+    w.gtag = gtagFn;
 
     // gtag initialisieren
-    gtag('js', new Date());
-    gtag('config', GTAG_ID);
+    gtagFn('js', new Date());
+    gtagFn('config', GTAG_ID);
   }, []);
 
   return (
