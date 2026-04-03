@@ -47,16 +47,27 @@ export default function Benefits() {
   return (
     <section className="relative bg-black py-5 overflow-hidden">
       {/* Super dezenter Hintergrund – sanft pulsierende zentrale Blobs */}
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
-        animate={{ scale: [1, 1.15, 1] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
-        animate={{ scale: [1.1, 0.95, 1.1] }}
-        transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
-      />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
+          style={{ 
+            animation: 'gentlePulse 32s ease-in-out infinite' 
+          }}
+        />
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
+          style={{ 
+            animation: 'gentlePulse 36s ease-in-out infinite reverse' 
+          }}
+        />
+      </div>
+
+      <style jsx>{`
+        @keyframes gentlePulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.08); }
+        }
+      `}</style>
 
       <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
         {/* Intro Block – keyword-optimiert, natürlich */}
