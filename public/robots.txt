@@ -1,9 +1,7 @@
-# === SolanaHolderBot robots.txt – optimiert für Google Ads + Search 2026 ===
-
+# SolanaHolderBot – optimiert für Google Ads Policy Check
 User-agent: *
 Allow: /
 
-# === Explizit für Google Search & Ads (wichtig für "Destination Not Accessible") ===
 User-agent: Googlebot
 Allow: /
 
@@ -16,5 +14,4 @@ Allow: /
 User-agent: Googlebot-Image
 Allow: /
 
-# Sitemap
 Sitemap: https://www.solanaholderbot.com/sitemap.xml
