@@ -12,20 +12,27 @@ export default function Header1() {
   return (
     <section id="header" className="relative bg-black py-2 md:py-5 overflow-hidden">
       {/* Hintergrund-Glows – sehr sanft und performant */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl will-change-transform"
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ duration: 32, repeat: Infinity, ease: "easeInOut" }}
-          style={{ transformOrigin: "center center" }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl will-change-transform"
-          animate={{ scale: [1, 0.96, 1] }}
-          transition={{ duration: 36, repeat: Infinity, ease: "easeInOut" }}
-          style={{ transformOrigin: "center center" }}
-        />
-      </div>
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
+        style={{ 
+          animation: 'gentlePulse 32s ease-in-out infinite' 
+        }}
+      />
+      <div 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
+        style={{ 
+          animation: 'gentlePulse 36s ease-in-out infinite reverse' 
+        }}
+      />
+    </div>
+
+    <style jsx>{`
+      @keyframes gentlePulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.08); }
+      }
+    `}</style>
 
       <div className="relative z-10 container mx-auto px-2 md:px-3">
         {/* Hero Card – ohne äußere motion.div für besseres LCP */}
