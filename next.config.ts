@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
   },
 
   experimental: {
-    optimizePackageImports: ["framer-motion", "react-icons", "lucide-react"],
+    optimizePackageImports: ["framer-motion", "react-icons"],
     inlineCss: true,
   },
 
@@ -23,18 +23,6 @@ const nextConfig: NextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-  swcMinify: true,
-
-  // WICHTIG: Framer Motion besser optimieren
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        'framer-motion': 'framer-motion/dist/framer-motion',
-      };
-    }
-    return config;
-  },
 };
 
 export default nextConfig;
