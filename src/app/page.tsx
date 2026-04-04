@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Solana Volume Bot - Boost SOL Stats & Holders",
     description:
       "Skyrocket your Solana token with Solana Volume Bot, the ultimate SOL volume booster for organic holders and volume in 2026.",
-    url: "https://www.solanaholderbot.com",
+    url: "https://solanaholderbot.com",
     type: "website",
     images: [
       {
@@ -60,13 +60,13 @@ export const metadata: Metadata = {
     images: "https://solanaholderbot.com/og-image.jpg",
   },
   alternates: {
-    canonical: "https://www.solanaholderbot.com",
+    canonical: "https://solanaholderbot.com",
   },
   robots: "index, follow",
 };
 
 export default function Home() {
-  const canonicalUrl = "https://www.solanaholderbot.com";
+  const canonicalUrl = "https://solanaholderbot.com";
   const logoUrl = "/logo.png";
 
   return (

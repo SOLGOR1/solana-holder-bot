@@ -43,7 +43,7 @@ export default function SolanaHolderBot() {
             "author": {
               "@type": "Organization",
               "name": "Solana Holder Bot",
-              "url": "https://www.solanaholderbot.com"
+              "url": "https://solanaholderbot.com"
             },
             "screenshot": "https://solanaholderbot.com/og-holder.jpg",
             "featureList": [

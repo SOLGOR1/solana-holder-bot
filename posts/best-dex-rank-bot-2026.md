@@ -116,7 +116,7 @@ You can stack unlimited packages for even greater scale. Compared to competitors
 Getting started is incredibly simple, everything happens inside Telegram:
 </p>
 <ol className="space-y-4 text-lg text-gray-100 mt-6 list-decimal list-inside">
-<li>Start the SolanaHolderBot: Telegram bot (<a href="https://t.me/Degen_wg_bot" className="text-green-400 hover:text-green-300 underline font-semibold">SolanaHolderBot</a> or visit <a href="https://www.solanaholderbot.com" className="text-green-400 hover:text-green-300 underline">www.solanaholderbot.com</a> to get the link).</li>
+<li>Start the SolanaHolderBot: Telegram bot (<a href="https://t.me/Degen_wg_bot" className="text-green-400 hover:text-green-300 underline font-semibold">SolanaHolderBot</a> or visit <a href="https://solanaholderbot.com" className="text-green-400 hover:text-green-300 underline">solanaholderbot.com</a> to get the link).</li>
 <li>Choose Package: • 10 Wallets (0.1 SOL) • 50 (0.15 SOL) • 100 (0.25 SOL) • 500 (1.5 SOL)</li>
 <li>Send Token CA: Provide your Solana token Contract Address.</li>
 <li>Send Tokens: Transfer tokens (10+ per wallet + extras for safety).</li>

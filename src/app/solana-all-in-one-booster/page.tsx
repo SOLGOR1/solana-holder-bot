@@ -65,7 +65,7 @@ export default function SolanaAllInOneBooster() {
             "author": {
               "@type": "Organization",
               "name": "Solana Holder Bot",
-              "url": "https://www.solanaholderbot.com"
+              "url": "https://solanaholderbot.com"
             },
             "screenshot": "https://solanaholderbot.com/blogthumb/bestsolanaallinonebooster2026.png",
             "featureList": [

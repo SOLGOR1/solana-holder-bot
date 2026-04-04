@@ -12,7 +12,7 @@ function escapeXml(unsafe: string): string {
 }
 
 export async function GET() {
-  const siteUrl = "https://www.solanaholderbot.com";
+  const siteUrl = "https://solanaholderbot.com";
   const feedUrl = `${siteUrl}/blog/rss.xml`;
 
   const rss = `<?xml version="1.0" encoding="UTF-8"?>

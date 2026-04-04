@@ -21,7 +21,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
       "author": {
         "@type": "Organization",
         "name": "Solana Holder Bot Team",
-        "url": "https://www.solanaholderbot.com"
+        "url": "https://solanaholderbot.com"
       },
       "publisher": {
         "@type": "Organization",
@@ -49,7 +49,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.solanaholderbot.com"
+          "item": "https://solanaholderbot.com"
         },
         {
           "@type": "ListItem",
@@ -93,7 +93,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
     This guide is your roadmap to the top 20 Solana launchpads, meticulously analyzing costs, features, security, and user engagement to ensure your <strong>Solana coin launch</strong> soars. Whether you’re chasing viral fame on <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a> or aiming for a spot on <a href="https://coinmarketcap.com" class="text-blue-400 hover:underline">CoinMarketCap</a>, we’ll help you pick the ideal platform. For expert strategies, dive into our <a href="https://solanaholderbot.com/blog" class="text-blue-400 hover:underline font-semibold">blog</a> for a treasure trove of crypto launch insights.
   </p>
   <p class="text-lg font-semibold text-blue-400 text-center">
-    <a href="https://www.solanaholderbot.com" class="text-blue-400 hover:underline">www.solanaholderbot.com</a>
+    <a href="https://solanaholderbot.com" class="text-blue-400 hover:underline">solanaholderbot.com</a>
   </p>
 </div>
 
@@ -518,6 +518,6 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
   <div class="flex justify-center space-x-4">
     <a href="https://t.me/Degen_wg_bot" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Boost Holders</a>
     <a href="https://t.me/leektradingbot" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Boost Volume</a>
-    <a href="https://www.solanaholderbot.com" class="bg-gray-700 text-white px-8 py-4 rounded-full hover:bg-gray-600 transition duration-300 font-semibold">Learn More</a>
+    <a href="https://solanaholderbot.com" class="bg-gray-700 text-white px-8 py-4 rounded-full hover:bg-gray-600 transition duration-300 font-semibold">Learn More</a>
   </div>
 </div>

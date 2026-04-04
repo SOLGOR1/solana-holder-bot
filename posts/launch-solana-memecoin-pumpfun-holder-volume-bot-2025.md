@@ -21,7 +21,7 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
       "author": {
         "@type": "Organization",
         "name": "Solana Holder Bot Team",
-        "url": "https://www.solanaholderbot.com"
+        "url": "https://solanaholderbot.com"
       },
       "publisher": {
         "@type": "Organization",
@@ -49,7 +49,7 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.solanaholderbot.com"
+          "item": "https://solanaholderbot.com"
         },
         {
           "@type": "ListItem",
@@ -79,7 +79,7 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
   <h1 class="text-3xl font-bold text-white mb-6">How to Launch a Solana Memecoin with Pump.fun in 2025</h1>
   <p class="text-lg leading-relaxed mb-4">Imagine your memecoin topping <strong>DexScreener</strong>, with <span class="text-blue-400">thousands of holders</span> and <span class="text-blue-400">surging trading volume</span>. In 2025, <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump.fun</a> makes launching a Solana memecoin a breeze, while <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> supercharge its success.</p>
   <p class="text-lg leading-relaxed mb-4">This guide breaks down <strong>Pump.fun’s</strong> mechanics, the power of <strong>holder</strong> and <strong>volume bots</strong>, legal risks, and a step-by-step plan to dominate. Backed by data from <a href="https://x.com/pumpdotfun" class="text-blue-400 hover:underline">X</a>, <a href="https://www.forbes.com/sites/jonathanponciano/2025/02/10/from-memes-to-500-million-in-revenue-the-pumpfun-phenomenon/" class="text-blue-400 hover:underline">Forbes</a>, and our <a href="https://solanaholderbot.com/blog" class="text-blue-400 hover:underline">blog</a>, we’ll show you how to launch and scale your token.</p>
-  <p class="text-lg font-semibold text-blue-400">Ready to rule the Solana ecosystem? 🌟 Dive in or visit <a href="https://www.solanaholderbot.com" class="text-blue-400 hover:underline">www.solanaholderbot.com</a>!</p>
+  <p class="text-lg font-semibold text-blue-400">Ready to rule the Solana ecosystem? 🌟 Dive in or visit <a href="https://solanaholderbot.com" class="text-blue-400 hover:underline">solanaholderbot.com</a>!</p>
 </div>
 
 <div class="table-of-contents bg-gray-900 text-gray-100 p-6 rounded-lg mb-12 shadow-md border border-gray-700">
@@ -225,7 +225,7 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
     <li><strong>Launch on Pump.fun</strong>: Visit <a href="https://pump.fun" class="text-blue-400 hover:underline">pump.fun</a>, connect a Solana wallet (e.g., Phantom), fill in token details, and pay 0.02 SOL. Promote to hit the $50K–$69K cap.</li>
     <li><strong>Boost Holders</strong>: Use <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> to add permanent holders, meeting <a href="https://coinmarketcap.com" class="text-blue-400 hover:underline">CoinMarketCap</a>’s 500–1,000 holder requirement.</li>
     <li><strong>Increase Volume</strong>: Configure <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> to spike trading volume and trend on <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a>.</li>
-    <li><strong>Monitor & Scale</strong>: Track metrics on <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a> and adjust bot settings via <a href="https://www.solanaholderbot.com" class="text-blue-400 hover:underline">Solana Holder Bot</a>.</li>
+    <li><strong>Monitor & Scale</strong>: Track metrics on <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a> and adjust bot settings via <a href="https://solanaholderbot.com" class="text-blue-400 hover:underline">Solana Holder Bot</a>.</li>
   </ol>
 </div>
 
@@ -357,6 +357,6 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
   <p class="text-lg mb-8 max-w-2xl mx-auto">Launch with <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump.fun</a> and scale with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a>. Your crypto empire starts now!</p>
   <div class="flex justify-center space-x-4">
     <a href="https://t.me/Degen_wg_bot" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Launch Now</a>
-    <a href="https://www.solanaholderbot.com" class="bg-gray-700 text-white px-8 py-4 rounded-full hover:bg-gray-600 transition duration-300 font-semibold">Learn More</a>
+    <a href="https://solanaholderbot.com" class="bg-gray-700 text-white px-8 py-4 rounded-full hover:bg-gray-600 transition duration-300 font-semibold">Learn More</a>
   </div>
 </div>
