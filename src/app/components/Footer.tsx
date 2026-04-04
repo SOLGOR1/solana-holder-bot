@@ -1,8 +1,8 @@
 "use client";
 
-import { FaXTwitter, FaRedditAlien, FaTelegram } from "react-icons/fa6";
+import { FaXTwitter, FaRedditAlien, FaTelegram, FaYoutube, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa6";
+import { motion } from "framer-motion";
 import Link from "next/link";
-
 
 export default function Footer() {
   return (
@@ -32,17 +32,7 @@ export default function Footer() {
               <li><Link href="/blog" className="text-gray-100 hover:text-cyan-400">Blog</Link></li>
               <li><Link href="#faqs" className="text-gray-100 hover:text-cyan-400">FAQs</Link></li>
               <li><Link href="#guide" className="text-gray-100 hover:text-cyan-400">Guide</Link></li>
-              <li>
-                <a href="https://solana-holder-bot.gitbook.io/solana-holder-bot-docs" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:text-cyan-400">
-                  Docs (GitBook)
-                </a>
-              </li>
-              {/* NEU: Partners Link */}
-              <li>
-                <Link href="/partners" className="text-cyan-400 hover:text-cyan-300 font-medium">
-                  View all Partners →
-                </Link>
-              </li>
+              <li><Link href="/partners" className="text-cyan-400 hover:text-cyan-300 font-medium">View all Partners →</Link></li>
             </ul>
           </div>
 
@@ -58,17 +48,33 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social Icons */}
+          {/* Social Profile Icons – jetzt mit allen neuen Links */}
           <div className="flex flex-col items-center md:items-end">
-            <div className="flex justify-center md:justify-end gap-5 flex-wrap">
-              <a href="https://x.com/solanaholderbot" target="_blank" rel="noopener noreferrer" className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-cyan-500/40 transition-all duration-300">
-                <FaXTwitter className="w-5 h-5 text-gray-100 group-hover:text-cyan-400" />
+            <h4 className="text-sm font-medium text-gray-100 mb-4 uppercase tracking-wider">Follow Us</h4>
+            <div className="flex justify-center md:justify-end gap-4 flex-wrap">
+              {/* X */}
+              <a href="https://x.com/solanaholderbot" target="_blank" rel="noopener noreferrer" className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-cyan-400 transition-all">
+                <FaXTwitter className="w-6 h-6 text-gray-100 group-hover:text-cyan-400" />
               </a>
-              <a href="https://www.reddit.com/r/holana_holder_bot/" target="_blank" rel="noopener noreferrer" className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-orange-500/40 transition-all duration-300">
-                <FaRedditAlien className="w-5 h-5 text-gray-100 group-hover:text-orange-400" />
+              {/* YouTube */}
+              <a href="https://www.youtube.com/@SolanaHolderBot" target="_blank" rel="noopener noreferrer" className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-red-500 transition-all">
+                <FaYoutube className="w-6 h-6 text-gray-100 group-hover:text-red-500" />
               </a>
-              <a href="https://t.me/+3XCV3c958XwyYjE8" target="_blank" rel="noopener noreferrer" className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-emerald-500/40 transition-all duration-300">
-                <FaTelegram className="w-5 h-5 text-gray-100 group-hover:text-emerald-400" />
+              {/* Instagram */}
+              <a href="https://www.instagram.com/solanaholderbot2026/" target="_blank" rel="noopener noreferrer" className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-pink-500 transition-all">
+                <FaInstagram className="w-6 h-6 text-gray-100 group-hover:text-pink-500" />
+              </a>
+              {/* LinkedIn */}
+              <a href="https://www.linkedin.com/in/solana-holdder-bot-523958370/" target="_blank" rel="noopener noreferrer" className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-blue-600 transition-all">
+                <FaLinkedin className="w-6 h-6 text-gray-100 group-hover:text-blue-600" />
+              </a>
+              {/* Facebook */}
+              <a href="https://www.facebook.com/people/Solana-Holder-Bot" target="_blank" rel="noopener noreferrer" className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-blue-500 transition-all">
+                <FaFacebook className="w-6 h-6 text-gray-100 group-hover:text-blue-500" />
+              </a>
+              {/* Telegram */}
+              <a href="https://t.me/+3XCV3c958XwyYjE8" target="_blank" rel="noopener noreferrer" className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-emerald-400 transition-all">
+                <FaTelegram className="w-6 h-6 text-gray-100 group-hover:text-emerald-400" />
               </a>
             </div>
           </div>

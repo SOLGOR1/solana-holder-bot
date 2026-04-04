@@ -17,6 +17,7 @@ import Customer from './components/Customer';
 import Disclaimer from './components/Disclaimer';
 import AllInOneBooster from './components/AllInOneBooster';
 import type { Metadata } from "next";
+import FloatingSocialWidget from './components/FloatingSocialWidget';
 
 export const metadata: Metadata = {
   title: "Solana Volume Bot – Boost SOL Volume, Stats & Holders",
@@ -165,6 +166,7 @@ export default function Home() {
         <Disclaimer />
         <Footer />
         <Widget1 />
+        <FloatingSocialWidget />
       </div>
     </>
   );
