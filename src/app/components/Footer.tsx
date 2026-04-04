@@ -269,14 +269,6 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://aitooltrek.com"
-              aria-label="Listed on AI Tool Trek directory"
-              className="text-gray-200 hover:text-white transition-colors" 
-            >
-              AI Tool Trek
-            </a>
-
-            <a
               href="https://www.aitoolzdir.com"
               aria-label="Listed on AI Toolz Dir directory"
               className="text-gray-200 hover:text-white transition-colors"
