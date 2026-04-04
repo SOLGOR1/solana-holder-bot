@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Blog | Solana Holder Bot",
-    template: "%s | Solana Holder Bot Blog",
+    default: "Blog",
+    template: "%s | Blog",
   },
   description:
     "Expert guides, strategies, and updates on Solana Holder Bot and Solana Volume Bot – the leading tools for permanent holders, genuine volume boosting, and trending on DexScreener, Pump.fun, Raydium, and more in 2026.",
