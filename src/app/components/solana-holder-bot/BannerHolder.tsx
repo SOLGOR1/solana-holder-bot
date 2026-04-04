@@ -5,24 +5,21 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const platforms = [
-  // DEXs
   { name: "Jupiter", link: "https://jup.ag", logo: "/partners/partner1.png" },
-  { name: "Raydium", link: "https://raydium.io", logo: "/partners/partner2.png" },
+  { name: "Raydium", link: "https://raydium.io/swap/", logo: "/partners/partner2.png" },
   { name: "Orca", link: "https://www.orca.so", logo: "/partners/partner3.png" },
-  { name: "Meteora", link: "https://meteora.ag", logo: "/partners/partner4.png" },
-  { name: "Kamino Finance", link: "https://kamino.finance", logo: "/partners/partner5.png" },
+  { name: "Meteora", link: "https://www.meteora.ag/?tab=top", logo: "/partners/partner4.png" },
+  { name: "Kamino Finance", link: "https://kamino.com/lend", logo: "/partners/partner5.png" },
   { name: "Lifinity", link: "https://lifinity.io", logo: "/partners/partner6.png" },
   { name: "Saros", link: "https://saros.finance", logo: "/partners/partner7.png" },
   { name: "PumpSwap", link: "https://swap.pump.fun", logo: "/partners/partner8.png" },
-  { name: "Crema Finance", link: "https://crema.finance", logo: "/partners/partner9.png" },
-  // Launchpads
+  { name: "Crema Finance", link: "https://www.crema.finance", logo: "/partners/partner9.png" },
   { name: "Pump.fun", link: "https://pump.fun", logo: "/partners/partner10.png" },
   { name: "Solanium", link: "https://solanium.io", logo: "/partners/partner11.png" },
   { name: "Dflow", link: "https://dflow.net", logo: "/partners/partner12.png" },
-  { name: "StarLaunch", link: "https://starlaunch.com", logo: "/partners/partner13.png" },
-  { name: "Bonk.fun", link: "https://bonk.fun/", logo: "/partners/partner14.png" },
+  { name: "Bonkfun", link: "https://www.bonk.fun/", logo: "/partners/partner14.png" },
   { name: "PinkSale", link: "https://www.pinksale.finance", logo: "/partners/partner15.png" },
-  { name: "Bags.fm", link: "https://bags.fm/", logo: "/partners/partner16.png" },
+  { name: "Bagsfm", link: "https://bags.fm/", logo: "/partners/partner16.png" },
   { name: "Moonit", link: "https://moon.it/", logo: "/partners/partner17.png" },
   { name: "Boop", link: "https://boop.fun/", logo: "/partners/partner18.png" },
 ];

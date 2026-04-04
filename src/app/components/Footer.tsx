@@ -268,16 +268,6 @@ export default function Footer() {
               />
             </a>
 
-            <a href="https://www.uneed.best/tool/solanavolumebot">
-              <Image
-                src="https://www.uneed.best/EMBED3B.png"
-                alt="Uneed Embed Badge"
-                width={250}
-                height={54}
-                className="h-7 w-auto"
-              />
-            </a>
-
             <a
               href="https://aitooltrek.com"
               aria-label="Listed on AI Tool Trek directory"
