@@ -1,5 +1,5 @@
 ---
-title: "Ultimate Solana Launchpad Marketing Bot 2026: Volume + Holders"
+title: "Solana Launchpad Marketing Bot 2026"
 excerpt: "Most Solana memecoin launches die in obscurity because they can't trigger the algorithms on Pump.fun, Raydium, and DexScreener. In my controlled tests across 50 fresh launches, combining targeted volume + permanent holders delivered an average +642% volume spike and trending placement in under 4 hours."
 image: "/blogthumb/launchpad-marketing-bot-2026.png"
 imageAlt: "Data chart showing before/after volume and holder metrics from 50 Solana launch tests using SolanaHolderBot"

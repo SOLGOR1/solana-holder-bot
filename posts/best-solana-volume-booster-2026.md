@@ -1,5 +1,5 @@
 ---
-title: "Best Solana Volume Bot 2026: Generate massive Volume with Solana Volume Bot"
+title: "Best Solana Volume Bot 2026"
 excerpt: "Looking for the cheapest and best Solana volume bot in 2026? Discover how Solana Volume Bot delivers authentic volume to skyrocket your Solana token launches, starting at just 0.1 SOL."
 image: "/blogthumb/bestsolanavolumebooster2026.png"
 imageAlt: "Best solana volume booster telegram bot for generating massive volume in 2026"

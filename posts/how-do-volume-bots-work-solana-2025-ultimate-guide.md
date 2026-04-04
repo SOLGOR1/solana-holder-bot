@@ -1,5 +1,5 @@
 ---
-title: "🚀 How Do Volume Bots Work? The Ultimate 2025 Guide to Boosting Solana Tokens to the Moon"
+title: "How Do Volume Bots Work?"
 excerpt: "Uncover how volume bots work to skyrocket Solana tokens on DexScreener in 2025. Learn mechanics, compare top bots, avoid legal pitfalls, and dominate the crypto market!"
 image: "/volumebot1.jpg"
 imageAlt: "Ultimate guide to using volume bots for Solana tokens"

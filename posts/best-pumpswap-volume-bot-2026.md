@@ -1,5 +1,5 @@
 ---
-title: "Best PumpSwap Volume Bot 2026: Dominate PumpSwap Launches with Authentic Volume Boosting"
+title: "Best PumpSwap Volume Bot 2026"
 excerpt: "Searching for the best PumpSwap volume bot in 2026? SolanaHolderBot delivers genuine, buy-heavy on-chain volume to accelerate PumpSwap bonding curves, complete migrations fast, and attract real buyers – starting at just 0.1 SOL."
 image: "/blogthumb/pumpswap-volume-bot-2026.png"
 imageAlt: "SolanaHolderBot Telegram PumpSwap volume bot pushing tokens up the curve with real-time stats in 2026"

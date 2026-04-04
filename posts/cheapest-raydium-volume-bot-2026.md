@@ -1,5 +1,5 @@
 ---
-title: "Cheapest Raydium Volume Bot 2026: Zero Platform Fees with SolanaHolderBot"
+title: "Cheapest Raydium Volume Bot 2026"
 excerpt: "Sick of overpriced Raydium volume bots draining your launch budget? SolanaHolderBot delivers the cheapest Raydium volume in 2026, genuine buy-heavy trades with zero platform fees, starting at just 0.1 SOL."
 image: "/blogthumb/raydium-2026.png"
 imageAlt: "SolanaHolderBot Telegram interface pumping authentic volume into a Raydium pool with live stats and zero fee confirmation"

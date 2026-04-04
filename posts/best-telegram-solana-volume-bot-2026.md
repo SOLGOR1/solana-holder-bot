@@ -1,5 +1,5 @@
 ---
-title: "Best Telegram Solana Volume Bot 2026: SolanaHolderBot Guide"
+title: "Best Telegram Solana Volume Bot 2026"
 excerpt: "Looking for the best Telegram Solana Volume or holder bot in 2026? Discover how Solana Holder Bot delivers permanent, real Solana holders, ultra-fast 5x RPC, and authentic volume to skyrocket your Token launches on DexScreener and Birdeye, starting at just 0.1 SOL."
 image: "/blogthumb/telegram-2026.png"
 imageAlt: "Best Telegram Solana Volume Bot for generating massive Volume on Solana in 2026"

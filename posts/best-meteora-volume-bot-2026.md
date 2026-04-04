@@ -1,5 +1,5 @@
 ---
-title: "Best Meteora Volume Bot 2026: Dominate Meteora DLMM Pools with SolanaHolderBot"
+title: "Best Meteora Volume Bot 2026"
 excerpt: "Struggling to boost volume in Meteora DLMM pools in 2026? SolanaHolderBot is the #1 Meteora volume bot, authentic buy-heavy trades and permanent holders to skyrocket your pool rankings, starting at just 0.1 SOL."
 image: "/blogthumb/meteora-2026.png"
 imageAlt: "SolanaHolderBot Telegram dashboard generating real-time volume in Meteora DLMM pools, pushing a Solana token to top performers"

@@ -1,5 +1,5 @@
 ---
-title: "Best Pump.fun Holder Bot 2026: Generate Permanent Solana Holders Fast with Solana Holder Bot"
+title: "Best Pump.fun Holder Bot 2026"
 excerpt: "Looking for the best Pump.fun holder bot in 2026? Discover how Solana Holder Bot by the LEEK Team delivers permanent, real Solana holders, ultra-fast 5x RPC, and authentic volume to skyrocket your Pump.fun launches on DexScreener and Birdeye, starting at just 0.1 SOL."
 image: "/solhold-pump2026.png"
 imageAlt: "Best Pump.fun holder bot interface for generating permanent Solana holders in 2026"

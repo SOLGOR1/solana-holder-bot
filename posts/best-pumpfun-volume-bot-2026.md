@@ -1,5 +1,5 @@
 ---
-title: "Best PumpFun Volume Bot 2026: Skyrocket Your Pump.fun Launch with Genuine Volume"
+title: "Best PumpFun Volume Bot 2026"
 excerpt: "Looking for the best PumpFun volume bot in 2026? SolanaHolderBot's PumpFun volume bot delivers authentic, buy-heavy trading activity to complete bonding curves fast, attract real buyers, and dominate Pump.fun — starting at just 0.1 SOL."
 image: "/blogthumb/pumpfun-volume-bot-2026.png"
 imageAlt: "SolanaHolderBot Telegram volume bot dashboard pushing a Pump.fun token up the bonding curve with real-time stats"

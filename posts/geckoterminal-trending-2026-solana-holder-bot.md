@@ -1,5 +1,5 @@
 ---
-title: "GeckoTerminal Trending: SolanaHolderBot Guaranteed Marketing for Solana in 2026"
+title: "GeckoTerminal Trending 2026"
 excerpt: "Dominate GeckoTerminal trending in 2026 with SolanaHolderBot, the best bot for GeckoTerminal trending 2026. Combine permanent holders and authentic volume boosting for rapid visibility, organic growth, and sustained rankings on Solana's premier DEX tracker."
 image: "/blogthumb/geckoterminal-2026.png"
 imageAlt: "SolanaHolderBot Telegram interface showing live holder addition and volume impact pushing tokens to GeckoTerminal trending lists"

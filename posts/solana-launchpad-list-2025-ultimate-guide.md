@@ -1,5 +1,5 @@
 ---
-title: "Solana Launchpad List 2025: The Ultimate Guide"
+title: "Solana Launchpad List 2025"
 excerpt: "Explore the top 20 Solana launchpads in 2025, compare costs, features, and security!"
 image: "/solana-launchpad-overview.jpg"
 imageAlt: "Comparison of top Solana launchpads for token creation in 2025"
