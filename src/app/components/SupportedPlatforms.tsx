@@ -4,26 +4,23 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const platforms = [
-  // === TOP 4 (mit echtem externen Link) – das reicht für A+ ===
-  { name: "Jupiter", link: "https://jup.ag", logo: "/partners/partner1.png", top: true },
-  { name: "Raydium", link: "https://raydium.io/swap/", logo: "/partners/partner2.png", top: true },
-  { name: "Orca", link: "https://www.orca.so/pools", logo: "/partners/partner3.png", top: true },
-  { name: "Pump.fun", link: "https://pump.fun", logo: "/partners/partner10.png", top: true },
-
-  // === Rest (nur Logo, kein Link mehr) ===
-  { name: "Meteora", logo: "/partners/partner4.png", top: false },
-  { name: "Kamino Finance", logo: "/partners/partner5.png", top: false },
-  { name: "Lifinity", logo: "/partners/partner6.png", top: false },
-  { name: "Saros", logo: "/partners/partner7.png", top: false },
-  { name: "PumpSwap", logo: "/partners/partner8.png", top: false },
-  { name: "Crema Finance", logo: "/partners/partner9.png", top: false },
-  { name: "Solanium", logo: "/partners/partner11.png", top: false },
-  { name: "Dflow", logo: "/partners/partner12.png", top: false },
-  { name: "Bonkfun", logo: "/partners/partner14.png", top: false },
-  { name: "PinkSale", logo: "/partners/partner15.png", top: false },
-  { name: "Bagsfm", logo: "/partners/partner16.png", top: false },
-  { name: "Moonit", logo: "/partners/partner17.png", top: false },
-  { name: "Boop", logo: "/partners/partner18.png", top: false },
+  { name: "Jupiter", logo: "/partners/partner1.png" },
+  { name: "Raydium", logo: "/partners/partner2.png" },
+  { name: "Orca", logo: "/partners/partner3.png" },
+  { name: "Meteora", logo: "/partners/partner4.png" },
+  { name: "Kamino Finance", logo: "/partners/partner5.png" },
+  { name: "Lifinity", logo: "/partners/partner6.png" },
+  { name: "Saros", logo: "/partners/partner7.png" },
+  { name: "PumpSwap", logo: "/partners/partner8.png" },
+  { name: "Crema Finance", logo: "/partners/partner9.png" },
+  { name: "Pump.fun", logo: "/partners/partner10.png" },
+  { name: "Solanium", logo: "/partners/partner11.png" },
+  { name: "Dflow", logo: "/partners/partner12.png" },
+  { name: "Bonkfun", logo: "/partners/partner14.png" },
+  { name: "PinkSale", logo: "/partners/partner15.png" },
+  { name: "Bagsfm", logo: "/partners/partner16.png" },
+  { name: "Moonit", logo: "/partners/partner17.png" },
+  { name: "Boop", logo: "/partners/partner18.png" },
 ];
 
 export default function SupportedPlatforms() {
@@ -95,41 +92,18 @@ export default function SupportedPlatforms() {
                   key={i}
                   className="flex items-center justify-center transition-all duration-300 hover:scale-110 flex-shrink-0"
                 >
-                  {platform.top ? (
-                    <a
-                      href={platform.link}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="flex items-center justify-center"
-                      aria-label={`Zur Website von ${platform.name}`}
-                    >
-                      <div className="w-[50px] h-[50px] flex items-center justify-center bg-white/5 rounded-2xl">
-                        <Image
-                          src={platform.logo}
-                          alt={`${platform.name} Logo`}
-                          width={50}
-                          height={50}
-                          className="max-w-full max-h-full object-contain"
-                          quality={75}
-                          sizes="50px"
-                          loading={i < 6 ? "eager" : "lazy"}
-                        />
-                      </div>
-                    </a>
-                  ) : (
-                    <div className="w-[50px] h-[50px] flex items-center justify-center bg-white/5 rounded-2xl">
-                      <Image
-                        src={platform.logo}
-                        alt={`${platform.name} Logo`}
-                        width={50}
-                        height={50}
-                        className="max-w-full max-h-full object-contain"
-                        quality={75}
-                        sizes="50px"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
+                  <div className="w-[50px] h-[50px] flex items-center justify-center bg-white/5 rounded-2xl">
+                    <Image
+                      src={platform.logo}
+                      alt={`${platform.name} Logo`}
+                      width={50}
+                      height={50}
+                      className="max-w-full max-h-full object-contain"
+                      quality={75}
+                      sizes="50px"
+                      loading={i < 6 ? "eager" : "lazy"}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
