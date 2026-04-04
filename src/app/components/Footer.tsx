@@ -1,9 +1,8 @@
 "use client";
 
 import { FaXTwitter, FaRedditAlien, FaTelegram } from "react-icons/fa6";
-import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+
 
 export default function Footer() {
   return (
