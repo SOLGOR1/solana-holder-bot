@@ -19,7 +19,7 @@ import AllInOneBooster from './components/AllInOneBooster';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Solana Volume Bot - Boost SOL Stats & Holders",
+  title: "Solana Volume Bot – Boost SOL Volume, Stats & Holders",
   description:
     "Maximize your Solana token with Solana Volume Bot, the top SOL volume booster. Drive organic holders and stats with our moonshot volume bot in 2026.",
   keywords: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "sol holder boost",
   ],
   openGraph: {
-    title: "Solana Volume Bot - Boost SOL Stats & Holders",
+    title: "Solana Volume Bot – Boost SOL Volume, Stats & Holders",
     description:
       "Skyrocket your Solana token with Solana Volume Bot, the ultimate SOL volume booster for organic holders and volume in 2026.",
     url: "https://solanaholderbot.com",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@solanaholderbot",
-    title: "Solana Volume Bot - Boost SOL Stats & Holders",
+    title: "Solana Volume Bot – Boost SOL Volume, Stats & Holders",
     description:
       "Drive organic holders and volume with Solana Volume Bot, the top SOL volume booster in 2026.",
     images: "https://solanaholderbot.com/og-image.jpg",
