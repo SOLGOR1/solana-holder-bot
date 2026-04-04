@@ -110,7 +110,7 @@ export default function SupportedPlatforms() {
                       width={50}
                       height={50}
                       className="max-w-full max-h-full object-contain"
-                      quality={80}           // ← besser komprimiert
+                      quality={75}           // ← besser komprimiert
                       sizes="50px"           // ← wichtig für kleine Icons
                       loading={i < 6 ? "eager" : "lazy"} // nur erste paar eager
                     />
