@@ -16,7 +16,6 @@ const platforms = [
   { name: "Pump.fun", link: "https://pump.fun", logo: "/partners/partner10.png" },
   { name: "Solanium", link: "https://solanium.io", logo: "/partners/partner11.png" },
   { name: "Dflow", link: "https://dflow.net", logo: "/partners/partner12.png" },
-  { name: "StarLaunch", link: "https://starlaunch.com", logo: "/partners/partner13.png" },
   { name: "Bonkfun", link: "https://bonk.fun/", logo: "/partners/partner14.png" },
   { name: "PinkSale", link: "https://www.pinksale.finance", logo: "/partners/partner15.png" },
   { name: "Bagsfm", link: "https://bags.fm/", logo: "/partners/partner16.png" },
