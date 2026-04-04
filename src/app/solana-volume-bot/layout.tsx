@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Solana Volume Bot 2026 • #1 Raydium & Pump.fun Volume Booster starting at 0.005 SOL",
+  title: "Solana Volume Bot 2026 • Volume Booster starting at 0.01 SOL",
   description: "The cheapest and most powerful Solana Volume Bot for Raydium, Pump.fun, Meteora & PumpSwap. Generate real on-chain volume starting at just 0.01 SOL",
   
   openGraph: {
