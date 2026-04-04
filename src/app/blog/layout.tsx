@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Blog",
-    template: "%s | Blog",
+    default: "Solana Holder Bot Blog: Volume & Holder Guides 2026",
+    template: "%s | Solana Holder Bot",
   },
   description:
     "Expert guides, strategies, and updates on Solana Holder Bot and Solana Volume Bot – the leading tools for permanent holders, genuine volume boosting, and trending on DexScreener, Pump.fun, Raydium, and more in 2026.",
@@ -41,15 +41,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://solanaholderbot.com/blog",
-    // RSS wird NICHT mehr in alternates gesetzt → das verursacht den TS-Fehler
-    // Next.js unterstützt 'rss' nicht als Schlüssel in alternates
   },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://solanaholderbot.com/blog",
     siteName: "Solana Holder Bot",
-    title: "Solana Holder Bot Blog: Volume & Holder 2026",
+    title: "Solana Holder Bot Blog: Volume & Holder Guides 2026",
     description:
       "Read the latest guides, bot updates, and expert strategies for Solana Holder Bot and Volume Bot – the fastest, cheapest, and most reliable tools for memecoin success in 2026.",
     images: [
@@ -64,9 +62,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@solanaholderbot", // anpassen oder entfernen, falls kein Handle
+    site: "@solanaholderbot",
     creator: "@solanaholderbot",
-    title: "Blog | Solana Holder Bot",
+    title: "Solana Holder Bot Blog – Volume & Holder Guides 2026",
     description:
       "Expert guides and updates on Solana Holder Bot & Volume Bot – dominate trending charts in 2026.",
     images: [
@@ -78,9 +76,8 @@ export const metadata: Metadata = {
       },
     ],
   },
+  // RSS als custom meta (falls du ein RSS-Feed hast)
   other: {
-    // RSS als custom <link>-Tag simulieren (wird von vielen Crawlern erkannt)
-    // Alternativ kannst du das später in einer Head-Komponente oder im Root-Layout ergänzen
     "rss": "https://solanaholderbot.com/blog/rss.xml",
   },
 };
