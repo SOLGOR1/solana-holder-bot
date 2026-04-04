@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://solanaholderbot.com/blog",
     siteName: "Solana Holder Bot",
-    title: "Blog | Solana Holder Bot – Insights & Strategies for Solana Volume and Holders",
+    title: "Solana Holder Bot Blog: Volume & Holder Guides 2026",
     description:
       "Read the latest guides, bot updates, and expert strategies for Solana Holder Bot and Volume Bot – the fastest, cheapest, and most reliable tools for memecoin success in 2026.",
     images: [

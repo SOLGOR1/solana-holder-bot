@@ -240,9 +240,9 @@ export default function BlogOverview() {
 }
 
 export const metadata = {
-  title: "Blog | Solana Holder Bot – Guides for Volume & Holders in 2026",
-  description: "Expert guides and strategies for Solana holder bot and volume bot tools. Learn how to dominate Pump.fun, DexScreener, and Raydium launches with authentic growth.",
-  keywords: "solana holder bot, solana volume bot, pumpfun volume bot, dexscreener boost, permanent holders bot, solana memecoin marketing",
+  title: "Solana Holder Bot Blog: Volume & Holder Guides 2026",
+  description: "Expert guides and strategies for Solana holder bot and volume bot tools. Learn how to dominate Pump.fun, DexScreener, and Raydium launches.",
+  keywords: "solana holder bot, solana volume bot, sol volume bot, pumpfun volume bot, dexscreener boost, permanent holders bot, solana memecoin marketing",
   robots: "index, follow",
   alternates: {
     rss: "/blog/rss.xml",

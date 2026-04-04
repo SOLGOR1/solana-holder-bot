@@ -4,7 +4,7 @@ import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Solana Volume Bot 2026 • #1 Raydium & Pump.fun Volume Booster starting at 0.005 SOL",
-  description: "The cheapest and most powerful Solana Volume Bot for Raydium, Pump.fun, Meteora & PumpSwap. Generate real on-chain volume starting at just 0.005 SOL • Pause anytime • 100% undetectable • Full MEV protection.",
+  description: "The cheapest and most powerful Solana Volume Bot for Raydium, Pump.fun, Meteora & PumpSwap. Generate real on-chain volume starting at just 0.01 SOL",
   
   openGraph: {
     title: "Solana Volume Bot 2026 – Raydium & Pump.fun Volume Booster",

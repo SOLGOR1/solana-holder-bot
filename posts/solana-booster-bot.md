@@ -1,5 +1,5 @@
 ---
-title: "Solana Booster Bot"
+title: "Solana All-in-One Booster Volume + Holder Growth"
 excerpt: "Solana Booster Bot 2026: real organic volume, permanent holders and market-maker activity in one powerful Telegram tool – from 0.1 SOL."
 image: "/solbooster1.jpg"
 imageAlt: "Solana Booster Bot interface showcasing organic volume and holder generation tools for Solana projects in 2025"

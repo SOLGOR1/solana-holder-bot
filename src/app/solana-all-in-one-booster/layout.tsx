@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Solana All-in-One Booster 2026 • Volume + Permanent Holders Starting at 0.15 SOL",
-  description: "The ultimate Solana booster 2026: Real trading volume and permanent holders at the same time in one Telegram bot. From just 0.15 SOL • MEV protection • Wallet rotation • Live dashboard • 100% natural-looking activity.",
+  title: "Solana All-in-One Booster – Volume + Holder Growth",
+  description: "The ultimate Solana booster 2026: Real trading volume and permanent holders at the same time in one Telegram bot. From just 0.15 SOL",
   
   openGraph: {
     title: "Solana All-in-One Booster 2026 – Volume + Holders in One Bot",

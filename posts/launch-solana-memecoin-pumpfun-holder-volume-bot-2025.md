@@ -1,5 +1,5 @@
 ---
-title: "How to Launch a Solana Memecoin on Pump.fun"
+title: "How to Launch a Solana Memecoin on Pump.fun (2026 Guide)"
 excerpt: "Launch Solana memecoins on Pump.fun and boost to DexScreener top with SolanaHolderBot volume + holders."
 image: "/pumpfun1.jpg"
 imageAlt: "Step-by-step guide to launching a memecoin on Pump.fun"
@@ -14,10 +14,10 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
     {
       "@type": "Article",
       "@id": "https://solanaholderbot.com/blog/launch-solana-memecoin-pumpfun-holder-volume-bot-2025#article",
-      "headline": "How to Launch a Solana Memecoin with Pump.fun and Skyrocket It with Solana Holder Bot & Volume Bot",
+      "headline": "How to Launch a Solana Memecoin on Pump.fun (2026 Guide)",
       "description": "Launch a Solana memecoin on Pump.fun in 2025 and boost it to the top of DexScreener with Solana Holder Bot and Solana Volume Bot. Our ultimate guide reveals the steps, tools, and legal pitfalls to dominate the crypto market!",
       "datePublished": "2025-05-20T00:00:00Z",
-      "dateModified": "2025-05-20T00:00:00Z",
+      "dateModified": "2026-04-04T00:00:00Z",
       "author": {
         "@type": "Organization",
         "name": "Solana Holder Bot Team",
