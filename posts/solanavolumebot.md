@@ -1,6 +1,6 @@
 ---
 title: "Top Sol Volume Bot in 2026"
-excerpt: "Discover the most powerful Solana volume bot that generates 100% authentic on-chain trades. Dominate Raydium, Pump.fun, Moonshot, DexScreener, and Birdeye rankings with real volume — starting from just 0.1 SOL."
+excerpt: "Ultimate Solana volume bot 2026: 100% real on-chain trades for Raydium, Pump.fun & DexScreener."
 image: "/solvolbot_1.png"
 imageAlt: "Solana Volume Bot Telegram interface showing real-time volume generation and on-chain trading dashboard"
 date: "2026-01-27"

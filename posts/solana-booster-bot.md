@@ -1,6 +1,6 @@
 ---
 title: "Solana Booster Bot"
-excerpt: "Discover Solana Booster Bot, the ultimate tool to boost your Solana token project with organic volume, unique holders, and market-maker activity. Learn how our 5x faster RPC, intuitive Telegram interface, and modular boost options can elevate your project in 2025."
+excerpt: "Solana Booster Bot 2025: organic volume, unique holders and market-maker activity in one tool."
 image: "/solbooster1.jpg"
 imageAlt: "Solana Booster Bot interface showcasing organic volume and holder generation tools for Solana projects in 2025"
 date: "2025-06-18"

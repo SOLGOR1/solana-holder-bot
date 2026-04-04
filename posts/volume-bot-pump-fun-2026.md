@@ -1,6 +1,6 @@
 ---
 title: "Ultimate Volume Bot for Pump.fun 2026"
-excerpt: "The ultimate volume bot Pump.fun launchers trust in 2026 – genuine buy-heavy trades, lowest fees, and seamless Telegram control to dominate Pump.fun bonding curves from just 0.1 SOL."
+excerpt: "Best Pump.fun volume bot 2026: authentic trades, lowest fees and Telegram control. From 0.1 SOL."
 image: "/blogthumb/volume-bot-pump-fun-2026.png"
 imageAlt: "Volume bot Pump.fun dashboard accelerating bonding curve completion in 2026"
 date: "2026-02-15"

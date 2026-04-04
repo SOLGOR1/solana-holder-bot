@@ -1,6 +1,6 @@
 ---
 title: "Best DEX Rank Bot 2026"
-excerpt: "Discover the best DEX rank bot 2026, SolanaHolderBot combines powerful solana volume bot and permanent holders bot features to dominate DexScreener, Birdeye, Raydium, Pump.fun, and all major Solana trending charts with authentic on-chain metrics."
+excerpt: "Discover the best DEX rank bot 2026, SolanaHolderBot combines powerful solana volume bot and permanent holders bot."
 image: "/blogthumb/b1.png"
 imageAlt: "SolanaHolderBot Telegram dashboard showing real-time DEX rank boosting with volume, makers, and permanent holders"
 date: "2026-02-07"

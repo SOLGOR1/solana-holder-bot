@@ -1,6 +1,6 @@
 ---
 title: "How to Launch a Solana Memecoin on Pump.fun"
-excerpt: "Launch a Solana memecoin on Pump.fun in 2025 and boost it to the top of DexScreener with Solana Holder Bot and Solana Volume Bot. Our ultimate guide reveals the steps, tools, and legal pitfalls to dominate the crypto market!"
+excerpt: "Launch Solana memecoins on Pump.fun and boost to DexScreener top with SolanaHolderBot volume + holders."
 image: "/pumpfun1.jpg"
 imageAlt: "Step-by-step guide to launching a memecoin on Pump.fun"
 date: "2025-05-20"

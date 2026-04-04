@@ -1,6 +1,6 @@
 ---
 title: "Best Meme Coin Volume Bot 2026"
-excerpt: "The top meme coin volume bot for Solana in 2026 – authentic buy-heavy trades to skyrocket memecoin launches on Pump.fun, PumpSwap, and beyond, starting at 0.1 SOL."
+excerpt: "Top meme coin volume bot for Solana 2026: authentic buys to launch Pump.fun coins fast. From 0.1 SOL."
 image: "/blogthumb/meme-coin-volume-bot-2026.png"
 imageAlt: "Meme coin volume bot generating real trading activity for Solana memecoins in 2026"
 date: "2026-02-16"

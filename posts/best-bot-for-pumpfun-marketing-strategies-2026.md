@@ -1,6 +1,6 @@
 ---
 title: "Best Pump.fun Marketing Bot 2026"
-excerpt: "SolanaHolderBot is the best bot for Pumpfun 2026, delivering permanent rent-exempt holders and powerful volume boosting to dominate pump.fun trending lists, accelerate bonding curve completion, and drive organic growth with zero hidden fees."
+excerpt: "SolanaHolderBot is the best bot for Pumpfun 2026, delivering permanent rent-exempt holders and powerful volume."
 image: "/blogthumb/pumpfun-2026.png"
 imageAlt: "SolanaHolderBot Telegram interface showing real-time permanent holder addition and pumpfun trending impact"
 date: "2026-02-02"

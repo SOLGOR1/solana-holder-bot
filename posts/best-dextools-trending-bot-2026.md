@@ -1,6 +1,6 @@
 ---
 title: "Best Dextools Trending Bot 2026"
-excerpt: "Want to dominate Dextools Hot Pairs in 2026? SolanaHolderBot is the #1 Dextools trending bot, combining authentic buy-heavy volume and permanent holders to get you trending in hours, starting at just 0.1 SOL."
+excerpt: "Hit Dextools Hot Pairs fast in 2026 with SolanaHolderBot. Real volume + holders in hours."
 image: "/blogthumb/dextools-2026.png"
 imageAlt: "SolanaHolderBot real-time dashboard pushing a Solana token to Dextools Hot Pairs #1 with surging volume and holder count"
 date: "2026-02-12"

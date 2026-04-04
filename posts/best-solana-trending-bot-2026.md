@@ -1,6 +1,6 @@
 ---
 title: "Best Solana Trendig Bot 2026"
-excerpt: "Looking for the cheapest and best Solana volume and holder bot in 2026? Discover how Solana Volume and Holder Bot delivers authentic volume and holders to skyrocket your Solana token launches, starting at just 0.1 SOL."
+excerpt: "Best Solana trending bot 2026: massive volume + holders to skyrocket your memecoin launches."
 image: "/blogthumb/bestsolanatrendingbot2026.png"
 imageAlt: "Best solana trending telegram bot for getting on the top Dex and Analytic trending lists in 2026"
 date: "2026-02-09"
