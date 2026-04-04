@@ -49,7 +49,7 @@ export default function SolanaAllInOneBooster() {
             "name": "Solana All-in-One Booster",
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Telegram",
-            "url": "https://www.solanaholderbot.com/solana-all-in-one-booster",
+            "url": "https://solanaholderbot.com/solana-all-in-one-booster",
             "description": "Real trading volume and permanent holders at the same time – the most powerful Solana booster of 2026",
             "offers": {
               "@type": "Offer",
@@ -67,7 +67,7 @@ export default function SolanaAllInOneBooster() {
               "name": "Solana Holder Bot",
               "url": "https://www.solanaholderbot.com"
             },
-            "screenshot": "https://www.solanaholderbot.com/blogthumb/bestsolanaallinonebooster2026.png",
+            "screenshot": "https://solanaholderbot.com/blogthumb/bestsolanaallinonebooster2026.png",
             "featureList": [
               "Volume + Holders simultaneously",
               "8-11 buys per cycle",

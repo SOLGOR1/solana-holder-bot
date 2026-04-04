@@ -13,7 +13,7 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
   "@graph": [
     {
       "@type": "Article",
-      "@id": "https://www.solanaholderbot.com/blog/launch-solana-memecoin-pumpfun-holder-volume-bot-2025#article",
+      "@id": "https://solanaholderbot.com/blog/launch-solana-memecoin-pumpfun-holder-volume-bot-2025#article",
       "headline": "How to Launch a Solana Memecoin with Pump.fun and Skyrocket It with Solana Holder Bot & Volume Bot",
       "description": "Launch a Solana memecoin on Pump.fun in 2025 and boost it to the top of DexScreener with Solana Holder Bot and Solana Volume Bot. Our ultimate guide reveals the steps, tools, and legal pitfalls to dominate the crypto market!",
       "datePublished": "2025-05-20T00:00:00Z",
@@ -28,22 +28,22 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
         "name": "Solana Holder Bot",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.solanaholderbot.com/logo.png"
+          "url": "https://solanaholderbot.com/logo.png"
         }
       },
       "image": {
         "@type": "ImageObject",
-        "url": "https://www.solanaholderbot.com/pumpfun1.jpg",
+        "url": "https://solanaholderbot.com/pumpfun1.jpg",
         "caption": "Step-by-step guide to launching a memecoin on Pump.fun"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://www.solanaholderbot.com/blog/launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
+        "@id": "https://solanaholderbot.com/blog/launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.solanaholderbot.com/blog/launch-solana-memecoin-pumpfun-holder-volume-bot-2025#breadcrumb",
+      "@id": "https://solanaholderbot.com/blog/launch-solana-memecoin-pumpfun-holder-volume-bot-2025#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -55,13 +55,13 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": "https://www.solanaholderbot.com/blog"
+          "item": "https://solanaholderbot.com/blog"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "How to Launch a Solana Memecoin with Pump.fun and Skyrocket It with Solana Holder Bot & Volume Bot",
-          "item": "https://www.solanaholderbot.com/blog/launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
+          "item": "https://solanaholderbot.com/blog/launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
         }
       ]
     }
@@ -78,7 +78,7 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
 <div class="intro-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
   <h1 class="text-3xl font-bold text-white mb-6">How to Launch a Solana Memecoin with Pump.fun in 2025</h1>
   <p class="text-lg leading-relaxed mb-4">Imagine your memecoin topping <strong>DexScreener</strong>, with <span class="text-blue-400">thousands of holders</span> and <span class="text-blue-400">surging trading volume</span>. In 2025, <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump.fun</a> makes launching a Solana memecoin a breeze, while <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> supercharge its success.</p>
-  <p class="text-lg leading-relaxed mb-4">This guide breaks down <strong>Pump.fun’s</strong> mechanics, the power of <strong>holder</strong> and <strong>volume bots</strong>, legal risks, and a step-by-step plan to dominate. Backed by data from <a href="https://x.com/pumpdotfun" class="text-blue-400 hover:underline">X</a>, <a href="https://www.forbes.com/sites/jonathanponciano/2025/02/10/from-memes-to-500-million-in-revenue-the-pumpfun-phenomenon/" class="text-blue-400 hover:underline">Forbes</a>, and our <a href="https://www.solanaholderbot.com/blog" class="text-blue-400 hover:underline">blog</a>, we’ll show you how to launch and scale your token.</p>
+  <p class="text-lg leading-relaxed mb-4">This guide breaks down <strong>Pump.fun’s</strong> mechanics, the power of <strong>holder</strong> and <strong>volume bots</strong>, legal risks, and a step-by-step plan to dominate. Backed by data from <a href="https://x.com/pumpdotfun" class="text-blue-400 hover:underline">X</a>, <a href="https://www.forbes.com/sites/jonathanponciano/2025/02/10/from-memes-to-500-million-in-revenue-the-pumpfun-phenomenon/" class="text-blue-400 hover:underline">Forbes</a>, and our <a href="https://solanaholderbot.com/blog" class="text-blue-400 hover:underline">blog</a>, we’ll show you how to launch and scale your token.</p>
   <p class="text-lg font-semibold text-blue-400">Ready to rule the Solana ecosystem? 🌟 Dive in or visit <a href="https://www.solanaholderbot.com" class="text-blue-400 hover:underline">www.solanaholderbot.com</a>!</p>
 </div>
 
@@ -151,7 +151,7 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
   <ul class="list-disc pl-6 space-y-2 text-lg">
     <li><strong>Holders</strong>: Signal credibility and attract investors.</li>
     <li><strong>Volume</strong>: Boosts rankings and draws organic traders.</li>
-    <li><strong>Combo Power</strong>: Use both for explosive growth, as seen in <a href="https://www.solanaholderbot.com/blog/solana-holder-bot" class="text-blue-400 hover:underline">our blog</a>.</li>
+    <li><strong>Combo Power</strong>: Use both for explosive growth, as seen in <a href="https://solanaholderbot.com/blog/solana-holder-bot" class="text-blue-400 hover:underline">our blog</a>.</li>
   </ul>
 </div>
 

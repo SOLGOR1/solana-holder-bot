@@ -50,7 +50,7 @@ export default function SolanaVolumeBot() {
             "name": "Solana Volume Bot",
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Telegram",
-            "url": "https://www.solanaholderbot.com/solana-volume-bot",
+            "url": "https://solanaholderbot.com/solana-volume-bot",
             "description": "The strongest Solana Volume Booster 2026 for Raydium, Pump.fun & DexScreener",
             "offers": {
               "@type": "Offer",
@@ -68,7 +68,7 @@ export default function SolanaVolumeBot() {
               "name": "Solana Holder Bot",
               "url": "https://www.solanaholderbot.com"
             },
-            "screenshot": "https://www.solanaholderbot.com/og-volume.jpg",
+            "screenshot": "https://solanaholderbot.com/og-volume.jpg",
             "featureList": [
               "Real on-chain Jupiter trades",
               "MEV protection",

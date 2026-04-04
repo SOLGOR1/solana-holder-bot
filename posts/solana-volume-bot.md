@@ -14,7 +14,7 @@ slug: "solana-volume-bot"
   "headline": "Best Solana Volume Bot 2026: 200x Booster vs Boost Legends & Moonshot Alternatives",
   "description": "The top Solana volume bot for 2026 delivers 200x volume, low fees, and trending dominance. Compare to Boost Legends volume bot, Moonshot volume bot, and general volume bot crypto tools.",
   "keywords": "solana volume bot, sol volume bot, volume bot solana, solana volume booster, boost legends volume bot, moonshot volume bot, volume bot crypto, solana trading volume, solana token boost",
-  "image": "https://www.solanaholderbot.com/solana-volume-bot-1.jpg",
+  "image": "https://solanaholderbot.com/solana-volume-bot-1.jpg",
   "datePublished": "2026-02-15",
   "author": {
     "@type": "Organization",
@@ -25,12 +25,12 @@ slug: "solana-volume-bot"
     "name": "SolanaHolderBot",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.solanaholderbot.com/logo.png"
+      "url": "https://solanaholderbot.com/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.solanaholderbot.com/blog/solana-volume-bot"
+    "@id": "https://solanaholderbot.com/blog/solana-volume-bot"
   },
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -39,19 +39,19 @@ slug: "solana-volume-bot"
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.solanaholderbot.com/"
+        "item": "https://solanaholderbot.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://www.solanaholderbot.com/blog"
+        "item": "https://solanaholderbot.com/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Best Solana Volume Bot 2026",
-        "item": "https://www.solanaholderbot.com/blog/solana-volume-bot"
+        "item": "https://solanaholderbot.com/blog/solana-volume-bot"
       }
     ]
   },
@@ -512,7 +512,7 @@ slug: "solana-volume-bot"
       <a href="https://t.me/leektradingbot" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-500 transition">Upgrade to the #1 Solana Volume Bot! 📈</a>
     </div>
     <p class="text-gray-100 mt-6">
-      Explore more tools for your crypto journey on our <a href="https://www.solanaholderbot.com/blog" class="text-blue-400 hover:text-blue-300 underline">blog</a>, including guides on the <a href="https://www.solanaholderbot.com/blog/solana-holder-bot" class="text-blue-400 hover:text-blue-300 underline">Solana Holder Bot</a> and other chain-specific bots.
+      Explore more tools for your crypto journey on our <a href="https://solanaholderbot.com/blog" class="text-blue-400 hover:text-blue-300 underline">blog</a>, including guides on the <a href="https://solanaholderbot.com/blog/solana-holder-bot" class="text-blue-400 hover:text-blue-300 underline">Solana Holder Bot</a> and other chain-specific bots.
     </p>
   </section>
 </div>

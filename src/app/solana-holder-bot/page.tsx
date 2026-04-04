@@ -27,7 +27,7 @@ export default function SolanaHolderBot() {
             "name": "Solana Holder Bot",
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Telegram",
-            "url": "https://www.solanaholderbot.com/solana-holder-bot",
+            "url": "https://solanaholderbot.com/solana-holder-bot",
             "description": "The strongest Solana Holder Booster 2026 for Raydium, Pump.fun & DexScreener",
             "offers": {
               "@type": "Offer",
@@ -45,7 +45,7 @@ export default function SolanaHolderBot() {
               "name": "Solana Holder Bot",
               "url": "https://www.solanaholderbot.com"
             },
-            "screenshot": "https://www.solanaholderbot.com/og-holder.jpg",
+            "screenshot": "https://solanaholderbot.com/og-holder.jpg",
             "featureList": [
               "Real permanent on-chain holders",
               "MEV protection",

@@ -14,4 +14,4 @@ Allow: /
 User-agent: Googlebot-Image
 Allow: /
 
-Sitemap: https://www.solanaholderbot.com/sitemap.xml
+Sitemap: https://solanaholderbot.com/sitemap.xml
