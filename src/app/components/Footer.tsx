@@ -91,7 +91,9 @@ export default function Footer() {
               <a href="https://x.com/solanaholderbot" 
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
-                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-cyan-400 transition-all">
+                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-cyan-400 transition-all"
+                 aria-label="Solana Holder Bot Twitter"
+                 >
                 <FaXTwitter className="w-6 h-6 text-gray-100 group-hover:text-cyan-400" />
               </a>
 
@@ -99,7 +101,9 @@ export default function Footer() {
               <a href="https://www.reddit.com/r/holana_holder_bot/" 
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
-                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-orange-500/40 transition-all">
+                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-orange-500/40 transition-all"
+                 aria-label="Solana Holder Bot Reddit"
+                 >
                 <FaRedditAlien className="w-6 h-6 text-gray-100 group-hover:text-orange-400" />
               </a>
 
@@ -107,7 +111,8 @@ export default function Footer() {
               <a href="https://www.youtube.com/@SolanaHolderBot" 
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
-                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-red-500 transition-all">
+                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-red-500 transition-all"
+                 aria-label="Solana Holder Bot YouTube">
                 <FaYoutube className="w-6 h-6 text-gray-100 group-hover:text-red-500" />
               </a>
 
@@ -115,7 +120,8 @@ export default function Footer() {
               <a href="https://www.instagram.com/solanaholderbot2026/" 
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
-                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-pink-500 transition-all">
+                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-pink-500 transition-all"
+                 aria-label="Solana Holder Bot Instagram">
                 <FaInstagram className="w-6 h-6 text-gray-100 group-hover:text-pink-500" />
               </a>
 
@@ -123,7 +129,8 @@ export default function Footer() {
               <a href="https://www.linkedin.com/in/solana-holdder-bot-523958370/" 
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
-                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-blue-600 transition-all">
+                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-blue-600 transition-all"
+                 aria-label="Solana Holder Bot LinkedIn">
                 <FaLinkedin className="w-6 h-6 text-gray-100 group-hover:text-blue-600" />
               </a>
 
@@ -131,7 +138,8 @@ export default function Footer() {
               <a href="https://www.facebook.com/people/Solana-Holder-Bot" 
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
-                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-blue-500 transition-all">
+                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-blue-500 transition-all"
+                 aria-label="Solana Holder Bot Facebook">
                 <FaFacebook className="w-6 h-6 text-gray-100 group-hover:text-blue-500" />
               </a>
 
@@ -139,7 +147,8 @@ export default function Footer() {
               <a href="https://t.me/+3XCV3c958XwyYjE8" 
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
-                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-emerald-400 transition-all">
+                 className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-emerald-400 transition-all"
+                 aria-label="Solana Holder Bot Telegram">
                 <FaTelegram className="w-6 h-6 text-gray-100 group-hover:text-emerald-400" />
               </a>
             </div>
