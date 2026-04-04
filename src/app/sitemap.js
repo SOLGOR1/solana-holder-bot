@@ -2,7 +2,7 @@
 import { blogPosts } from "./data/blogs";
 
 export default function sitemap() {
-  const baseUrl = "https://www.solanaholderbot.com";
+  const baseUrl = "https://solanaholderbot.com";
 
   const homepageEntry = {
     url: baseUrl,
