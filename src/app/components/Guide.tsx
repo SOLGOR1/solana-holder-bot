@@ -213,6 +213,7 @@ export default function Guide() {
               className="text-white hover:text-blue-400 transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label="Previous Step"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
@@ -223,6 +224,7 @@ export default function Guide() {
               onClick={toggleAutoPlay}
               className="flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white/20 transition-all"
               whileHover={{ scale: 1.05 }}
+              aria-label={autoPlay ? "Pause" : "Play"}
             >
               {autoPlay ? 'Pause' : 'Play'}
             </motion.button>
@@ -232,6 +234,7 @@ export default function Guide() {
               className="text-white hover:text-green-400 transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label="Next Step"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
