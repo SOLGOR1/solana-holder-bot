@@ -1,6 +1,6 @@
 ---
 title: "Best Solana Trendig Bot 2026"
-excerpt: "Best Solana trending bot 2026: massive volume + holders to skyrocket your memecoin launches."
+excerpt: "Best Solana trending bot 2026: massive authentic volume + permanent holders to get your memecoin trending on DexScreener, Birdeye and Raydium."
 image: "/blogthumb/bestsolanatrendingbot2026.png"
 imageAlt: "Best solana trending telegram bot for getting on the top Dex and Analytic trending lists in 2026"
 date: "2026-02-09"

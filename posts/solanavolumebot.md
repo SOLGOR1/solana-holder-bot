@@ -1,6 +1,6 @@
 ---
 title: "Top Sol Volume Bot in 2026"
-excerpt: "Ultimate Solana volume bot 2026: 100% real on-chain trades for Raydium, Pump.fun & DexScreener."
+excerpt: "Ultimate Solana volume bot 2026: 100% real on-chain trades for Raydium, Pump.fun, Moonshot and DexScreener – authentic volume from just 0.1 SOL."
 image: "/solvolbot_1.png"
 imageAlt: "Solana Volume Bot Telegram interface showing real-time volume generation and on-chain trading dashboard"
 date: "2026-01-27"

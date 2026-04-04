@@ -1,6 +1,6 @@
 ---
 title: "Best Dextools Trending Bot 2026"
-excerpt: "Hit Dextools Hot Pairs fast in 2026 with SolanaHolderBot. Real volume + holders in hours."
+excerpt: "Hit Dextools Hot Pairs fast in 2026 with SolanaHolderBot. Real buy-heavy volume + permanent holders get you trending in hours – from 0.1 SOL."
 image: "/blogthumb/dextools-2026.png"
 imageAlt: "SolanaHolderBot real-time dashboard pushing a Solana token to Dextools Hot Pairs #1 with surging volume and holder count"
 date: "2026-02-12"

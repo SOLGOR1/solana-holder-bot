@@ -1,6 +1,6 @@
 ---
 title: "SolanaHolderBot in 2026"
-excerpt: "Fastest Solscan trending 2026: SolanaHolderBot combines holders + volume for real growth."
+excerpt: "Fastest Solscan trending 2026: SolanaHolderBot combines permanent holders + strategic volume for real on-chain growth and higher rankings."
 image: "/blogthumb/solscan-2026.png"
 imageAlt: "SolanaHolderBot Telegram dashboard illustrating real-time holder additions and volume surges impacting Solscan trending metrics"
 date: "2026-02-08"

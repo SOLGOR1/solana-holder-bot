@@ -1,6 +1,6 @@
 ---
 title: "Best Pump.fun Holder Bot 2026"
-excerpt: "Best Pump.fun holder bot 2026: real permanent holders + volume. SolanaHolderBot from 0.1 SOL."
+excerpt: "Best Pump.fun holder bot 2026: real permanent Solana holders + authentic volume. Ultra-fast 5x RPC and full control – from just 0.1 SOL."
 image: "/solhold-pump2026.png"
 imageAlt: "Best Pump.fun holder bot interface for generating permanent Solana holders in 2026"
 date: "2026-01-31"

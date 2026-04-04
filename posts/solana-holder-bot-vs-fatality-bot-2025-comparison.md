@@ -1,6 +1,6 @@
 ---
 title: "Solana Holder Bot vs Fatality Bot"
-excerpt: "Solana Holder Bot vs Fatality Bot 2025: who wins on volume, holders and rankings? Full comparison."
+excerpt: "Solana Holder Bot vs Fatality Bot 2025: detailed comparison of volume, permanent holders and rankings on Solana."
 image: "/SolanaHolderBot_Fatality_1.jpg"
 imageAlt: "Sleek dashboard comparing Solana Holder Bot vs Fatality Bot for crypto success in 2025"
 date: "2025-04-24"
