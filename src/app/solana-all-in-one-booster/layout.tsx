@@ -9,17 +9,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Solana All-in-One Booster 2026 – Volume + Holders in One Bot",
     description: "Real on-chain volume and permanent holders simultaneously. The most powerful Solana launch tool of 2026 starting at only 0.15 SOL.",
-    url: "https://www.solanaholderbot.com/solana-all-in-one-booster",
-    images: [{ url: "https://www.solanaholderbot.com/blogthumb/bestsolanaallinonebooster2026.png", width: 1200, height: 630 }],
+    url: "https://solanaholderbot.com/solana-all-in-one-booster",
+    images: [{ url: "https://solanaholderbot.com/blogthumb/bestsolanaallinonebooster2026.png", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Solana All-in-One Booster 2026 • Volume + Permanent Holders",
-    images: "https://www.solanaholderbot.com/blogthumb/bestsolanaallinonebooster2026.png",
+    images: "https://solanaholderbot.com/blogthumb/bestsolanaallinonebooster2026.png",
   },
   alternates: {
-    canonical: "https://www.solanaholderbot.com/solana-all-in-one-booster",
+    canonical: "https://solanaholderbot.com/solana-all-in-one-booster",
   },
   robots: {
     index: true,

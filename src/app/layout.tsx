@@ -40,19 +40,19 @@ export const metadata: Metadata = {
   publisher: "Solana Holder Bot",
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.solanaholderbot.com",
+    canonical: "https://solanaholderbot.com",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.solanaholderbot.com",
+    url: "https://solanaholderbot.com",
     siteName: "Solana Holder Bot",
     title: "Solana Holder Bot – The #1 Holder & Volume Bot for Solana Memecoins in 2026",
     description:
       "Permanent holders, genuine volume boosting, and full Telegram automation – the fastest and cheapest way to reach trending on DexScreener, Pump.fun, and Raydium. Start from just 0.1 SOL.",
     images: [
       {
-        url: "https://www.solanaholderbot.com/blogthumb/blogthumb2.png",
+        url: "https://solanaholderbot.com/blogthumb/blogthumb2.png",
         width: 1200,
         height: 630,
         alt: "Solana Holder Bot – Permanent Holders & Genuine Volume Booster for Solana",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Solana Holder Bot – #1 Solana Holder & Volume Bot 2026",
     description:
       "The fastest, cheapest, and most reliable Telegram bots for permanent holders and real volume on Solana.",
-    images: "https://www.solanaholderbot.com/blogthumb/blogthumb2.png",
+    images: "https://solanaholderbot.com/blogthumb/blogthumb2.png",
   },
 };
 

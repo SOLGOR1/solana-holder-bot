@@ -9,17 +9,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Solana Holder Bot 2026 – Raydium & Pump.fun Holder Booster",
     description: "Real permanent holders and social proof for your Solana token starting at 0.1 SOL. The #1 Telegram Holder Bot of 2026.",
-    url: "https://www.solanaholderbot.com/solana-holder-bot",
-    images: [{ url: "https://www.solanaholderbot.com/og-holder.jpg", width: 1200, height: 630 }],
+    url: "https://solanaholderbot.com/solana-holder-bot",
+    images: [{ url: "https://solanaholderbot.com/og-holder.jpg", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Solana Holder Bot 2026 • #1 Raydium & Pump.fun Holder Booster",
-    images: "https://www.solanaholderbot.com/og-holder.jpg",
+    images: "https://solanaholderbot.com/og-holder.jpg",
   },
   alternates: {
-    canonical: "https://www.solanaholderbot.com/solana-holder-bot",
+    canonical: "https://solanaholderbot.com/solana-holder-bot",
   },
   robots: {
     index: true,
