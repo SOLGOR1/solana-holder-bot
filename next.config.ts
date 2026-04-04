@@ -23,10 +23,9 @@ const nextConfig: NextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-  // === Saubere 301-Redirects für www + http ===
+  // === Nur www → ohne www Redirect (Permanent 301) ===
   async redirects() {
     return [
-      // www → ohne www (Permanent 301)
       {
         source: '/:path*',
         has: [
@@ -34,19 +33,6 @@ const nextConfig: NextConfig = {
             type: 'host',
             key: 'host',
             value: 'www.solanaholderbot.com',
-          },
-        ],
-        destination: 'https://solanaholderbot.com/:path*',
-        permanent: true,
-      },
-      // http → https (Permanent 301)
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'scheme',
-            key: 'scheme',
-            value: 'http',
           },
         ],
         destination: 'https://solanaholderbot.com/:path*',
