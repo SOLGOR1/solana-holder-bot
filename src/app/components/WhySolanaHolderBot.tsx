@@ -99,8 +99,10 @@ export default function WhySolanaVolumeBot() {
             <a
               href="https://t.me/Degen_wg_bot"
               className="group relative w-full sm:w-auto px-12 py-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl font-semibold text-xl border-2 border-blue-400/60 shadow-2xl shadow-blue-500/30 transition-all duration-400 hover:border-blue-800/80 hover:ring-4 hover:ring-blue-400/40 hover:shadow-inner hover:shadow-blue-900/50 overflow-hidden"
+              title="Launch Solana Holder Bot on Telegram"
+              arial-laberl="Launch Solana Holder Bot on Telegram"
             >
-              <span className="relative z-10 flex items-center justify-center gap-3">
+              <span className="relative z-10 flex items-center justify-center gap-3" title="Launch Solana Holder Bot on Telegram" aria-label="Launch Solana Holder Bot on Telegram">
                 Launch Holder Bot
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7 sexism m7-7H3" />
@@ -113,10 +115,12 @@ export default function WhySolanaVolumeBot() {
             <a
               href="https://t.me/leektradingbot"
               className="group relative w-full sm:w-auto px-12 py-6 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-2xl font-semibold text-xl border-2 border-green-400/60 shadow-2xl shadow-green-500/30 transition-all duration-400 hover:border-green-800/80 hover:ring-4 hover:ring-green-400/40 hover:shadow-inner hover:shadow-green-900/50 overflow-hidden"
+              title="Launch Solana Volume Bot on Telegram"
+              aria-label="Launch Solana Volume Bot on Telegram"
             >
-              <span className="relative z-10 flex items-center justify-center gap-3">
+              <span className="relative z-10 flex items-center justify-center gap-3" title="Launch Solana Volume Bot on Telegram" aria-label="Launch Solana Volume Bot on Telegram">
                 Launch Volume Bot Now
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0ellaneous 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7 sexism m7-7H3" />
                 </svg>
               </span>

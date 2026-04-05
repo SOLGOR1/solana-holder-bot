@@ -79,6 +79,7 @@ export default function Testimonials() {
                     <Image
                       src={t.avatar}
                       alt={t.name}
+                      title={t.name}
                       width={48}
                       height={48}
                       className="rounded-full ring-2 ring-gray-800 group-hover:ring-cyan-500/60 transition-all duration-300"
