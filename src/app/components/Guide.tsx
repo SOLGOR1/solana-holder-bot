@@ -184,6 +184,7 @@ export default function Guide() {
               <Image
                 src={current.image}
                 alt={current.alt}
+                title={current.alt}
                 width={600}
                 height={420}
                 className="rounded-lg object-contain shadow-md max-h-[420px] w-auto"

@@ -94,6 +94,7 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
                 <Image
                   src={featured.image}
                   alt={featured.imageAlt}
+                  title={featured.imageAlt}
                   width={1200}
                   height={500}
                   className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
