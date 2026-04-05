@@ -139,14 +139,14 @@ export default function Guide() {
       `}</style>
 
       <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
-        <motion.h2
+        <motion.div
           className="text-4xl md:text-5xl font-bold text-center mb-12 tracking-tight text-white"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
           How to Boost Your Solana Token with Permanent Holders
-        </motion.h2>
+        </motion.div>
 
         <div className="relative max-w-4xl mx-auto">
           {/* Fortschrittsbalken */}
@@ -197,9 +197,9 @@ export default function Guide() {
 
             {/* Rechte Seite: Text */}
             <div className="flex-1 bg-white/5 backdrop-blur-xl p-6 md:p-8 flex flex-col justify-center">
-              <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight mb-4">
+              <strong className="text-xl md:text-2xl font-semibold text-white tracking-tight mb-4">
                 {current.title}
-              </h3>
+              </strong>
               <p className="text-gray-100 text-base md:text-lg leading-relaxed">
                 {current.desc}
               </p>

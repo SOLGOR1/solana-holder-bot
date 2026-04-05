@@ -171,11 +171,11 @@ export default function HowItWorks() {
                   }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h3 className={`text-base md:text-lg font-semibold text-white mb-1 transition-colors duration-500 ${
+                  <h4 className={`text-base md:text-lg font-semibold text-white mb-1 transition-colors duration-500 ${
                     highlightedStep === index ? `text-${botColor}-300` : ''
                   }`}>
                     {step.title}
-                  </h3>
+                  </h4>
                   <p className={`text-gray-100 text-sm leading-relaxed transition-colors duration-500 ${
                     highlightedStep === index ? 'text-gray-100' : ''
                   }`}>

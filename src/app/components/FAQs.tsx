@@ -168,9 +168,9 @@ export default function FAQs() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
               >
-                <h3 className="text-lg md:text-xl font-semibold text-white pr-4">
+                <div className="accordion-header text-lg md:text-xl font-semibold text-white pr-4">
                   {faq.q}
-                </h3>
+                </div>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}

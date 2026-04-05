@@ -63,7 +63,7 @@ export default function AllInOneBooster() {
               LIVE BETA • NOW AVAILABLE
             </motion.div>
 
-            <motion.h2
+            <motion.h3
               variants={itemVariants}
               className="text-5xl lg:text-6xl font-bold tracking-[-1.5px] leading-[1.05] text-white mb-3"
             >
@@ -71,7 +71,7 @@ export default function AllInOneBooster() {
               <span className="block bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-300 bg-clip-text text-transparent">
                 All-in-One Booster
               </span>
-            </motion.h2>
+            </motion.h3>
 
             <motion.p
               variants={itemVariants}

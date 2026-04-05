@@ -91,9 +91,9 @@ export default function Benefits() {
               <div className={`w-16 h-16 rounded-full bg-${benefit.color}-500/10 flex items-center justify-center mb-4 group-hover:bg-${benefit.color}-500/20 transition-colors mx-auto`}>
                 {benefit.icon}
               </div>
-              <h3 className={`text-xl font-semibold text-white group-hover:text-${benefit.color}-400 transition-colors mb-3 text-center`}>
+              <h4 className={`text-xl font-semibold text-white group-hover:text-${benefit.color}-400 transition-colors mb-3 text-center`}>
                 {benefit.title}
-              </h3>
+              </h4>
               <p className="text-gray-100 leading-relaxed text-center text-sm md:text-base">
                 {benefit.desc}
               </p>
