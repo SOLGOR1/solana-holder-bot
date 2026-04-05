@@ -55,19 +55,19 @@ export default function GrowthStats() {
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-8">
             <motion.div className="flex flex-col items-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-lg p-6 w-full md:w-1/3">
               <FaRocket className="text-white text-4xl mb-4" />
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">1,700+</h3>
+              <strong className="text-3xl md:text-4xl font-bold text-white mb-2">1,700+</strong>
               <p className="text-gray-100 text-sm md:text-base">Projects Boosted</p>
             </motion.div>
 
             <motion.div className="flex flex-col items-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-lg p-6 w-full md:w-1/3">
               <FaUsers className="text-white text-4xl mb-4" />
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">1M+</h3>
+              <strong className="text-3xl md:text-4xl font-bold text-white mb-2">1M+</strong>
               <p className="text-gray-100 text-sm md:text-base">Holders Added</p>
             </motion.div>
 
             <motion.div className="flex flex-col items-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-lg p-6 w-full md:w-1/3">
               <FaDollarSign className="text-white text-4xl mb-4" />
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">20M+</h3>
+              <strong className="text-3xl md:text-4xl font-bold text-white mb-2">20M+</strong>
               <p className="text-gray-100 text-sm md:text-base">Volume Generated</p>
             </motion.div>
           </div>
