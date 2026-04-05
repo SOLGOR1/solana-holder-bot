@@ -80,7 +80,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center gap-3" aria-label="Solana Holder Bot Home">
+            <Link href="/" className="flex items-center gap-3" aria-label="Solana Holder Bot Home" title="Solana Holder & Volume Bot - Home">
               <svg
                 className="w-9 h-9 text-white flex-shrink-0"
                 fill="currentColor"
@@ -193,6 +193,7 @@ export default function Navbar() {
     rel="noopener noreferrer"
     className="px-4 py-2.5 bg-cyan-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-cyan-500/30 hover:bg-cyan-600/40 hover:border-cyan-500/60 transition-all duration-300 shadow-lg"
     aria-label="Solana Holder Bot on Telegram"
+    title="Open Solana Holder Bot on Telegram"
   >
     <span className="flex items-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />
@@ -207,6 +208,7 @@ export default function Navbar() {
     rel="noopener noreferrer"
     className="px-4 py-2.5 bg-emerald-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-emerald-500/30 hover:bg-emerald-600/40 hover:border-emerald-500/60 transition-all duration-300 shadow-lg"
     aria-label="Solana Volume Bot on Telegram"
+    title="Open Solana Volume Bot on Telegram"
   >
     <span className="flex items-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />
@@ -221,6 +223,7 @@ export default function Navbar() {
     rel="noopener noreferrer"
     className="px-4 py-2.5 bg-amber-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-amber-500/30 hover:bg-amber-600/40 hover:border-amber-500/60 transition-all duration-300 shadow-lg"
     aria-label="Solana Volume + Holder Bot on Telegram"
+    title="Open Solana Volume + Holder Bot on Telegram"
   >
     <span className="flex items-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />
@@ -322,6 +325,7 @@ export default function Navbar() {
     rel="noopener noreferrer"
     className="block px-4 py-2.5 bg-cyan-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-cyan-500/40 hover:bg-cyan-600/30 hover:border-cyan-500/60 transition-all duration-300 text-center"
     aria-label="Solana Holder Bot on Telegram"
+    title="Open Solana Holder Bot on Telegram mobile"
   >
     <span className="flex items-center justify-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />
@@ -336,6 +340,7 @@ export default function Navbar() {
     rel="noopener noreferrer"
     className="block px-4 py-2.5 bg-emerald-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-emerald-500/40 hover:bg-emerald-600/30 hover:border-emerald-500/60 transition-all duration-300 text-center"
     aria-label="Solana Volume Bot on Telegram"
+    title="Open Solana Volume Bot on Telegram mobile"
   >
     <span className="flex items-center justify-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />
@@ -350,6 +355,7 @@ export default function Navbar() {
     rel="noopener noreferrer"
     className="block px-4 py-2.5 bg-amber-600/20 backdrop-blur-md text-white font-semibold rounded-2xl border border-amber-500/40 hover:bg-amber-600/30 hover:border-amber-500/60 transition-all duration-300 text-center"
     aria-label="Solana Volume + Holder Bot on Telegram"
+    title="Open Solana Volume + Holder Bot on Telegram mobile"
   >
     <span className="flex items-center justify-center gap-2 text-sm">
       <FaTelegramPlane className="w-4 h-4" />

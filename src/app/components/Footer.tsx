@@ -14,6 +14,8 @@ export default function Footer() {
               href="https://www.leeksol.online" 
               target="_blank" 
               rel="noopener noreferrer"
+              arial-label="Visit LeekSol - The Team Behind Solana Holder Bot"
+              title="Visit LeekSol - The Team Behind Solana Holder Bot"
             >
               <h3 className="text-2xl md:text-3xl font-bold text-gray-100 mb-3 tracking-tight hover:text-white transition-colors">
                 $LEEK
@@ -29,13 +31,13 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <h4 className="text-sm font-medium text-gray-100 mb-4 uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/solana-volume-bot" className="text-gray-100 hover:text-cyan-400">Solana Volume Bot</Link></li>
-              <li><Link href="/solana-holder-bot" className="text-gray-100 hover:text-cyan-400">Solana Holder Bot</Link></li>
-              <li><Link href="/solana-all-in-one-booster" className="text-gray-100 hover:text-cyan-400">Solana All-in-One Booster</Link></li>
-              <li><Link href="/blog" className="text-gray-100 hover:text-cyan-400">Blog</Link></li>
-              <li><Link href="#faqs" className="text-gray-100 hover:text-cyan-400">FAQs</Link></li>
-              <li><Link href="#guide" className="text-gray-100 hover:text-cyan-400">Guide</Link></li>
-              <li><Link href="/partners" className="text-cyan-400 hover:text-cyan-300 font-medium">View all Partners →</Link></li>
+              <li><Link href="/solana-volume-bot" className="text-gray-100 hover:text-cyan-400" arial-label="Visit Solana Volume Bot" title="Visit Solana Volume Bot">Solana Volume Bot</Link></li>
+              <li><Link href="/solana-holder-bot" className="text-gray-100 hover:text-cyan-400" arial-label="Visit Solana Holder Bot" title="Visit Solana Holder Bot">Solana Holder Bot</Link></li>
+              <li><Link href="/solana-all-in-one-booster" className="text-gray-100 hover:text-cyan-400" arial-label="Visit Solana All-in-One Booster" title="Visit Solana All-in-One Booster">Solana All-in-One Booster</Link></li>
+              <li><Link href="/blog" className="text-gray-100 hover:text-cyan-400" arial-label="Visit Blog" title="Visit Blog">Blog</Link></li>
+              <li><Link href="#faqs" className="text-gray-100 hover:text-cyan-400" arial-label="View FAQs" title="View FAQs">FAQs</Link></li>
+              <li><Link href="#guide" className="text-gray-100 hover:text-cyan-400" arial-label="View Guide" title="View Guide">Guide</Link></li>
+              <li><Link href="/partners" className="text-cyan-400 hover:text-cyan-300 font-medium" arial-label="View Partners" title="View Partners">View all Partners →</Link></li>
             </ul>
           </div>
 
@@ -47,7 +49,10 @@ export default function Footer() {
                 <a href="https://t.me/Degen_wg_bot" 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   className="text-gray-100 hover:text-blue-400">
+                   className="text-gray-100 hover:text-blue-400"
+                   aria-label="Visit Solana Holder Bot Telegram"
+                   title="Visit Solana Holder Bot Telegram"
+                >
                   Solana Holder Bot
                 </a>
               </li>
@@ -55,7 +60,10 @@ export default function Footer() {
                 <a href="https://t.me/leektradingbot" 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   className="text-gray-100 hover:text-green-400">
+                   className="text-gray-100 hover:text-green-400"
+                   aria-label="Visit Solana Volume Bot Telegram"
+                   title="Visit Solana Volume Bot Telegram"
+                >
                   Solana Volume Bot
                 </a>
               </li>
@@ -63,7 +71,10 @@ export default function Footer() {
                 <a href="https://t.me/sol_volume_holder_bot" 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   className="text-gray-100 hover:text-yellow-400">
+                   className="text-gray-100 hover:text-yellow-400"
+                   aria-label="Visit Solana Volume + Holder Bot Telegram"
+                   title="Visit Solana Volume + Holder Bot Telegram"
+                >
                   Solana Volume + Holder Bot
                 </a>
               </li>
@@ -71,12 +82,15 @@ export default function Footer() {
                 <a href="https://t.me/+3XCV3c958XwyYjE8" 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   className="text-gray-100 hover:text-emerald-400">
+                   className="text-gray-100 hover:text-emerald-400"
+                   aria-label="Visit Telegram Support"
+                   title="Visit Telegram Support"
+                >
                   Telegram Support
                 </a>
               </li>
               <li>
-                <a href="mailto:leek.sol@gmx.de" className="text-gray-100 hover:text-cyan-400">
+                <a href="mailto:leek.sol@gmx.de" className="text-gray-100 hover:text-cyan-400" aria-label="Contact Us" title="Contact Us">
                   Contact Us
                 </a>
               </li>
@@ -93,6 +107,7 @@ export default function Footer() {
                  rel="noopener noreferrer nofollow" 
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-cyan-400 transition-all"
                  aria-label="Solana Holder Bot Twitter"
+                 title="Solana Holder Bot Twitter"
                  >
                 <FaXTwitter className="w-6 h-6 text-gray-100 group-hover:text-cyan-400" />
               </a>
@@ -103,6 +118,7 @@ export default function Footer() {
                  rel="noopener noreferrer nofollow" 
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-orange-500/40 transition-all"
                  aria-label="Solana Holder Bot Reddit"
+                  title="Solana Holder Bot Reddit"
                  >
                 <FaRedditAlien className="w-6 h-6 text-gray-100 group-hover:text-orange-400" />
               </a>
@@ -112,7 +128,9 @@ export default function Footer() {
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-red-500 transition-all"
-                 aria-label="Solana Holder Bot YouTube">
+                 aria-label="Solana Holder Bot YouTube"
+                 title="Solana Holder Bot YouTube"
+                >
                 <FaYoutube className="w-6 h-6 text-gray-100 group-hover:text-red-500" />
               </a>
 
@@ -121,7 +139,9 @@ export default function Footer() {
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-pink-500 transition-all"
-                 aria-label="Solana Holder Bot Instagram">
+                 aria-label="Solana Holder Bot Instagram"
+                 title="Solana Holder Bot Instagram"
+                >
                 <FaInstagram className="w-6 h-6 text-gray-100 group-hover:text-pink-500" />
               </a>
 
@@ -130,7 +150,9 @@ export default function Footer() {
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-blue-600 transition-all"
-                 aria-label="Solana Holder Bot LinkedIn">
+                 aria-label="Solana Holder Bot LinkedIn"
+                 title="Solana Holder Bot LinkedIn"
+                >
                 <FaLinkedin className="w-6 h-6 text-gray-100 group-hover:text-blue-600" />
               </a>
 
@@ -139,7 +161,9 @@ export default function Footer() {
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-blue-500 transition-all"
-                 aria-label="Solana Holder Bot Facebook">
+                 aria-label="Solana Holder Bot Facebook"
+                 title="Solana Holder Bot Facebook"
+                >
                 <FaFacebook className="w-6 h-6 text-gray-100 group-hover:text-blue-500" />
               </a>
 
@@ -148,7 +172,9 @@ export default function Footer() {
                  target="_blank" 
                  rel="noopener noreferrer nofollow" 
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-emerald-400 transition-all"
-                 aria-label="Solana Holder Bot Telegram">
+                 aria-label="Solana Holder Bot Telegram"
+                 title="Solana Holder Bot Telegram"
+                >
                 <FaTelegram className="w-6 h-6 text-gray-100 group-hover:text-emerald-400" />
               </a>
             </div>
