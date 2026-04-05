@@ -65,14 +65,14 @@ export default function HowItWorks() {
       `}</style>
 
       <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
-        <motion.h2
+        <motion.h3
           className="text-4xl md:text-5xl font-bold text-center mb-8 tracking-tight text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           How It Works
-        </motion.h2>
+        </motion.h3>
 
         {/* Bot Selector – kompakt */}
         <div className="flex justify-center mb-8 gap-4">

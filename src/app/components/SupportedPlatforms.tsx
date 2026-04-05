@@ -96,6 +96,7 @@ export default function SupportedPlatforms() {
                     <Image
                       src={platform.logo}
                       alt={`${platform.name} Logo`}
+                      title={`${platform.name} Logo`}
                       width={50}
                       height={50}
                       className="max-w-full max-h-full object-contain"

@@ -87,6 +87,7 @@ export default function BannerAllInOne() {
                     <Image
                       src={platform.logo}
                       alt={`${platform.name} Logo`}
+                      title={`${platform.name} Logo`}
                       width={50}
                       height={50}
                       className="grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"

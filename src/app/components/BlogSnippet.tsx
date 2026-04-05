@@ -1,6 +1,7 @@
 // src/components/BlogSnippet.tsx
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { BlogPost } from "../data/blogs";
@@ -28,9 +29,9 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
     return (
       <section id="blog" className="relative bg-black py-5 overflow-hidden">
         <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-10 tracking-tight text-white">
+          <h4 className="text-4xl md:text-5xl font-bold text-center mb-10 tracking-tight text-white">
             Latest Insights
-          </h3>
+          </h4>
           {/* Platzhalter für Featured Card */}
           <div className="max-w-4xl mx-auto mb-10 h-[520px] bg-white/5 rounded-3xl" />
           {/* Platzhalter für Secondary Cards */}
@@ -116,9 +117,9 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
                     day: "numeric",
                   })}
                 </p>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors line-clamp-2">
+                <h5 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors line-clamp-2">
                   {featured.title}
-                </h3>
+                </h5>
                 <p className="text-gray-100 text-base leading-relaxed line-clamp-3">
                   {featured.excerpt}
                 </p>
@@ -163,9 +164,9 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
                           year: "numeric",
                         })}
                       </p>
-                      <h3 className="text-xl md:text-2xl font-semibold text-white mb-2 group-hover:text-emerald-300 transition-colors line-clamp-2">
+                      <h5 className="text-xl md:text-2xl font-semibold text-white mb-2 group-hover:text-emerald-300 transition-colors line-clamp-2">
                         {post.title}
-                      </h3>
+                      </h5>
                       <p className="text-gray-100 text-base line-clamp-2">
                         {post.excerpt}
                       </p>
