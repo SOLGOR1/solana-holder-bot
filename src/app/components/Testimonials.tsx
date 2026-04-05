@@ -98,11 +98,11 @@ export default function Testimonials() {
               </div>
 
               {/* Post Text – natürlicher, ohne Anführungszeichen */}
-              <div className="px-4 pb-3">
-                <p className="text-gray-100 leading-relaxed text-base">
+              <blockquote className="px-4 pb-3">
+                <cite className="text-gray-100 leading-relaxed text-base">
                   {t.text}
-                </p>
-              </div>
+                </cite>
+              </blockquote>
 
               {/* Engagement Bar – realistisch mit randomisierten Zahlen + Retweet */}
               <div className="px-4 py-3 border-t border-gray-800/50 flex items-center justify-between text-gray-100 text-sm">

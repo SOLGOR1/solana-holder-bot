@@ -116,7 +116,7 @@ export default function WhyChoose() {
                   </h3>
 
                   <p className="text-sm md:text-md text-gray-100 leading-relaxed">
-                    Permanently boost your holder count with authentic Solana wallets. Rise to the top of every major ranking.
+                    <strong>Permanently boost</strong> your holder count with authentic Solana wallets. Rise to the top of every major ranking.
                   </p>
 
                   <ul className="space-y-2 text-left max-w-xs mx-auto">
@@ -231,7 +231,7 @@ export default function WhyChoose() {
                   </h3>
 
                   <p className="text-sm md:text-md text-gray-100 leading-relaxed">
-                    Create genuine on-chain trading volume. Dominate trending charts across all major platforms.
+                    Create <em>genuine on-chain trading volume</em>. Dominate trending charts across all major platforms.
                   </p>
 
                   <ul className="space-y-2 text-left max-w-xs mx-auto">

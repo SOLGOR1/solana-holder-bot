@@ -112,7 +112,7 @@ export default function SupportedPlatforms() {
         </div>
 
         <p className="text-xl text-gray-100 max-w-3xl mx-auto mb-5 mt-10">
-          Works with SLP & Token2022 Standard on every Solana DEX and Launchpad.
+          Works with <i>SLP & Token2022</i> Standard on every Solana DEX and Launchpad.
         </p>
         <h2 className="text-5xl md:text-6xl font-bold text-white mt-10">
           The Only Bots You’ll Ever Need

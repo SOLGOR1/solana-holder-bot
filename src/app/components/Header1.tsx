@@ -66,7 +66,8 @@ export default function Header1() {
 
           {/* Beschreibung – wichtig für LCP */}
           <p className="text-base md:text-xl font-bold text-gray-100 max-w-3xl mx-auto mb-12 leading-relaxed px-4">
-            Boost your Solana volume, makers, and holders with the cheapest, most organic DEX-trending bot, delivering an unmatched, user-friendly Telegram experience for effortless growth.
+            Boost your Solana <em>volume, makers, and holders</em> with the <strong>cheapest</strong>, most <strong>organic</strong> DEX-trending bot, 
+            delivering an unmatched, user-friendly Telegram experience for effortless growth.
           </p>
 
           {/* Haupt-Buttons */}

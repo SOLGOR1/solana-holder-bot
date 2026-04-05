@@ -22,7 +22,7 @@ export default function Footer() {
               </h3>
             </Link>
             <p className="text-sm text-gray-100 leading-relaxed">
-              Next-gen tools for Solana growth: Holder & Volume Bots.
+              <em>Next-gen tools for Solana growth: holder & volume bots.</em>
             </p>
             <p className="text-xs text-gray-100 mt-6">© 2026 $LEEK. All rights reserved.</p>
           </div>
