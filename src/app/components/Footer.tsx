@@ -108,6 +108,7 @@ export default function Footer() {
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-cyan-400 transition-all"
                  aria-label="Solana Holder Bot Twitter"
                  title="Solana Holder Bot Twitter"
+                 alt-text="follow us on Twitter"
                  >
                 <FaXTwitter className="w-6 h-6 text-gray-100 group-hover:text-cyan-400" />
               </a>
@@ -119,6 +120,7 @@ export default function Footer() {
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-orange-500/40 transition-all"
                  aria-label="Solana Holder Bot Reddit"
                   title="Solana Holder Bot Reddit"
+                  alt-text="follow us on Reddit"
                  >
                 <FaRedditAlien className="w-6 h-6 text-gray-100 group-hover:text-orange-400" />
               </a>
@@ -130,6 +132,7 @@ export default function Footer() {
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-red-500 transition-all"
                  aria-label="Solana Holder Bot YouTube"
                  title="Solana Holder Bot YouTube"
+                 alt-text="follow us on YouTube"
                 >
                 <FaYoutube className="w-6 h-6 text-gray-100 group-hover:text-red-500" />
               </a>
@@ -141,6 +144,7 @@ export default function Footer() {
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-pink-500 transition-all"
                  aria-label="Solana Holder Bot Instagram"
                  title="Solana Holder Bot Instagram"
+                 alt-text="follow us on Instagram"
                 >
                 <FaInstagram className="w-6 h-6 text-gray-100 group-hover:text-pink-500" />
               </a>
@@ -152,6 +156,7 @@ export default function Footer() {
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-blue-600 transition-all"
                  aria-label="Solana Holder Bot LinkedIn"
                  title="Solana Holder Bot LinkedIn"
+                 alt-text="follow us on LinkedIn"
                 >
                 <FaLinkedin className="w-6 h-6 text-gray-100 group-hover:text-blue-600" />
               </a>
@@ -163,6 +168,7 @@ export default function Footer() {
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-blue-500 transition-all"
                  aria-label="Solana Holder Bot Facebook"
                  title="Solana Holder Bot Facebook"
+                 alt-text="follow us on Facebook"
                 >
                 <FaFacebook className="w-6 h-6 text-gray-100 group-hover:text-blue-500" />
               </a>
@@ -174,6 +180,7 @@ export default function Footer() {
                  className="group relative p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-emerald-400 transition-all"
                  aria-label="Solana Holder Bot Telegram"
                  title="Solana Holder Bot Telegram"
+                 alt-text="Join our Telegram Group"
                 >
                 <FaTelegram className="w-6 h-6 text-gray-100 group-hover:text-emerald-400" />
               </a>
