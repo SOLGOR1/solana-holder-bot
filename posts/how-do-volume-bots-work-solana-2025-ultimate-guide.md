@@ -1,5 +1,5 @@
 ---
-title: "How Do Volume Bots Work?"
+title: "How Do Volume Bots Work in 2026?"
 excerpt: "How Solana volume bots work in 2026: full mechanics, bot comparison and pro tips to safely skyrocket your tokens on DexScreener and Raydium."
 image: "/volumebot1.jpg"
 imageAlt: "Ultimate guide to using volume bots for Solana tokens"

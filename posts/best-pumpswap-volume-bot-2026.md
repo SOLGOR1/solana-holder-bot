@@ -1,5 +1,5 @@
 ---
-title: "Best PumpSwap Volume Bot 2026"
+title: "Best PumpSwap Volume Telegram Bot 2026"
 excerpt: "Best PumpSwap volume bot 2026: genuine buy-heavy trades that finish bonding curves fast and attract real buyers – SolanaHolderBot from 0.1 SOL."
 image: "/blogthumb/pumpswap-volume-bot-2026.png"
 imageAlt: "SolanaHolderBot Telegram PumpSwap volume bot pushing tokens up the curve with real-time stats in 2026"

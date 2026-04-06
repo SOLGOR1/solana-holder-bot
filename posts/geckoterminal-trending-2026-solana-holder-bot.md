@@ -1,5 +1,5 @@
 ---
-title: "GeckoTerminal Trending 2026"
+title: "Sol Token GeckoTerminal Trending in 2026"
 excerpt: "Dominate GeckoTerminal trending 2026 with SolanaHolderBot. Authentic volume + holders for fast rankings."
 image: "/blogthumb/geckoterminal-2026.png"
 imageAlt: "SolanaHolderBot Telegram interface showing live holder addition and volume impact pushing tokens to GeckoTerminal trending lists"

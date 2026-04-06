@@ -1,5 +1,5 @@
 ---
-title: "Solana Launchpad List 2025"
+title: "Solana Memecoin Launchpad List 2025"
 excerpt: "Solana launchpad list 2025: compare the top 20 platforms by fees, features, speed and security – the ultimate guide for successful memecoin launches."
 image: "/solana-launchpad-overview.jpg"
 imageAlt: "Comparison of top Solana launchpads for token creation in 2025"

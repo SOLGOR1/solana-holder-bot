@@ -1,5 +1,5 @@
 ---
-title: "Best Meteora Volume Bot 2026"
+title: "Best Meteora Telegram Volume Bot 2026"
 excerpt: "Boost Meteora DLMM pools 2026 with SolanaHolderBot: authentic volume + permanent holders for top rankings. From 0.1 SOL."
 image: "/blogthumb/meteora-2026.png"
 imageAlt: "SolanaHolderBot Telegram dashboard generating real-time volume in Meteora DLMM pools, pushing a Solana token to top performers"

@@ -1,5 +1,5 @@
 ---
-title: "Best Solana Volume Bot 2026"
+title: "Best Telegram Solana Volume Bot 2026"
 excerpt: "Best Solana volume booster 2026: authentic on-chain volume to skyrocket your token launches on Raydium, Pump.fun and beyond – from 0.1 SOL."
 image: "/blogthumb/bestsolanavolumebooster2026.png"
 imageAlt: "Best solana volume booster telegram bot for generating massive volume in 2026"

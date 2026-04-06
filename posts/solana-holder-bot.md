@@ -1,5 +1,5 @@
 ---
-title: "Telegram Solana Holder Bot"
+title: "#1 Telegram Solana Holder Bot 2026"
 excerpt: "Solana Holder Bot 2026 by LEEK Team: 5x faster RPC, permanent holders, authentic volume and regular $LEEK updates – start from just 0.1 SOL."
 image: "/solhold1.jpg"
 imageAlt: "Solana Holder Bot interface showcasing tools to generate Solana holders in 2025"

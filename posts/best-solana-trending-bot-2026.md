@@ -1,5 +1,5 @@
 ---
-title: "Best Solana Trendig Bot 2026"
+title: "Best Solana Trendig Volume Bot 2026"
 excerpt: "Best Solana trending bot 2026: massive authentic volume + permanent holders to get your memecoin trending on DexScreener, Birdeye and Raydium."
 image: "/blogthumb/bestsolanatrendingbot2026.png"
 imageAlt: "Best solana trending telegram bot for getting on the top Dex and Analytic trending lists in 2026"

@@ -1,5 +1,5 @@
 ---
-title: "Solana Launchpad Marketing Bot 2026"
+title: "Solana Launchpad Marketing Telegram Bot 2026"
 excerpt: "Ultimate Solana launchpad marketing bot 2026: combine volume + permanent holders to get trending in under 4 hours on DexScreener and Birdeye."
 image: "/blogthumb/launchpad-marketing-bot-2026.png"
 imageAlt: "Data chart showing before/after volume and holder metrics from 50 Solana launch tests using SolanaHolderBot"

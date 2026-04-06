@@ -1,5 +1,5 @@
 ---
-title: "#1 Solana Volume Bot 2026"
+title: "#1 Telegram Solana Volume Bot 2026"
 excerpt: "Best Solana volume bot 2026: 300x real trades, 0.05% fee and beats Boost Legends & Moonshot. From 0.1 SOL."
 image: "/solana-volume-bot-1.jpg"
 imageAlt: "Solana Volume Bot dashboard delivering 300x volume boost in 2026"

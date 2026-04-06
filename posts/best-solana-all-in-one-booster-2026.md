@@ -1,5 +1,5 @@
 ---
-title: "Best Solana All-in-One Booster"
+title: "Best Solana All-in-One Telegram Booster Bot"
 excerpt: "Best Solana all-in-one booster 2026: real trading volume + permanent holders in a single bot. The most powerful and cheapest solution from 0.15 SOL."
 image: "/blogthumb/bestsolanaallinonebooster2026.png"
 imageAlt: "Best Solana All-in-One Volume + Holder Booster 2026 Telegram bot"

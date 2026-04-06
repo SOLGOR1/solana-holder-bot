@@ -1,5 +1,5 @@
 ---
-title: "Best DEX Rank Bot 2026"
+title: "Best Solana DEX Rank Bot 2026"
 excerpt: "Discover the best DEX rank bot 2026, SolanaHolderBot combines powerful solana volume bot and permanent holders bot."
 image: "/blogthumb/b1.png"
 imageAlt: "SolanaHolderBot Telegram dashboard showing real-time DEX rank boosting with volume, makers, and permanent holders"

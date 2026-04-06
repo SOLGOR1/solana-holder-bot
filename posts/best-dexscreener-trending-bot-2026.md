@@ -1,5 +1,5 @@
 ---
-title: "Best DexScreener Trending Bot 2026"
+title: "Best DexScreener Trending Telegram Bot 2026"
 excerpt: "Struggling to hit DexScreener trending in 2026? Discover the best DexScreener trending bot,SolanaHolderBot’s complete Volume + Holder suite."
 image: "/blogthumb/dexscreener-2026.png"
 imageAlt: "SolanaHolderBot Telegram dashboard showing real-time volume and permanent holder boosts pushing a token to DexScreener trending top 10"

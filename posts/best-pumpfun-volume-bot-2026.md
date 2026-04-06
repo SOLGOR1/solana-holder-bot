@@ -1,5 +1,5 @@
 ---
-title: "Best PumpFun Volume Bot 2026"
+title: "Best PumpFun Solana Volume Bot 2026"
 excerpt: "Best Pump.fun volume bot 2026: genuine buys complete bonding curves fast. SolanaHolderBot from 0.1 SOL."
 image: "/blogthumb/pumpfun-volume-bot-2026.png"
 imageAlt: "SolanaHolderBot Telegram volume bot dashboard pushing a Pump.fun token up the bonding curve with real-time stats"

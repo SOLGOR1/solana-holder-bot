@@ -1,5 +1,5 @@
 ---
-title: "Cheapest Raydium Volume Bot 2026"
+title: "Cheapest Raydium Telegram Volume Bot 2026"
 excerpt: "Cheapest Raydium volume bot 2026: zero platform fees and genuine buy-heavy trades. SolanaHolderBot delivers real volume from only 0.1 SOL."
 image: "/blogthumb/raydium-2026.png"
 imageAlt: "SolanaHolderBot Telegram interface pumping authentic volume into a Raydium pool with live stats and zero fee confirmation"
