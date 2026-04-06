@@ -201,9 +201,9 @@ export default function Guide() {
               <strong className="text-xl md:text-2xl font-semibold text-white tracking-tight mb-4">
                 {current.title}
               </strong>
-              <ol className="text-gray-100 text-base md:text-lg leading-relaxed">
+              <b className="text-gray-100 text-base md:text-lg leading-relaxed">
                 {current.desc}
-              </ol>
+              </b>
             </div>
           </motion.div>
 
