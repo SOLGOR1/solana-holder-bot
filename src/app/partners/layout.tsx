@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Our Partners & Featured On | Solana Volume Bot & Holder Bot 2026",
+  title: "Our Partners & Featured On Sites",
   description: "All trusted partners, DEXs, launchpads and directories where Solana Volume Bot and Holder Bot are featured in 2026. Real partnerships for real on-chain growth.",
 
   openGraph: {
