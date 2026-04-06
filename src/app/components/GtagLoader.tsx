@@ -1,48 +1,70 @@
 // src/app/components/GtagLoader.tsx
 'use client';
-import { useEffect } from "react";
 
-const GA_ID = 'G-8FMSTEXF0Z';        // Google Analytics
-const ADS_ID = 'AW-18035540031';    // Google Ads Conversion
+import Script from 'next/script';
+import { useEffect, useState } from 'react';
+
+const GA_ID = 'G-8FMSTEXF0Z';      // Google Analytics
+const ADS_ID = 'AW-18035540031';  // Google Ads
 
 export default function GtagLoader() {
+  const [shouldLoad, setShouldLoad] = useState(false);
+
   useEffect(() => {
+    // Sofort nach 2,5 Sekunden laden (konservativ)
     const timer = setTimeout(() => {
-      // Type-safe Window Extension
-      const w = window as Window & {
-        dataLayer?: unknown[];
-        gtag?: (...args: unknown[]) => void;
-      };
+      setShouldLoad(true);
+    }, 2500);
 
-      w.dataLayer = w.dataLayer || [];
+    // Oder früher laden, sobald der User interagiert (besser für UX + Speed)
+    const handleUserInteraction = () => {
+      setShouldLoad(true);
+      window.removeEventListener('scroll', handleUserInteraction);
+      window.removeEventListener('click', handleUserInteraction);
+      window.removeEventListener('touchstart', handleUserInteraction);
+    };
 
-      const gtagFn = (...args: unknown[]) => {
-        if (w.dataLayer) {
-          w.dataLayer.push(args);
-        }
-      };
+    window.addEventListener('scroll', handleUserInteraction, { once: true, passive: true });
+    window.addEventListener('click', handleUserInteraction, { once: true });
+    window.addEventListener('touchstart', handleUserInteraction, { once: true, passive: true });
 
-      w.gtag = gtagFn;
-
-      // gtag initialisieren
-      gtagFn('js', new Date());
-      gtagFn('config', GA_ID);   // Analytics
-      gtagFn('config', ADS_ID);  // Ads
-
-      // Scripts dynamisch und async laden
-      const loadScript = (id: string) => {
-        const script = document.createElement('script');
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
-        script.async = true;
-        document.head.appendChild(script);
-      };
-
-      loadScript(GA_ID);
-      loadScript(ADS_ID);
-    }, 1800); // 1.8 Sekunden Verzögerung
-
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleUserInteraction);
+      window.removeEventListener('click', handleUserInteraction);
+      window.removeEventListener('touchstart', handleUserInteraction);
+    };
   }, []);
 
-  return null;
+  // Nichts rendern, bis wir wirklich laden wollen
+  if (!shouldLoad) return null;
+
+  return (
+    <>
+      {/* Google Analytics + Ads */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        strategy="afterInteractive"
+        async
+      />
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${ADS_ID}`}
+        strategy="afterInteractive"
+        async
+      />
+
+      {/* gtag Initialisierung */}
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_ID}', { 
+            page_path: window.location.pathname 
+          });
+          gtag('config', '${ADS_ID}');
+        `}
+      </Script>
+    </>
+  );
 }
