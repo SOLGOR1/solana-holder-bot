@@ -17,6 +17,7 @@ const landingPages = [
   "/solana-holder-bot",
   "/solana-all-in-one-booster",
   "/blog",
+  "/partners",
 ].map((path) => ({
   url: `${baseUrl}${path}`,
   lastModified: new Date(),
