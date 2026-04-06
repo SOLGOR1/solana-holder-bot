@@ -4,6 +4,7 @@
 import { motion } from "framer-motion";
 import BlogCard from "./BlogCard";
 import { BlogPost } from "../data/blogs";
+import Image from "next/image";
 
 type BlogContentProps = {
   posts: BlogPost[];
@@ -47,7 +48,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
             href="/blog/rss.xml"
             className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-lg"
           >
-            <img src="/rss-icon.png" alt="RSS" className="w-5 h-5" />
+            <Image src="/rss-icon.png" alt="RSS" className="w-5 h-5" />
             Subscribe to our RSS Feed
           </a>
         </div>

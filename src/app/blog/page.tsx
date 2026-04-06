@@ -48,7 +48,7 @@ export default function BlogOverview() {
               href="/blog/rss.xml"
               className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-md text-white text-sm font-medium rounded-xl border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:border-white/40"
             >
-              <img src="/rss-icon.png" alt="RSS Icon" className="w-5 h-5" />
+              <Image src="/rss-icon.png" alt="RSS Icon" className="w-5 h-5" />
               Subscribe to RSS Feed
             </a>
           </div>

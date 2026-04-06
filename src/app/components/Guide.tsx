@@ -99,15 +99,18 @@ export default function Guide() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
-    if (autoPlay) {
-      const interval = setInterval(() => {
-        setCurrentStep((prev) => (prev === steps.length - 1 ? 0 : prev + 1));
-        setImageLoaded(false);
-      }, 10000);
-      return () => clearInterval(interval);
-    }
-  }, [autoPlay]);
+    if (!autoPlay) return;
 
+    const interval = setInterval(() => {
+      setCurrentStep((prev) => 
+        prev === steps.length - 1 ? 0 : prev + 1
+      );
+      setImageLoaded(false);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [autoPlay, steps.length]);
+  
   const nextStep = () => {
     setCurrentStep((prev) => (prev === steps.length - 1 ? 0 : prev + 1));
     setImageLoaded(false);
