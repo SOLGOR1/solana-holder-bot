@@ -1,6 +1,5 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
-import "./globals.css";
 import { ReactNode } from "react";
 
 // ← GtagLoader bleibt (wir machen ihn gleich noch sicherer)

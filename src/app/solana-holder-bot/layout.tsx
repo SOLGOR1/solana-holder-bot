@@ -1,6 +1,5 @@
 // app/solana-holder-bot/layout.tsx
 import type { Metadata } from "next";
-import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Solana Volume Bot – Pump.fun & Raydium Booster",

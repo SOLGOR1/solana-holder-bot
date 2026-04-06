@@ -1,6 +1,5 @@
 // app/solana-all-in-one-booster/layout.tsx
 import type { Metadata } from "next";
-import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Solana All-in-One Booster – Volume + Holder Growth",
