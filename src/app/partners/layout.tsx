@@ -1,5 +1,6 @@
 // app/partners/layout.tsx
 import type { Metadata } from "next";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Our Partners & Featured On | Solana Volume Bot & Holder Bot 2026",

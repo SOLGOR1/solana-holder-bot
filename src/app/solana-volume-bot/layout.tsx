@@ -1,5 +1,6 @@
 // app/solana-volume-bot/layout.tsx
 import type { Metadata } from "next";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Solana Volume Bot 2026 • Bot starting at 0.01 SOL",
