@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
 
   // www → non-www + http → https in EINEM einzigen 301
   const wantsWww = host.startsWith('www.');
-  const wantsHttp = url.protocol === 'https:';
+  const wantsHttp = url.protocol === 'http:';
 
   if (wantsWww || wantsHttp) {
     const newUrl = new URL(url);
