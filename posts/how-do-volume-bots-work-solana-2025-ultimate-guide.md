@@ -274,14 +274,6 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
         <td class="p-4">⭐⭐</td>
         <td class="p-4">Budget-conscious users, small projects</td>
       </tr>
-      <tr class="border-b border-gray-600">
-        <td class="p-4"><a href="https://fatalitycoin.net/" class="text-blue-400 hover:underline">Fatality Bot</a></td>
-        <td class="p-4">Telegram</td>
-        <td class="p-4"><span class="bg-yellow-500 text-white px-2 py-1 rounded">Medium</span></td>
-        <td class="p-4"><span class="bg-yellow-500 text-white px-2 py-1 rounded">Medium</span></td>
-        <td class="p-4">⭐</td>
-        <td class="p-4">Experimental projects, low expectations</td>
-      </tr>
     </tbody>
   </table>
 </div>
@@ -294,7 +286,6 @@ slug: "how-do-volume-bots-work-solana-2025-ultimate-guide"
     <li><strong><a href="https://www.hypersol.app/volume-bot" class="text-blue-400 hover:underline">HyperSol Volume Bot</a></strong>: Solid for high-budget projects with high volume output and good fees, but its <span class="text-yellow-400">3-star features</span> lack the polish of the top two.</li>
     <li><strong><a href="https://www.smithii.tools/en/blog/solana-volume-bot" class="text-blue-400 hover:underline">Smithii Volume Bot</a></strong>: Strong analytics but crippled by <span class="text-red-600">high fees</span>. Its <span class="text-yellow-400">3-star features</span> suit data-driven users.</li>
     <li><strong><a href="https://boostlegends.com/" class="text-blue-400 hover:underline">BoostLegends Bot</a></strong>: Underwhelming with medium volume output and <span class="text-yellow-400">2-star features</span>. Only viable for small, budget-conscious projects.</li>
-    <li><strong><a href="https://fatalitycoin.net/" class="text-blue-400 hover:underline">Fatality Bot</a></strong>: The bottom of the barrel. With medium performance and a <span class="text-yellow-400">1-star feature set</span>, it’s barely worth considering.</li>
   </ol>
 </div>
 <div class="callout bg-blue-900 text-white p-6 rounded-lg mb-12 shadow-md border-l-4 border-blue-500">

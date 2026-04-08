@@ -41,7 +41,7 @@ slug: "solana-booster-bot"
         <a href="https://solanaholderbot.com/blog/best-solana-volume-booster-2026" class="text-blue-400 hover:text-blue-200 underline flex items-center gap-2 transition-colors">
           <span class="text-blue-400">📈</span> Solana Volume Bot
         </a>
-        <a href="https://solanaholderbot.com/blog/best-solana-all-in-one-booster-2026" class="text-blue-400 hover:text-blue-200 underline flex items-center gap-2 transition-colors">
+        <a href="https://solanaholderbot.com/blog/best-solana-all-in-one-booster" class="text-blue-400 hover:text-blue-200 underline flex items-center gap-2 transition-colors">
           <span class="text-blue-400">🔥</span> Solana All in One Volume + Holder Bot
         </a>
       </div>

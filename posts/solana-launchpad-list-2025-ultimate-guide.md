@@ -253,12 +253,6 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
         <td class="p-4">Free</td>
       </tr>
       <tr class="border-b border-gray-600">
-        <td class="p-4"><a href="https://time.fun" class="text-blue-400 hover:underline">TimeFun</a></td>
-        <td class="p-4">⭐</td>
-        <td class="p-4">SocialFi Launchpad: Social media-driven token launches</td>
-        <td class="p-4">Free</td>
-      </tr>
-      <tr class="border-b border-gray-600">
         <td class="p-4"><a href="https://mentat.fun" class="text-blue-400 hover:underline">MentatFun</a></td>
         <td class="p-4">⭐</td>
         <td class="p-4">Test projects: Experimental token launches with low activity</td>
@@ -298,12 +292,6 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
         <td class="p-4"><a href="https://circus.fun" class="text-blue-400 hover:underline">CircusFun</a></td>
         <td class="p-4">⭐</td>
         <td class="p-4">Small-scale launches: Low-volume token projects</td>
-        <td class="p-4">Free</td>
-      </tr>
-      <tr class="border-b border-gray-600">
-        <td class="p-4"><a href="https://www.ego.tech/home" class="text-blue-400 hover:underline">Ego</a></td>
-        <td class="p-4">⭐</td>
-        <td class="p-4">Micro projects: Tiny-scale token experiments</td>
         <td class="p-4">Free</td>
       </tr>
       <tr class="border-b border-gray-600">

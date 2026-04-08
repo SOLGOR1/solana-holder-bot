@@ -148,7 +148,7 @@ Getting started takes under 2 minutes, everything happens in Telegram:
 <img src="/screen/Screen_07.png" alt="Solana Holder Bot Screenshot: Real-Time Analytics Dashboard" class="w-auto h-auto rounded-lg mb-6" />
 </ol>
 <p className="text-lg text-gray-100 leading-relaxed">
-For maximum <strong>pumpfun trending</strong> impact, combine with our <strong>solana volume booster</strong>, see our guide <a href="/blog/best-solana-volume-bot-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume Bot 2026</a>.
+For maximum <strong>pumpfun trending</strong> impact, combine with our <strong>solana volume booster</strong>, see our guide <a href="/blog/best-solana-volume-booster-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume Bot 2026</a>.
 </p>
 </div>
 
@@ -161,7 +161,7 @@ Many tools claim to help with Pumpfun marketing, but none match SolanaHolderBot 
 SolanaHolderBot delivers truly permanent rent-exempt holders, superior randomization for undetectable growth, the lowest pricing with zero hidden costs, faster execution on optimized infrastructure, and full Telegram convenience. Projects consistently report faster <strong>pumpfun trending</strong> positions and stronger post-launch performance after switching to the <strong>best bot for Pumpfun 2026</strong>.
 </p>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-Learn more in our related posts: <a href="/blog/best-permanent-solana-holders-bot-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Permanent Solana Holders Bot 2026</a> and <a href="/blog/best-solana-volume-bot-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume Bot 2026</a>.
+Learn more in our related posts: <a href="/blog/best-permanent-solana-holders-bot-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Permanent Solana Holders Bot 2026</a> and <a href="/blog/best-solana-volume-booster-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume Bot 2026</a>.
 </p>
 </div>
 

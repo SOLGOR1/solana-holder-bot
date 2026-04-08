@@ -110,7 +110,7 @@ SolanaHolderBot delivers unmatched value as the <strong>best bot for GeckoTermin
 </table>
 </div>
 <p className="text-lg text-gray-100 leading-relaxed mt-6">
-Combine with the pay-as-you-go <strong>solana volume bot</strong> (from 0.1 SOL) for full GeckoTerminal trending power. No other solution matches this affordability and effectiveness. Check our <a href="https://solanaholderbot.com/pricing" className="text-cyan-400 hover:text-cyan-300 underline">pricing page</a> or <a href="https://solanaholderbot.com" className="text-cyan-400 hover:text-cyan-300 underline">homepage</a> for details.
+Combine with the pay-as-you-go <strong>solana volume bot</strong> (from 0.1 SOL) for full GeckoTerminal trending power. No other solution matches this affordability and effectiveness. Check our <a href="https://solanaholderbot.com/solana-holder-bot" className="text-cyan-400 hover:text-cyan-300 underline">pricing page</a> or <a href="https://solanaholderbot.com" className="text-cyan-400 hover:text-cyan-300 underline">homepage</a> for details.
 </p>
 </div>
 
@@ -136,7 +136,7 @@ Start your GeckoTerminal trending campaign in minutes using only Telegram:
 <img src="/screen/Screen_07.png" alt="Solana Holder Bot Screenshot: Real-Time Analytics Dashboard" class="w-auto h-auto rounded-lg mb-6" />
 </ol>
 <p className="text-lg text-gray-100 leading-relaxed mt-6">
-Users often see GeckoTerminal trending improvements shortly after completion. Pair with our <a href="/blog/best-solana-volume-bot-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume Bot 2026</a> guide for advanced tactics.
+Users often see GeckoTerminal trending improvements shortly after completion. Pair with our <a href="/blog/best-solana-volume-booster-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume Bot 2026</a> guide for advanced tactics.
 </p>
 </div>
 
@@ -149,7 +149,7 @@ Numerous tools claim to support GeckoTerminal trending. However, SolanaHolderBot
 SolanaHolderBot provides truly permanent rent-exempt holders, refined randomization for undetectable activity, the lowest pricing without extras, rapid execution, proven reliability, and zero reported issues. Teams switching to the <strong>best bot for GeckoTerminal trending 2026</strong> report faster climbs and longer-lasting positions backed by genuine metrics.
 </p>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-Discover more in related articles. <a href="/blog/best-solana-volume-booster-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume Booster 2026</a>, <a href="/blog/best-pumpfun-bot-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Pumpfun Bot 2026</a>, <a href="/blog/best-birdeye-trending-bot-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Birdeye Trending Bot 2026</a>, and our complete <a href="https://solanaholderbot.com/blog" className="text-cyan-400 hover:text-cyan-300 underline">blog</a>.
+Discover more in related articles. <a href="/blog/best-solana-all-in-one-booster" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume + holder Booster 2026</a>, <a href="/blog/best-pumpfun-holder-bot-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Pumpfun Bot 2026</a>, <a href="/blog/birdeye-trending-2026-solana-holder-bot" className="text-cyan-400 hover:text-cyan-300 underline">Best Birdeye Trending Bot 2026</a>, and our complete <a href="https://solanaholderbot.com/blog" className="text-cyan-400 hover:text-cyan-300 underline">blog</a>.
 </p>
 </div>
 

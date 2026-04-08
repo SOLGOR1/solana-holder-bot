@@ -182,7 +182,7 @@ slug: "best-pump-fun-holder-bot-2026"
       <li>Post-Migration: Use $LEEK rewards to fund community giveaways.</li>
     </ol>
     <p class="text-gray-100 mb-4">
-      See our full strategy guide: <a href="/blog/solana-volume-bot-ultimate-guide-2026" class="text-blue-400 hover:text-blue-300 underline">Solana Volume Bot Ultimate Guide 2026</a>.
+      See our full strategy guide: <a href="/blog/solana-volume-bot" class="text-blue-400 hover:text-blue-300 underline">Solana Volume Bot Ultimate Guide 2026</a>.
     </p>
   </section>
 
