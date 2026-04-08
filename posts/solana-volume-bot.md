@@ -335,7 +335,7 @@ slug: "solana-volume-bot"
       </div>
     </div>
     <p class="text-gray-100 mt-6">
-      Need help? Watch our <a href="https://youtu.be/9hqVecv1Y2M" class="text-blue-400 hover:text-blue-300 underline">tutorial video</a>! 🎥
+      Need help? Watch our <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" class="text-blue-400 hover:text-blue-300 underline">tutorial video</a>! 🎥
     </p>
     <div class="bg-blue-900 p-6 rounded-lg mt-6">
       <p class="text-blue-300 font-semibold text-lg">
