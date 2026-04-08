@@ -140,7 +140,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
         <span class="text-blue-400 mr-4 text-2xl"></span>
         <div>
           <strong class="text-white font-semibold">Feature-Rich</strong>
-          <p class="text-gray-100"><a href="https://meteora.ag" class="text-blue-400 hover:underline">Meteora DBC</a> and <a href="https://letsbonk.fun" class="text-blue-400 hover:underline">LetsbonkFun</a> shine with token burns, staking, and bonding curves.</p>
+          <p class="text-gray-100"><a href="https://meteora.ag" class="text-blue-400 hover:underline">Meteora DBC</a> and <a href="https://letsbonk.fun/" class="text-blue-400 hover:underline">LetsbonkFun</a> shine with token burns, staking, and bonding curves.</p>
         </div>
       </li>
       <li class="flex items-start bg-gray-900 bg-opacity-50 p-4 rounded-lg hover:bg-opacity-70 transition duration-300">
@@ -154,7 +154,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
         <span class="text-red-400 mr-4 text-2xl"></span>
         <div>
           <strong class="text-white font-semibold">Security Insight</strong>
-          <p class="text-gray-100"><a href="https://raydium.io" class="text-blue-400 hover:underline">Raydium</a> is audited; most platforms rely on Solana’s security and community trust.</p>
+          <p class="text-gray-100"><a href="https://raydium.io/swap/" class="text-blue-400 hover:underline">Raydium</a> is audited; most platforms rely on Solana’s security and community trust.</p>
         </div>
       </li>
     </ul>
@@ -168,7 +168,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
     <strong>Solana launchpads</strong> are innovative platforms designed to simplify the creation, deployment, and promotion of tokens on the Solana blockchain. Leveraging the Solana Program Library (SPL) token standard, they enable creators to launch everything from meme coins to utility tokens with minimal technical expertise. By automating processes like token minting, presale structuring, and liquidity provisioning, launchpads such as <a href="https://moon.it" class="text-blue-400 hover:underline">Moonit</a> and <a href="https://boop.fun" class="text-blue-400 hover:underline">Boop</a> empower users to bring ideas to market swiftly. Many, like <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a>, use algorithmic pricing models to ensure fair token distribution.
   </p>
   <p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto">
-    These platforms are <strong>bridges to global audiences</strong>. With features like community governance, real-time analytics, and wallet compatibility, launchpads such as <a href="https://raydium.io" class="text-blue-400 hover:underline">Raydium</a> and <a href="https://letsbonk.fun" class="text-blue-400 hover:underline">LetsbonkFun</a> cultivate ecosystems where tokens gain rapid traction. Our in-depth review of <strong>20 leading Solana launchpads</strong> explores their capabilities, from social integrations to <a href="https://birdeye.so" class="text-blue-400 hover:underline">Birdeye</a> price tracking, helping you choose the perfect platform for your <strong>Solana token launch</strong>. For advanced strategies, visit our <a href="https://solanaholderbot.com/blog" class="text-blue-400 hover:underline font-semibold">blog</a>.
+    These platforms are <strong>bridges to global audiences</strong>. With features like community governance, real-time analytics, and wallet compatibility, launchpads such as <a href="https://raydium.io/swap/" class="text-blue-400 hover:underline">Raydium</a> and <a href="https://letsbonk.fun" class="text-blue-400 hover:underline">LetsbonkFun</a> cultivate ecosystems where tokens gain rapid traction. Our in-depth review of <strong>20 leading Solana launchpads</strong> explores their capabilities, from social integrations to <a href="https://birdeye.so" class="text-blue-400 hover:underline">Birdeye</a> price tracking, helping you choose the perfect platform for your <strong>Solana token launch</strong>. For advanced strategies, visit our <a href="https://solanaholderbot.com/blog" class="text-blue-400 hover:underline font-semibold">blog</a>.
   </p>
 </div>
 
@@ -205,7 +205,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
         <td class="p-4">Free</td>
       </tr>
       <tr class="border-b border-gray-600">
-        <td class="p-4"><a href="https://raydium.io/launchpad" class="text-blue-400 hover:underline">Raydium</a></td>
+        <td class="p-4"><a href="https://raydium.io/launchpad/" class="text-blue-400 hover:underline">Raydium</a></td>
         <td class="p-4">⭐⭐⭐⭐</td>
         <td class="p-4">DeFi projects: Audited platform for secure DeFi tokens</td>
         <td class="p-4">Free</td>
@@ -241,7 +241,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
         <td class="p-4">Free</td>
       </tr>
       <tr class="border-b border-gray-600">
-        <td class="p-4"><a href="https://daos.fun" class="text-blue-400 hover:underline">DaosFun</a></td>
+        <td class="p-4"><a href="https://www.daos.fun" class="text-blue-400 hover:underline">DaosFun</a></td>
         <td class="p-4">⭐⭐</td>
         <td class="p-4">DAO-based tokens: Focused on decentralized governance projects</td>
         <td class="p-4">Free</td>
@@ -328,8 +328,8 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
     <li><strong><a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a></strong>: Rules with <span class="text-green-400">84.6% market share</span>, <span class="text-green-400">572,000 users</span>, and <span class="text-green-400">30,951 launches</span>. Perfect for meme coins seeking viral fame. <span class="text-red-400">No audit</span>, but designed to deter rug pulls.</li>
     <li><strong><a href="https://believe.app" class="text-blue-400 hover:underline">Believe</a></strong>: Secures <span class="text-green-400">8.85% market share</span> with <span class="text-green-400">social media integration</span>. Its 41,800 users and 260 launches make it ideal for hype-driven projects. <span class="text-red-400">No audit</span>.</li>
     <li><strong><a href="https://letsbonk.fun" class="text-blue-400 hover:underline">LetsbonkFun</a></strong>: Holds <span class="text-green-400">2.72% market share</span> with <span class="text-green-400">1,212 launches</span> and community rewards. Audit planned, great for engagement-focused tokens.</li>
-    <li><strong><a href="https://meteora.ag" class="text-blue-400 hover:underline">Meteora DBC</a></strong>: Offers <span class="text-green-400">dynamic bonding curves</span> and 290 launches for advanced users. <span class="text-red-400">No audit</span>.</li>
-    <li><strong><a href="https://raydium.io" class="text-blue-400 hover:underline">Raydium</a></strong>: <span class="text-green-400">Audited</span> with 1,217 launches, a top pick for DeFi projects.</li>
+    <li><strong><a href="https://www.meteora.ag" class="text-blue-400 hover:underline">Meteora DBC</a></strong>: Offers <span class="text-green-400">dynamic bonding curves</span> and 290 launches for advanced users. <span class="text-red-400">No audit</span>.</li>
+    <li><strong><a href="https://raydium.io/swap/" class="text-blue-400 hover:underline">Raydium</a></strong>: <span class="text-green-400">Audited</span> with 1,217 launches, a top pick for DeFi projects.</li>
   </ol>
 </div>
 
@@ -347,7 +347,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
   <h3 class="text-xl font-semibold text-white mb-6">Your Step-by-Step Launch Blueprint</h3>
   <p class="text-lg leading-relaxed mb-4">Launching a token on Solana is straightforward with the right launchpad. Here’s how to execute a stellar <strong>Solana coin launch</strong>:</p>
   <ul class="list-disc pl-6 space-y-2 text-lg">
-    <li><strong>Choose Your Platform</strong>: Select a launchpad like <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a> for reach or <a href="https://raydium.io" class="text-blue-400 hover:underline">Raydium</a> for security, based on your goals.</li>
+    <li><strong>Choose Your Platform</strong>: Select a launchpad like <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a> for reach or <a href="https://raydium.io/swap/" class="text-blue-400 hover:underline">Raydium</a> for security, based on your goals.</li>
     <li><strong>Create Your Token</strong>: Use the platform’s no-code tools to mint your SPL token, customizing name, supply, and logo.</li>
     <li><strong>Buy your coin</strong>: Buy with the inital buy or direct after launch.</li>
     <li><strong>Launch and Promote</strong>: Go live and amplify buzz on <a href="https://x.com/" class="text-blue-400 hover:underline">X</a> and <a href="https://www.reddit.com/" class="text-blue-400 hover:underline">Reddit</a>.</li>
@@ -364,7 +364,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
     <li><strong>Social Media Surge</strong>: Promote on <a href="https://x.com/solanaholderbot" class="text-blue-400 hover:underline">X</a> and <a href="https://www.reddit.com/r/solana" class="text-blue-400 hover:underline">Reddit</a> to spark organic interest.</li>
     <li><strong>Volume Boost</strong>: Leverage <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> to drive trades, boosting <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a> rankings. Start with 4 SOL.</li>
     <li><strong>Holder Growth</strong>: Use <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> to increase holders, meeting <a href="https://coinmarketcap.com" class="text-blue-400 hover:underline">CoinMarketCap</a> listing criteria.</li>
-    <li><strong>Liquidity Stability</strong>: Maintain robust pools on <a href="https://raydium.io" class="text-blue-400 hover:underline">Raydium</a> or <a href="https://meteora.ag" class="text-blue-400 hover:underline">Meteora</a>.</li>
+    <li><strong>Liquidity Stability</strong>: Maintain robust pools on <a href="https://raydium.io/swap/" class="text-blue-400 hover:underline">Raydium</a> or <a href="https://meteora.ag" class="text-blue-400 hover:underline">Meteora</a>.</li>
     <li><strong>Community Engagement</strong>: Reward holders via <a href="https://letsbonk.fun" class="text-blue-400 hover:underline">LetsbonkFun</a> or engage through <a href="https://believe.app" class="text-blue-400 hover:underline">Believe</a>’s X tools.</li>
     <li><strong>Performance Tracking</strong>: Optimize with <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a> analytics, adjusting bot settings for organic patterns.</li>
     <li><strong>Transparency</strong>: Be open about bot usage to build trust, as outlined in our <a href="https://solanaholderbot.com/blog/solana-holder-bot" class="text-blue-400 hover:underline">holder bot guide</a>.</li>
@@ -460,11 +460,11 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">How much does it cost to create a token on Solana?</h3>
-      <p class="text-lg text-gray-100">Costs range from free on platforms like <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a>, <a href="https://believe.app" class="text-blue-400 hover:underline">Believe</a>, and <a href="https://boop.fun" class="text-blue-400 hover:underline">Boop</a> to ~0.02 SOL (~$2) on <a href="https://raydium.io" class="text-blue-400 hover:underline">Raydium</a> and others.</p>
+      <p class="text-lg text-gray-100">Costs range from free on platforms like <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a>, <a href="https://believe.app" class="text-blue-400 hover:underline">Believe</a>, and <a href="https://boop.fun" class="text-blue-400 hover:underline">Boop</a> to ~0.02 SOL (~$2) on <a href="https://raydium.io/swap/" class="text-blue-400 hover:underline">Raydium</a> and others.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">Are Solana launchpads secure?</h3>
-      <p class="text-lg text-gray-100">Most rely on Solana’s security, but few are audited. <a href="https://raydium.io" class="text-blue-400 hover:underline">Raydium</a> is audited, and <a href="https://letsbonk.fun" class="text-blue-400 hover:underline">LetsbonkFun</a> plans one. Always verify platform legitimacy.</p>
+      <p class="text-lg text-gray-100">Most rely on Solana’s security, but few are audited. <a href="https://raydium.io/swap/" class="text-blue-400 hover:underline">Raydium</a> is audited, and <a href="https://letsbonk.fun" class="text-blue-400 hover:underline">LetsbonkFun</a> plans one. Always verify platform legitimacy.</p>
     </div>
     <div>
       <h3 class="text-xl font-semibold text-white">Which launchpad has the most users?</h3>

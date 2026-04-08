@@ -185,7 +185,7 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
 <div class="text-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-8 shadow-md border border-gray-700">
   <p class="text-lg leading-relaxed mb-4"><a href="https://pump.fun" class="text-blue-400 hover:underline">Pump.fun</a> is a Solana juggernaut:</p>
   <ul class="list-disc pl-6 space-y-2 text-lg">
-    <li><strong>6M+ Tokens</strong>: Launched by January 2025, per <a href="https://www.ledger.com/academy/what-is-pump-fun-and-how-does-it-work" class="text-blue-400 hover:underline">Ledger Academy</a>.</li>
+    <li><strong>6M+ Tokens</strong>: Launched by January 2025, per <a href="https://www.ledger.com/academy/topics/crypto/what-is-pump-fun-and-how-does-it-work" class="text-blue-400 hover:underline">Ledger Academy</a>.</li>
     <li><strong>$571M Revenue</strong>: By February 2025, outpacing Ethereum some days.</li>
     <li><strong>Success Stories</strong>: Fartcoin hit $1B briefly; celebrity coins like Iggy Azalea’s soared.</li>
     <li><strong>Failure Rate</strong>: 98.6% don’t graduate, per Solidus Labs.</li>
