@@ -404,14 +404,6 @@ const pressLinks = [
 "https://urbannewspaper.co.uk/solana-volume-bot-launch-focuses-on-liquidity-activity-for-emerging-tokens/",
 "https://gptnewsdesk.com/solana-volume-bot-launch-focuses-on-liquidity-activity-for-emerging-tokens/",
 ];
-
-const keywords = [
-  "Solana Volume Bot",
-  "Solana Holder Bot",
-  "Solana Trading Bot",
-  "Solana Liquidity Bot",
-  "Solana Volume Booster",
-];
 const getAnchorFromUrl = (url: string) => {
   try {
     const host = new URL(url).hostname
