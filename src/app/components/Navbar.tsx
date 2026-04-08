@@ -85,7 +85,7 @@ export default function Navbar() {
                 className="w-9 h-9 text-white flex-shrink-0"
                 fill="currentColor"
                 viewBox="0 0 18 18"
-                xmlns="http://www.w3.org/2000/svg"
+                xmlns="https://www.w3.org/2000/svg"
                 aria-label="Solana Holder Bot Logo"
                 alt-text="Solana Holder Bot Logo"
               >

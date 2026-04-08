@@ -60,7 +60,7 @@ slug: "best-pump-fun-holder-bot-2026"
     <ul class="list-none space-y-4 text-gray-100 mb-6">
       <li class="flex items-start"><span class="text-blue-400 mr-2">🔥</span> <strong>Permanent, Real Holders:</strong> Unique wallets that hold long-term, no drop-offs.</li>
       <li class="flex items-start"><span class="text-blue-400 mr-2">⚡</span> <strong>5x Faster RPC:</strong> Lightning-fast execution for competitive Pump.fun curves.</li>
-      <li class="flex items-start"><span class="text-blue-400 mr-2">📈</span> <strong>Undetectable Volume Pairing:</strong> Combine with authentic volume for full momentum (see our <a href="/blog/solana-volume-bot-ultimate-guide-2026" class="text-blue-400 hover:text-blue-300 underline">Solana Volume Bot Guide</a>).</li>
+      <li class="flex items-start"><span class="text-blue-400 mr-2">📈</span> <strong>Undetectable Volume Pairing:</strong> Combine with authentic volume for full momentum (see our <a href="/blog/best-telegram-solana-volume-bot-2026" class="text-blue-400 hover:text-blue-300 underline">Solana Volume Bot Guide</a>).</li>
       <li class="flex items-start"><span class="text-blue-400 mr-2">💰</span> <strong>Affordable Entry:</strong> Packages from 0.1 SOL, scale as needed.</li>
       <li class="flex items-start"><span class="text-blue-400 mr-2">🌱</span> <strong>$LEEK Ecosystem Boost:</strong> All earnings reinvested into $LEEK liquidity, burns, and holder rewards.</li>
       <li class="flex items-start"><span class="text-blue-400 mr-2">🛡️</span> <strong>100% Safe & Compliant:</strong> Real on-chain actions, no wash trading risks.</li>
@@ -79,7 +79,7 @@ slug: "best-pump-fun-holder-bot-2026"
       <li>Choose your package (start small at 0.1 SOL for testing).</li>
       <li>Paste your token mint and configure pacing (waves for organic look).</li>
       <li>Confirm payment and watch holders climb in real-time on Birdeye.</li>
-      <li>Layer volume boosts for trending (see <a href="/blog/how-to-launch-a-solana-memecoin-with-pump-fun-and-skyrocket-it-with-solana-holder-bot-volume-bot" class="text-blue-400 hover:text-blue-300 underline">our Pump.fun launch guide</a>).</li>
+      <li>Layer volume boosts for trending (see <a href="/blog/volume-bot-pump-fun-2026" class="text-blue-400 hover:text-blue-300 underline">our Pump.fun launch guide</a>).</li>
       <li>Monitor and scale, add more holders as you approach Raydium graduation.</li>
     </ol>
     <div class="bg-blue-900 p-6 rounded-lg mb-4">
@@ -148,7 +148,7 @@ slug: "best-pump-fun-holder-bot-2026"
       </tbody>
     </table>
     <p class="text-gray-100 mb-4">
-      For deeper analysis, check our head-to-head: <a href="/blog/solana-holder-bot-vs-fatality-bot" class="text-blue-400 hover:text-blue-300 underline">Solana Holder Bot vs Fatality Bot</a>.
+      For deeper analysis, check our head-to-head: <a href="/blog/solana-holder-bot-vs-fatality-bot-2025-showdown" class="text-blue-400 hover:text-blue-300 underline">Solana Holder Bot vs Fatality Bot</a>.
     </p>
   </section>
 

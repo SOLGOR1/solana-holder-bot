@@ -35,7 +35,7 @@ slug: "solana-booster-bot"
         Looking for more ways to grow your project? Check out our full range of tools tailored for every blockchain:
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <a href="https://solanaholderbot.com/blog/best-permanent-solana-holder-bot-2026" class="text-blue-400 hover:text-blue-200 underline flex items-center gap-2 transition-colors">
+        <a href="https://solanaholderbot.com/blog/best-permanent-solana-holders-bot-2026" class="text-blue-400 hover:text-blue-200 underline flex items-center gap-2 transition-colors">
           <span class="text-blue-400">👥</span> Solana Holder Bot
         </a>
         <a href="https://solanaholderbot.com/blog/best-solana-volume-booster-2026" class="text-blue-400 hover:text-blue-200 underline flex items-center gap-2 transition-colors">

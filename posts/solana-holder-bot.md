@@ -29,7 +29,7 @@ slug: "solana-holder-bot"
     </p>
     <img src="/solhold6.jpg" alt="Solana Holder Bot blog page with tips to boost your Solana project" class="w-full h-auto rounded-lg mb-4" />
     <p class="text-gray-100">
-      Check out our <a href="/blog" class="text-blue-400 hover:text-blue-300 underline">blog overview</a> to explore more articles, like our guide on <a href="/blog/mellow-man-hyper-volume-bot" class="text-blue-400 hover:text-blue-300 underline">Hyper Volume Bot</a>.
+      Check out our <a href="/blog" class="text-blue-400 hover:text-blue-300 underline">blog overview</a> to explore more articles, like our guide on <a href="/blog/best-solana-all-in-one-booster" class="text-blue-400 hover:text-blue-300 underline">All in One Booster</a>.
     </p>
   </section>
 
@@ -157,7 +157,7 @@ slug: "solana-holder-bot"
     </p>
     <h3 class="text-xl font-semibold text-white mb-2">How can I get started with Solana Holder Bot?</h3>
     <p class="text-gray-100">
-      It’s easy! Visit <a href="http://solanaholderbot.com" class="text-blue-400 hover:text-blue-300 underline">SolanaHolderBot.com</a> to learn more, or start the bot directly <a href="https://t.me/Degen_WG_bot" class="text-blue-400 hover:text-blue-300 underline">Solana-Holder-Bot</a> and generate some holders.
+      It’s easy! Visit <a href="https://solanaholderbot.com" class="text-blue-400 hover:text-blue-300 underline">SolanaHolderBot.com</a> to learn more, or start the bot directly <a href="https://t.me/Degen_WG_bot" class="text-blue-400 hover:text-blue-300 underline">Solana-Holder-Bot</a> and generate some holders.
     </p>
   </section>
 
@@ -167,7 +167,7 @@ slug: "solana-holder-bot"
       Ready to <strong>generate Solana holders</strong> and <strong>boost your Solana project</strong> like never before? With Solana Holder Bot and the LEEK Team by your side, the sky’s the limit! Take advantage of our 5x faster RPC node, explore our new blog, and join the $LEEK movement as we aim for the moon in 2025. 🌕🚀
     </p>
     <div class="mt-4 flex space-x-4">
-      <a href="http://solanaholderbot.com" class="text-blue-400 hover:text-blue-300 underline">Get Started Now</a>
+      <a href="https://solanaholderbot.com" class="text-blue-400 hover:text-blue-300 underline">Get Started Now</a>
       <a href="/blog" class="text-blue-400 hover:text-blue-300 underline">Read More on Our Blog</a>
     </div>
   </section>

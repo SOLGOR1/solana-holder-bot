@@ -50,7 +50,7 @@ export default function Header1() {
                 className="w-16 h-16 md:w-20 md:h-20 text-white"
                 fill="currentColor"
                 viewBox="0 0 18 18"
-                xmlns="http://www.w3.org/2000/svg"
+                xmlns="https://www.w3.org/2000/svg"
                 aria-label="Solana Holder & Volume Bot Logo"
                 alt-text="Solana Holder & Volume Bot Logo"
               >

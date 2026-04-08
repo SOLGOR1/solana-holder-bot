@@ -111,7 +111,7 @@ As the best bot for Solscan trending 2026, SolanaHolderBot offers superior affor
 </table>
 </div>
 <p className="text-lg text-gray-100 leading-relaxed mt-6">
-Enhance with the flexible solana volume bot (from 0.1 SOL). This combination delivers unbeatable value for Solscan trending goals. Explore full options on our <a href="https://solanaholderbot.com/pricing" className="text-cyan-400 hover:text-cyan-300 underline">pricing page</a>.
+Enhance with the flexible solana volume bot (from 0.1 SOL). This combination delivers unbeatable value for Solscan trending goals. Explore full options on our <a href="https://solanaholderbot.com/solana-volume-bot" className="text-cyan-400 hover:text-cyan-300 underline">pricing page</a>.
 </p>
 </div>
 

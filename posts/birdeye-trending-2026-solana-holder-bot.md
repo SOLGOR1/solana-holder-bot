@@ -111,7 +111,7 @@ SolanaHolderBot provides the best value in the industry, undeniably the cheapest
 </table>
 </div>
 <p className="text-lg text-gray-100 leading-relaxed mt-6">
-Pair with our pay-as-you-go <strong>solana volume bot</strong> (starting at 0.1 SOL) for maximum impact. No competitor matches this value, SolanaHolderBot is the clear <strong>best bot for Birdeye trending 2026</strong>. Full pricing details on our <a href="https://solanaholderbot.com/pricing" className="text-cyan-400 hover:text-cyan-300 underline">pricing page</a>.
+Pair with our pay-as-you-go <strong>solana volume bot</strong> (starting at 0.1 SOL) for maximum impact. No competitor matches this value, SolanaHolderBot is the clear <strong>best bot for Birdeye trending 2026</strong>. Full pricing details on our <a href="https://solanaholderbot.com/solana-holder-bot" className="text-cyan-400 hover:text-cyan-300 underline">pricing page</a>.
 </p>
 </div>
 
@@ -137,7 +137,7 @@ Launch your <strong>birdeye trending</strong> campaign in minutes, everything vi
 <img src="/screen/Screen_07.png" alt="Solana Holder Bot Screenshot: Real-Time Analytics Dashboard" class="w-auto h-auto rounded-lg mb-6" />
 </ol>
 <p className="text-lg text-gray-100 leading-relaxed mt-6">
-Most users reach <strong>birdeye trending</strong> impact within minutes. See our <a href="/blog/best-solana-volume-bot-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume Bot 2026</a> post for combined strategies.
+Most users reach <strong>birdeye trending</strong> impact within minutes. See our <a href="/blog/best-telegram-solana-volume-bot-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume Bot 2026</a> post for combined strategies.
 </p>
 </div>
 
@@ -150,7 +150,7 @@ While other tools promise <strong>birdeye trending</strong> results, none delive
 SolanaHolderBot stands above with truly permanent rent-exempt holders, superior randomization for natural growth, the lowest SOL costs, faster execution, unmatched reliability, and zero ban reports. Projects switching to the <strong>best bot for Birdeye trending 2026</strong> consistently achieve higher, more sustained rankings with genuine on-chain metrics.
 </p>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-Explore related guides: <a href="/blog/best-solana-volume-booster-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume Booster 2026</a>, <a href="/blog/top-solana-marketing-tools-2026" className="text-cyan-400 hover:text-cyan-300 underline">Top Solana Marketing Tools 2026</a>, and our <a href="https://solanaholderbot.com/blog" className="text-cyan-400 hover:text-cyan-300 underline">full blog</a>.
+Explore related guides: <a href="/blog/best-solana-volume-booster-2026" className="text-cyan-400 hover:text-cyan-300 underline">Best Solana Volume Booster 2026</a>, <a href="/blog/best-bot-for-pumpfun-marketing-strategies-2026" className="text-cyan-400 hover:text-cyan-300 underline">Top Solana Marketing Tools 2026</a>, and our <a href="https://solanaholderbot.com/blog" className="text-cyan-400 hover:text-cyan-300 underline">full blog</a>.
 </p>
 </div>
 
