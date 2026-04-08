@@ -72,7 +72,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
 <div class="hero-banner bg-gradient-to-r from-indigo-950 via-blue-900 to-blue-700 text-white p-16 rounded-3xl text-center mb-16 shadow-2xl relative overflow-hidden">
   <div class="absolute inset-0 bg-[url('/solana-hero-bg.jpg')] bg-cover bg-center opacity-10"></div>
   <div class="relative z-10">
-    <h1 class="text-5xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">Launch Your Solana Token</h1>
+    <h2 class="text-5xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">Launch Your Solana Token</h2>
     <p class="text-lg md:text-xl mb-10 leading-relaxed max-w-4xl mx-auto font-light">
       with our definitive guide to the top 20 launchpads in 2025. Compare costs, features, and security to find your perfect platform. Amplify your launch with <a href="https://t.me/Degen_wg_bot" class="text-blue-300 font-semibold hover:underline">Solana Holder Bot</a> for a thriving community and <a href="https://t.me/leektradingbot" class="text-blue-300 font-semibold hover:underline">Solana Volume Bot</a> to dominate <a href="https://dexscreener.com" class="text-blue-300 hover:underline">DexScreener</a> rankings—your journey to viral success and exchange listings begins now!
     </p>
@@ -85,7 +85,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
 </div>
 
 <div class="intro-section bg-gray-900 text-gray-100 p-10 rounded-xl mb-12 shadow-lg border border-gray-800">
-  <h1 class="text-4xl font-extrabold text-white mb-8 tracking-tight">Your Ultimate Solana Launchpad Guide</h1> 
+  <h2 class="text-4xl font-extrabold text-white mb-8 tracking-tight">Your Ultimate Solana Launchpad Guide</h2> 
   <p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto">
     Solana’s blockchain is a <span class="text-blue-400 font-semibold">rocket engine for token launches</span>. With transaction fees averaging $0.00025 and speeds of 65,000 transactions per second, it eclipses blockchains like Ethereum, delivering a cost-effective, high-performance platform. In 2024, Solana powered <strong>6.2 million token launches</strong>, predominantly meme coins, according to <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a>, and processed <strong>$1.2 trillion in DeFi volume</strong>, per <a href="https://defillama.com" class="text-blue-400 hover:underline">DeFiLlama</a>. As 2025 unfolds, Solana launchpads are the gateways to this dynamic ecosystem.
   </p>

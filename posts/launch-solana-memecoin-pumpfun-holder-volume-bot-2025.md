@@ -70,13 +70,13 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
 </script>
 
 <div class="hero-banner bg-gradient-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mb-12 shadow-2xl">
-  <h1 class="text-5xl font-extrabold mb-4 tracking-tight leading-tight">🚀 Launch a Solana Memecoin with Pump.fun & Dominate with Bots</h1>
+  <h2 class="text-5xl font-extrabold mb-4 tracking-tight leading-tight">🚀 Launch a Solana Memecoin with Pump.fun & Dominate with Bots</h2>
   <p class="text-xl mb-8 leading-relaxed max-w-3xl mx-auto">Want your memecoin to <strong>trend on DexScreener</strong> with <strong>permanent holders</strong> and <strong>massive volume</strong>? Discover how <strong>Pump.fun</strong>, <strong>Solana Holder Bot</strong>, and <strong>Solana Volume Bot</strong> can make you a crypto legend in 2025!</p>
   <a href="https://t.me/Degen_wg_bot" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Start with Solana Holder Bot</a>
 </div>
 
 <div class="intro-section bg-gray-900 text-gray-100 p-8 rounded-lg mb-12 shadow-md border border-gray-700">
-  <h1 class="text-3xl font-bold text-white mb-6">How to Launch a Solana Memecoin with Pump.fun in 2025</h1>
+  <h2 class="text-3xl font-bold text-white mb-6">How to Launch a Solana Memecoin with Pump.fun in 2025</h2>
   <p class="text-lg leading-relaxed mb-4">Imagine your memecoin topping <strong>DexScreener</strong>, with <span class="text-blue-400">thousands of holders</span> and <span class="text-blue-400">surging trading volume</span>. In 2025, <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump.fun</a> makes launching a Solana memecoin a breeze, while <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a> supercharge its success.</p>
   <p class="text-lg leading-relaxed mb-4">This guide breaks down <strong>Pump.fun’s</strong> mechanics, the power of <strong>holder</strong> and <strong>volume bots</strong>, legal risks, and a step-by-step plan to dominate. Backed by data from <a href="https://x.com/pumpdotfun" class="text-blue-400 hover:underline">X</a> and our <a href="https://solanaholderbot.com/blog" class="text-blue-400 hover:underline">blog</a>, we’ll show you how to launch and scale your token.</p>
   <p class="text-lg font-semibold text-blue-400">Ready to rule the Solana ecosystem? 🌟 Dive in or visit <a href="https://solanaholderbot.com" class="text-blue-400 hover:underline">solanaholderbot.com</a>!</p>

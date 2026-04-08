@@ -10,9 +10,9 @@ slug: "solanavolumebot"
 <div className="space-y-12 max-w-5xl mx-auto">
 
   <section className="bg-gray-900/50 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-gray-800 shadow-2xl">
-    <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-500">
+    <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-500">
       Solana Volume Bot: Your Key to Dominating Trending Charts in 2026
-    </h1>
+    </h2>
     <p className="text-xl text-gray-100 leading-relaxed text-center mb-8">
       In the hyper-competitive Solana ecosystem, <strong>real trading volume</strong> is what separates breakout projects from the rest. 
       Solana Volume Bot — built by the proven LEEK Team — delivers <strong>100% authentic on-chain trades</strong> that push your token to the top of Raydium, Pump.fun, Moonshot, DexScreener, and Birdeye.
