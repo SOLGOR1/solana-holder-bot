@@ -205,7 +205,6 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
   <p class="text-lg leading-relaxed mb-4">The evidence points to risks with <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump.fun</a>:</p>
   <ul class="list-disc pl-6 space-y-2 text-lg">
     <li><strong>UK Ban</strong>: Banned in December 2024 by the FCA, per <a href="https://www.coingecko.com/learn/solana-telegram-trading-bots" class="text-blue-400 hover:underline">CoinDesk</a>.</li>
-    <li><strong>Lawsuits</strong>: January 2025 securities violation claims over PNUT token, per <a href="https://dlnews.com/articles/markets/meme-coins/pump-fun-accused-of-cranking-out-unregistered-securities/" class="text-blue-400 hover:underline">DLNews</a>.</li>
     <li><strong>Ethical Issues</strong>: Livestream feature suspended in November 2024 for inappropriate content.</li>
   </ul>
   <p class="text-lg leading-relaxed mb-4">Bots are safer but use responsibly to avoid platform bans, as discussed on <a href="https://www.reddit.com/r/solana/comments/1ee2rth/is_there_a_bot_to_increase_the_amount_of_holders/" class="text-blue-400 hover:underline">Reddit</a>.</p>
