@@ -69,7 +69,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
 }
 </script>
 
-<div class="hero-banner bg-gradient-to-r from-indigo-950 via-blue-900 to-blue-700 text-white p-16 rounded-3xl text-center mb-16 shadow-2xl relative overflow-hidden">
+<div class="hero-banner bg-linear-to-r from-indigo-950 via-blue-900 to-blue-700 text-white p-16 rounded-3xl text-center mb-16 shadow-2xl relative overflow-hidden">
   <div class="absolute inset-0 bg-[url('/solana-hero-bg.jpg')] bg-cover bg-center opacity-10"></div>
   <div class="relative z-10">
     <h2 class="text-5xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">Launch Your Solana Token</h2>
@@ -77,8 +77,8 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
       with our definitive guide to the top 20 launchpads in 2025. Compare costs, features, and security to find your perfect platform. Amplify your launch with <a href="https://t.me/Degen_wg_bot" class="text-blue-300 font-semibold hover:underline">Solana Holder Bot</a> for a thriving community and <a href="https://t.me/leektradingbot" class="text-blue-300 font-semibold hover:underline">Solana Volume Bot</a> to dominate <a href="https://dexscreener.com" class="text-blue-300 hover:underline">DexScreener</a> rankings—your journey to viral success and exchange listings begins now!
     </p>
     <div class="flex flex-col md:flex-row justify-center gap-4">
-      <a href="https://t.me/Degen_wg_bot" class="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-blue-600 transition duration-300 font-semibold text-lg shadow-md">Boost Holders Now</a>
-      <a href="https://t.me/leektradingbot" class="bg-gradient-to-r from-teal-600 to-teal-500 text-white px-8 py-4 rounded-full hover:from-teal-700 hover:to-teal-600 transition duration-300 font-semibold text-lg shadow-md">Spike Volume Now</a>
+      <a href="https://t.me/Degen_wg_bot" class="bg-linear-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-blue-600 transition duration-300 font-semibold text-lg shadow-md">Boost Holders Now</a>
+      <a href="https://t.me/leektradingbot" class="bg-linear-to-r from-teal-600 to-teal-500 text-white px-8 py-4 rounded-full hover:from-teal-700 hover:to-teal-600 transition duration-300 font-semibold text-lg shadow-md">Spike Volume Now</a>
       <a href="#comparison" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-blue-900 transition duration-300 font-semibold text-lg shadow-md">View Launchpad Comparison</a>
     </div>
   </div>
@@ -109,17 +109,17 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
   </ul>
 </div>
 
-<div class="why-section bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100 p-10 rounded-xl mb-16 shadow-xl border border-gray-800">
+<div class="why-section bg-linear-to-b from-gray-900 to-gray-800 text-gray-100 p-10 rounded-xl mb-16 shadow-xl border border-gray-800">
   <h2 class="text-3xl font-extrabold text-white mb-8 tracking-tight">Why Use Solana Launchpads in 2025?</h2>
   <p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto">
     Solana launchpads transform token creation into an <strong>accessible, seamless experience</strong>. <strong>No coding expertise?</strong> No worries. Platforms like <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a> and <a href="https://believe.app" class="text-blue-400 hover:underline">Believe</a> offer user-friendly interfaces that mint tokens in minutes, with minimal costs and no developers needed. Features like automated liquidity pools, social media integrations, and real-time analytics empower you to launch and promote your token effortlessly, paving the way for viral success on <a href="https://dexscreener.com" class="text-blue-400 hover:underline">DexScreener</a> or listings on <a href="https://coinmarketcap.com" class="text-blue-400 hover:underline">CoinMarketCap</a>.
   </p>
 </div>
 
-<div class="infobox bg-gradient-to-r from-gray-800 to-gray-900 text-gray-100 p-8 rounded-2xl mb-16 shadow-2xl border border-gray-700 relative overflow-hidden">
+<div class="infobox bg-linear-to-r from-gray-800 to-gray-900 text-gray-100 p-8 rounded-2xl mb-16 shadow-2xl border border-gray-700 relative overflow-hidden">
   <div class="absolute inset-0 bg-[url('/solana-snapshot-bg.jpg')] bg-cover bg-center opacity-5"></div>
   <div class="relative z-10">
-    <h2 class="text-3xl font-extrabold text-white mb-6 tracking-tight bg-clip-text bg-gradient-to-r from-blue-300 to-teal-300">Solana Launchpads: Quick Snapshot</h2>
+    <h2 class="text-3xl font-extrabold text-white mb-6 tracking-tight bg-clip-text bg-linear-to-r from-blue-300 to-teal-300">Solana Launchpads: Quick Snapshot</h2>
     <p class="text-lg text-gray-100 mb-6 max-w-2xl mx-auto leading-relaxed">Discover the key stats on Solana’s top 20 launchpads for 2025, curated to fuel your token launch success.</p>
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <li class="flex items-start bg-gray-900 bg-opacity-50 p-4 rounded-lg hover:bg-opacity-70 transition duration-300">
@@ -163,7 +163,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
 
 <div class="section-divider border-t border-gray-700 my-10"></div>
 <span id="what-are-solana-launchpads" class="text-2xl font-bold text-white mb-6 block">1. What Are Solana Launchpads?</span>
-<div class="text-section bg-gradient-to-b from-gray-900 to-gray-850 text-gray-100 p-10 rounded-xl mb-12 shadow-lg border border-gray-800">
+<div class="text-section bg-linear-to-b from-gray-900 to-gray-850 text-gray-100 p-10 rounded-xl mb-12 shadow-lg border border-gray-800">
   <p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto">
     <strong>Solana launchpads</strong> are innovative platforms designed to simplify the creation, deployment, and promotion of tokens on the Solana blockchain. Leveraging the Solana Program Library (SPL) token standard, they enable creators to launch everything from meme coins to utility tokens with minimal technical expertise. By automating processes like token minting, presale structuring, and liquidity provisioning, launchpads such as <a href="https://moon.it" class="text-blue-400 hover:underline">Moonit</a> and <a href="https://boop.fun" class="text-blue-400 hover:underline">Boop</a> empower users to bring ideas to market swiftly. Many, like <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a>, use algorithmic pricing models to ensure fair token distribution.
   </p>
@@ -500,7 +500,7 @@ slug: "solana-launchpad-list-2025-ultimate-guide"
   <img src="/solana-launchpad-success.jpg" alt="Successful Solana token launch trending on DexScreener" class="rounded-lg shadow-md">
   <p class="text-gray-100 text-sm mt-2 italic">Track your token’s success on DexScreener with the right launchpad and bots.</p>
 </div>
-<div class="final-cta bg-gradient-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mt-12 shadow-2xl">
+<div class="final-cta bg-linear-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mt-12 shadow-2xl">
   <h2 class="text-3xl font-extrabold mb-4 tracking-tight">Ready to Launch Your Solana Token to the Stars?</h2>
   <p class="text-lg mb-8 max-w-2xl mx-auto">Launch on <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump</a>, amplify with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a>, and dominate the crypto market in 2025!</p>
   <div class="flex justify-center space-x-4">
