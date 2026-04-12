@@ -213,7 +213,7 @@ const pressLinks = [
 "https://lifestyleupdate.org/solana-volume-bot-launch-focuses-on-liquidity-activity-for-emerging-tokens/",
 "https://techupdates.uk/solana-volume-bot-launch-focuses-on-liquidity-activity-for-emerging-tokens/",
 "https://mediadesigner.org/solana-volume-bot-launch-focuses-on-liquidity-activity-for-emerging-tokens/",
-"https://www.bizinsidernews.org/solana-volume-bot-launch-focuses-on-liquidity-activity-for-emerging-tokens/",
+"https://bizinsidernews.org/solana-volume-bot-launch-focuses-on-liquidity-activity-for-emerging-tokens/",
 "https://msnbnews.com/solana-volume-bot-launch-focuses-on-liquidity-activity-for-emerging-tokens/",
 "https://newsweekspecial.com/solana-volume-bot-launch-focuses-on-liquidity-activity-for-emerging-tokens/",
 "https://goldenjackpots.org/solana-volume-bot-launch-focuses-on-liquidity-activity-for-emerging-tokens/",

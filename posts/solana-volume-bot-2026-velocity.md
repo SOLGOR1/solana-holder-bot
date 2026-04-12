@@ -1,6 +1,6 @@
 ---
 title: "Solana Volume Bot 2026 Real Velocity Strategy"
-excerpt: "Why 90% of volume bots get shadow-banned in 2026. The complete insider guide to authentic on-chain velocity that actually ranks on DexScreener, Birdeye & Pump.fun – from the team behind SolanaHolderBot."
+excerpt: "The complete guide to authentic on-chain velocity that ranks on DexScreener, Birdeye & Pump.fun."
 image: "/blogthumb/solana-volume-bot-velocity-2026.jpg"
 imageAlt: "Solana Volume Bot 2026 – Real velocity spikes on DexScreener trending with natural randomized buy-heavy patterns"
 date: "2026-04-12"
