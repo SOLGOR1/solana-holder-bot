@@ -1,22 +1,20 @@
-// src/app/components/GtagLoader.tsx
 'use client';
 
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
-const GA_ID = 'G-8FMSTEXF0Z';      // Google Analytics
-const ADS_ID = 'AW-18035540031';  // Google Ads
+const GA_ID = 'G-8FMSTEXF0Z';   // Nur noch Analytics – Ads komplett entfernt
 
 export default function GtagLoader() {
   const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
-    // Sofort nach 2,5 Sekunden laden (konservativ)
+    // Nach 2,5 Sekunden laden (konservativ, aber sicher)
     const timer = setTimeout(() => {
       setShouldLoad(true);
     }, 2500);
 
-    // Oder früher laden, sobald der User interagiert (besser für UX + Speed)
+    // Oder sofort bei erster User-Interaktion (beste UX + Speed-Kombi)
     const handleUserInteraction = () => {
       setShouldLoad(true);
       window.removeEventListener('scroll', handleUserInteraction);
@@ -36,24 +34,18 @@ export default function GtagLoader() {
     };
   }, []);
 
-  // Nichts rendern, bis wir wirklich laden wollen
   if (!shouldLoad) return null;
 
   return (
     <>
-      {/* Google Analytics + Ads */}
+      {/* 1. Nur ein einziges gtag.js Script (GA4) */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="afterInteractive"
         async
       />
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${ADS_ID}`}
-        strategy="afterInteractive"
-        async
-      />
 
-      {/* gtag Initialisierung */}
+      {/* 2. Minimales Init-Script */}
       <Script id="gtag-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -62,7 +54,6 @@ export default function GtagLoader() {
           gtag('config', '${GA_ID}', { 
             page_path: window.location.pathname 
           });
-          gtag('config', '${ADS_ID}');
         `}
       </Script>
     </>

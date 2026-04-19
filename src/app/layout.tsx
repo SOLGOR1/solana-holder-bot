@@ -84,7 +84,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         suppressHydrationWarning
       >
         {children}
-        {/* GtagLoader bleibt hier – wir machen ihn gleich client-only sicher */}
+        {/* GtagLoader – jetzt nur noch Analytics + stark verzögert */}
         <GtagLoader />
       </body>
     </html>
