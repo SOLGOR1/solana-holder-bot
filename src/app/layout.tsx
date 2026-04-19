@@ -5,7 +5,7 @@ import "./globals.css";
 
 // ← GtagLoader bleibt (wir machen ihn gleich noch sicherer)
 import dynamic from 'next/dynamic';
-const GtagLoader = dynamic(() => import('./components/GtagLoader'), { ssr: false, loading: () => null });
+const GtagLoader = dynamic(() => import('./components/GtagLoader'), { loading: () => null });
 
 export const metadata: Metadata = {
   title: {

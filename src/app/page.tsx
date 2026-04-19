@@ -15,7 +15,7 @@ import dynamic from 'next/dynamic';
 import React, { memo } from 'react';
 
 // Dynamic imports for below-the-fold content (reduces LCP and TBT)
-const DynamicBenefits2 = dynamic(() => import('./components/Benefits2'), { ssr: false, loading: () => null });
+const DynamicBenefits2 = dynamic(() => import('./components/Benefits2'), { loading: () => null });
 const DynamicGuide = dynamic(() => import('./components/Guide'), { ssr: true });
 const DynamicHowItWorks = dynamic(() => import('./components/HowItWorks'), { ssr: true });
 const DynamicTestimonials = dynamic(() => import('./components/Testimonials'), { ssr: true });
