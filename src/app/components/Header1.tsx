@@ -46,8 +46,8 @@ export default function Header1() {
             Boost your <b>Solana</b> <em>volume, makers, and holders</em> with the <strong>cheapest</strong>, most <strong>organic</strong> DEX-trending bot, 
             delivering an unmatched, user-friendly Telegram experience for <b>effortless growth</b>.
           </p>
-
-          {/* Buttons mit originalem Icon + Shine */}
+          
+          {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
             <a
               href="https://t.me/Degen_wg_bot"
@@ -59,7 +59,7 @@ export default function Header1() {
                 <FaTelegramPlane className="w-5 h-5" />
                 Launch Holder Bot
               </span>
-              <div className="shine absolute inset-0 -skew-x-12 bg-linear-to-r from-transparent via-white/30 to-transparent" />
+              <div className="shine" />
             </a>
 
             <a
@@ -72,7 +72,7 @@ export default function Header1() {
                 <FaTelegramPlane className="w-5 h-5" />
                 Launch Volume Bot
               </span>
-              <div className="shine absolute inset-0 -skew-x-12 bg-linear-to-r from-transparent via-white/30 to-transparent" />
+              <div className="shine" />
             </a>
           </div>
 
