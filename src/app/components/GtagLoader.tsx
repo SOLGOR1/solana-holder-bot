@@ -41,12 +41,12 @@ export default function GtagLoader() {
       {/* 1. Nur ein einziges gtag.js Script (GA4) */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         async
       />
 
-      {/* 2. Minimales Init-Script */}
-      <Script id="gtag-init" strategy="afterInteractive">
+      {/* 2. Minimal Init-Script */}
+      <Script id="gtag-init" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}

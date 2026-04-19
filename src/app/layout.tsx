@@ -4,7 +4,8 @@ import { ReactNode } from "react";
 import "./globals.css";
 
 // ← GtagLoader bleibt (wir machen ihn gleich noch sicherer)
-import GtagLoader from "./components/GtagLoader";
+import dynamic from 'next/dynamic';
+const GtagLoader = dynamic(() => import('./components/GtagLoader'), { ssr: false, loading: () => null });
 
 export const metadata: Metadata = {
   title: {
@@ -84,7 +85,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         suppressHydrationWarning
       >
         {children}
-        {/* GtagLoader – jetzt nur noch Analytics + stark verzögert */}
+        {/* GtagLoader – now deferred and lazy loaded for analytics only */}
         <GtagLoader />
       </body>
     </html>

@@ -1,11 +1,17 @@
 "use client";
 
+
 import { FaChartLine, FaShieldAlt, FaRocket, FaCoins, FaUsers, FaBolt, FaRobot, } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import React, { memo, useMemo } from 'react';
 
-export default function Benefits() {
-  const benefits = [
+const ShineEffect = memo(() => (
+  <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent animate-shine opacity-70" />
+));
+
+const Benefits = memo(function Benefits() {
+  const benefits = useMemo(() => [
     {
       title: "Permanent Holders & Genuine Volume",
       desc: "Boost your Solana token with lasting holders and 100% on-chain trades that feel organic and drive real momentum.",
@@ -42,22 +48,22 @@ export default function Benefits() {
       icon: <FaCoins className="w-10 h-10 text-green-400" />,
       color: "green",
     },
-  ];
+  ], []);
 
   return (
     <section className="relative bg-black py-5 overflow-hidden">
       {/* Super dezenter Hintergrund – sanft pulsierende zentrale Blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-cyan-600/5 rounded-full blur-4xl opacity-60"
           style={{ 
-            animation: 'gentlePulse 32s ease-in-out infinite' 
+            animation: 'gentlePulse 48s ease-in-out infinite' 
           }}
         />
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-emerald-600/5 rounded-full blur-4xl opacity-50"
           style={{ 
-            animation: 'gentlePulse 36s ease-in-out infinite reverse' 
+            animation: 'gentlePulse 54s ease-in-out infinite reverse' 
           }}
         />
       </div>
@@ -65,7 +71,12 @@ export default function Benefits() {
       <style jsx>{`
         @keyframes gentlePulse {
           0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.08); }
+          50% { transform: scale(1.04); }
+        }
+        @keyframes shine {
+          to {
+            background-position: 200% center;
+          }
         }
       `}</style>
 
@@ -147,6 +158,10 @@ export default function Benefits() {
       </div>
 
       <style jsx>{`
+        @keyframes gentlePulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.04); }
+        }
         @keyframes shine {
           to {
             background-position: 200% center;
@@ -155,8 +170,6 @@ export default function Benefits() {
       `}</style>
     </section>
   );
-}
+});
 
-const ShineEffect = () => (
-  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shine" />
-);
+export default Benefits;

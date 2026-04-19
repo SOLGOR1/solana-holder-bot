@@ -12,9 +12,10 @@ import Disclaimer from './components/Disclaimer';
 import type { Metadata } from "next";
 import FloatingSocialWidget from './components/FloatingSocialWidget';
 import dynamic from 'next/dynamic';
+import React, { memo } from 'react';
 
-// === Dynamische Imports für alles unter dem Hero (das reduziert LCP und TBT) ===
-const DynamicBenefits2 = dynamic(() => import('./components/Benefits2'), { ssr: true });
+// Dynamic imports for below-the-fold content (reduces LCP and TBT)
+const DynamicBenefits2 = dynamic(() => import('./components/Benefits2'), { ssr: false, loading: () => null });
 const DynamicGuide = dynamic(() => import('./components/Guide'), { ssr: true });
 const DynamicHowItWorks = dynamic(() => import('./components/HowItWorks'), { ssr: true });
 const DynamicTestimonials = dynamic(() => import('./components/Testimonials'), { ssr: true });
@@ -69,13 +70,14 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
-export default function Home() {
+
+const Home = memo(function Home() {
   const canonicalUrl = "https://solanaholderbot.com";
   const logoUrl = "/logo.png";
 
   return (
     <>
-      {/* Schema Markup – bleibt gleich */}
+      {/* Schema Markup */}
       <Script
         id="website-schema"
         type="application/ld+json"
@@ -106,7 +108,6 @@ export default function Home() {
           }),
         }}
       />
-
       <Script
         id="breadcrumb-schema"
         type="application/ld+json"
@@ -126,45 +127,22 @@ export default function Home() {
           }),
         }}
       />
-
-      {/* Content */}
+      {/* Content: flatten structure, remove unnecessary wrappers */}
       <div className="flex flex-col min-h-screen pt-16">
         <Navbar />
-        <div id="header1" className="scroll-mt-5">
-          <Header1 />
-        </div>
-        <div id="sup" className="scroll-mt-5">
-          <SupportedPlatforms />
-        </div>
-        <div id="cust" className="scroll-mt-5">
-          <Customer />
-        </div>
-        <div id="header" className="scroll-mt-16">
-          <Header />
-        </div>
-
-        {/* Dynamisch geladen → das ist der Teil, der den LCP-Render-Delay stark reduziert */}
+        <Header1 />
+        <SupportedPlatforms />
+        <Customer />
+        <Header />
         <DynamicAllInOneBooster />
-
         <main className="grow" role="main">
-          <div id="benefits" className="scroll-mt-16">
-            <DynamicBenefits2 />
-          </div>
-          <div id="guide" className="scroll-mt-16">
-            <DynamicGuide />
-          </div>
-          <div id="how-it-works" className="scroll-mt-16">
-            <DynamicHowItWorks />
-          </div>
-          <div id="testimonials" className="scroll-mt-16">
-            <DynamicTestimonials />
-          </div>
+          <DynamicBenefits2 />
+          <DynamicGuide />
+          <DynamicHowItWorks />
+          <DynamicTestimonials />
           <DynamicBlogSnippet posts={blogPosts} />
-          <div id="faqs" className="scroll-mt-16">
-            <DynamicFAQs />
-          </div>
+          <DynamicFAQs />
         </main>
-
         <Disclaimer />
         <Footer />
         <Widget1 />
@@ -172,4 +150,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+});
+
+export default Home;
