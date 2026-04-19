@@ -6,9 +6,10 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React, { memo, useMemo } from 'react';
 
-const ShineEffect = memo(() => (
-  <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent animate-shine opacity-70" />
-));
+const ShineEffect = memo(function ShineEffect() {
+  return <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent animate-shine opacity-70" />;
+});
+ShineEffect.displayName = "ShineEffect";
 
 const Benefits = memo(function Benefits() {
   const benefits = useMemo(() => [
@@ -171,5 +172,6 @@ const Benefits = memo(function Benefits() {
     </section>
   );
 });
+Benefits.displayName = "Benefits";
 
 export default Benefits;
