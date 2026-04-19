@@ -57,12 +57,22 @@ const nextConfig: NextConfig = {
   generateEtags: true,
   output: "standalone",
 
-  // === TURBOPACK: Legacy-Polyfills entfernen (Punkt 2) ===
+  // === TURBOPACK (bleibt für andere Sachen) ===
   turbopack: {
     resolveAlias: {
       "../build/polyfills/polyfill-module": "./src/lib/modern-polyfill.js",
       "next/dist/build/polyfills/polyfill-module": "./src/lib/modern-polyfill.js",
     },
+  },
+
+  // === NEU: Webpack-Alias – entfernt die Legacy-Polyfills zuverlässig ===
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "../build/polyfills/polyfill-module": false,
+      "next/dist/build/polyfills/polyfill-module": false,
+    };
+    return config;
   },
 };
 

@@ -2,22 +2,25 @@
 import Header from './components/Header';
 import Header1 from './components/Header1';
 import Widget1 from './components/Widget1';
-import Benefits2 from './components/Benefits2';
-import Guide from './components/Guide';
-import HowItWorks from './components/HowItWorks';
-import Testimonials from './components/Testimonials';
-import FAQs from './components/FAQs';
 import Navbar from './components/Navbar';
 import Script from 'next/script';
 import Footer from './components/Footer';
-import BlogSnippet from './components/BlogSnippet';
 import { blogPosts } from './data/blogs';
 import SupportedPlatforms from './components/SupportedPlatforms';
 import Customer from './components/Customer';
 import Disclaimer from './components/Disclaimer';
-import AllInOneBooster from './components/AllInOneBooster';
 import type { Metadata } from "next";
 import FloatingSocialWidget from './components/FloatingSocialWidget';
+import dynamic from 'next/dynamic';
+
+// === Dynamische Imports für alles unter dem Hero (das reduziert LCP und TBT) ===
+const DynamicBenefits2 = dynamic(() => import('./components/Benefits2'), { ssr: true });
+const DynamicGuide = dynamic(() => import('./components/Guide'), { ssr: true });
+const DynamicHowItWorks = dynamic(() => import('./components/HowItWorks'), { ssr: true });
+const DynamicTestimonials = dynamic(() => import('./components/Testimonials'), { ssr: true });
+const DynamicFAQs = dynamic(() => import('./components/FAQs'), { ssr: true });
+const DynamicBlogSnippet = dynamic(() => import('./components/BlogSnippet'), { ssr: true });
+const DynamicAllInOneBooster = dynamic(() => import('./components/AllInOneBooster'), { ssr: true });
 
 export const metadata: Metadata = {
   title: "Solana Volume Bot – Boost SOL Volume, Stats & Holders",
@@ -72,7 +75,7 @@ export default function Home() {
 
   return (
     <>
-      {/* Schema Markup – jetzt sicherer */}
+      {/* Schema Markup – bleibt gleich */}
       <Script
         id="website-schema"
         type="application/ld+json"
@@ -124,9 +127,6 @@ export default function Home() {
         }}
       />
 
-      {/* Google Analytics – jetzt hydrationssicher als separate Client-Komponente */}
-      <GoogleAnalytics />
-
       {/* Content */}
       <div className="flex flex-col min-h-screen pt-16">
         <Navbar />
@@ -142,52 +142,34 @@ export default function Home() {
         <div id="header" className="scroll-mt-16">
           <Header />
         </div>
-        <div id="all-in-one-booster" className="scroll-mt-16">
-          <AllInOneBooster />
-        </div>
-        <main className="flex-grow" role="main">
+
+        {/* Dynamisch geladen → das ist der Teil, der den LCP-Render-Delay stark reduziert */}
+        <DynamicAllInOneBooster />
+
+        <main className="grow" role="main">
           <div id="benefits" className="scroll-mt-16">
-            <Benefits2 />
+            <DynamicBenefits2 />
           </div>
           <div id="guide" className="scroll-mt-16">
-            <Guide />
+            <DynamicGuide />
           </div>
           <div id="how-it-works" className="scroll-mt-16">
-            <HowItWorks />
+            <DynamicHowItWorks />
           </div>
           <div id="testimonials" className="scroll-mt-16">
-            <Testimonials />
+            <DynamicTestimonials />
           </div>
-          <BlogSnippet posts={blogPosts} />
+          <DynamicBlogSnippet posts={blogPosts} />
           <div id="faqs" className="scroll-mt-16">
-            <FAQs />
+            <DynamicFAQs />
           </div>
         </main>
+
         <Disclaimer />
         <Footer />
         <Widget1 />
         <FloatingSocialWidget />
       </div>
-    </>
-  );
-}
-
-// Neue Client-Komponente für Google Analytics (verhindert Hydration Error)
-function GoogleAnalytics() {
-  return (
-    <>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-8FMSTEXF0Z"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-8FMSTEXF0Z');
-        `}
-      </Script>
     </>
   );
 }
