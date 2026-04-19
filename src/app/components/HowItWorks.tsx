@@ -44,13 +44,13 @@ export default function HowItWorks() {
       {/* Super dezenter Hintergrund – sanft pulsierende zentrale Blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-cyan-600/10 rounded-full blur-3xl"
           style={{ 
             animation: 'gentlePulse 32s ease-in-out infinite' 
           }}
         />
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-emerald-600/10 rounded-full blur-3xl"
           style={{ 
             animation: 'gentlePulse 36s ease-in-out infinite reverse' 
           }}
@@ -127,7 +127,7 @@ export default function HowItWorks() {
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 {/* Schritt-Nummer links – größer, ohne ) */}
-                <div className="flex-shrink-0 w-10 text-right">
+                <div className="shrink-0 w-10 text-right">
                   <motion.span
                     className={`text-3xl font-bold transition-colors duration-500 ${
                       highlightedStep === index ? `text-${botColor}-400` : 'text-gray-100'
@@ -143,7 +143,7 @@ export default function HowItWorks() {
 
                 {/* Icon mit stärkerem Highlight-Glow */}
                 <motion.div
-                  className={`flex-shrink-0 w-14 h-14 rounded-full bg-${botColor}-600/20 border-2 border-${botColor}-500/50 flex items-center justify-center shadow-lg relative overflow-hidden`}
+                  className={`shrink-0 w-14 h-14 rounded-full bg-${botColor}-600/20 border-2 border-${botColor}-500/50 flex items-center justify-center shadow-lg relative overflow-hidden`}
                   animate={{
                     boxShadow: highlightedStep === index
                       ? `0 0 30px rgba(${botColor === 'blue' ? '59,130,246' : '34,197,94'}, 0.6)`
@@ -201,7 +201,7 @@ export default function HowItWorks() {
             </span>
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100">
               <motion.div
-                className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                className="absolute inset-0 -skew-x-12 bg-linear-to-r from-transparent via-white/20 to-transparent"
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}
                 transition={{ duration: 2, ease: "easeOut", repeat: Infinity, repeatDelay: 3 }}

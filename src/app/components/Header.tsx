@@ -32,7 +32,7 @@ export default function WhyChoose() {
 
   const ShineEffect = () => (
     <motion.div
-      className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+      className="absolute inset-0 -skew-x-12 bg-linear-to-r from-transparent via-white/20 to-transparent"
       initial={{ x: "-100%" }}
       animate={{ x: "100%" }}
       transition={{ duration: 2, ease: "easeOut", repeat: Infinity, repeatDelay: 3 }}
@@ -44,13 +44,13 @@ export default function WhyChoose() {
       {/* Super dezenter Hintergrund – sanft pulsierende zentrale Blobs */}
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-cyan-600/10 rounded-full blur-3xl"
         style={{ 
           animation: 'gentlePulse 32s ease-in-out infinite' 
         }}
       />
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-emerald-600/10 rounded-full blur-3xl"
         style={{ 
           animation: 'gentlePulse 36s ease-in-out infinite reverse' 
         }}
@@ -93,7 +93,7 @@ export default function WhyChoose() {
               <div className="relative p-4 md:p-6 backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 shadow-2xl">
                 {/* Logo Circle – zentriert */}
                 <div className="relative mx-auto w-20 h-20 mb-4">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 opacity-30 blur-xl" />
+                  <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500 to-blue-600 opacity-30 blur-xl" />
                   <div className="relative w-full h-full rounded-full bg-black/50 border-4 border-blue-500/50 p-2 flex items-center justify-center">
                     <Image
                       src="/holderbot.png"
@@ -208,7 +208,7 @@ export default function WhyChoose() {
               <div className="relative p-4 md:p-6 backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 shadow-2xl">
                 {/* Logo Circle – zentriert */}
                 <div className="relative mx-auto w-20 h-20 mb-4">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500 to-green-600 opacity-30 blur-xl" />
+                  <div className="absolute inset-0 rounded-full bg-linear-to-r from-green-500 to-green-600 opacity-30 blur-xl" />
                   <div className="relative w-full h-full rounded-full bg-black/50 border-4 border-green-500/50 p-2 flex items-center justify-center">
                     <Image
                       src="/volumebot.png"
