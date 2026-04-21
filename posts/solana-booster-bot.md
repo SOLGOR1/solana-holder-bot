@@ -8,7 +8,7 @@ slug: "solana-booster-bot"
 ---
 
 <div class="space-y-8">
-<section class="relative bg-gradient-to-br from-gray-900 via-blue-950 to-blue-800 p-8 rounded-xl shadow-2xl overflow-hidden">
+<section class="relative bg-linear-to-br from-gray-900 via-blue-950 to-blue-800 p-8 rounded-xl shadow-2xl overflow-hidden">
   <!-- Subtle animated background effect -->
   <div class="absolute inset-0 bg-[url('/blockchain-pattern.png')] opacity-15 animate-pulse-slow"></div>
   <div class="relative z-10">
@@ -95,7 +95,7 @@ slug: "solana-booster-bot"
   <p class="text-gray-100 mb-4">
     Prepare to be blown away by the <strong>Solana Booster Bot</strong>! Our initial test run, conducted on a standard 1% fee pool, was impressive—but with most Solana pools offering fees as low as <strong>0.25%</strong>, the results are nothing short of <strong>game-changing</strong>. Starting with just <strong>0.5 SOL</strong> (~$73 at $146/SOL), our bot delivers <strong>unprecedented organic growth</strong> that will make your token project stand out on DexTools, BirdEye, and GeckoTerminal. Here’s what we achieved with a 0.25% fee pool:
   </p>
-  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 bg-gradient-to-r from-blue-900 to-gray-700 p-6 rounded-lg shadow-inner">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 bg-linear-to-r from-blue-900 to-gray-700 p-6 rounded-lg shadow-inner">
     <div class="text-center">
       <p class="text-blue-400 font-semibold text-lg">Unique Holders</p>
       <p class="text-white text-3xl font-bold">248 Wallets</p>
@@ -145,7 +145,7 @@ slug: "solana-booster-bot"
     <img src="/solbooster4.jpg" alt="Solana Booster Bot boost cycle process for organic token growth" class="w-full h-auto rounded-lg mb-4" />
   </section>
 
-<section class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 p-8 rounded-xl shadow-2xl overflow-hidden">
+<section class="relative bg-linear-to-br from-gray-900 via-gray-800 to-blue-900 p-8 rounded-xl shadow-2xl overflow-hidden">
   <!-- Subtle background overlay for depth -->
   <div class="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-10"></div>
   <div class="relative z-10">
@@ -204,7 +204,7 @@ slug: "solana-booster-bot"
   <p class="text-gray-100 mb-4">
     <strong>Exclusive Partnership Opportunity:</strong> When you collaborate with the LEEK Team, we reinvest a portion of our <strong>Solana Booster Bot</strong> earnings to <strong>buy back and burn your project’s tokens</strong>. This deflationary strategy reduces your token supply, enhances scarcity, and boosts long-term value for your community. Our commitment to reinvesting bot fees into $LEEK liquidity pools and partner token burns ensures a thriving ecosystem where everyone wins—your project, $LEEK, and the broader Solana network. 🚀
   </p>
-  <div class="bg-gradient-to-r from-blue-900 to-gray-700 p-6 rounded-lg shadow-inner mb-6">
+  <div class="bg-linear-to-r from-blue-900 to-gray-700 p-6 rounded-lg shadow-inner mb-6">
     <p class="text-blue-300 font-semibold text-lg mb-2">
       🔥 <strong>Join the Solana Revolution!</strong>
     </p>

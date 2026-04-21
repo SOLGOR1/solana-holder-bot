@@ -1,17 +1,27 @@
-# SolanaHolderBot – optimiert für Google Ads Policy Check
+# SolanaHolderBot – optimiert für Google Ads Policy + saubere Indexierung
+# Alles erlauben außer RSS-Feed und alte www-Pfade
+
 User-agent: *
 Allow: /
+Disallow: /blog/rss.xml
+Disallow: /www.solanaholderbot.com/   # alte www-URLs sicher blocken
 
+# Google-spezifische Bots (für Google Ads Policy wichtig)
 User-agent: Googlebot
 Allow: /
+Disallow: /blog/rss.xml
 
 User-agent: AdsBot-Google
 Allow: /
+Disallow: /blog/rss.xml
 
 User-agent: AdsBot-Google-Mobile
 Allow: /
+Disallow: /blog/rss.xml
 
 User-agent: Googlebot-Image
 Allow: /
+Disallow: /blog/rss.xml
 
+# Sitemap (nur die aktuelle non-www Version)
 Sitemap: https://solanaholderbot.com/sitemap.xml

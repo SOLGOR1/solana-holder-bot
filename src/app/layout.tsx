@@ -1,65 +1,71 @@
 // src/app/layout.tsx
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { ReactNode } from "react";
 import "./globals.css";
 
-// ← GtagLoader bleibt (wir machen ihn gleich noch sicherer)
+// GtagLoader nur für Analytics – stark verzögert und dynamisch geladen
 import dynamic from 'next/dynamic';
-const GtagLoader = dynamic(() => import('./components/GtagLoader'), { loading: () => null });
+const GtagLoader = dynamic(() => import('./components/GtagLoader'), {
+  loading: () => null,
+  ssr: false,
+});
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://solanaholderbot.com'), // ← wichtig für alle Canonicals, OG, Twitter
+
   title: {
     default: "Solana Holder Bot – #1 Holder & Volume Bot for Solana in 2026",
     template: "%s | Solana Holder Bot",
   },
   description:
     "Solana Holder Bot is the leading all-in-one Telegram bot suite for permanent holder creation and genuine on-chain volume boosting. The fastest, cheapest, and most reliable tools to dominate DexScreener, Pump.fun, Raydium trending charts in 2026 – starting at just 0.1 SOL, no private keys required.",
+
   keywords: [
-    "Solana Holder Bot",
-    "Solana Volume Bot",
-    "solana holder bot",
-    "solana volume bot",
-    "permanent holders bot",
-    "solana volume booster",
-    "pumpfun volume bot",
-    "dexscreener trending",
-    "birdeye trending",
-    "pumpfun trending",
-    "solana trending bot",
-    "solana memecoin bot",
-    "solana token marketing",
-    "solana holder growth",
-    "real holders solana",
-    "rent-exempt holders",
-    "solana trading bot",
-    "memecoin tools 2026",
-    "solana automation",
-    "telegram crypto bot",
+    "Solana Holder Bot", "Solana Volume Bot", "solana holder bot", "solana volume bot",
+    "permanent holders bot", "solana volume booster", "pumpfun volume bot",
+    "dexscreener trending", "birdeye trending", "pumpfun trending",
+    "solana trending bot", "solana memecoin bot", "solana token marketing",
+    "real holders solana", "rent-exempt holders", "telegram crypto bot",
   ],
+
   authors: [{ name: "Solana Holder Bot Team" }],
   creator: "Solana Holder Bot",
   publisher: "Solana Holder Bot",
-  robots: "index, follow",
-  alternates: {
-    canonical: "https://solanaholderbot.com",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
   },
+
+  // Canonical wird automatisch auf https://solanaholderbot.com + Pfad gesetzt
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://solanaholderbot.com",
     siteName: "Solana Holder Bot",
     title: "Solana Holder Bot – The #1 Holder & Volume Bot for Solana Memecoins in 2026",
     description:
       "Permanent holders, genuine volume boosting, and full Telegram automation – the fastest and cheapest way to reach trending on DexScreener, Pump.fun, and Raydium. Start from just 0.1 SOL.",
     images: [
       {
-        url: "https://solanaholderbot.com/blogthumb/blogthumb2.png",
+        url: "/blogthumb/blogthumb2.png",
         width: 1200,
         height: 630,
         alt: "Solana Holder Bot – Permanent Holders & Genuine Volume Booster for Solana",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     site: "@solanaholderbot",
@@ -67,8 +73,16 @@ export const metadata: Metadata = {
     title: "Solana Holder Bot – #1 Solana Holder & Volume Bot 2026",
     description:
       "The fastest, cheapest, and most reliable Telegram bots for permanent holders and real volume on Solana.",
-    images: "https://solanaholderbot.com/blogthumb/blogthumb2.png",
+    images: "/blogthumb/blogthumb2.png",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: "#000000",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -80,12 +94,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body 
+
+      <body
         className="bg-black text-white antialiased"
         suppressHydrationWarning
       >
         {children}
-        {/* GtagLoader – now deferred and lazy loaded for analytics only */}
+
+        {/* GtagLoader – nur Analytics, stark verzögert */}
         <GtagLoader />
       </body>
     </html>
