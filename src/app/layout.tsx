@@ -3,15 +3,11 @@ import type { Metadata, Viewport } from "next";
 import { ReactNode } from "react";
 import "./globals.css";
 
-// GtagLoader nur für Analytics – stark verzögert und dynamisch geladen
-import dynamic from 'next/dynamic';
-const GtagLoader = dynamic(() => import('./components/GtagLoader'), {
-  loading: () => null,
-  ssr: false,
-});
+// GtagLoader ist bereits eine Client Component → normales Import reicht
+import GtagLoader from './components/GtagLoader';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://solanaholderbot.com'), // ← wichtig für alle Canonicals, OG, Twitter
+  metadataBase: new URL('https://solanaholderbot.com'),
 
   title: {
     default: "Solana Holder Bot – #1 Holder & Volume Bot for Solana in 2026",
@@ -44,7 +40,6 @@ export const metadata: Metadata = {
     },
   },
 
-  // Canonical wird automatisch auf https://solanaholderbot.com + Pfad gesetzt
   alternates: {
     canonical: "/",
   },
@@ -101,7 +96,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         {children}
 
-        {/* GtagLoader – nur Analytics, stark verzögert */}
+        {/* GtagLoader – bleibt Client Component und lädt sich selbst verzögert */}
         <GtagLoader />
       </body>
     </html>
