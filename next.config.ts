@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
 
-  // === HEADERS ===
+  // === HEADERS (Security + Cache) ===
   async headers() {
     return [
       {
@@ -16,14 +16,15 @@ const nextConfig: NextConfig = {
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-Frame-Options", value: "DENY" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
           { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+          // Besserer Cache für statische Assets (hilft gegen Redirects)
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
     ];
   },
 
-  // === IMAGES OPTIMIZATION ===
+  // === IMAGES OPTIMIZATION – stark verbessert gegen Redirects ===
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "indiehunt.io" },
@@ -39,6 +40,10 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
+
+    // === WICHTIGSTE ÄNDERUNGEN GEGEN IMAGE REDIRECTS ===
+    minimumCacheTTL: 31536000,   // 1 Jahr Cache → reduziert Image Redirects massiv
+    unoptimized: false,
   },
 
   // === COMPILER ===
@@ -57,7 +62,7 @@ const nextConfig: NextConfig = {
   generateEtags: true,
   output: "standalone",
 
-  // === TURBOPACK (bleibt für andere Sachen) ===
+  // === TURBOPACK + Webpack Alias (Legacy Polyfills) ===
   turbopack: {
     resolveAlias: {
       "../build/polyfills/polyfill-module": "./src/lib/modern-polyfill.js",
@@ -65,7 +70,6 @@ const nextConfig: NextConfig = {
     },
   },
 
-  // === NEU: Webpack-Alias – entfernt die Legacy-Polyfills zuverlässig ===
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,

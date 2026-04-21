@@ -25,28 +25,24 @@ export function middleware(request: NextRequest) {
   }
 
   // =============================================
-  // 2. Alte / gelöschte Seiten → 410 Gone
+  // 2. Alte / gelöschte Seiten → 410 Gone (permanently gone)
   // =============================================
   const oldPaths = [
     '/pricing',
     '/blog/mellow-man-hyper-volume-bot',
-    // Hier kannst du jederzeit weitere alte URLs hinzufügen:
-    // '/blog/irgend-ein-alter-post',
-    // '/alte-seite',
+    // Weitere alte URLs einfach hier hinzufügen
   ];
 
-  // Prüfen, ob die angefragte URL genau einer der alten Pfade entspricht
   if (oldPaths.some((path) => url.pathname === path)) {
-    return new NextResponse(null, { status: 410 }); // 410 Gone
+    return new NextResponse(null, { status: 410 });
   }
 
-  // Alles andere normal weiterleiten
   return NextResponse.next();
 }
 
-// Matcher – ignoriert statische Dateien und API-Routen
+// Sehr strenger Matcher – ignoriert wirklich ALLE statischen Dateien
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|xml|txt)).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|xml|txt|css|js|json|woff2|ttf|otf)).*)',
   ],
 };
