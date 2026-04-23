@@ -82,7 +82,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center gap-3" aria-label="Solana Holder Bot Home" title="Solana Holder & Volume Bot - Home">
               <svg
-                className="w-9 h-9 text-white flex-shrink-0"
+                className="w-9 h-9 text-white shrink-0"
                 fill="currentColor"
                 viewBox="0 0 18 18"
                 xmlns="https://www.w3.org/2000/svg"

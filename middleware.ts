@@ -30,6 +30,10 @@ export function middleware(request: NextRequest) {
   const oldPaths = [
     '/pricing',
     '/blog/mellow-man-hyper-volume-bot',
+    '/blog/mellowman-hyper-volume-bot',
+    '/&',
+    '/blog/ton-volume-bot',
+    '/blog/bnb-volume-bot',
     // Weitere alte URLs einfach hier hinzufügen
   ];
 
