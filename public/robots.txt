@@ -2,6 +2,7 @@
 # Alles erlauben außer RSS-Feed und alte www-Pfade
 
 User-agent: *
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 Allow: /
 Disallow: /blog/rss.xml
 Disallow: /www.solanaholderbot.com/   # alte www-URLs sicher blocken
