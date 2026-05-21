@@ -5,25 +5,19 @@ import { useEffect } from 'react';
 const GA_ID = 'G-8FMSTEXF0Z';
 
 function loadGtag() {
-  // Bereits geladen? Abbrechen.
   if (document.getElementById('gtag-script')) return;
 
-  // 1. Haupt-Script dynamisch injizieren
   const script = document.createElement('script');
-  script.id  = 'gtag-script';
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  script.id    = 'gtag-script';
+  script.src   = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
   script.async = true;
   document.head.appendChild(script);
 
-  // 2. Inline-Init – so minimal wie möglich
   window.dataLayer = window.dataLayer || [];
-  function gtag(..._args: unknown[]) {
-    // eslint-disable-next-line prefer-rest-params
-    window.dataLayer.push(arguments);
-  }
-  window.gtag = gtag;
-  gtag('js', new Date());
-  gtag('config', GA_ID, { anonymize_ip: true });
+  // Arrow function statt arguments-Objekt → kein TypeScript/ESLint Konflikt
+  window.gtag = (...args: unknown[]) => window.dataLayer.push(args);
+  window.gtag('js', new Date());
+  window.gtag('config', GA_ID, { anonymize_ip: true });
 }
 
 export default function GtagLoader() {
@@ -40,7 +34,6 @@ export default function GtagLoader() {
   return null;
 }
 
-// ─── TypeScript globals ───────────────────────────────────────────────────────
 declare global {
   interface Window {
     dataLayer: unknown[];
