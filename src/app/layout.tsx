@@ -2,15 +2,18 @@
 import type { Metadata, Viewport } from "next";
 import { ReactNode } from "react";
 import "./globals.css";
-
-// GtagLoader ist bereits eine Client Component → normales Import reicht
 import GtagLoader from './components/GtagLoader';
 
+// ─── Konstanten ───────────────────────────────────────────────────────────────
+const BASE_URL = 'https://solanaholderbot.com';
+const GA_ID    = 'G-8FMSTEXF0Z';
+
+// ─── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  metadataBase: new URL('https://solanaholderbot.com'),
+  metadataBase: new URL(BASE_URL),
 
   title: {
-    default: "Solana Holder Bot – #1 Holder & Volume Bot for Solana in 2026",
+    default:  "Solana Holder Bot – #1 Holder & Volume Bot for Solana in 2026",
     template: "%s | Solana Holder Bot",
   },
   description:
@@ -24,79 +27,85 @@ export const metadata: Metadata = {
     "real holders solana", "rent-exempt holders", "telegram crypto bot",
   ],
 
-  authors: [{ name: "Solana Holder Bot Team" }],
-  creator: "Solana Holder Bot",
+  authors:   [{ name: "Solana Holder Bot Team" }],
+  creator:   "Solana Holder Bot",
   publisher: "Solana Holder Bot",
 
   robots: {
-    index: true,
+    index:  true,
     follow: true,
     googleBot: {
-      index: true,
-      follow: true,
+      index:              true,
+      follow:             true,
       "max-image-preview": "large",
       "max-video-preview": -1,
-      "max-snippet": -1,
+      "max-snippet":       -1,
     },
   },
 
-  alternates: {
-    canonical: "/",
-  },
+  /*
+   * canonical weglassen wenn sie identisch zur metadataBase ist –
+   * Next.js setzt sie automatisch pro Route korrekt.
+   * Nur explizit setzen wenn du eine abweichende URL brauchst.
+   */
 
   openGraph: {
-    type: "website",
-    locale: "en_US",
+    type:     "website",
+    locale:   "en_US",
     siteName: "Solana Holder Bot",
-    title: "Solana Holder Bot – The #1 Holder & Volume Bot for Solana Memecoins in 2026",
+    title:    "Solana Holder Bot – The #1 Holder & Volume Bot for Solana Memecoins in 2026",
     description:
       "Permanent holders, genuine volume boosting, and full Telegram automation – the fastest and cheapest way to reach trending on DexScreener, Pump.fun, and Raydium. Start from just 0.1 SOL.",
     images: [
       {
-        url: "/blogthumb/blogthumb2.png",
-        width: 1200,
+        url:    "/blogthumb/blogthumb2.png",
+        width:  1200,
         height: 630,
-        alt: "Solana Holder Bot – Permanent Holders & Genuine Volume Booster for Solana",
+        alt:    "Solana Holder Bot – Permanent Holders & Genuine Volume Booster for Solana",
       },
     ],
   },
 
   twitter: {
-    card: "summary_large_image",
-    site: "@solanaholderbot",
-    creator: "@solanaholderbot",
-    title: "Solana Holder Bot – #1 Solana Holder & Volume Bot 2026",
-    description:
-      "The fastest, cheapest, and most reliable Telegram bots for permanent holders and real volume on Solana.",
-    images: "/blogthumb/blogthumb2.png",
+    card:        "summary_large_image",
+    site:        "@solanaholderbot",
+    creator:     "@solanaholderbot",
+    title:       "Solana Holder Bot – #1 Solana Holder & Volume Bot 2026",
+    description: "The fastest, cheapest, and most reliable Telegram bots for permanent holders and real volume on Solana.",
+    images:      "/blogthumb/blogthumb2.png",
   },
 };
 
+// ─── Viewport ─────────────────────────────────────────────────────────────────
 export const viewport: Viewport = {
-  width: "device-width",
+  width:        "device-width",
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: "#000000",
+  themeColor:   "#000000",
 };
 
+// ─── Layout ───────────────────────────────────────────────────────────────────
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.google-analytics.com"  crossOrigin="anonymous" />
+
+        {/* dns-prefetch als Fallback für Browser ohne preconnect-Support */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+        {/* Favicons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
 
-      <body
-        className="bg-black text-white antialiased"
-        suppressHydrationWarning
-      >
+      <body className="bg-black text-white antialiased">
         {children}
-
-        {/* GtagLoader – bleibt Client Component und lädt sich selbst verzögert */}
         <GtagLoader />
       </body>
     </html>

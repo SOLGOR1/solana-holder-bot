@@ -1,98 +1,81 @@
 "use client";
 
-
-import { FaChartLine, FaShieldAlt, FaRocket, FaCoins, FaUsers, FaBolt, FaRobot, } from 'react-icons/fa';
+import { FaChartLine, FaShieldAlt, FaRocket, FaCoins, FaUsers, FaBolt, FaRobot } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React, { memo, useMemo } from 'react';
 
 const ShineEffect = memo(function ShineEffect() {
-  return <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent animate-shine opacity-70" />;
+  return <div className="shine" />;
 });
 ShineEffect.displayName = "ShineEffect";
 
+const benefits = [
+  {
+    title: "Permanent Holders & Genuine Volume",
+    desc: "Boost your Solana token with lasting holders and 100% on-chain trades that feel organic and drive real momentum.",
+    icon: <FaUsers className="w-10 h-10 text-blue-400" />,
+    color: "blue",
+  },
+  {
+    title: "Undetectable & Secure",
+    desc: "Advanced MEV protection and no private key access ensure your growth is safe, compliant, and impossible to flag.",
+    icon: <FaShieldAlt className="w-10 h-10 text-green-400" />,
+    color: "green",
+  },
+  {
+    title: "Lightning-Fast Setup",
+    desc: "Launch in minutes via Telegram, automated for both holders and volume, perfect for quick moonshots on any DEX.",
+    icon: <FaBolt className="w-10 h-10 text-blue-400" />,
+    color: "blue",
+  },
+  {
+    title: "Dominate Trending Charts",
+    desc: "Explode visibility on DexScreener, Birdeye, and more with bullish pressure from more buys than sells.",
+    icon: <FaChartLine className="w-10 h-10 text-green-400" />,
+    color: "green",
+  },
+  {
+    title: "Fully Automated & Flexible",
+    desc: "Set once and forget: Real-time stats, pause/withdraw anytime, supports SPL/Token2022 across all platforms.",
+    icon: <FaRobot className="w-10 h-10 text-blue-400" />,
+    color: "blue",
+  },
+  {
+    title: "Affordable Scalability",
+    desc: "Start from just 0.1 SOL scale holders and volume effortlessly for projects of any size without hidden fees.",
+    icon: <FaCoins className="w-10 h-10 text-green-400" />,
+    color: "green",
+  },
+];
+
 const Benefits = memo(function Benefits() {
-  const benefits = useMemo(() => [
-    {
-      title: "Permanent Holders & Genuine Volume",
-      desc: "Boost your Solana token with lasting holders and 100% on-chain trades that feel organic and drive real momentum.",
-      icon: <FaUsers className="w-10 h-10 text-blue-400" />,
-      color: "blue",
-    },
-    {
-      title: "Undetectable & Secure",
-      desc: "Advanced MEV protection and no private key access ensure your growth is safe, compliant, and impossible to flag.",
-      icon: <FaShieldAlt className="w-10 h-10 text-green-400" />,
-      color: "green",
-    },
-    {
-      title: "Lightning-Fast Setup",
-      desc: "Launch in minutes via Telegram, automated for both holders and volume, perfect for quick moonshots on any DEX.",
-      icon: <FaBolt className="w-10 h-10 text-blue-400" />,
-      color: "blue",
-    },
-    {
-      title: "Dominate Trending Charts",
-      desc: "Explode visibility on DexScreener, Birdeye, and more with bullish pressure from more buys than sells.",
-      icon: <FaChartLine className="w-10 h-10 text-green-400" />,
-      color: "green",
-    },
-    {
-      title: "Fully Automated & Flexible",
-      desc: "Set once and forget: Real-time stats, pause/withdraw anytime, supports SPL/Token2022 across all platforms.",
-      icon: <FaRobot className="w-10 h-10 text-blue-400" />,
-      color: "blue",
-    },
-    {
-      title: "Affordable Scalability",
-      desc: "Start from just 0.1 SOL scale holders and volume effortlessly for projects of any size without hidden fees.",
-      icon: <FaCoins className="w-10 h-10 text-green-400" />,
-      color: "green",
-    },
-  ], []);
 
   return (
     <section className="relative bg-black py-5 overflow-hidden">
-      {/* Super dezenter Hintergrund – sanft pulsierende zentrale Blobs */}
+
+      {/* Hintergrund-Blobs – nutzen jetzt .gentle-pulse aus globals.css */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-cyan-600/5 rounded-full blur-4xl opacity-60"
-          style={{ 
-            animation: 'gentlePulse 48s ease-in-out infinite' 
-          }}
-        />
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-emerald-600/5 rounded-full blur-4xl opacity-50"
-          style={{ 
-            animation: 'gentlePulse 54s ease-in-out infinite reverse' 
-          }}
-        />
+        <div className="gentle-pulse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-cyan-600/5 rounded-full blur-4xl opacity-60" />
+        <div className="gentle-pulse-reverse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-emerald-600/5 rounded-full blur-4xl opacity-50" />
       </div>
 
-      <style jsx>{`
-        @keyframes gentlePulse {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.04); }
-        }
-        @keyframes shine {
-          to {
-            background-position: 200% center;
-          }
-        }
-      `}</style>
-
       <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
-        {/* Intro Block – keyword-optimiert, natürlich */}
+
+        {/* Intro */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
           <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed mb-6">
-            In the hyper-competitive Solana ecosystem, real <span className="text-green-400 font-semibold">on-chain trading volume</span> and <span className="text-blue-400 font-semibold">permanent holders</span> are the ultimate game-changers.
+            In the hyper-competitive Solana ecosystem, real{" "}
+            <span className="text-green-400 font-semibold">on-chain trading volume</span> and{" "}
+            <span className="text-blue-400 font-semibold">permanent holders</span> are the ultimate game-changers.
           </p>
           <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed">
-            Whether launching on Pump.fun, Raydium, Meteora, or Orca, our bots deliver explosive growth to top DexScreener and Birdeye charts. No more getting buried, dominate with authentic, lasting activity.
+            Whether launching on Pump.fun, Raydium, Meteora, or Orca, our bots deliver explosive growth to top
+            DexScreener and Birdeye charts. No more getting buried, dominate with authentic, lasting activity.
           </p>
         </div>
 
-        {/* Benefits Grid – 6 cards, alternierend blau/grün für Holder/Volume */}
+        {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
             <motion.div
@@ -113,17 +96,19 @@ const Benefits = memo(function Benefits() {
           ))}
         </div>
 
-        {/* Abschluss CTA Block – zwei Buttons */}
+        {/* CTA */}
         <div className="max-w-4xl mx-auto mt-20 text-center space-y-8">
           <p className="text-2xl lg:text-3xl text-gray-100 leading-relaxed font-light">
-            Stop watching your token sit flat. Unlock explosive <span className="text-green-400 font-semibold">volume boost</span> and <span className="text-blue-400 font-semibold">holder growth</span> today.
+            Stop watching your token sit flat. Unlock explosive{" "}
+            <span className="text-green-400 font-semibold">volume boost</span> and{" "}
+            <span className="text-blue-400 font-semibold">holder growth</span> today.
           </p>
           <p className="text-2xl lg:text-3xl text-gray-100 leading-relaxed font-bold">
             HOLDERS + MASSIVE VOLUME = UNSTOPPABLE MOMENTUM.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            {/* Holder Bot Button */}
+
             <Link href="https://t.me/Degen_wg_bot">
               <motion.button
                 className="group relative w-full sm:w-auto px-10 py-5 bg-white/10 backdrop-blur-md text-white font-medium rounded-2xl border border-white/20 shadow-lg overflow-hidden transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:shadow-xl hover:ring-4 hover:ring-blue-400/20"
@@ -133,13 +118,13 @@ const Benefits = memo(function Benefits() {
                   <FaRocket className="w-5 h-5" />
                   Launch Holder Bot
                 </span>
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100">
+                {/* ShineEffect nur bei hover rendern – opacity-0 war unnötiges DOM */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <ShineEffect />
                 </div>
               </motion.button>
             </Link>
 
-            {/* Volume Bot Button */}
             <Link href="https://t.me/leektradingbot">
               <motion.button
                 className="group relative w-full sm:w-auto px-10 py-5 bg-white/10 backdrop-blur-md text-white font-medium rounded-2xl border border-white/20 shadow-lg overflow-hidden transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:shadow-xl hover:ring-4 hover:ring-green-400/20"
@@ -149,26 +134,15 @@ const Benefits = memo(function Benefits() {
                   <FaChartLine className="w-5 h-5" />
                   Launch Volume Bot
                 </span>
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <ShineEffect />
                 </div>
               </motion.button>
             </Link>
+
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes gentlePulse {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.04); }
-        }
-        @keyframes shine {
-          to {
-            background-position: 200% center;
-          }
-        }
-      `}</style>
     </section>
   );
 });
