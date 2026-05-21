@@ -1,0 +1,18 @@
+# ai.txt for solanaholderbot.com
+# Specification: https://site.ai.txt/
+
+User-agent: *
+Allow: /
+Disallow: /blog/rss.xml
+
+# AI Training
+Training: no
+
+# AI Search / Retrieval (z.B. Perplexity, ChatGPT Search)
+Retrieval: yes
+
+# AI-generierte Antworten basierend auf Inhalten
+Attribution: required
+
+# Kontakt
+Contact: mailto:leek.sol@gmx.de
