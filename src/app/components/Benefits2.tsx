@@ -3,7 +3,7 @@
 import { FaChartLine, FaShieldAlt, FaRocket, FaCoins, FaUsers, FaBolt, FaRobot } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import React, { memo, useMemo } from 'react';
+import React, { memo } from 'react';
 
 const ShineEffect = memo(function ShineEffect() {
   return <div className="shine" />;
@@ -48,6 +48,7 @@ const benefits = [
     color: "green",
   },
 ];
+
 
 const Benefits = memo(function Benefits() {
 

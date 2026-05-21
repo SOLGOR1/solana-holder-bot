@@ -6,7 +6,6 @@ import GtagLoader from './components/GtagLoader';
 
 // ─── Konstanten ───────────────────────────────────────────────────────────────
 const BASE_URL = 'https://solanaholderbot.com';
-const GA_ID    = 'G-8FMSTEXF0Z';
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -42,12 +41,6 @@ export const metadata: Metadata = {
       "max-snippet":       -1,
     },
   },
-
-  /*
-   * canonical weglassen wenn sie identisch zur metadataBase ist –
-   * Next.js setzt sie automatisch pro Route korrekt.
-   * Nur explizit setzen wenn du eine abweichende URL brauchst.
-   */
 
   openGraph: {
     type:     "website",
@@ -90,6 +83,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Performance-Optimierungen für Google Analytics */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com"  crossOrigin="anonymous" />
 
