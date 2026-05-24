@@ -431,7 +431,7 @@ export default function BlogOverview() {
 }
 
 export const metadata = {
-  title: "Solana Holder & Volume Bot Blog 2026 – Strategies, Guides & Insights",
+  title: "Bot Blog - Strategies, Guides & Insights",
   description: "Expert guides for Solana holder bot and volume bot. Learn to dominate Pump.fun, Bonk.fun and Meteora with proven tactics from 2,500+ successful launches.",
   keywords: "solana holder bot, solana volume bot, sol volume bot, pumpfun volume bot, dexscreener boost, permanent holders bot, solana memecoin marketing, meteora volume bot, raydium trending bot",
   robots: "index, follow",
