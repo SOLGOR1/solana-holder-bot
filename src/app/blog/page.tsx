@@ -137,16 +137,16 @@ export default function BlogOverview() {
             {/* What this blog covers */}
             <section>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                What You'll Learn in This Blog
-              </h2>
+                  What You&apos;ll Learn in This Blog
+                </h2>
               <p className="text-lg leading-relaxed">
-                The Solana ecosystem in 2026 moves faster than any other blockchain. New tokens launch by the thousands every day on Pump.fun, PumpSwap, Bonk.fun, and Bags.fm. The gap between a token that trends and one that gets buried isn't talent, art, or even community size — it's momentum. Real, on-chain momentum that aggregators and rankings algorithms reward.
+                The Solana ecosystem in 2026 moves faster than any other blockchain. New tokens launch by the thousands every day on Pump.fun, PumpSwap, Bonk.fun, and Bags.fm. The gap between a token that trends and one that gets buried isn&apos;t talent, art, or even community size — it&apos;s momentum. Real, on-chain momentum that aggregators and rankings algorithms reward.
               </p>
               <p className="text-lg leading-relaxed mt-4">
                 This blog exists for the builders, the degens, and the project teams who want to understand exactly how that momentum is created and sustained. Every article is written by people who live inside Solana launch culture — not marketers, not academics.
               </p>
               <p className="text-lg leading-relaxed mt-4">
-                You'll find deep-dives into how DexScreener's trending algorithm actually works, why Pump.fun bonding curves stall and how to push through them, the difference between fake wash volume and genuine buy-heavy activity, how to combine <a href="https://solanaholderbot.com/solana-holder-bot" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">permanent Solana holders</a> with <a href="https://solanaholderbot.com/solana-volume-bot" className="text-emerald-400 hover:text-emerald-300 underline font-semibold">volume generation</a> for maximum impact, and much more.
+                You&apos;ll find deep-dives into how DexScreener&apos;s trending algorithm actually works, why Pump.fun bonding curves stall and how to push through them, the difference between fake wash volume and genuine buy-heavy activity, how to combine <a href="https://solanaholderbot.com/solana-holder-bot" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">permanent Solana holders</a> with <a href="https://solanaholderbot.com/solana-volume-bot" className="text-emerald-400 hover:text-emerald-300 underline font-semibold">volume generation</a> for maximum impact, and much more.
               </p>
             </section>
 
@@ -156,13 +156,13 @@ export default function BlogOverview() {
                 Why Volume Is the Single Most Important Metric for Solana Tokens in 2026
               </h2>
               <p className="text-lg leading-relaxed">
-                Every major discovery platform in the Solana ecosystem — DexScreener, Birdeye, Defined.fi, GeckoTerminal, and DEX-native trending feeds — ranks tokens primarily by trading volume. Volume signals liquidity. Volume signals interest. Volume triggers FOMO in new buyers who see a chart moving and don't want to miss out.
+                Every major discovery platform in the Solana ecosystem — DexScreener, Birdeye, Defined.fi, GeckoTerminal, and DEX-native trending feeds — ranks tokens primarily by trading volume. Volume signals liquidity. Volume signals interest. Volume triggers FOMO in new buyers who see a chart moving and don&apos;t want to miss out.
               </p>
               <p className="text-lg leading-relaxed mt-4">
-                But volume alone isn't enough anymore. The algorithms in 2026 have gotten smarter. They track buy/sell ratios, wallet diversity, transaction frequency patterns, and holder distribution. A token with robotic wash-trading patterns gets suppressed or shadowbanned from trending feeds. A token with buy-heavy, naturally spaced, wallet-diverse activity gets elevated — and stays elevated.
+                But volume alone isn&apos;t enough anymore. The algorithms in 2026 have gotten smarter. They track buy/sell ratios, wallet diversity, transaction frequency patterns, and holder distribution. A token with robotic wash-trading patterns gets suppressed or shadowbanned from trending feeds. A token with buy-heavy, naturally spaced, wallet-diverse activity gets elevated — and stays elevated.
               </p>
               <p className="text-lg leading-relaxed mt-4">
-                That's why the articles on this blog don't just talk about generating volume — they talk about generating the right kind of volume. Trades that look exactly like a community going full degen, because that's what every algorithm rewards and every human trader trusts.
+                That&apos;s why the articles on this blog don&apos;t just talk about generating volume — they talk about generating the right kind of volume. Trades that look exactly like a community going full degen, because that&apos;s what every algorithm rewards and every human trader trusts.
               </p>
               <p className="text-lg leading-relaxed mt-4">
                 The <a href="https://solanaholderbot.com/solana-volume-bot" className="text-emerald-400 hover:text-emerald-300 underline font-semibold">Solana Volume Bot</a> covered in this blog routes through Jupiter, DFLOW, OKX, and every major aggregator in real time to ensure the best fills and the most authentic-looking activity patterns. Combined with the <a href="https://solanaholderbot.com/solana-holder-bot" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">Solana Holder Bot</a> for permanent, rent-exempt holder distribution, it creates the dual signal that every ranking algorithm prioritizes in 2026.
@@ -178,10 +178,10 @@ export default function BlogOverview() {
                 When a new trader discovers your token on Jupiter or DexScreener, the holder count is one of the first things they check. A token with 12 holders at a $200k market cap is sending distress signals. A token with 800 holders at the same cap tells a completely different story — this one has community, this one has distribution, this one is real.
               </p>
               <p className="text-lg leading-relaxed mt-4">
-                But beyond the psychological signal, holder count has a direct technical impact on how platforms treat your token. Jupiter's strict token verification process considers holder count. Raydium's trending pools factor in wallet diversity. DexScreener's "Hot" and "Gainers" filters weight holder distribution as part of their scoring model.
+                  But beyond the psychological signal, holder count has a direct technical impact on how platforms treat your token. Jupiter&apos;s strict token verification process considers holder count. Raydium&apos;s trending pools factor in wallet diversity. DexScreener&apos;s &quot;Hot&quot; and &quot;Gainers&quot; filters weight holder distribution as part of their scoring model.
               </p>
               <p className="text-lg leading-relaxed mt-4">
-                The key word is <strong className="text-white">permanent</strong>. Most holder bots create temporary wallets that dump within days. Permanent rent-exempt holders created by the <a href="https://solanaholderbot.com/solana-holder-bot" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">Solana Holder Bot</a> stay forever, maintaining the credibility signal even when market conditions are quiet. That's the difference between a one-time pump and a sustained, rankable presence.
+                The key word is <strong className="text-white">permanent</strong>. Most holder bots create temporary wallets that dump within days. Permanent rent-exempt holders created by the <a href="https://solanaholderbot.com/solana-holder-bot" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">Solana Holder Bot</a> stay forever, maintaining the credibility signal even when market conditions are quiet. That&apos;s the difference between a one-time pump and a sustained, rankable presence.
               </p>
               <p className="text-lg leading-relaxed mt-4">
                 Our blog covers the full strategy: when to add holders, how many to target at each stage of a launch, how to time holder additions alongside volume pushes for maximum algorithmic impact, and how different platforms weight this metric differently.
@@ -207,7 +207,7 @@ export default function BlogOverview() {
                   <strong className="text-white">Meteora DLMM:</strong> How concentrated liquidity bins require different volume sizing to avoid slippage, why fee generation is a core ranking metric on Meteora, and how to combine volume with the right bin width for maximum impact.
                 </li>
                 <li>
-                  <strong className="text-white">DexScreener Trending:</strong> The exact filters and thresholds for the Trending, Hot, and Gainers sections, how the 1h/6h/24h volume windows are weighted, and why buy-heavy ratios matter more than raw volume numbers.
+                  <strong className="text-white">DexScreener Trending:</strong> The exact filters and thresholds for the Trending, &quot;Hot&quot;, and &quot;Gainers&quot; sections, how the 1h/6h/24h volume windows are weighted, and why buy-heavy ratios matter more than raw volume numbers.
                 </li>
                 <li>
                   <strong className="text-white">Birdeye & GeckoTerminal:</strong> Discovery platform-specific signals and how to appear on their trending feeds during launch windows.
@@ -227,10 +227,10 @@ export default function BlogOverview() {
                 Whether you're a solo degen who just launched a memecoin and needs to understand how to get it moving, a small team preparing a more serious Solana project launch, or a community manager trying to understand why your chart stalled and how to fix it — this blog is written for you.
               </p>
               <p className="text-lg leading-relaxed mt-4">
-                We don't sugarcoat the realities of Solana launch culture in 2026. The market is brutal, launches fail every day, and attention spans are measured in minutes. But we do believe that the right tools, deployed with the right strategy at the right time, can give any legitimate project the fighting chance it deserves.
+                We don&apos;t sugarcoat the realities of Solana launch culture in 2026. The market is brutal, launches fail every day, and attention spans are measured in minutes. But we do believe that the right tools, deployed with the right strategy at the right time, can give any legitimate project the fighting chance it deserves.
               </p>
               <p className="text-lg leading-relaxed mt-4">
-                Every guide on this blog is actionable. You'll find step-by-step strategies, real numbers, real timing windows, and direct links to the tools we cover. No theoretical fluff. Just what works, tested across thousands of launches.
+                Every guide on this blog is actionable. You&apos;ll find step-by-step strategies, real numbers, real timing windows, and direct links to the tools we cover. No theoretical fluff. Just what works, tested across thousands of launches.
               </p>
             </section>
 
