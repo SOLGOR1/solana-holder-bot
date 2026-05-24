@@ -172,7 +172,7 @@ export default function BlogOverview() {
             {/* Understanding holders */}
             <section>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Understanding the Holder Count Signal — And Why It's More Than Just a Number
+                Understanding the Holder Count Signal â€” And Why It&apos;s More Than Just a Number
               </h2>
               <p className="text-lg leading-relaxed">
                 When a new trader discovers your token on Jupiter or DexScreener, the holder count is one of the first things they check. A token with 12 holders at a $200k market cap is sending distress signals. A token with 800 holders at the same cap tells a completely different story — this one has community, this one has distribution, this one is real.
@@ -201,7 +201,7 @@ export default function BlogOverview() {
                   <strong className="text-white">Pump.fun & PumpSwap:</strong> How the bonding curve algorithm works, why tokens stall at 40-60%, and the exact volume cadence needed to push through to migration. We also cover the PumpSwap migration mechanics introduced in 2025 and how to maintain momentum post-migration.
                 </li>
                 <li>
-                  <strong className="text-white">Raydium:</strong> Concentrated Liquidity Pool (CLMM) ranking signals, the difference between volume in standard AMM pools vs CLMM, and how buy pressure affects the Raydium "Hot Pairs" algorithm.
+                  <strong className="text-white">Raydium:</strong> Concentrated Liquidity Pool (CLMM) ranking signals, the difference between volume in standard AMM pools vs CLMM, and how buy pressure affects the Raydium &quot;Hot Pairs&quot; algorithm.
                 </li>
                 <li>
                   <strong className="text-white">Meteora DLMM:</strong> How concentrated liquidity bins require different volume sizing to avoid slippage, why fee generation is a core ranking metric on Meteora, and how to combine volume with the right bin width for maximum impact.
@@ -224,7 +224,7 @@ export default function BlogOverview() {
                 Who This Blog Is For
               </h2>
               <p className="text-lg leading-relaxed">
-                Whether you're a solo degen who just launched a memecoin and needs to understand how to get it moving, a small team preparing a more serious Solana project launch, or a community manager trying to understand why your chart stalled and how to fix it — this blog is written for you.
+                Whether you&apos;re a solo degen who just launched a memecoin and needs to understand how to get it moving, a small team preparing a more serious Solana project launch, or a community manager trying to understand why your chart stalled and how to fix it â€” this blog is written for you.
               </p>
               <p className="text-lg leading-relaxed mt-4">
                 We don&apos;t sugarcoat the realities of Solana launch culture in 2026. The market is brutal, launches fail every day, and attention spans are measured in minutes. But we do believe that the right tools, deployed with the right strategy at the right time, can give any legitimate project the fighting chance it deserves.
@@ -240,7 +240,7 @@ export default function BlogOverview() {
                 Quick Reference: Which Tool Does What
               </h2>
               <p className="text-lg leading-relaxed mb-6">
-                New to the SolanaHolderBot ecosystem? Here's a fast breakdown of the three core tools covered in this blog and what each one does:
+                New to the SolanaHolderBot ecosystem? Here&apos;s a fast breakdown of the three core tools covered in this blog and what each one does:
               </p>
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse text-base">
