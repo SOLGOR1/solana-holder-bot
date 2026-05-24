@@ -10,7 +10,7 @@ slug: "solanavolumebot"
 <div className="space-y-12 max-w-5xl mx-auto">
 
   <section className="bg-gray-900/50 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-gray-800 shadow-2xl">
-    <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-500">
+    <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 bg-clip-text text-transparent bg-linear-to-r from-green-400 to-green-500">
       Solana Volume Bot: Your Key to Dominating Trending Charts in 2026
     </h2>
     <p className="text-xl text-gray-100 leading-relaxed text-center mb-8">
@@ -141,7 +141,7 @@ slug: "solanavolumebot"
     </div>
   </section>
 
-  <section className="bg-gradient-to-r from-green-900 to-blue-900 rounded-3xl p-8 md:p-12 text-center">
+  <section className="bg-linear-to-r from-green-900 to-blue-900 rounded-3xl p-8 md:p-12 text-center">
     <h2 className="text-4xl font-bold mb-6">Ready to Explode Your Volume?</h2>
     <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
       Join hundreds of successful projects using the most trusted Solana volume bot. Start from just 0.1 SOL and watch your token dominate trending charts.

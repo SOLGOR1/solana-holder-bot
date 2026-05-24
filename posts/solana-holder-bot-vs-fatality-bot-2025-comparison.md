@@ -69,7 +69,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
 }
 </script>
 
-<div class="hero-banner bg-gradient-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mb-12 shadow-2xl">
+<div class="hero-banner bg-linear-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mb-12 shadow-2xl">
   <h2 class="text-5xl font-extrabold mb-4 tracking-tight leading-tight">🚀 Solana Holder Bot vs Fatality Bot: The 2025 Crypto Showdown</h2>
   <p class="text-xl mb-8 leading-relaxed max-w-3xl mx-auto">Dreaming of topping <strong>DexScreener</strong> with <strong>permanent holders</strong> and <strong>200x volume</strong>? Discover which <strong>Telegram/DeFi bot</strong> is your ticket to crypto stardom. Let’s dive in!</p>
   <a href="https://t.me/Degen_wg_bot" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Launch with Solana Holder Bot</a>
@@ -786,7 +786,7 @@ slug: "solana-holder-bot-vs-fatality-bot-2025-showdown"
   <p class="text-lg leading-relaxed mb-4"><strong>Fatality Bot</strong>? It’s a risky, short-term hustle with <span class="text-red-400">temporary holders</span> and <span class="text-red-400">security nightmares</span>. Don’t settle—choose the champ.</p>
 </div>
 
-<div class="final-cta bg-gradient-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mt-12 shadow-2xl">
+<div class="final-cta bg-linear-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mt-12 shadow-2xl">
   <h2 class="text-3xl font-extrabold mb-4 tracking-tight">Ready to Rule 2025?</h2>
   <p class="text-lg mb-8 max-w-2xl mx-auto">Skip the hype and build a crypto empire with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a>. Your project deserves the best—start today!</p>
   <div class="flex justify-center space-x-4">

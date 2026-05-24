@@ -69,7 +69,7 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
 }
 </script>
 
-<div class="hero-banner bg-gradient-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mb-12 shadow-2xl">
+<div class="hero-banner bg-linear-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mb-12 shadow-2xl">
   <h2 class="text-5xl font-extrabold mb-4 tracking-tight leading-tight">🚀 Launch a Solana Memecoin with Pump.fun & Dominate with Bots</h2>
   <p class="text-xl mb-8 leading-relaxed max-w-3xl mx-auto">Want your memecoin to <strong>trend on DexScreener</strong> with <strong>permanent holders</strong> and <strong>massive volume</strong>? Discover how <strong>Pump.fun</strong>, <strong>Solana Holder Bot</strong>, and <strong>Solana Volume Bot</strong> can make you a crypto legend in 2025!</p>
   <a href="https://t.me/Degen_wg_bot" class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Start with Solana Holder Bot</a>
@@ -351,7 +351,7 @@ slug: "launch-solana-memecoin-pumpfun-holder-volume-bot-2025"
   <p class="text-lg leading-relaxed mb-4">Beware legal pitfalls, but with caution, you can dominate. Don’t wait—launch your memecoin today!</p>
 </div>
 
-<div class="final-cta bg-gradient-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mt-12 shadow-2xl">
+<div class="final-cta bg-linear-to-r from-indigo-900 to-blue-800 text-white p-12 rounded-2xl text-center mt-12 shadow-2xl">
   <h2 class="text-3xl font-extrabold mb-4 tracking-tight">Ready to Rule the Solana Memecoin Market?</h2>
   <p class="text-lg mb-8 max-w-2xl mx-auto">Launch with <a href="https://pump.fun" class="text-blue-400 hover:underline">Pump.fun</a> and scale with <a href="https://t.me/Degen_wg_bot" class="text-blue-400 hover:underline">Solana Holder Bot</a> and <a href="https://t.me/leektradingbot" class="text-blue-400 hover:underline">Solana Volume Bot</a>. Your crypto empire starts now!</p>
   <div class="flex justify-center space-x-4">

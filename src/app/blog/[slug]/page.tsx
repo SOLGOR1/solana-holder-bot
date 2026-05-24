@@ -95,7 +95,7 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <div className="flex flex-col min-h-screen pt-16 bg-black overflow-hidden">
       <Navbar />
-      <main className="flex-grow py-5 relative z-10">
+      <main className="grow py-5 relative z-10">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <BlogPostContent post={post} prevSlug={prevSlug} nextSlug={nextSlug} />
         </div>

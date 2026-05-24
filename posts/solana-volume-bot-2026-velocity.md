@@ -1,5 +1,5 @@
 ---
-title: "Solana Volume Bot 2026 Real Velocity Strategy"
+title: "Solana Volume Bot 2026 Velocity Strategy"
 excerpt: "The complete guide to authentic on-chain velocity that let your token rank on DexScreener, Birdeye & Pump.fun."
 image: "/blogthumb/solana-volume-bot-velocity-2026.jpg"
 imageAlt: "Solana Volume Bot 2026 – Real velocity spikes on DexScreener trending with natural randomized buy-heavy patterns"
