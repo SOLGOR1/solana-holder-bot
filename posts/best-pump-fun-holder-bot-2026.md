@@ -149,7 +149,7 @@ SolanaHolderBot isn't one bot — it's a full suite of specialized tools, each o
     <p className="text-gray-100 mb-3">Creates real, distributed permanent holders for your token. Generates unique on-chain Solana wallets that hold your token forever, building genuine distribution metrics on DexScreener, Birdeye, and Bubblemaps.</p>
     <p className="text-gray-100 mb-1"><strong className="text-cyan-400">Pricing:</strong> 0.1 SOL (10 holders) – 1.5 SOL (500 holders)</p>
     <p className="text-gray-100 mb-3"><strong className="text-cyan-400">Requires:</strong> SOL for fees + enough tokens for distribution (10+ per wallet)</p>
-    <p className="text-gray-100 mb-3"><strong className="text-cyan-400">Video Guide:</strong> <a href="https://youtu.be/7jdOvbVwZeI" className="text-cyan-400 hover:text-cyan-300 underline" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+    <p className="text-gray-100 mb-3"><strong className="text-cyan-400">Video Guide:</strong> <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" className="text-cyan-400 hover:text-cyan-300 underline" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
     <a href="https://t.me/Degen_wg_bot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold underline">→ Launch Solana Holder Bot on Telegram</a>
   </div>
 
@@ -165,7 +165,7 @@ SolanaHolderBot isn't one bot — it's a full suite of specialized tools, each o
     <h3 className="text-xl font-bold text-white mb-2">3. Volume Bot – Single Wallet — Best for Beginners</h3>
     <p className="text-gray-100 mb-3">Delivers the highest volume per SOL spent. Simple and efficient — operates from a single wallet for clean, fast volume generation. Perfect entry-level option for first-time launchers testing the system. See the full <a href="https://solanaholderbot.com/solana-volume-bot" className="text-purple-400 hover:text-purple-300 underline">Solana Volume Bot page</a>.</p>
     <p className="text-gray-100 mb-1"><strong className="text-purple-400">Pricing:</strong> 0.1 SOL – 1,000 SOL</p>
-    <p className="text-gray-100 mb-3"><strong className="text-purple-400">Video Guide:</strong> <a href="https://youtu.be/Py6Nbn5-840" className="text-purple-400 hover:text-purple-300 underline" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+    <p className="text-gray-100 mb-3"><strong className="text-purple-400">Video Guide:</strong> <a href="https://www.youtube.com/watch?v=Py6Nbn5-840" className="text-purple-400 hover:text-purple-300 underline" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
     <a href="https://t.me/leektradingbot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold underline">→ Launch Volume Bot (Single Wallet) on Telegram</a>
   </div>
 

@@ -134,7 +134,7 @@ SolanaHolderBot isn't a single tool — it's a full suite of official volume and
       Creates real, permanent rent-exempt Solana wallets that hold your token forever. Complements the volume bots by building the holder distribution that DexScreener filter bypass and Birdeye's holder growth rate algorithm require. See the dedicated <a href="https://solanaholderbot.com/solana-holder-bot" className="text-yellow-400 hover:text-yellow-300 underline">Holder Bot page</a> and our full guide on the <a href="/blog/best-pump-fun-holder-bot-2026" className="text-yellow-400 hover:text-yellow-300 underline">Best Pump.fun Holder Bot 2026</a>.
     </p>
     <p className="text-gray-100 mb-1 text-sm"><strong className="text-yellow-400">Pricing:</strong> 0.1 SOL (10 holders) – 1.5 SOL (500 holders)</p>
-    <p className="text-gray-100 mb-3 text-sm"><strong className="text-yellow-400">Video Guide:</strong> <a href="https://youtu.be/7jdOvbVwZeI" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 underline">Watch on YouTube</a></p>
+    <p className="text-gray-100 mb-3 text-sm"><strong className="text-yellow-400">Video Guide:</strong> <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 underline">Watch on YouTube</a></p>
     <a href="https://t.me/Degen_wg_bot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 font-semibold underline">→ Launch Holder Bot on Telegram</a>
   </div>
 

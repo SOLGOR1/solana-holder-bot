@@ -1,6 +1,6 @@
 ---
 title: "Best Solana Trending Bot 2026"
-excerpt: "Best Solana trending bot 2026: massive authentic volume + permanent holders to get your memecoin trending on DexScreener, Birdeye and Pump.fun. Full guide with strategy, pricing & results."
+excerpt: "Best Solana trending bot 2026: massive authentic volume + permanent holders to get your memecoin trending on DexScreener, Birdeye and Pump.fun."
 image: "/blogthumb/bestsolanatrendingbot2026.png"
 imageAlt: "Best Solana trending Telegram bot for DexScreener, Birdeye and Pump.fun trending lists in 2026"
 date: "2026-02-09"
@@ -158,7 +158,7 @@ Key technical details:
   <li>Never requires your private key or seed phrase</li>
 </ul>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-The video walkthrough covers the complete process: <a href="https://youtu.be/7jdOvbVwZeI" className="text-green-400 hover:text-green-300 underline">Solana Holder Bot Video Guide</a>.
+The video walkthrough covers the complete process: <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" className="text-green-400 hover:text-green-300 underline">Solana Holder Bot Video Guide</a>.
 </p>
 </div>
 
@@ -183,7 +183,7 @@ Beyond routing efficiency, the Volume Bot features:
   <li><strong>Seamless migration continuity:</strong> Works across Pump.fun → Raydium, PumpSwap → Raydium, and all other platform migrations without reconfiguration</li>
 </ul>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-Watch the Volume Bot in action: <a href="https://youtu.be/Py6Nbn5-840" className="text-green-400 hover:text-green-300 underline">Volume Bot Video Guide</a>.
+Watch the Volume Bot in action: <a href="https://www.youtube.com/watch?v=Py6Nbn5-840" className="text-green-400 hover:text-green-300 underline">Volume Bot Video Guide</a>.
 </p>
 </div>
 
@@ -292,7 +292,7 @@ Everything runs in Telegram — no dashboards, no delays, no technical setup req
   <li>Confirm — the bot creates real wallets and distributes tokens permanently.</li>
 </ol>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-The holder distribution is permanent. Once complete, those wallets hold your tokens indefinitely. Watch the video guide: <a href="https://youtu.be/7jdOvbVwZeI" className="text-green-400 hover:text-green-300 underline">Holder Bot Video Guide</a>.
+The holder distribution is permanent. Once complete, those wallets hold your tokens indefinitely. Watch the video guide: <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" className="text-green-400 hover:text-green-300 underline">Holder Bot Video Guide</a>.
 </p>
 
 <h3 className="text-2xl font-bold text-white mt-8 mb-4">Step 2: Launch the Solana Volume Bot</h3>
@@ -305,7 +305,7 @@ The holder distribution is permanent. Once complete, those wallets hold your tok
   <li>Pause, adjust speed, or withdraw unused SOL at any time.</li>
 </ol>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-Watch the Video Guide: <a href="https://youtu.be/Py6Nbn5-840" className="text-green-400 hover:text-green-300 underline">Volume Bot Video Guide</a>.
+Watch the Video Guide: <a href="https://www.youtube.com/watch?v=Py6Nbn5-840" className="text-green-400 hover:text-green-300 underline">Volume Bot Video Guide</a>.
 </p>
 
 <h3 className="text-2xl font-bold text-white mt-8 mb-4">Alternative: Launch the All-in-One Booster Instead</h3>
