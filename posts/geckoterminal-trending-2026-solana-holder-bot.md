@@ -183,7 +183,7 @@ The entire process runs inside Telegram. No wallet connections, no dashboards, n
   <li>Monitor progress — GeckoTerminal's token page updates as the new wallets register on-chain.</li>
 </ol>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-Video walkthrough available: <a href="https://youtu.be/7jdOvbVwZeI" className="text-cyan-400 hover:text-cyan-300 underline">Holder Bot Setup Guide</a>.
+Video walkthrough available: <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" className="text-cyan-400 hover:text-cyan-300 underline">Holder Bot Setup Guide</a>.
 </p>
 
 <h3 className="text-2xl font-bold text-white mt-8 mb-4">For the Solana Volume Bot (GeckoTerminal Pool Activity)</h3>
@@ -196,7 +196,7 @@ Video walkthrough available: <a href="https://youtu.be/7jdOvbVwZeI" className="t
   <li>Watch your GeckoTerminal pool listing climb the volume rankings.</li>
 </ol>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-Video walkthrough available: <a href="https://youtu.be/Py6Nbn5-840" className="text-cyan-400 hover:text-cyan-300 underline">Volume Bot Setup Guide</a>. For maximum GeckoTerminal impact, run both bots simultaneously or use the <a href="https://t.me/sol_volume_holder_bot" className="text-cyan-400 hover:text-cyan-300 underline">All-in-One Booster</a>.
+Video walkthrough available: <a href="https://www.youtube.com/watch?v=Py6Nbn5-840" className="text-cyan-400 hover:text-cyan-300 underline">Volume Bot Setup Guide</a>. For maximum GeckoTerminal impact, run both bots simultaneously or use the <a href="https://t.me/sol_volume_holder_bot" className="text-cyan-400 hover:text-cyan-300 underline">All-in-One Booster</a>.
 </p>
 </div>
 

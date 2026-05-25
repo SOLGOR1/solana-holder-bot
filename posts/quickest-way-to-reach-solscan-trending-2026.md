@@ -1,5 +1,5 @@
 ---
-title: "Quickest Way to Reach Solscan Trending in 2026"
+title: "Quickest Way to Solscan Trending in 2026"
 excerpt: "Fastest way to reach Solscan trending 2026: SolanaHolderBot combines permanent rent-exempt holders and authentic on-chain volume for Solscan ranking impact."
 image: "/blogthumb/solscan-2026.png"
 imageAlt: "SolanaHolderBot Telegram dashboard showing real-time holder additions and volume surges impacting Solscan trending metrics"
@@ -179,7 +179,7 @@ The entire process runs inside Telegram. No external accounts, no wallet connect
   <li>Monitor progress on Solscan — the new wallet distributions appear on-chain within minutes and update your token's holder count on Solscan's token page.</li>
 </ol>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-Full video walkthrough: <a href="https://youtu.be/7jdOvbVwZeI" className="text-cyan-400 hover:text-cyan-300 underline">Holder Bot Setup Guide</a>.
+Full video walkthrough: <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" className="text-cyan-400 hover:text-cyan-300 underline">Holder Bot Setup Guide</a>.
 </p>
 
 <h3 className="text-2xl font-bold text-white mt-8 mb-4">Solana Volume Bot (Solscan Transaction Activity)</h3>
@@ -192,7 +192,7 @@ Full video walkthrough: <a href="https://youtu.be/7jdOvbVwZeI" className="text-c
   <li>Pause, adjust speed, or withdraw unused SOL anytime via Telegram commands.</li>
 </ol>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-Full video walkthrough: <a href="https://youtu.be/Py6Nbn5-840" className="text-cyan-400 hover:text-cyan-300 underline">Volume Bot Setup Guide</a>. For maximum Solscan trending impact, run both bots simultaneously or use the <a href="https://t.me/sol_volume_holder_bot" className="text-cyan-400 hover:text-cyan-300 underline">All-in-One Booster</a>.
+Full video walkthrough: <a href="https://www.youtube.com/watch?v=Py6Nbn5-840" className="text-cyan-400 hover:text-cyan-300 underline">Volume Bot Setup Guide</a>. For maximum Solscan trending impact, run both bots simultaneously or use the <a href="https://t.me/sol_volume_holder_bot" className="text-cyan-400 hover:text-cyan-300 underline">All-in-One Booster</a>.
 </p>
 </div>
 

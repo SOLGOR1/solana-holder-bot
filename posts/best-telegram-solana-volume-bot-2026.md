@@ -106,7 +106,7 @@ SolanaHolderBot operates four official Telegram bots — each purpose-built for 
     <h3 className="text-xl font-bold text-white mb-2">1. Volume Bot – Single Wallet <span className="text-emerald-400 text-sm font-normal ml-2">Highest Volume per SOL</span></h3>
     <p className="text-gray-100 mb-2">Delivers maximum on-chain volume per SOL spent from a single wallet. Simple, fast, and most efficient for Pump.fun bonding curve campaigns and budget-focused launches. Every trade routed through cheapest available path via Jupiter + DFLOW + OKX+ aggregation. Explore all packages on the <a href="https://solanaholderbot.com/solana-volume-bot" className="text-emerald-400 hover:text-emerald-300 underline">Solana Volume Bot page</a>.</p>
     <p className="text-sm text-gray-100 mb-1"><strong className="text-emerald-400">Pricing:</strong> 0.1 SOL – 1,000 SOL (pay-as-you-go)</p>
-    <p className="text-sm text-gray-100 mb-3"><strong className="text-emerald-400">Video Guide:</strong> <a href="https://youtu.be/Py6Nbn5-840" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline">Watch on YouTube</a></p>
+    <p className="text-sm text-gray-100 mb-3"><strong className="text-emerald-400">Video Guide:</strong> <a href="https://www.youtube.com/watch?v=Py6Nbn5-840" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline">Watch on YouTube</a></p>
     <a href="https://t.me/leektradingbot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-semibold underline">→ Open on Telegram: @leektradingbot</a>
   </div>
 
@@ -128,7 +128,7 @@ SolanaHolderBot operates four official Telegram bots — each purpose-built for 
     <h3 className="text-xl font-bold text-white mb-2">4. Solana Holder Bot <span className="text-yellow-400 text-sm font-normal ml-2">Permanent Rent-Exempt Holders</span></h3>
     <p className="text-gray-100 mb-2">Creates real, permanent rent-exempt Solana wallets that hold your token forever. The credibility layer that converts volume-driven chart visitors into real organic buyers. Works on Pump.fun, Raydium, PumpSwap, Meteora, and all Solana DEXs. Full guide in our <a href="/blog/best-pump-fun-holder-bot-2026" className="text-yellow-400 hover:text-yellow-300 underline">Best Pump.fun Holder Bot 2026</a> article.</p>
     <p className="text-sm text-gray-100 mb-1"><strong className="text-yellow-400">Pricing:</strong> 0.1 SOL (10 holders) – 1.5 SOL (500 holders)</p>
-    <p className="text-sm text-gray-100 mb-3"><strong className="text-yellow-400">Video Guide:</strong> <a href="https://youtu.be/7jdOvbVwZeI" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 underline">Watch on YouTube</a></p>
+    <p className="text-sm text-gray-100 mb-3"><strong className="text-yellow-400">Video Guide:</strong> <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 underline">Watch on YouTube</a></p>
     <a href="https://t.me/Degen_wg_bot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 font-semibold underline">→ Open on Telegram: @Degen_wg_bot</a>
   </div>
 </div>

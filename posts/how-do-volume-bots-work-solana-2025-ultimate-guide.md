@@ -98,7 +98,7 @@ The single-wallet volume bot operates all trades from one primary wallet, with t
   <li>Simplest setup — one wallet, one session, instant start</li>
   <li>Best for beginners and for situations where sheer volume is the primary goal</li>
   <li>Up to 30 SOL of volume generated per 0.1 SOL invested in Fast mode</li>
-  <li>Starting at 0.1 SOL — Video guide: <a href="https://youtu.be/Py6Nbn5-840" className="text-blue-400 hover:text-blue-300 underline">Volume Bot Setup Guide</a></li>
+  <li>Starting at 0.1 SOL — Video guide: <a href="https://www.youtube.com/watch?v=Py6Nbn5-840" className="text-blue-400 hover:text-blue-300 underline">Volume Bot Setup Guide</a></li>
 </ul>
 
 <h3 className="text-2xl font-bold text-white mt-8 mb-4">Multi-Wallet Volume Bot (@sol_volume_multi_bot)</h3>
@@ -262,7 +262,7 @@ The entire setup process happens inside Telegram. No dashboard accounts, no wall
   </li>
 </ol>
 <p className="text-lg text-gray-100 leading-relaxed mt-6">
-From Telegram open to first trade on-chain: under 2 minutes. Full video walkthrough: <a href="https://youtu.be/Py6Nbn5-840" className="text-blue-400 hover:text-blue-300 underline">Volume Bot Setup Guide on YouTube</a>.
+From Telegram open to first trade on-chain: under 2 minutes. Full video walkthrough: <a href="https://www.youtube.com/watch?v=Py6Nbn5-840" className="text-blue-400 hover:text-blue-300 underline">Volume Bot Setup Guide on YouTube</a>.
 </p>
 </div>
 
@@ -377,7 +377,7 @@ Used strategically, volume bots are a powerful and legitimate part of a Solana l
   </div>
   <div>
     <h3 className="text-xl font-semibold text-white mb-2">How do I get started with SolanaHolderBot's volume bot?</h3>
-    <p className="text-gray-100">Open <a href="https://t.me/leektradingbot" className="text-blue-400 hover:text-blue-300 underline">@leektradingbot</a> on Telegram, send your token CA, choose speed mode, send minimum 0.1 SOL, and press Start. The entire setup takes under 2 minutes. Full video guide: <a href="https://youtu.be/Py6Nbn5-840" className="text-blue-400 hover:text-blue-300 underline">Volume Bot Setup on YouTube</a>.</p>
+    <p className="text-gray-100">Open <a href="https://t.me/leektradingbot" className="text-blue-400 hover:text-blue-300 underline">@leektradingbot</a> on Telegram, send your token CA, choose speed mode, send minimum 0.1 SOL, and press Start. The entire setup takes under 2 minutes. Full video guide: <a href="https://www.youtube.com/watch?v=Py6Nbn5-840" className="text-blue-400 hover:text-blue-300 underline">Volume Bot Setup on YouTube</a>.</p>
   </div>
 </div>
 </div>

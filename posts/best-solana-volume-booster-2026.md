@@ -103,7 +103,7 @@ SolanaHolderBot offers four official bots, each optimized for different volume a
   <div className="p-6 bg-zinc-900/60 border border-emerald-900/30 rounded-2xl">
     <h3 className="text-xl font-bold text-white mb-2">Volume Bot – Single Wallet <span className="text-emerald-400 text-sm font-normal ml-2">Highest Volume/SOL</span></h3>
     <p className="text-gray-100 mb-2">Maximum volume per SOL spent. Ideal for Pump.fun bonding curve acceleration and budget-conscious campaigns. Routes every trade through the cheapest available path via multi-aggregator technology.</p>
-    <p className="text-sm text-gray-100 mb-3"><strong className="text-emerald-400">Pricing:</strong> 0.1–1,000 SOL | <strong className="text-emerald-400">Video:</strong> <a href="https://youtu.be/Py6Nbn5-840" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline">Watch guide</a> | <a href="https://solanaholderbot.com/solana-volume-bot" className="text-emerald-400 hover:text-emerald-300 underline">Full package page</a></p>
+    <p className="text-sm text-gray-100 mb-3"><strong className="text-emerald-400">Pricing:</strong> 0.1–1,000 SOL | <strong className="text-emerald-400">Video:</strong> <a href="https://www.youtube.com/watch?v=Py6Nbn5-840" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline">Watch guide</a> | <a href="https://solanaholderbot.com/solana-volume-bot" className="text-emerald-400 hover:text-emerald-300 underline">Full package page</a></p>
     <a href="https://t.me/leektradingbot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-semibold underline">→ Launch on Telegram</a>
   </div>
 
@@ -124,7 +124,7 @@ SolanaHolderBot offers four official bots, each optimized for different volume a
   <div className="p-6 bg-zinc-900/60 border border-yellow-900/30 rounded-2xl">
     <h3 className="text-xl font-bold text-white mb-2">Solana Holder Bot <span className="text-yellow-400 text-sm font-normal ml-2">Permanent Holders</span></h3>
     <p className="text-gray-100 mb-2">Permanent rent-exempt holders that stay forever — the credibility layer that converts chart visitors into organic buyers. See the <a href="https://solanaholderbot.com/solana-holder-bot" className="text-yellow-400 hover:text-yellow-300 underline">Holder Bot page</a> and our <a href="/blog/best-pump-fun-holder-bot-2026" className="text-yellow-400 hover:text-yellow-300 underline">complete holder guide</a>.</p>
-    <p className="text-sm text-gray-100 mb-3"><strong className="text-yellow-400">Pricing:</strong> 0.1–1.5 SOL | <strong className="text-yellow-400">Video:</strong> <a href="https://youtu.be/7jdOvbVwZeI" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 underline">Watch guide</a></p>
+    <p className="text-sm text-gray-100 mb-3"><strong className="text-yellow-400">Pricing:</strong> 0.1–1.5 SOL | <strong className="text-yellow-400">Video:</strong> <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 underline">Watch guide</a></p>
     <a href="https://t.me/Degen_wg_bot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 font-semibold underline">→ Launch on Telegram</a>
   </div>
 </div>

@@ -160,7 +160,7 @@ Holder packages available:
   <li>500 permanent holders — 1.5 SOL</li>
 </ul>
 <p className="text-lg text-gray-100 leading-relaxed mt-4">
-The 100-holder package is the recommended minimum for Pump.fun launches. The 500-holder package crosses the GMGN.AI filter threshold that unlocks your token to the largest audience of active Solana traders. See the <a href="https://youtu.be/7jdOvbVwZeI" className="text-blue-400 hover:text-blue-300 underline">Holder Bot video guide</a> for setup.
+The 100-holder package is the recommended minimum for Pump.fun launches. The 500-holder package crosses the GMGN.AI filter threshold that unlocks your token to the largest audience of active Solana traders. See the <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" className="text-blue-400 hover:text-blue-300 underline">Holder Bot video guide</a> for setup.
 </p>
 
 <h3 className="text-2xl font-bold text-white mt-8 mb-4">The All-in-One Booster: Both Effects Simultaneously</h3>
