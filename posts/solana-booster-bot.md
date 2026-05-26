@@ -1,6 +1,6 @@
 ---
 title: "Solana All-in-One Booster Bot 2026"
-excerpt: "Solana All-in-One Booster Bot 2026: real organic volume AND permanent holders from one Telegram bot. Complete token launch stack from 0.15 SOL – no private keys."
+excerpt: "Solana All-in-One Booster Bot 2026: real organic volume AND permanent holders from one Telegram bot. Complete token launch stack from 0.15 SOL, no private keys."
 image: "/solbooster1.jpg"
 imageAlt: "Solana All-in-One Booster Bot interface generating authentic volume and permanent holders for Solana token projects in 2026"
 date: "2025-06-18"

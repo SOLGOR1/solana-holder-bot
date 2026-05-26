@@ -1,6 +1,6 @@
 ---
 title: "Solana Launchpad List 2026"
-excerpt: "Compare the top 20 platforms by fees, features, speed and security. Complete guide to choosing the right launchpad and boosting your launch with volume and holder tools."
+excerpt: "The top 20 platforms by fees, features, speed and security. Complete guide to choosing the right launchpad and boosting your launch with volume and holder."
 image: "/solana-launchpad-overview.jpg"
 imageAlt: "Comparison of top Solana launchpads for token creation in 2026"
 date: "2026-06-03"
