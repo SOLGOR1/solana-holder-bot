@@ -1,6 +1,6 @@
 ---
-title: "Crypto Volume Bot 2026: Complete Solana Guide (Volume, Holder & All-in-One)"
-description: "What is a crypto volume bot? The complete 2026 Solana guide: how volume bots work, difference between single-wallet, multi-wallet, holder bot & all-in-one booster — with platform-specific strategies for DexScreener, Birdeye, Pump.fun & Dextools."
+title: "Crypto Volume Bot 2026"
+description: "What is a crypto volume bot? The complete 2026 Solana guide: how volume bots work, difference between single-wallet, multi-wallet, holder bot & all-in-one booster."
 excerpt: "What is a crypto volume bot? Complete 2026 Solana guide: how volume bots work, the difference between volume, holder, multi-wallet bots and all-in-one boosters."
 image: "/blogthumb/crypto-volume-bot-2026.png"
 imageAlt: "Crypto volume bot guide 2026 – Solana volume bot, holder bot, and all-in-one booster explained"
