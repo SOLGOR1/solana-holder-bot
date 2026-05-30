@@ -22,7 +22,7 @@ export default function BlogCard({ post }: BlogCardProps) {
             height={400}
             className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
           {/* SolanaHolderBot Logo – top-left Overlay */}
           <div className="absolute top-4 left-4 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center">
             <svg

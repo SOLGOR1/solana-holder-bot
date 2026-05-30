@@ -15,12 +15,12 @@ export default function BlogContent({ posts }: BlogContentProps) {
     <>
       {/* Pulsierende Blobs */}
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-600/10 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-cyan-600/10 rounded-full blur-3xl"
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emerald-600/10 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-175 bg-emerald-600/10 rounded-full blur-3xl"
         animate={{ scale: [1.1, 0.95, 1.1] }}
         transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
       />
