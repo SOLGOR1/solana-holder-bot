@@ -8,7 +8,7 @@ import { FaFire, FaChartLine, FaUsers, FaBolt, FaPauseCircle, FaRobot, FaGlobe }
 export default function AllInOneBooster() {
   const ShineEffect = () => (
     <motion.div
-      className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent"  // opacity von 20% auf 10% reduziert
+      className="absolute inset-0 -skew-x-12 bg-linear-to-r from-transparent via-white/10 to-transparent"  // opacity von 20% auf 10% reduziert
       initial={{ x: "-120%" }}
       animate={{ x: "120%" }}
       transition={{ duration: 3, ease: "easeOut", repeat: Infinity, repeatDelay: 4 }}
@@ -36,12 +36,12 @@ export default function AllInOneBooster() {
     <section className="relative bg-black py-16 overflow-hidden">
       {/* Ultra-premium layered gold glows */}
       <motion.div
-        className="absolute top-1/3 left-1/4 w-[650px] h-[650px] bg-gradient-to-br from-amber-400/8 to-transparent rounded-full blur-[90px]"
+        className="absolute top-1/3 left-1/4 w-162.5 h-162.5 bg-linear-to-br from-amber-400/8 to-transparent rounded-full blur-[90px]"
         animate={{ scale: [1, 1.06, 1] }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-1/3 right-1/4 w-[520px] h-[520px] bg-gradient-to-br from-yellow-300/6 to-transparent rounded-full blur-[80px]"
+        className="absolute bottom-1/3 right-1/4 w-130 h-130 bg-linear-to-br from-yellow-300/6 to-transparent rounded-full blur-[80px]"
         animate={{ scale: [1.04, 0.98, 1.04] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -57,7 +57,7 @@ export default function AllInOneBooster() {
           <div className="flex-1 text-center lg:text-left">
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 px-5 py-2 mb-6 rounded-3xl bg-gradient-to-r from-amber-400/10 to-yellow-300/10 border border-amber-400/25 text-amber-200 text-sm font-semibold tracking-[0.5px] uppercase"
+              className="inline-flex items-center gap-2 px-5 py-2 mb-6 rounded-3xl bg-linear-to-r from-amber-400/10 to-yellow-300/10 border border-amber-400/25 text-amber-200 text-sm font-semibold tracking-[0.5px] uppercase"
             >
               <FaFire className="text-lg animate-pulse" />
               LIVE BETA • NOW AVAILABLE
@@ -68,7 +68,7 @@ export default function AllInOneBooster() {
               className="text-5xl lg:text-6xl font-bold tracking-[-1.5px] leading-[1.05] text-white mb-3"
             >
               Volume + Holder
-              <span className="block bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-300 bg-clip-text text-transparent">
+              <span className="block bg-linear-to-r from-amber-300 via-yellow-200 to-amber-300 bg-clip-text text-transparent">
                 All-in-One Booster
               </span>
             </motion.h3>
@@ -87,7 +87,7 @@ export default function AllInOneBooster() {
               className="mt-9 grid grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 text-left"
             >
               <div className="flex gap-3">
-                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center shrink-0">
                   <FaChartLine className="w-4 h-4 text-amber-400" />
                 </div>
                 <div className="text-sm">
@@ -96,7 +96,7 @@ export default function AllInOneBooster() {
                 </div>
               </div>
               <div className="flex gap-3">
-                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center shrink-0">
                   <FaUsers className="w-4 h-4 text-amber-400" />
                 </div>
                 <div className="text-sm">
@@ -105,7 +105,7 @@ export default function AllInOneBooster() {
                 </div>
               </div>
               <div className="flex gap-3">
-                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center shrink-0">
                   <FaBolt className="w-4 h-4 text-amber-400" />
                 </div>
                 <div className="text-sm">
@@ -114,7 +114,7 @@ export default function AllInOneBooster() {
                 </div>
               </div>
               <div className="flex gap-3">
-                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center shrink-0">
                   <FaPauseCircle className="w-4 h-4 text-amber-400" />
                 </div>
                 <div className="text-sm">
@@ -123,7 +123,7 @@ export default function AllInOneBooster() {
                 </div>
               </div>
               <div className="flex gap-3">
-                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center shrink-0">
                   <FaRobot className="w-4 h-4 text-amber-400" />
                 </div>
                 <div className="text-sm">
@@ -132,7 +132,7 @@ export default function AllInOneBooster() {
                 </div>
               </div>
               <div className="flex gap-3">
-                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-2xl bg-amber-500/10 flex items-center justify-center shrink-0">
                   <FaGlobe className="w-4 h-4 text-amber-400" />
                 </div>
                 <div className="text-sm">
@@ -163,19 +163,19 @@ export default function AllInOneBooster() {
             <div className="relative w-64 h-64 lg:w-64 lg:h-64">
               {/* Soft outer glow layer */}
               <motion.div
-                className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-amber-400/15 to-yellow-300/8"
+                className="absolute inset-0 rounded-[3rem] bg-linear-to-br from-amber-400/15 to-yellow-300/8"
                 animate={{ scale: [1, 1.08, 1], opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               />
               {/* Main premium orb */}
-              <div className="relative w-full h-full rounded-[3rem] bg-gradient-to-br from-black/95 to-black border border-amber-400/30 flex items-center justify-center shadow-2xl overflow-hidden">
+              <div className="relative w-full h-full rounded-[3rem] bg-linear-to-br from-black/95 to-black border border-amber-400/30 flex items-center justify-center shadow-2xl overflow-hidden">
                 {/* Animated Telegram icon – very subtle luxury movement */}
                 <motion.div
                   className="text-8xl text-amber-300 drop-shadow-[0_0_40px_#fcd34d]"
                   animate={{ y: [0, -6, 0], rotate: [0, 6, -6, 0] }}
                   transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <SiTelegram />
+                  <SiTelegram aria-hidden="true" focusable="false"/>
                 </motion.div>
 
                 {/* Tiny LIVE badge inside orb */}
@@ -194,12 +194,12 @@ export default function AllInOneBooster() {
         >
           <Link href="https://t.me/sol_volume_holder_bot" target="_blank" rel="noopener noreferrer">
             <motion.button
-              className="group relative w-full py-5 bg-gradient-to-r from-amber-400 to-yellow-300 text-black font-bold text-xl tracking-[-0.5px] rounded-3xl shadow-xl shadow-amber-500/30 hover:shadow-amber-400/40 transition-all duration-500 overflow-hidden"
+              className="group relative w-full py-5 bg-linear-to-r from-amber-400 to-yellow-300 text-black font-bold text-xl tracking-[-0.5px] rounded-3xl shadow-xl shadow-amber-500/30 hover:shadow-amber-400/40 transition-all duration-500 overflow-hidden"
               whileTap={{ scale: 0.98 }}
               whileHover={{ scale: 1.03 }}
             >
               <span className="relative z-10 flex items-center justify-center gap-3">
-                <SiTelegram className="w-6 h-6" />
+                <SiTelegram className="w-6 h-6" aria-hidden="true" focusable="false"/>
                 START ALL-IN-ONE BOOSTER NOW
               </span>
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
