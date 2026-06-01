@@ -784,31 +784,110 @@ Head-to-head comparison with Fatality Bot — the most frequently compared alter
 </div>
 </div>
 
-<div id="scoring">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The 10-Criteria Scoring Framework — Evaluate Any Volume Bot</h2>
-<p className="text-lg text-gray-100 leading-relaxed">
-Use this framework to independently evaluate any Solana volume bot service — including SolanaHolderBot. Each criterion has a specific, practical verification test.
-</p>
+<div id="scoring" className="mt-16">
+  <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+    The 10-Criteria Scoring Framework
+  </h2>
+  <p className="text-xl text-gray-300 mb-10 max-w-3xl">
+    Use this framework to independently evaluate any Solana volume bot service — including ours. 
+    Each criterion comes with a clear verification test.
+  </p>
 
-<div className="space-y-3 mt-6">
-  {[
-    ["Private key not required", "Start bot setup — if it asks for a private key or seed phrase, leave immediately", "Pass — deposit address only"],
-    ["Withdrawal available anytime", "Ask support or check docs: can unused SOL be withdrawn mid-campaign?", "Pass — instant via Telegram command"],
-    ["Jito MEV protection", "Confirm in documentation: are transactions submitted as Jito bundles?", "Pass — 100% of transactions"],
-    ["Multi-aggregator routing", "Ask which DEX aggregators are used. Single aggregator = lower efficiency.", "Pass — Jupiter + DFLOW + OKX+"],
-    ["Rent-exempt holders", "Check a holder wallet on Solscan — SOL balance must be ≥ 0.002 SOL", "Pass — every wallet funded above threshold"],
-    ["Verifiable track record", "Request Solscan transaction examples from previous campaigns", "Pass — 1,700+ documented projects"],
-    ["Real-time analytics", "Confirm what data appears during active campaign — live or delayed?", "Pass — live Telegram dashboard"],
-    ["Post-migration continuity", "Ask: does the bot automatically continue after Pump.fun migrates?", "Pass — fully automatic"],
-    ["Identifiable support channel", "Check for public Telegram group or official documentation", "Pass — 24/7 group + GitBook"],
-    ["Token2022 compatibility", "Ask whether Token2022 tokens are supported with or without extra fees", "Pass — gasless Token2022 support"],
-  ].map(([criterion, test, result], i) => (
-    <div key={i} className="p-4 bg-zinc-900/60 border border-gray-800 rounded-xl grid grid-cols-1 md:grid-cols-3 gap-2">
-      <p className="text-white font-semibold text-sm">{i + 1}. {criterion}</p>
-      <p className="text-gray-100 text-xs">{test}</p>
-      <p className="text-green-400 text-xs font-semibold">✅ {result}</p>
-    </div>
-  ))}
+  <div className="space-y-4">
+    {[
+      {
+        nr: "01",
+        criterion: "Private key not required",
+        test: "Start bot setup — if it asks for a private key or seed phrase, leave immediately",
+        result: "Pass — deposit address only"
+      },
+      {
+        nr: "02",
+        criterion: "Withdrawal available anytime",
+        test: "Ask support or check docs: can unused SOL be withdrawn mid-campaign?",
+        result: "Pass — instant via Telegram command"
+      },
+      {
+        nr: "03",
+        criterion: "Jito MEV protection",
+        test: "Confirm in documentation: are transactions submitted as Jito bundles?",
+        result: "Pass — 100% of transactions"
+      },
+      {
+        nr: "04",
+        criterion: "Multi-aggregator routing",
+        test: "Ask which DEX aggregators are used. Single aggregator = lower efficiency.",
+        result: "Pass — Jupiter + DFLOW + OKX+"
+      },
+      {
+        nr: "05",
+        criterion: "Rent-exempt holders",
+        test: "Check a holder wallet on Solscan — SOL balance must be ≥ 0.002 SOL",
+        result: "Pass — every wallet funded above threshold"
+      },
+      {
+        nr: "06",
+        criterion: "Verifiable track record",
+        test: "Request Solscan transaction examples from previous campaigns",
+        result: "Pass — 1,700+ documented projects"
+      },
+      {
+        nr: "07",
+        criterion: "Real-time analytics",
+        test: "Confirm what data appears during active campaign — live or delayed?",
+        result: "Pass — live Telegram dashboard"
+      },
+      {
+        nr: "08",
+        criterion: "Post-migration continuity",
+        test: "Ask: does the bot automatically continue after Pump.fun migrates?",
+        result: "Pass — fully automatic"
+      },
+      {
+        nr: "09",
+        criterion: "Identifiable support channel",
+        test: "Check for public Telegram group or official documentation",
+        result: "Pass — 24/7 group + GitBook"
+      },
+      {
+        nr: "10",
+        criterion: "Token2022 compatibility",
+        test: "Ask whether Token2022 tokens are supported with or without extra fees",
+        result: "Pass — gasless Token2022 support"
+      },
+    ].map((item, i) => (
+      <div 
+        key={i} 
+        className="group p-6 bg-zinc-900/70 hover:bg-zinc-900 border border-gray-800 hover:border-gray-700 rounded-2xl transition-all duration-300 grid grid-cols-1 md:grid-cols-12 gap-4 items-start"
+      >
+        {/* Nummer */}
+        <div className="md:col-span-1">
+          <div className="w-10 h-10 rounded-xl bg-linear-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-lg">
+            {item.nr}
+          </div>
+        </div>
+
+        {/* Kriterium */}
+        <div className="md:col-span-3">
+          <p className="text-white font-semibold text-lg leading-tight">
+            {item.criterion}
+          </p>
+        </div>
+
+        {/* Test / Verification */}
+        <div className="md:col-span-5 text-gray-400 text-[15px] leading-relaxed">
+          {item.test}
+        </div>
+
+        {/* Result */}
+        <div className="md:col-span-3 flex justify-end md:justify-start">
+          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-4 py-2 rounded-xl text-sm font-semibold">
+            ✅ {item.result}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
 </div>
 
 <p className="text-gray-100 text-sm mt-4 p-4 bg-yellow-900/20 border border-yellow-800/30 rounded-xl">
