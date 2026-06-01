@@ -19,12 +19,12 @@ export default function BlogPostContent({ post, prevSlug, nextSlug }: BlogPostCo
     <>
       {/* Dezente pulsierende Blobs */}
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-600/5 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-cyan-600/5 rounded-full blur-3xl"
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emerald-600/5 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-175 bg-emerald-600/5 rounded-full blur-3xl"
         animate={{ scale: [1.1, 0.95, 1.1] }}
         transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -45,7 +45,7 @@ export default function BlogPostContent({ post, prevSlug, nextSlug }: BlogPostCo
             height={600}
             className="w-full h-auto object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
           {/* SolanaHolderBot Logo – top-left */}
           <div className="absolute top-6 left-6 w-12 h-12 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg">
             <svg
