@@ -784,105 +784,100 @@ Head-to-head comparison with Fatality Bot — the most frequently compared alter
 </div>
 </div>
 
-<div id="scoring" className="mt-16">
-  <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+<div id="scoring" className="mt-20">
+  <h2 className="text-4xl md:text-5xl font-bold text-white mb-3 tracking-tighter">
     The 10-Criteria Scoring Framework
   </h2>
-  <p className="text-xl text-gray-300 mb-10 max-w-3xl">
-    Use this framework to independently evaluate any Solana volume bot service — including ours. 
-    Each criterion comes with a clear verification test.
+  <p className="text-xl text-gray-400 max-w-2xl mb-12">
+    Use this framework to evaluate any Solana volume bot — including ours.
   </p>
 
-  <div className="space-y-4">
+  <div className="grid grid-cols-1 gap-6">
     {[
       {
         nr: "01",
         criterion: "Private key not required",
-        test: "Start bot setup — if it asks for a private key or seed phrase, leave immediately",
+        test: "Start bot setup — if it asks for private key or seed phrase, leave immediately",
         result: "Pass — deposit address only"
       },
       {
         nr: "02",
         criterion: "Withdrawal available anytime",
-        test: "Ask support or check docs: can unused SOL be withdrawn mid-campaign?",
+        test: "Can unused SOL be withdrawn mid-campaign?",
         result: "Pass — instant via Telegram command"
       },
       {
         nr: "03",
         criterion: "Jito MEV protection",
-        test: "Confirm in documentation: are transactions submitted as Jito bundles?",
+        test: "Are transactions submitted as Jito bundles?",
         result: "Pass — 100% of transactions"
       },
       {
         nr: "04",
         criterion: "Multi-aggregator routing",
-        test: "Ask which DEX aggregators are used. Single aggregator = lower efficiency.",
+        test: "Which DEX aggregators are used?",
         result: "Pass — Jupiter + DFLOW + OKX+"
       },
       {
         nr: "05",
         criterion: "Rent-exempt holders",
-        test: "Check a holder wallet on Solscan — SOL balance must be ≥ 0.002 SOL",
+        test: "SOL balance in holder wallets ≥ 0.002 SOL",
         result: "Pass — every wallet funded above threshold"
       },
       {
         nr: "06",
         criterion: "Verifiable track record",
-        test: "Request Solscan transaction examples from previous campaigns",
+        test: "Can you see real Solscan transactions from past campaigns?",
         result: "Pass — 1,700+ documented projects"
       },
       {
         nr: "07",
         criterion: "Real-time analytics",
-        test: "Confirm what data appears during active campaign — live or delayed?",
+        test: "Is the campaign data live or delayed?",
         result: "Pass — live Telegram dashboard"
       },
       {
         nr: "08",
         criterion: "Post-migration continuity",
-        test: "Ask: does the bot automatically continue after Pump.fun migrates?",
+        test: "Does the bot continue automatically after Pump.fun migration?",
         result: "Pass — fully automatic"
       },
       {
         nr: "09",
         criterion: "Identifiable support channel",
-        test: "Check for public Telegram group or official documentation",
+        test: "Public Telegram group or official docs?",
         result: "Pass — 24/7 group + GitBook"
       },
       {
         nr: "10",
         criterion: "Token2022 compatibility",
-        test: "Ask whether Token2022 tokens are supported with or without extra fees",
+        test: "Token2022 support with or without extra fees?",
         result: "Pass — gasless Token2022 support"
       },
-    ].map((item, i) => (
+    ].map((item) => (
       <div 
-        key={i} 
-        className="group p-6 bg-zinc-900/70 hover:bg-zinc-900 border border-gray-800 hover:border-gray-700 rounded-2xl transition-all duration-300 grid grid-cols-1 md:grid-cols-12 gap-4 items-start"
+        key={item.nr}
+        className="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group"
       >
-        {/* Nummer */}
-        <div className="md:col-span-1">
-          <div className="w-10 h-10 rounded-xl bg-linear-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-lg">
-            {item.nr}
+        <div className="flex flex-col md:flex-row md:items-center gap-6">
+          <div className="shrink-0">
+            <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">
+              {item.nr}
+            </div>
           </div>
-        </div>
-
-        {/* Kriterium */}
-        <div className="md:col-span-3">
-          <p className="text-white font-semibold text-lg leading-tight">
-            {item.criterion}
-          </p>
-        </div>
-
-        {/* Test / Verification */}
-        <div className="md:col-span-5 text-gray-400 text-[15px] leading-relaxed">
-          {item.test}
-        </div>
-
-        {/* Result */}
-        <div className="md:col-span-3 flex justify-end md:justify-start">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-4 py-2 rounded-xl text-sm font-semibold">
-            ✅ {item.result}
+          <div className="flex-1 min-w-0">
+            <h3 className="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">
+              {item.criterion}
+            </h3>
+            <p className="text-gray-400 text-[15.5px] leading-relaxed">
+              {item.test}
+            </p>
+          </div>
+          <div className="shrink-0 md:text-right">
+            <div className="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
+              <span className="text-xl">✅</span>
+              <span>{item.result}</span>
+            </div>
           </div>
         </div>
       </div>
