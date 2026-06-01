@@ -784,104 +784,186 @@ Head-to-head comparison with Fatality Bot — the most frequently compared alter
 </div>
 </div>
 
-<div id="scoring" className="mt-20">
-  <h2 className="text-4xl md:text-5xl font-bold text-white mb-3 tracking-tighter">
+<div id="scoring" class="mt-20">
+  <h2 class="text-4xl md:text-5xl font-bold text-white mb-3 tracking-tighter">
     The 10-Criteria Scoring Framework
   </h2>
-  <p className="text-xl text-gray-400 max-w-2xl mb-12">
+  <p class="text-xl text-gray-400 max-w-2xl mb-12">
     Use this framework to evaluate any Solana volume bot — including ours.
   </p>
 
-  <div className="grid grid-cols-1 gap-6">
-    {[
-      {
-        nr: "01",
-        criterion: "Private key not required",
-        test: "Start bot setup — if it asks for private key or seed phrase, leave immediately",
-        result: "Pass — deposit address only"
-      },
-      {
-        nr: "02",
-        criterion: "Withdrawal available anytime",
-        test: "Can unused SOL be withdrawn mid-campaign?",
-        result: "Pass — instant via Telegram command"
-      },
-      {
-        nr: "03",
-        criterion: "Jito MEV protection",
-        test: "Are transactions submitted as Jito bundles?",
-        result: "Pass — 100% of transactions"
-      },
-      {
-        nr: "04",
-        criterion: "Multi-aggregator routing",
-        test: "Which DEX aggregators are used?",
-        result: "Pass — Jupiter + DFLOW + OKX+"
-      },
-      {
-        nr: "05",
-        criterion: "Rent-exempt holders",
-        test: "SOL balance in holder wallets ≥ 0.002 SOL",
-        result: "Pass — every wallet funded above threshold"
-      },
-      {
-        nr: "06",
-        criterion: "Verifiable track record",
-        test: "Can you see real Solscan transactions from past campaigns?",
-        result: "Pass — 1,700+ documented projects"
-      },
-      {
-        nr: "07",
-        criterion: "Real-time analytics",
-        test: "Is the campaign data live or delayed?",
-        result: "Pass — live Telegram dashboard"
-      },
-      {
-        nr: "08",
-        criterion: "Post-migration continuity",
-        test: "Does the bot continue automatically after Pump.fun migration?",
-        result: "Pass — fully automatic"
-      },
-      {
-        nr: "09",
-        criterion: "Identifiable support channel",
-        test: "Public Telegram group or official docs?",
-        result: "Pass — 24/7 group + GitBook"
-      },
-      {
-        nr: "10",
-        criterion: "Token2022 compatibility",
-        test: "Token2022 support with or without extra fees?",
-        result: "Pass — gasless Token2022 support"
-      },
-    ].map((item) => (
-      <div 
-        key={item.nr}
-        className="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group"
-      >
-        <div className="flex flex-col md:flex-row md:items-center gap-6">
-          <div className="shrink-0">
-            <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">
-              {item.nr}
-            </div>
-          </div>
-          <div className="flex-1 min-w-0">
-            <h3 className="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">
-              {item.criterion}
-            </h3>
-            <p className="text-gray-400 text-[15.5px] leading-relaxed">
-              {item.test}
-            </p>
-          </div>
-          <div className="shrink-0 md:text-right">
-            <div className="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
-              <span className="text-xl">✅</span>
-              <span>{item.result}</span>
-            </div>
+  <div class="space-y-6">
+    <div class="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="shrink-0">
+          <div class="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">01</div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Private key not required</h3>
+          <p class="text-gray-400 text-[15.5px] leading-relaxed">Start bot setup — if it asks for private key or seed phrase, leave immediately.</p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
+            <span class="text-xl">✅</span>
+            <span>Pass — deposit address only</span>
           </div>
         </div>
       </div>
-    ))}
+    </div>
+    <div class="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="shrink-0">
+          <div class="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">02</div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Withdrawal available anytime</h3>
+          <p class="text-gray-400 text-[15.5px] leading-relaxed">Can unused SOL be withdrawn mid-campaign?</p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
+            <span class="text-xl">✅</span>
+            <span>Pass — instant via Telegram command</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="shrink-0">
+          <div class="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">03</div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Jito MEV protection</h3>
+          <p class="text-gray-400 text-[15.5px] leading-relaxed">Are transactions submitted as Jito bundles?</p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
+            <span class="text-xl">✅</span>
+            <span>Pass — 100% of transactions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="shrink-0">
+          <div class="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">04</div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Multi-aggregator routing</h3>
+          <p class="text-gray-400 text-[15.5px] leading-relaxed">Which DEX aggregators are used?</p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
+            <span class="text-xl">✅</span>
+            <span>Pass — Jupiter + DFLOW + OKX+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="shrink-0">
+          <div class="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">05</div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Rent-exempt holders</h3>
+          <p class="text-gray-400 text-[15.5px] leading-relaxed">SOL balance in holder wallets ≥ 0.002 SOL</p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
+            <span class="text-xl">✅</span>
+            <span>Pass — every wallet funded above threshold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="shrink-0">
+          <div class="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">06</div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Verifiable track record</h3>
+          <p class="text-gray-400 text-[15.5px] leading-relaxed">Can you see real Solscan transactions from past campaigns?</p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
+            <span class="text-xl">✅</span>
+            <span>Pass — 1,700+ documented projects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="shrink-0">
+          <div class="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">07</div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Real-time analytics</h3>
+          <p class="text-gray-400 text-[15.5px] leading-relaxed">Is the campaign data live or delayed?</p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
+            <span class="text-xl">✅</span>
+            <span>Pass — live Telegram dashboard</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="shrink-0">
+          <div class="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">08</div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Post-migration continuity</h3>
+          <p class="text-gray-400 text-[15.5px] leading-relaxed">Does the bot continue automatically after Pump.fun migration?</p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
+            <span class="text-xl">✅</span>
+            <span>Pass — fully automatic</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="shrink-0">
+          <div class="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">09</div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Identifiable support channel</h3>
+          <p class="text-gray-400 text-[15.5px] leading-relaxed">Public Telegram group or official docs?</p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
+            <span class="text-xl">✅</span>
+            <span>Pass — 24/7 group + GitBook</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-zinc-900/80 border border-zinc-700 hover:border-emerald-500/30 rounded-3xl p-8 transition-all duration-300 group">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="shrink-0">
+          <div class="w-14 h-14 rounded-2xl bg-linear-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-2xl font-bold text-black">10</div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <h3 class="text-white text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Token2022 compatibility</h3>
+          <p class="text-gray-400 text-[15.5px] leading-relaxed">Token2022 support with or without extra fees?</p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <div class="inline-flex items-center gap-2.5 bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 px-6 py-3 rounded-2xl font-medium">
+            <span class="text-xl">✅</span>
+            <span>Pass — gasless Token2022 support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
