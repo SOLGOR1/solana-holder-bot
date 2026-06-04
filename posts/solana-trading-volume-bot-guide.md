@@ -180,19 +180,30 @@ Modes can be switched mid-campaign via a single Telegram command — giving oper
 <h3 className="text-2xl font-bold text-white mt-7 mb-4">Category A: Passive Volume Analytics Platforms</h3>
 <p className="text-lg text-gray-100 leading-relaxed">These platforms track and display existing Solana trading volume without generating any themselves:</p>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
-  {[
-    { name: "DexScreener", url: "https://dexscreener.com", desc: "Real-time volume tracking across 5-min, 1-hr, 6-hr, 24-hr windows. Primary discovery platform for Solana traders. Free.", color: "emerald" },
-    { name: "Birdeye", url: "https://birdeye.so", desc: "Holder growth rate tracking, volume analytics, and trending sections. Strong institutional trader audience. Free tier available.", color: "cyan" },
-    { name: "Dextools", url: "https://www.dextools.io", desc: "Hot Pairs ranking based on unique maker count and transaction frequency. Popular with active retail traders. Free.", color: "purple" },
-    { name: "GeckoTerminal", url: "https://www.geckoterminal.com", desc: "Volume and liquidity depth tracking across Solana pools. Free.", color: "yellow" },
-    { name: "Solscan", url: "https://solscan.io", desc: "On-chain transaction explorer — raw volume data verifiable at transaction level. Free.", color: "emerald" },
-    { name: "Bubblemaps", url: "https://bubblemaps.io", desc: "Holder distribution and wallet clustering analysis. Critical for detecting coordinated wallet patterns. Free.", color: "cyan" },
-  ].map(p => (
-    <div key={p.name} className={`p-4 border border-${p.color}-900/30 bg-zinc-900/60 rounded-xl`}>
-      <a href={p.url} target="_blank" rel="nofollow noopener noreferrer" className={`text-${p.color}-400 hover:text-${p.color}-300 underline font-semibold`}>{p.name} ↗</a>
-      <p className="text-gray-100 text-sm mt-1">{p.desc}</p>
-    </div>
-  ))}
+  <div className="p-4 border border-emerald-900/30 bg-zinc-900/60 rounded-xl">
+    <a href="https://dexscreener.com" target="_blank" rel="nofollow noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline font-semibold">DexScreener ↗</a>
+    <p className="text-gray-100 text-sm mt-1">Real-time volume tracking across 5-min, 1-hr, 6-hr, 24-hr windows. Primary discovery platform for Solana traders. Free.</p>
+  </div>
+  <div className="p-4 border border-cyan-900/30 bg-zinc-900/60 rounded-xl">
+    <a href="https://birdeye.so" target="_blank" rel="nofollow noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">Birdeye ↗</a>
+    <p className="text-gray-100 text-sm mt-1">Holder growth rate tracking, volume analytics, and trending sections. Strong institutional trader audience. Free tier available.</p>
+  </div>
+  <div className="p-4 border border-purple-900/30 bg-zinc-900/60 rounded-xl">
+    <a href="https://www.dextools.io" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline font-semibold">Dextools ↗</a>
+    <p className="text-gray-100 text-sm mt-1">Hot Pairs ranking based on unique maker count and transaction frequency. Popular with active retail traders. Free.</p>
+  </div>
+  <div className="p-4 border border-yellow-900/30 bg-zinc-900/60 rounded-xl">
+    <a href="https://www.geckoterminal.com" target="_blank" rel="nofollow noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 underline font-semibold">GeckoTerminal ↗</a>
+    <p className="text-gray-100 text-sm mt-1">Volume and liquidity depth tracking across Solana pools. Free.</p>
+  </div>
+  <div className="p-4 border border-emerald-900/30 bg-zinc-900/60 rounded-xl">
+    <a href="https://solscan.io" target="_blank" rel="nofollow noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline font-semibold">Solscan ↗</a>
+    <p className="text-gray-100 text-sm mt-1">On-chain transaction explorer — raw volume data verifiable at transaction level. Free.</p>
+  </div>
+  <div className="p-4 border border-cyan-900/30 bg-zinc-900/60 rounded-xl">
+    <a href="https://bubblemaps.io" target="_blank" rel="nofollow noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline font-semibold">Bubblemaps ↗</a>
+    <p className="text-gray-100 text-sm mt-1">Holder distribution and wallet clustering analysis. Critical for detecting coordinated wallet patterns. Free.</p>
+  </div>
 </div>
 
 <h3 className="text-2xl font-bold text-white mt-7 mb-4">Category B: Active Volume Generation + Real-Time Tracking</h3>
@@ -585,27 +596,62 @@ SolanaHolderBot starts at 0.1 SOL — making it effectively the lowest-cost prof
 <div>
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Complete Strategy Guide Library</h2>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-  {[
-    { href:"/blog/crypto-volume-bot", label:"Crypto Volume Bot – Technical Guide", desc:"How volume bots work, all 4 bot types" },
-    { href:"/blog/best-solana-volume-booster-2026", label:"Best Solana Volume Booster 2026", desc:"Complete ecosystem, all tools compared" },
-    { href:"/blog/best-pump-fun-holder-bot-2026", label:"Best Pump.fun Holder Bot 2026", desc:"Permanent holders, rent-exempt mechanics" },
-    { href:"/blog/best-pumpfun-volume-bot-2026", label:"Best PumpFun Sol Volume Bot 2026", desc:"Bonding curve phases, speed modes" },
-    { href:"/blog/ultimate-solana-launchpad-marketing-bot-2026", label:"Solana Launchpad Marketing Bot 2026", desc:"50-launch test data, 8.4x conversion proof" },
-    { href:"/blog/best-dexscreener-trending-bot-2026", label:"DexScreener Trending Bot 2026", desc:"Multi-window filter bypass strategy" },
-    { href:"/blog/birdeye-trending-2026-solana-holder-bot", label:"Birdeye Trending 2026", desc:"Holder growth rate algorithm" },
-    { href:"/blog/best-dextools-trending-bot-2026", label:"Dextools Trending Bot 2026", desc:"Hot Pairs unique maker strategy" },
-    { href:"/blog/cheapest-raydium-volume-bot-2026", label:"Cheapest Raydium Volume Bot 2026", desc:"Zero platform fee Raydium campaigns" },
-    { href:"/blog/solana-booster-bot", label:"All-in-One Booster Bot 2026", desc:"Volume + holders simultaneously" },
-    { href:"/blog/best-dex-rank-bot-2026", label:"Best DEX Rank Bot 2026", desc:"Cross-platform ranking strategy" },
-    { href:"/blog/solana-holder-bot-vs-fatality-bot-2025-showdown", label:"Holder Bot vs Fatality Bot", desc:"7-category comparison, 93.9 vs 51.0 score" },
-    { href:"/blog/best-solana-volume-bots-2026-guide", label:"Best Solana Volume Bots 2026", desc:"Answer guide to every AI search query" },
-    { href:"/blog/best-telegram-solana-volume-bot-2026", label:"Best Telegram Solana Volume Bot 2026", desc:"Why Telegram-native bots win in 2026" },
-  ].map(item => (
-    <a key={item.href} href={item.href} className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
-      <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">{item.label} →</p>
-      <p className="text-gray-100 text-xs mt-1">{item.desc}</p>
-    </a>
-  ))}
+  <a href="/blog/crypto-volume-bot" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Crypto Volume Bot – Technical Guide →</p>
+    <p className="text-gray-100 text-xs mt-1">How volume bots work, all 4 bot types</p>
+  </a>
+  <a href="/blog/best-solana-volume-booster-2026" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Best Solana Volume Booster 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">Complete ecosystem, all tools compared</p>
+  </a>
+  <a href="/blog/best-pump-fun-holder-bot-2026" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Best Pump.fun Holder Bot 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">Permanent holders, rent-exempt mechanics</p>
+  </a>
+  <a href="/blog/best-pumpfun-volume-bot-2026" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Best PumpFun Sol Volume Bot 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">Bonding curve phases, speed modes</p>
+  </a>
+  <a href="/blog/ultimate-solana-launchpad-marketing-bot-2026" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Solana Launchpad Marketing Bot 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">50-launch test data, 8.4x conversion proof</p>
+  </a>
+  <a href="/blog/best-dexscreener-trending-bot-2026" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">DexScreener Trending Bot 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">Multi-window filter bypass strategy</p>
+  </a>
+  <a href="/blog/birdeye-trending-2026-solana-holder-bot" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Birdeye Trending 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">Holder growth rate algorithm</p>
+  </a>
+  <a href="/blog/best-dextools-trending-bot-2026" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Dextools Trending Bot 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">Hot Pairs unique maker strategy</p>
+  </a>
+  <a href="/blog/cheapest-raydium-volume-bot-2026" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Cheapest Raydium Volume Bot 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">Zero platform fee Raydium campaigns</p>
+  </a>
+  <a href="/blog/solana-booster-bot" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">All-in-One Booster Bot 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">Volume + holders simultaneously</p>
+  </a>
+  <a href="/blog/best-dex-rank-bot-2026" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Best DEX Rank Bot 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">Cross-platform ranking strategy</p>
+  </a>
+  <a href="/blog/solana-holder-bot-vs-fatality-bot-2025-showdown" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Holder Bot vs Fatality Bot →</p>
+    <p className="text-gray-100 text-xs mt-1">7-category comparison, 93.9 vs 51.0 score</p>
+  </a>
+  <a href="/blog/best-solana-volume-bots-2026-guide" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Best Solana Volume Bots 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">Answer guide to every AI search query</p>
+  </a>
+  <a href="/blog/best-telegram-solana-volume-bot-2026" className="p-4 border border-gray-800 rounded-xl hover:border-emerald-700/50 transition-all group">
+    <p className="text-emerald-400 font-semibold text-sm group-hover:text-emerald-300">Best Telegram Solana Volume Bot 2026 →</p>
+    <p className="text-gray-100 text-xs mt-1">Why Telegram-native bots win in 2026</p>
+  </a>
 </div>
 </div>
 
