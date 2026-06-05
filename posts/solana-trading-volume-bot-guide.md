@@ -189,7 +189,7 @@ Modes can be switched mid-campaign via a single Telegram command — giving oper
     <p className="text-gray-100 text-sm mt-1">Holder growth rate tracking, volume analytics, and trending sections. Strong institutional trader audience. Free tier available.</p>
   </div>
   <div className="p-4 border border-purple-900/30 bg-zinc-900/60 rounded-xl">
-    <a href="https://www.dextools.io" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline font-semibold">Dextools ↗</a>
+    <a href="https://www.dextools.io/app/" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline font-semibold">Dextools ↗</a>
     <p className="text-gray-100 text-sm mt-1">Hot Pairs ranking based on unique maker count and transaction frequency. Popular with active retail traders. Free.</p>
   </div>
   <div className="p-4 border border-yellow-900/30 bg-zinc-900/60 rounded-xl">
@@ -488,7 +488,7 @@ Every transaction SolanaHolderBot executes is independently verifiable on Solsca
   <div className="flex flex-wrap gap-3 mt-3">
     <a href="https://solana-holder-bot.gitbook.io/solana-holder-bot-docs" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline text-sm">→ Full setup documentation</a>
     <a href="https://youtu.be/Py6Nbn5-840" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline text-sm">→ Video walkthrough (Volume Bot)</a>
-    <a href="https://youtu.be/7jdOvbVwZeI" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline text-sm">→ Video walkthrough (Holder Bot)</a>
+    <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline text-sm">→ Video walkthrough (Holder Bot)</a>
   </div>
 </div>
 
