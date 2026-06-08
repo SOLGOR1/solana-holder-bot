@@ -6,8 +6,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { compileMDX } from 'next-mdx-remote/rsc';
 
-// === MDX Components direkt importieren (kein Hook!) ===
-import { useMDXComponents } from '../../../../mdx-components';
+// MDX Components direkt importieren (ohne Hook in async Function)
+import * as mdxComponents from '../../../../mdx-components';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -39,7 +39,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       title: `${post.title} | Solana Holder Bot`,
       description: post.excerpt,
-      images: [{ url: `https://solanaholderbot.com${post.image}`, width: 1200, height: 630, alt: post.imageAlt || post.title }],
+      images: [
+        {
+          url: `https://solanaholderbot.com${post.image}`,
+          width: 1200,
+          height: 630,
+          alt: post.imageAlt || post.title,
+        },
+      ],
       publishedTime: post.date,
       authors: ["Solana Holder Bot Team"],
       siteName: "Solana Holder Bot",
@@ -71,8 +78,6 @@ export default async function BlogPostPage({ params }: Props) {
   let compiledContent: React.ReactNode = null;
 
   if (post.isMDX) {
-    const mdxComponents = useMDXComponents({});   // ← außerhalb der if-Bedingung!
-
     const result = await compileMDX({
       source: post.content,
       options: {
@@ -81,9 +86,8 @@ export default async function BlogPostPage({ params }: Props) {
           rehypePlugins: [],
         },
       },
-      components: mdxComponents,
+      components: mdxComponents,        // ← hier direkt das Objekt übergeben
     });
-
     compiledContent = result.content;
   }
 
