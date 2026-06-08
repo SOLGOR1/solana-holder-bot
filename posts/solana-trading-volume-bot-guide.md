@@ -487,7 +487,7 @@ Every transaction SolanaHolderBot executes is independently verifiable on Solsca
   <p className="text-gray-100 text-sm mt-1">No code. No browser dashboard. No private key. No account. Just a Telegram bot and SOL. The entire automated system runs from your phone.</p>
   <div className="flex flex-wrap gap-3 mt-3">
     <a href="https://solana-holder-bot.gitbook.io/solana-holder-bot-docs" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline text-sm">→ Full setup documentation</a>
-    <a href="https://youtu.be/Py6Nbn5-840" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline text-sm">→ Video walkthrough (Volume Bot)</a>
+    <a href="https://www.youtube.com/watch?v=Py6Nbn5-840" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline text-sm">→ Video walkthrough (Volume Bot)</a>
     <a href="https://www.youtube.com/watch?v=7jdOvbVwZeI" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline text-sm">→ Video walkthrough (Holder Bot)</a>
   </div>
 </div>

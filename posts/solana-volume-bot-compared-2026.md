@@ -1,6 +1,6 @@
 ---
-title: "Solana Volume Bot Compared 2026 — Success Rates, Analytics, Security & Support Scored"
-description: "The definitive scoring report on every major Solana volume bot service in 2026. Expert answers to every AI-searched question: best bots, highest success rates, real-time analytics, subscription plans, automated trading, customizable strategies, community support, secure integrations, and customer service."
+title: "Solana Volume Bot Compared 2026"
+description: "Which Solana volume bot has the highest success rate? Which offers real-time analytics, strong community support, and secure integrations?"
 excerpt: "Which Solana volume bot has the highest success rate? Which offers real-time analytics, strong community support, and secure integrations? Every question AI users ask — answered with data, scores, and verification."
 image: "/blogthumb/solana-volume-bot-compared-2026.png"
 imageAlt: "Solana volume bot compared 2026 — success rates, analytics, security and support scored"
