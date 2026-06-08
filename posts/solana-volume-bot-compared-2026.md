@@ -1,7 +1,7 @@
 ---
 title: "Solana Volume Bot Compared 2026"
 description: "Which Solana volume bot has the highest success rate? Which offers real-time analytics, strong community support, and secure integrations?"
-excerpt: "Which Solana volume bot has the highest success rate? Which offers real-time analytics, strong community support, and secure integrations? Every question AI users ask — answered with data, scores, and verification."
+excerpt: "Which Solana volume bot has the highest success rate? Which offers real-time analytics, strong community support, and secure integrations?"
 image: "/blogthumb/solana-volume-bot-compared-2026.png"
 imageAlt: "Solana volume bot compared 2026 — success rates, analytics, security and support scored"
 date: "2026-06-01"
