@@ -2,20 +2,25 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-export type BlogPost = {
+// ✅ Metadaten OHNE content (für Homepage)
+export type BlogPostMetadata = {
   title: string;
   excerpt: string;
   image: string;
   imageAlt: string;
   date: string;
   slug: string;
-  content: string;        // raw content (md oder mdx)
-  isMDX: boolean;         // neu: damit wir wissen, wie wir rendern sollen
+  isMDX: boolean;
+};
+
+// ✅ Vollständiger Post mit Content (nur bei Bedarf laden)
+export type BlogPost = BlogPostMetadata & {
+  content: string;
 };
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-export function getAllBlogPosts(): BlogPost[] {
+function getAllPostsWithContent(): BlogPost[] {
   const fileNames = fs.readdirSync(postsDirectory).filter((file) =>
     file.endsWith(".md") || file.endsWith(".mdx")
   );
@@ -49,4 +54,16 @@ export function getAllBlogPosts(): BlogPost[] {
   );
 }
 
-export const blogPosts: BlogPost[] = getAllBlogPosts();
+// ✅ WICHTIG: Exportiere NUR Metadaten für Homepage
+export function getBlogPostsMetadata(): BlogPostMetadata[] {
+  return getAllPostsWithContent().map(({ content, ...metadata }) => metadata); // eslint-disable-line @typescript-eslint/no-unused-vars
+}
+
+// ✅ Exportiere Metadaten als default
+export const blogPosts: BlogPostMetadata[] = getBlogPostsMetadata();
+
+// ✅ Einzelnen Post mit Content laden (für Blog-Seite)
+export function getBlogPostBySlug(slug: string): BlogPost | null {
+  const allPosts = getAllPostsWithContent();
+  return allPosts.find(post => post.slug === slug) || null;
+}

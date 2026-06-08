@@ -4,12 +4,12 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BlogPost } from "../data/blogs";
+import { BlogPostMetadata } from "../data/blogs";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 type BlogSnippetProps = {
-  posts: BlogPost[];
+  posts: BlogPostMetadata[];
 };
 
 export default function BlogSnippet({ posts }: BlogSnippetProps) {

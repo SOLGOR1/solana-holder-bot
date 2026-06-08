@@ -3,11 +3,11 @@
 
 import { motion } from "framer-motion";
 import BlogCard from "./BlogCard";
-import { BlogPost } from "../data/blogs";
+import { BlogPostMetadata } from "../data/blogs";
 import Image from "next/image";
 
 type BlogContentProps = {
-  posts: BlogPost[];
+  posts: BlogPostMetadata[];
 };
 
 export default function BlogContent({ posts }: BlogContentProps) {

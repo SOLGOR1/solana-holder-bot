@@ -1,5 +1,5 @@
 // src/app/blog/[slug]/page.tsx
-import { blogPosts } from "../../data/blogs";
+import { blogPosts, getBlogPostBySlug } from "../../data/blogs";
 import Navbar from "../../components/Navbar";
 import BlogPostContent from "../../components/BlogPostContent";
 import { notFound } from "next/navigation";
@@ -72,14 +72,16 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (postIndex === -1) notFound();
 
-  const post = blogPosts[postIndex];
+  // ✅ Lade nur Content wenn nötig
+  const fullPost = getBlogPostBySlug(resolvedParams.slug);
+  if (!fullPost) notFound();
 
   // MDX kompilieren
   let compiledContent: React.ReactNode = null;
 
-  if (post.isMDX) {
+  if (fullPost.isMDX) {
     const result = await compileMDX({
-      source: post.content,
+      source: fullPost.content,
       options: {
         mdxOptions: {
           remarkPlugins: [],
@@ -103,7 +105,7 @@ export default async function BlogPostPage({ params }: Props) {
       <main className="grow py-5 relative z-10">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <BlogPostContent
-            post={post}
+            post={fullPost}
             compiledContent={compiledContent}
             prevSlug={prevSlug}
             nextSlug={nextSlug}

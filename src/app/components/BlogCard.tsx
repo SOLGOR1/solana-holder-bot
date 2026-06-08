@@ -3,10 +3,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { BlogPost } from "../data/blogs";
+import { BlogPostMetadata } from "../data/blogs";
 
 type BlogCardProps = {
-  post: BlogPost;
+  post: BlogPostMetadata;
 };
 
 export default function BlogCard({ post }: BlogCardProps) {
