@@ -13,6 +13,7 @@ import FloatingSocialWidget from './components/FloatingSocialWidget';
 import dynamic from 'next/dynamic';
 import BelowFoldContent from './components/BelowFoldContent';
 import React, { memo } from 'react';
+import { blogPosts } from './data/blogs';  
 
 // Nur Above-the-Fold Komponenten (SSR erlaubt)
 const DynamicAllInOneBooster = dynamic(() => import('./components/AllInOneBooster'), { 
@@ -133,7 +134,7 @@ const Home = memo(function Home() {
         <DynamicAllInOneBooster />
         <main className="grow" role="main">
           {/* Alles schwere kommt hier rein und wird client-seitig geladen */}
-          <BelowFoldContent />
+          <BelowFoldContent blogPosts={blogPosts} />
         </main>
         <Disclaimer />
         <Footer />
