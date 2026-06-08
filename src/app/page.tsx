@@ -14,12 +14,10 @@ import dynamic from 'next/dynamic';
 import BelowFoldContent from './components/BelowFoldContent';
 import React, { memo } from 'react';
 
-const DynamicBenefits2 = dynamic(() => import('./components/Benefits2'), { 
-  loading: () => <div className="h-96" />, // Skeleton
-  ssr: false   // ← wichtig!
+// Nur Above-the-Fold Komponenten (SSR erlaubt)
+const DynamicAllInOneBooster = dynamic(() => import('./components/AllInOneBooster'), { 
+  ssr: true 
 });
-
-const DynamicAllInOneBooster = dynamic(() => import('./components/AllInOneBooster'), { ssr: true });
 
 export const metadata: Metadata = {
   title: "Solana Volume Bot – Boost SOL Volume, Stats & Holders",
