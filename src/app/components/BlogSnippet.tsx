@@ -33,11 +33,11 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
             Latest Insights
           </h4>
           {/* Platzhalter für Featured Card */}
-          <div className="max-w-4xl mx-auto mb-10 h-[520px] bg-white/5 rounded-3xl" />
+          <div className="max-w-4xl mx-auto mb-10 h-130 bg-white/5 rounded-3xl" />
           {/* Platzhalter für Secondary Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[1, 2].map((i) => (
-              <div key={i} className="h-[420px] bg-white/5 rounded-3xl" />
+              <div key={i} className="h-105 bg-white/5 rounded-3xl" />
             ))}
           </div>
         </div>
@@ -51,13 +51,13 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
 
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-cyan-600/10 rounded-full blur-3xl"
           style={{ 
             animation: 'gentlePulse 32s ease-in-out infinite' 
           }}
         />
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-emerald-600/10 rounded-full blur-3xl"
           style={{ 
             animation: 'gentlePulse 36s ease-in-out infinite reverse' 
           }}
@@ -99,7 +99,7 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
                   height={500}
                   className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute top-4 right-4 bg-cyan-500/95 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg ring-2 ring-cyan-400/50">
                   Featured
                 </div>
@@ -150,7 +150,7 @@ export default function BlogSnippet({ posts }: BlogSnippetProps) {
                         height={300}
                         className="w-full h-52 object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
                       <div className="absolute top-4 left-4 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center">
                         <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 18 18" xmlns="https://www.w3.org/2000/svg">
                           <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135" />

@@ -5,22 +5,20 @@ import Widget1 from './components/Widget1';
 import Navbar from './components/Navbar';
 import Script from 'next/script';
 import Footer from './components/Footer';
-import { blogPosts } from './data/blogs';
 import SupportedPlatforms from './components/SupportedPlatforms';
 import Customer from './components/Customer';
 import Disclaimer from './components/Disclaimer';
 import type { Metadata } from "next";
 import FloatingSocialWidget from './components/FloatingSocialWidget';
 import dynamic from 'next/dynamic';
+import BelowFoldContent from './components/BelowFoldContent';
 import React, { memo } from 'react';
 
-// Dynamic imports for below-the-fold content (reduces LCP and TBT)
-const DynamicBenefits2 = dynamic(() => import('./components/Benefits2'), { loading: () => null });
-const DynamicGuide = dynamic(() => import('./components/Guide'), { ssr: true });
-const DynamicHowItWorks = dynamic(() => import('./components/HowItWorks'), { ssr: true });
-const DynamicTestimonials = dynamic(() => import('./components/Testimonials'), { ssr: true });
-const DynamicFAQs = dynamic(() => import('./components/FAQs'), { ssr: true });
-const DynamicBlogSnippet = dynamic(() => import('./components/BlogSnippet'), { ssr: true });
+const DynamicBenefits2 = dynamic(() => import('./components/Benefits2'), { 
+  loading: () => <div className="h-96" />, // Skeleton
+  ssr: false   // ← wichtig!
+});
+
 const DynamicAllInOneBooster = dynamic(() => import('./components/AllInOneBooster'), { ssr: true });
 
 export const metadata: Metadata = {
@@ -136,12 +134,8 @@ const Home = memo(function Home() {
         <Header />
         <DynamicAllInOneBooster />
         <main className="grow" role="main">
-          <DynamicBenefits2 />
-          <DynamicGuide />
-          <DynamicHowItWorks />
-          <DynamicTestimonials />
-          <DynamicBlogSnippet posts={blogPosts} />
-          <DynamicFAQs />
+          {/* Alles schwere kommt hier rein und wird client-seitig geladen */}
+          <BelowFoldContent />
         </main>
         <Disclaimer />
         <Footer />
