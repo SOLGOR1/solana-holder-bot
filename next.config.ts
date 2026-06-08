@@ -1,13 +1,15 @@
-// next.config.ts
 import type { NextConfig } from "next";
+import createMDX from '@next/mdx';
 
 const nextConfig: NextConfig = {
-  // === CORE SETTINGS ===
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
 
-  // === HEADERS (Security + Cache) ===
+  // Wichtig für MD/MDX
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+
+  // === HEADERS ===
   async headers() {
     return [
       {
@@ -17,14 +19,12 @@ const nextConfig: NextConfig = {
           { key: "X-Frame-Options", value: "DENY" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
-          // Besserer Cache für statische Assets (hilft gegen Redirects)
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
     ];
   },
 
-  // === IMAGES OPTIMIZATION – stark verbessert gegen Redirects ===
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "indiehunt.io" },
@@ -40,36 +40,31 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
-
-    // === WICHTIGSTE ÄNDERUNGEN GEGEN IMAGE REDIRECTS ===
-    minimumCacheTTL: 31536000,   // 1 Jahr Cache → reduziert Image Redirects massiv
-    unoptimized: false,
+    minimumCacheTTL: 31536000,
   },
 
-  // === COMPILER ===
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-  // === EXPERIMENTAL FEATURES ===
   experimental: {
     optimizePackageImports: ["framer-motion", "react-icons", "lucide-react"],
     inlineCss: true,
   },
 
-  // === OTHER OPTIMIZATIONS ===
+  output: "standalone",
   trailingSlash: false,
   generateEtags: true,
-  output: "standalone",
 
-  // === TURBOPACK + Webpack Alias (Legacy Polyfills) ===
+  // Turbopack Config (vereinfacht)
   turbopack: {
-    resolveAlias: {
-      "../build/polyfills/polyfill-module": "./src/lib/modern-polyfill.js",
-      "next/dist/build/polyfills/polyfill-module": "./src/lib/modern-polyfill.js",
-    },
+    resolveExtensions: [
+      '.md', '.mdx', '.tsx', '.ts', '.jsx', '.js', '.json'
+    ],
+    // rules nur wenn wirklich nötig (z.B. für SVGs etc.)
   },
 
+  // Dein alter Webpack-Alias bleibt erhalten
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -80,4 +75,12 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  extension: /\.(md|mdx)$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
+
+export default withMDX(nextConfig);

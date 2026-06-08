@@ -4,6 +4,8 @@ import Navbar from "../../components/Navbar";
 import BlogPostContent from "../../components/BlogPostContent";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { compileMDX } from 'next-mdx-remote/rsc';   // ← neu
+import { useMDXComponents } from '../../../../mdx-components'; // Pfad anpassen!
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -84,6 +86,23 @@ export default async function BlogPostPage({ params }: Props) {
   }
 
   const post = blogPosts[postIndex];
+
+ let compiledContent: React.ReactNode = null;
+
+  if (post.isMDX) {
+    const result = await compileMDX({
+      source: post.content,
+      options: {
+        mdxOptions: {
+          remarkPlugins: [],
+          rehypePlugins: [],
+        },
+      },
+      components: useMDXComponents({}),
+    });
+    compiledContent = result.content;
+  }
+
   const prevSlug = postIndex > 0 ? blogPosts[postIndex - 1].slug : null;
 
   // Circular Navigation für nextSlug – immer ein string (wie in deiner Originalversion)
@@ -92,12 +111,19 @@ export default async function BlogPostPage({ params }: Props) {
       ? blogPosts[postIndex + 1].slug
       : blogPosts[0].slug; // zurück zum ersten Post
 
+  const blogPostContentProps = {
+    post,
+    compiledContent,
+    prevSlug,
+    nextSlug,
+  } as any;
+
   return (
     <div className="flex flex-col min-h-screen pt-16 bg-black overflow-hidden">
       <Navbar />
       <main className="grow py-5 relative z-10">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
-          <BlogPostContent post={post} prevSlug={prevSlug} nextSlug={nextSlug} />
+          <BlogPostContent {...blogPostContentProps} />
         </div>
       </main>
     </div>

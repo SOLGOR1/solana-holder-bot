@@ -10,11 +10,12 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 type BlogPostContentProps = {
   post: BlogPost;
+  compiledContent: React.ReactNode | null;
   prevSlug: string | null;
   nextSlug: string;
 };
 
-export default function BlogPostContent({ post, prevSlug, nextSlug }: BlogPostContentProps) {
+export default function BlogPostContent({ post, compiledContent, prevSlug, nextSlug }: BlogPostContentProps) {
   return (
     <>
       {/* Dezente pulsierende Blobs */}
@@ -77,15 +78,19 @@ export default function BlogPostContent({ post, prevSlug, nextSlug }: BlogPostCo
           })}
         </p>
 
-        {/* Markdown Content */}
-        <motion.div
-          className="prose prose-invert prose-headings:text-white prose-a:text-cyan-400 prose-a:hover:text-cyan-300 prose-p:text-gray-100 prose-li:text-gray-100 prose-code:text-pink-400 prose-pre:bg-black/50 prose-pre:border prose-pre:border-white/10 prose-pre:rounded-2xl prose-pre:shadow-lg max-w-none"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
+      {/* Markdown / MDX Content */}
+      <motion.div
+        className="prose prose-invert prose-headings:text-white prose-a:text-cyan-400 ... max-w-none"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        {post.isMDX && compiledContent ? (
+          compiledContent
+        ) : (
           <MarkdownRenderer content={post.content} />
-        </motion.div>
+        )}
+      </motion.div>
 
         {/* CTA am Ende */}
         <motion.div

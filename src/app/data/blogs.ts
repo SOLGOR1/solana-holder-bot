@@ -1,4 +1,3 @@
-// src/data/blogs.ts
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -10,27 +9,25 @@ export type BlogPost = {
   imageAlt: string;
   date: string;
   slug: string;
-  content: string;
+  content: string;        // raw content (md oder mdx)
+  isMDX: boolean;         // neu: damit wir wissen, wie wir rendern sollen
 };
 
-// Path to the posts directory
 const postsDirectory = path.join(process.cwd(), "posts");
 
-// Function to get all blog posts
 export function getAllBlogPosts(): BlogPost[] {
-  // Get all .md files in the posts directory
-  const fileNames = fs.readdirSync(postsDirectory).filter((file) => file.endsWith(".md"));
+  const fileNames = fs.readdirSync(postsDirectory).filter((file) =>
+    file.endsWith(".md") || file.endsWith(".mdx")
+  );
 
-  // Map each file to a blog post
   const blogPosts: BlogPost[] = fileNames
     .map((fileName) => {
       const filePath = path.join(postsDirectory, fileName);
       const fileContent = fs.readFileSync(filePath, "utf-8");
       const { data, content } = matter(fileContent);
 
-      // Validate required fields
       if (!data.slug || typeof data.slug !== "string") {
-        console.warn(`Warning: Missing or invalid 'slug' in ${fileName}. Skipping this post.`);
+        console.warn(`Warning: Missing slug in ${fileName}`);
         return null;
       }
 
@@ -38,17 +35,18 @@ export function getAllBlogPosts(): BlogPost[] {
         title: data.title || "Untitled",
         excerpt: data.excerpt || "",
         image: data.image || "/default-image.jpg",
-        imageAlt: data.imageAlt || "Default image for blog post",
+        imageAlt: data.imageAlt || "Blog Post",
         date: data.date || "1970-01-01",
         slug: data.slug,
         content,
+        isMDX: fileName.endsWith(".mdx"),
       };
     })
-    .filter((post): post is BlogPost => post !== null); // Remove null entries
+    .filter((post): post is BlogPost => post !== null);
 
-  // Sort posts by date (newest first)
-  return blogPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return blogPosts.sort((a, b) => 
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }
 
-// Export the sorted blog posts
 export const blogPosts: BlogPost[] = getAllBlogPosts();
