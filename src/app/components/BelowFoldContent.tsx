@@ -3,6 +3,7 @@
 
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { BlogPost } from '../data/blogs';     // ← Typ richtig importieren
 
 const DynamicBenefits2 = dynamic(() => import('./Benefits2'), { ssr: false });
 const DynamicGuide = dynamic(() => import('./Guide'), { ssr: false });
@@ -16,7 +17,7 @@ const DynamicBlogSnippet = dynamic(() => import('./BlogSnippet'), {
 });
 
 type BelowFoldContentProps = {
-  blogPosts: any[];   // oder import { BlogPost } from '../data/blogs';
+  blogPosts: BlogPost[];     // ← Korrekter Typ statt any
 };
 
 export default function BelowFoldContent({ blogPosts }: BelowFoldContentProps) {
