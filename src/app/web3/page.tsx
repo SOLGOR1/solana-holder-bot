@@ -28,7 +28,7 @@ import { useEffect, useMemo, useState, useCallback } from 'react';
 
 /* ============================ TYPES ============================ */
 
-type Billing = 'oneTime' | 'monthly' | 'perUnit' | 'perDay' | 'perWeek';
+type Billing = 'oneTime' | 'monthly' | 'weekly' | 'perUnit' | 'perDay' | 'perWeek';
 type Settle = 'USDC' | 'SOL';
 type Unit = 'USD' | 'SOL';
 
@@ -45,6 +45,10 @@ interface Item {
   qtyLabel?: string;        // e.g. "pages", "features", "days", "weeks"
   defaultQty?: number;
   amountEditable?: boolean; // client can override the USD amount (capital items)
+  defaultAmount?: number;   // starting value for amountEditable/slider items
+  slider?: { min: number; max: number; step: number }; // budget slider (e.g. KOL)
+  monthlyOptional?: boolean;     // shows a "bill monthly" toggle (× project duration)
+  billingOptions?: Billing[];    // segmented control, e.g. ['oneTime','monthly','weekly']
 }
 
 interface Category {
@@ -130,25 +134,28 @@ const CATALOG: Category[] = [
     id: 'assets',
     num: '04',
     title: 'Branding & Creative Assets',
-    blurb: 'Promotional images and videos. Pick one tier.',
+    blurb: 'Promotional images and videos. Pick one tier — switch to monthly/weekly for fresh batches.',
     items: [
       {
         id: 'assets_starter',
         name: 'Creative — Starter',
         desc: '8 images · 2 square videos (5–10s) · 1 landscape video (10–15s).',
         price: 250, unit: 'USD', settle: 'USDC', billing: 'oneTime',
+        billingOptions: ['oneTime', 'monthly', 'weekly'],
       },
       {
         id: 'assets_accelerator',
         name: 'Creative — Accelerator',
         desc: '20 images · 5 square videos · 2 landscape videos.',
         price: 500, unit: 'USD', settle: 'USDC', billing: 'oneTime',
+        billingOptions: ['oneTime', 'monthly', 'weekly'],
       },
       {
         id: 'assets_dominate',
         name: 'Creative — Dominate',
         desc: '50 images · 12 square videos · 5 landscape videos.',
         price: 1000, unit: 'USD', settle: 'USDC', billing: 'oneTime',
+        billingOptions: ['oneTime', 'monthly', 'weekly'],
       },
     ],
   },
@@ -172,8 +179,19 @@ const CATALOG: Category[] = [
     title: 'Marketing & Trending',
     blurb: 'Reach, trending placement and sustained volume.',
     items: [
-      { id: 'kol', name: 'KOL Campaign', desc: 'Coordinated influencer coverage.', price: 30000, unit: 'USD', settle: 'USDC', billing: 'oneTime' },
+      {
+        id: 'kol',
+        name: 'KOL Campaign',
+        desc: 'Coordinated influencer coverage. Set your budget; toggle monthly to repeat over the project duration.',
+        price: 3000, unit: 'USD', settle: 'USDC', billing: 'oneTime', from: true,
+        slider: { min: 3000, max: 1_000_000, step: 3000 }, defaultAmount: 30000, monthlyOptional: true,
+      },
       { id: 'dexscreener', name: 'Dexscreener Boost + Verification', price: 4800, unit: 'USD', settle: 'USDC', billing: 'oneTime' },
+      { id: 'dextools_update', name: 'Dextools Update', desc: 'Info update: logo, links, socials & description.', price: 195, unit: 'USD', settle: 'USDC', billing: 'oneTime' },
+      { id: 'dext_starter', name: 'Dextools Boost — Starter', price: 199, unit: 'USD', settle: 'USDC', billing: 'oneTime' },
+      { id: 'dext_standard', name: 'Dextools Boost — Standard', price: 499, unit: 'USD', settle: 'USDC', billing: 'oneTime' },
+      { id: 'dext_pro', name: 'Dextools Boost — Pro', price: 999, unit: 'USD', settle: 'USDC', billing: 'oneTime' },
+      { id: 'dext_max', name: 'Dextools Boost — Max', price: 3999, unit: 'USD', settle: 'USDC', billing: 'oneTime' },
       { id: 'blogs', name: 'Blogs, News & Backlinks', price: 1500, unit: 'USD', settle: 'USDC', billing: 'monthly' },
       { id: 'aeo', name: 'AEO — AI Search Optimization', desc: 'Optimized for ChatGPT, Gemini & Perplexity.', price: 1500, unit: 'USD', settle: 'USDC', billing: 'monthly' },
       { id: 'outreach', name: 'Outreach Budget', desc: 'Flexible outreach spend.', price: 2000, unit: 'USD', settle: 'USDC', billing: 'oneTime' },
@@ -265,9 +283,12 @@ const usd2 = (n: number) =>
 const sol = (n: number) =>
   `${n.toLocaleString('en-US', { maximumFractionDigits: 1 })} SOL`;
 
-function billingMultiplier(item: Item, months: number, qty: number): number {
-  switch (item.billing) {
+const WEEKS_PER_MONTH = 4;
+
+function billingMultiplier(billing: Billing, months: number, qty: number): number {
+  switch (billing) {
     case 'monthly': return Math.max(1, months);
+    case 'weekly': return Math.max(1, months * WEEKS_PER_MONTH);
     case 'perUnit':
     case 'perDay':
     case 'perWeek': return Math.max(1, qty);
@@ -275,9 +296,10 @@ function billingMultiplier(item: Item, months: number, qty: number): number {
   }
 }
 
-function billingLabel(item: Item, months: number, qty: number): string {
-  switch (item.billing) {
+function billingLabel(billing: Billing, months: number, qty: number, item: Item): string {
+  switch (billing) {
     case 'monthly': return `${Math.max(1, months)} month${months > 1 ? 's' : ''}`;
+    case 'weekly': return `${Math.max(1, months * WEEKS_PER_MONTH)} weeks`;
     case 'perUnit':
     case 'perDay':
     case 'perWeek': return `×${Math.max(1, qty)} ${item.qtyLabel ?? ''}`.trim();
@@ -296,7 +318,19 @@ export default function PackageConfigurator() {
   });
   const [amountMap, setAmountMap] = useState<Record<string, number>>(() => {
     const init: Record<string, number> = {};
-    CATALOG.forEach((c) => c.items.forEach((i) => { if (i.amountEditable) init[i.id] = i.price; }));
+    CATALOG.forEach((c) => c.items.forEach((i) => {
+      if (i.amountEditable || i.slider) init[i.id] = i.defaultAmount ?? i.price;
+    }));
+    return init;
+  });
+  // per-item "bill monthly" toggle (e.g. KOL)
+  const [monthlyMap, setMonthlyMap] = useState<Record<string, boolean>>({});
+  // per-item billing mode for items with billingOptions (e.g. creative assets)
+  const [billingModeMap, setBillingModeMap] = useState<Record<string, Billing>>(() => {
+    const init: Record<string, Billing> = {};
+    CATALOG.forEach((c) => c.items.forEach((i) => {
+      if (i.billingOptions?.length) init[i.id] = i.billingOptions[0];
+    }));
     return init;
   });
   const [months, setMonths] = useState(3);
@@ -326,11 +360,12 @@ export default function PackageConfigurator() {
   }, []);
 
   // exclusive groups: items inside the same category that share a "tier" are radio-like.
-  // We treat backlinks (bl_*), assets (assets_*) and pools (pool_*) as exclusive by prefix.
+  // We treat backlinks (bl_*), assets (assets_*), pools (pool_*) and dextools boosts (dext_*) as exclusive by prefix.
   const groupOf = (id: string): string | null => {
     if (id.startsWith('bl_')) return 'backlinks';
     if (id.startsWith('assets_')) return 'assets';
     if (id.startsWith('pool_')) return 'pools';
+    if (id.startsWith('dext_')) return 'dextools';
     return null;
   };
 
@@ -356,7 +391,28 @@ export default function PackageConfigurator() {
   const setAmount = (id: string, v: number) =>
     setAmountMap((p) => ({ ...p, [id]: Math.max(0, Math.floor(v) || 0) }));
 
+  const setMonthly = (id: string, v: boolean) =>
+    setMonthlyMap((p) => ({ ...p, [id]: v }));
+
+  const setBillingMode = (id: string, b: Billing) =>
+    setBillingModeMap((p) => ({ ...p, [id]: b }));
+
+  // effective billing once per-item toggles are applied
+  const effBilling = useCallback((item: Item): Billing => {
+    if (item.billingOptions?.length) return billingModeMap[item.id] ?? item.billingOptions[0];
+    if (item.monthlyOptional) return monthlyMap[item.id] ? 'monthly' : 'oneTime';
+    return item.billing;
+  }, [billingModeMap, monthlyMap]);
+
+  // effective base amount (slider / editable override the catalog price)
+  const effBase = useCallback((item: Item): number => {
+    if (item.slider || item.amountEditable) return amountMap[item.id] ?? item.defaultAmount ?? item.price;
+    return item.price;
+  }, [amountMap]);
+
   /* ---------------- totals ---------------- */
+  const TEAM_FEE_RATE = 0.02; // 2% base team fee on the selected subtotal
+
   const totals = useMemo(() => {
     let usdcUSD = 0;        // services paid in USDC
     let solFromUSD_USD = 0; // SOL-settled items that are quoted in USD
@@ -371,22 +427,24 @@ export default function PackageConfigurator() {
       for (const item of cat.items) {
         if (!selected[item.id]) continue;
         const qty = qtyMap[item.id] ?? item.defaultQty ?? 1;
-        const mult = billingMultiplier(item, months, qty);
-        const base = item.amountEditable ? (amountMap[item.id] ?? item.price) : item.price;
+        const billing = effBilling(item);
+        const mult = billingMultiplier(billing, months, qty);
+        const base = effBase(item);
+        const config = billingLabel(billing, months, qty, item);
 
         if (item.unit === 'SOL') {
           const solAmt = base * mult;
           const usdValue = solAmt * solPrice;
           solNative_SOL += solAmt;
-          lines.push({ cat: cat.title, name: item.name, config: billingLabel(item, months, qty), settle: 'SOL', usdValue, solValue: solAmt });
+          lines.push({ cat: cat.title, name: item.name, config, settle: 'SOL', usdValue, solValue: solAmt });
         } else {
           const usdValue = base * mult;
           if (item.settle === 'SOL') {
             solFromUSD_USD += usdValue;
-            lines.push({ cat: cat.title, name: item.name, config: billingLabel(item, months, qty), settle: 'SOL', usdValue, solValue: usdValue / solPrice });
+            lines.push({ cat: cat.title, name: item.name, config, settle: 'SOL', usdValue, solValue: usdValue / solPrice });
           } else {
             usdcUSD += usdValue;
-            lines.push({ cat: cat.title, name: item.name, config: billingLabel(item, months, qty), settle: 'USDC', usdValue, solValue: null });
+            lines.push({ cat: cat.title, name: item.name, config, settle: 'USDC', usdValue, solValue: null });
           }
         }
       }
@@ -394,10 +452,16 @@ export default function PackageConfigurator() {
 
     const solTotalSOL = solNative_SOL + solFromUSD_USD / solPrice;
     const solTotalUSD = solTotalSOL * solPrice;
-    const grandUSD = usdcUSD + solTotalUSD;
+    const subtotalUSD = usdcUSD + solTotalUSD;          // selected items, pre team fee
+    const teamFee = subtotalUSD * TEAM_FEE_RATE;        // 2% team fee, charged in USDC
+    const usdcRequired = usdcUSD + teamFee;             // USDC bucket includes the team fee
+    const grandUSD = subtotalUSD + teamFee;
 
-    return { lines, usdcUSD, solTotalSOL, solTotalUSD, grandUSD, count: lines.length };
-  }, [selected, qtyMap, amountMap, months, solPrice]);
+    return {
+      lines, usdcUSD, usdcRequired, solTotalSOL, solTotalUSD,
+      subtotalUSD, teamFee, grandUSD, count: lines.length,
+    };
+  }, [selected, qtyMap, amountMap, monthlyMap, billingModeMap, months, solPrice, effBilling, effBase]);
 
   const clearAll = () => { setSelected({}); };
 
@@ -476,7 +540,12 @@ export default function PackageConfigurator() {
         y += bold ? 22 : 18;
       };
 
-      row('USDC required', usd(totals.usdcUSD));
+      row('Subtotal (selected)', usd(totals.subtotalUSD));
+      row('Team fee (2%)', usd(totals.teamFee));
+      doc.setDrawColor(225, 230, 238);
+      doc.line(labelX, y - 6, right, y - 6);
+      y += 4;
+      row('USDC required', usd(totals.usdcRequired));
       row('SOL required', `${sol(totals.solTotalSOL)}  (~${usd(totals.solTotalUSD)})`);
       doc.setDrawColor(210, 216, 226);
       doc.line(labelX, y - 6, right, y - 6);
@@ -490,7 +559,7 @@ export default function PackageConfigurator() {
       doc.setTextColor(...MUTE);
       const note =
         'This is a self-configured estimate. Please submit it to the LEEK team for review — final pricing is confirmed after we check scope, market conditions and current SOL price. ' +
-        'SOL amounts are converted at the live rate shown above and will move with the market. "From" prices are starting points and may rise with scope. ' +
+        'A 2% base team fee is applied to the selected subtotal. SOL amounts are converted at the live rate shown above and will move with the market. "From" prices are starting points and may rise with scope. ' +
         'Capital figures (liquidity, buywalls, moneyflow) are funds deployed on-chain, not agency fees.';
       doc.text(doc.splitTextToSize(note, W - M * 2), M, y);
 
@@ -637,36 +706,100 @@ export default function PackageConfigurator() {
                           </span>
                         </button>
 
-                        {on && (item.qty || item.amountEditable) && (
-                          <div className="flex flex-wrap items-center gap-4 border-t border-white/10 px-4 py-3">
-                            {item.qty && (
-                              <div className="flex items-center gap-2">
-                                <span className="text-xs text-slate-400 capitalize">{item.qtyLabel}</span>
-                                <div className="flex items-center gap-1">
-                                  <button onClick={() => setQty(item.id, q - 1)} className="grid h-7 w-7 place-items-center rounded-md border border-white/10 bg-white/3 text-slate-300 hover:text-white">–</button>
-                                  <input
-                                    type="number" min={1} value={q}
-                                    onChange={(e) => setQty(item.id, Number(e.target.value))}
-                                    className="h-7 w-14 rounded-md border border-white/10 bg-black/30 text-center text-sm tabular-nums text-white outline-none focus:border-blue-500/60"
-                                  />
-                                  <button onClick={() => setQty(item.id, q + 1)} className="grid h-7 w-7 place-items-center rounded-md border border-white/10 bg-white/3 text-slate-300 hover:text-white">+</button>
+                        {on && (item.qty || item.amountEditable || item.slider || item.monthlyOptional || item.billingOptions) && (
+                          <div className="flex flex-col gap-3 border-t border-white/10 px-4 py-3">
+                            {item.slider && (
+                              <div>
+                                <div className="mb-1.5 flex items-center justify-between">
+                                  <span className="text-xs text-slate-400">Budget</span>
+                                  <span className="text-sm font-semibold tabular-nums text-white">
+                                    {usd(amountMap[item.id] ?? item.defaultAmount ?? item.price)}
+                                    {monthlyMap[item.id] && <span className="ml-1 text-[11px] font-normal text-slate-500">/ month</span>}
+                                  </span>
+                                </div>
+                                <input
+                                  type="range"
+                                  min={item.slider.min} max={item.slider.max} step={item.slider.step}
+                                  value={amountMap[item.id] ?? item.defaultAmount ?? item.price}
+                                  onChange={(e) => setAmount(item.id, Number(e.target.value))}
+                                  className="w-full cursor-pointer accent-blue-500"
+                                />
+                                <div className="mt-1 flex justify-between text-[10px] text-slate-500">
+                                  <span>{usd(item.slider.min)}</span>
+                                  <span>steps of {usd(item.slider.step)}</span>
+                                  <span>{usd(item.slider.max)}</span>
                                 </div>
                               </div>
                             )}
-                            {item.amountEditable && (
-                              <div className="flex items-center gap-2">
-                                <span className="text-xs text-slate-400">Amount (USD)</span>
-                                <div className="flex items-center rounded-md border border-white/10 bg-black/30 px-2">
-                                  <span className="text-sm text-slate-500">$</span>
-                                  <input
-                                    type="number" min={0} step={500}
-                                    value={amountMap[item.id] ?? item.price}
-                                    onChange={(e) => setAmount(item.id, Number(e.target.value))}
-                                    className="h-7 w-28 bg-transparent text-right text-sm tabular-nums text-white outline-none"
-                                  />
+
+                            <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+                              {item.qty && (
+                                <div className="flex items-center gap-2">
+                                  <span className="text-xs text-slate-400 capitalize">{item.qtyLabel}</span>
+                                  <div className="flex items-center gap-1">
+                                    <button onClick={() => setQty(item.id, q - 1)} className="grid h-7 w-7 place-items-center rounded-md border border-white/10 bg-white/3 text-slate-300 hover:text-white">–</button>
+                                    <input
+                                      type="number" min={1} value={q}
+                                      onChange={(e) => setQty(item.id, Number(e.target.value))}
+                                      className="h-7 w-14 rounded-md border border-white/10 bg-black/30 text-center text-sm tabular-nums text-white outline-none focus:border-blue-500/60"
+                                    />
+                                    <button onClick={() => setQty(item.id, q + 1)} className="grid h-7 w-7 place-items-center rounded-md border border-white/10 bg-white/3 text-slate-300 hover:text-white">+</button>
+                                  </div>
                                 </div>
-                              </div>
-                            )}
+                              )}
+
+                              {item.amountEditable && (
+                                <div className="flex items-center gap-2">
+                                  <span className="text-xs text-slate-400">Amount (USD)</span>
+                                  <div className="flex items-center rounded-md border border-white/10 bg-black/30 px-2">
+                                    <span className="text-sm text-slate-500">$</span>
+                                    <input
+                                      type="number" min={0} step={500}
+                                      value={amountMap[item.id] ?? item.price}
+                                      onChange={(e) => setAmount(item.id, Number(e.target.value))}
+                                      className="h-7 w-28 bg-transparent text-right text-sm tabular-nums text-white outline-none"
+                                    />
+                                  </div>
+                                </div>
+                              )}
+
+                              {item.monthlyOptional && (
+                                <button
+                                  onClick={() => setMonthly(item.id, !monthlyMap[item.id])}
+                                  className={`flex items-center gap-2 rounded-lg border px-3 py-1.5 text-xs font-medium transition ${
+                                    monthlyMap[item.id]
+                                      ? 'border-blue-500/60 bg-blue-500/15 text-blue-200'
+                                      : 'border-white/10 bg-white/3 text-slate-400 hover:text-white'
+                                  }`}
+                                >
+                                  <span className={`inline-block h-3.5 w-6 rounded-full p-0.5 transition ${monthlyMap[item.id] ? 'bg-blue-500' : 'bg-white/20'}`}>
+                                    <span className={`block h-2.5 w-2.5 rounded-full bg-white transition ${monthlyMap[item.id] ? 'translate-x-2.5' : ''}`} />
+                                  </span>
+                                  Bill monthly ({months}m)
+                                </button>
+                              )}
+
+                              {item.billingOptions && (
+                                <div className="flex items-center gap-2">
+                                  <span className="text-xs text-slate-400">Billing</span>
+                                  <div className="inline-flex rounded-lg border border-white/10 bg-black/30 p-0.5">
+                                    {item.billingOptions.map((opt) => {
+                                      const active = (billingModeMap[item.id] ?? item.billingOptions![0]) === opt;
+                                      const label = opt === 'oneTime' ? 'One-time' : opt === 'monthly' ? 'Monthly' : 'Weekly';
+                                      return (
+                                        <button
+                                          key={opt}
+                                          onClick={() => setBillingMode(item.id, opt)}
+                                          className={`rounded-md px-2.5 py-1 text-xs font-medium transition ${
+                                            active ? 'bg-blue-600 text-white' : 'text-slate-400 hover:text-white'
+                                          }`}
+                                        >{label}</button>
+                                      );
+                                    })}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
                           </div>
                         )}
                       </div>
@@ -712,12 +845,28 @@ export default function PackageConfigurator() {
 
                     <div className="my-4 h-px bg-white/10" />
 
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center justify-between text-slate-400">
+                        <span>Subtotal</span>
+                        <span className="tabular-nums">{usd(totals.subtotalUSD)}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-slate-400">
+                        <span>Team fee (2%)</span>
+                        <span className="tabular-nums">+ {usd(totals.teamFee)}</span>
+                      </div>
+                    </div>
+
+                    <div className="my-3 h-px bg-white/10" />
+
                     <div className="space-y-2.5 text-sm">
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-start justify-between">
                         <span className="flex items-center gap-2 text-slate-400">
                           <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-400" /> USDC required
                         </span>
-                        <span className="font-semibold tabular-nums text-white">{usd(totals.usdcUSD)}</span>
+                        <span className="text-right">
+                          <span className="block font-semibold tabular-nums text-white">{usd(totals.usdcRequired)}</span>
+                          <span className="text-[11px] text-slate-500">incl. team fee</span>
+                        </span>
                       </div>
                       <div className="flex items-start justify-between">
                         <span className="flex items-center gap-2 text-slate-400">
