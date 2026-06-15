@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { ReactNode } from "react";
 import "./globals.css";
 import GtagLoader from './components/GtagLoader';
+import WalletProviders from './providers/WalletProviders';
 
 // ─── Konstanten ───────────────────────────────────────────────────────────────
 const BASE_URL = 'https://solanaholderbot.com';
@@ -99,7 +100,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
 
       <body className="bg-black text-white antialiased">
-        {children}
+        <WalletProviders>
+          {children}
+        </WalletProviders>
         <GtagLoader />
       </body>
     </html>

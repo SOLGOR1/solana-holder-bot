@@ -11,6 +11,10 @@
   "dependencies": {
     "@mdx-js/react": "^3.1.1",
     "@next/mdx": "^16.2.7",
+    "@solana/wallet-adapter-base": "^0.9.27",
+    "@solana/wallet-adapter-react": "^0.15.39",
+    "@solana/wallet-adapter-react-ui": "^0.9.39",
+    "@solana/web3.js": "^1.98.4",
     "@types/mdx": "^2.0.14",
     "bs58": "^6.0.0",
     "framer-motion": "^12.23.9",
