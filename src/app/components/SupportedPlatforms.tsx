@@ -77,8 +77,8 @@ export default function SupportedPlatforms() {
     <section className="bg-black py-5">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <div className="relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-linear-to-r from-black to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-linear-to-l from-black to-transparent z-10" />
 
           <div
             ref={marqueeRef}
@@ -90,9 +90,9 @@ export default function SupportedPlatforms() {
               {platforms.map((platform, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-center transition-all duration-300 hover:scale-110 flex-shrink-0"
+                  className="flex items-center justify-center transition-all duration-300 hover:scale-110 shrink-0"
                 >
-                  <div className="w-[50px] h-[50px] flex items-center justify-center bg-white/5 rounded-2xl">
+                  <div className="w-12.5 h-12.5 flex items-center justify-center bg-white/5 rounded-2xl">
                     <Image
                       src={platform.logo}
                       alt={`${platform.name} Logo`}

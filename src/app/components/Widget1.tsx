@@ -8,8 +8,8 @@ import { FaTimes, FaTelegramPlane } from "react-icons/fa";
 const LogoAvatar = ({ size = "12", showPulse = false }: { size?: string; showPulse?: boolean }) => {
   const sizeClass = size === "12" ? "w-12 h-12" : "w-10 h-10";
   return (
-    <div className={`relative flex-shrink-0 ${sizeClass}`}>
-      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 shadow-lg" />
+    <div className={`relative shrink-0 ${sizeClass}`}>
+      <div className="absolute inset-0 rounded-full bg-linear-to-br from-green-400 to-emerald-600 shadow-lg" />
       <div className="absolute inset-0.5 rounded-full bg-black/80 flex items-center justify-center overflow-hidden">
         <svg
           className="w-[82%] h-[82%] text-white"
@@ -104,7 +104,7 @@ export default function Widget1() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.85, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="w-96 h-[500px] bg-black/50 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+            className="w-96 h-125 bg-black/50 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-5 border-b border-white/10">
@@ -131,7 +131,7 @@ export default function Widget1() {
             <div className="flex-1 p-6 overflow-y-auto">
               {showTyping && (
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-gray-700 flex-shrink-0" />
+                  <div className="w-10 h-10 rounded-full bg-gray-700 shrink-0" />
                   <div className="bg-white/10 rounded-3xl px-5 py-4">
                     <div className="flex gap-1.5">
                       <motion.div
@@ -188,7 +188,7 @@ export default function Widget1() {
         <motion.button
           onClick={() => setIsOpen(true)}
           aria-label="Open support chat"
-          className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full shadow-2xl flex items-center justify-center"
+          className="w-16 h-16 bg-linear-to-br from-green-400 to-emerald-600 rounded-full shadow-2xl flex items-center justify-center"
           whileHover={{ scale: 1.15 }}
           whileTap={{ scale: 0.95 }}
         >
