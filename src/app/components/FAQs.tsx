@@ -123,13 +123,13 @@ export default function FAQs() {
       {/* Super dezenter Hintergrund – sanft pulsierende zentrale Blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-cyan-600/10 rounded-full blur-3xl"
           style={{ 
             animation: 'gentlePulse 32s ease-in-out infinite' 
           }}
         />
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-emerald-600/10 rounded-full blur-3xl"
           style={{ 
             animation: 'gentlePulse 36s ease-in-out infinite reverse' 
           }}

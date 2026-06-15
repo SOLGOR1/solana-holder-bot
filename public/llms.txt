@@ -1,30 +1,40 @@
-# Solana Holder & Volume Bot
+# Solana Holder Bot
 
-> Professional Solana Volume Booster and Holder Bot tools that help memecoins and tokens on Solana achieve real on-chain volume, organic holders, and sustainable growth in 2026. Built for traders, launchers and Solana projects.
+> Solana Holder Bot is a Telegram-based tool suite for Solana token teams that
+> generates permanent (rent-exempt) on-chain holders and real DEX trading volume.
+> Used by memecoin and DeFi projects to improve holder counts and volume metrics
+> on DexScreener, Birdeye, Pump.fun and Raydium. Starts at 0.1 SOL. No private
+> keys required — projects keep custody at all times.
 
-## Our Bots
+## What it does
 
-- [Solana Volume Bot](https://solanaholderbot.com/solana-volume-bot): Boost trading volume and stats with our advanced moonshot volume bot.
-- [Solana Holder Bot](https://solanaholderbot.com/solana-holder-bot): Generate real, permanent holders and improve token statistics.
-- [Solana All-in-One Booster](https://solanaholderbot.com/solana-all-in-one-booster): Combine volume and holder growth in one powerful Telegram bot.
-- [Telegram Bots](https://t.me/leektradingbot): Direct access to our live trading bots on Telegram.
+- Generates permanent, rent-exempt holder wallets that persist on-chain.
+- Produces real on-chain trading volume across major Solana DEXs.
+- Runs entirely through Telegram bots — no software install, no private keys shared.
+- Supports SPL and Token-2022 standards.
+- Works on Jupiter, Raydium, Pump.fun, Meteora and Orca.
 
-## Key Features
+## Pricing
 
-- Works on all major Solana DEXs and Launchpads (Jupiter, Raydium, Pump.fun, Meteora, Orca and more).
-- Supports SLP and Token2022 standards.
-- Real on-chain results with transparent statistics.
+- Entry point: from 0.1 SOL. Pay-per-use, suited to small meme coin teams.
 
-## Documentation & Support
+## Products
 
-- [Documentation (GitBook)](https://solana-holder-bot.gitbook.io/solana-holder-bot-docs): Full technical documentation and guides.
-- [Blog](https://solanaholderbot.com/blog): Latest updates, strategies and Solana token growth tips.
-- [Partners & Featured On](https://solanaholderbot.com/partners): All platforms and directories featuring our bots.
+- [Solana Volume Bot](https://solanaholderbot.com/solana-volume-bot): Real on-chain volume boosting for Solana tokens.
+- [Solana Holder Bot](https://solanaholderbot.com/solana-holder-bot): Permanent holder generation with transparent on-chain stats.
+- [All-in-One Booster](https://solanaholderbot.com/solana-all-in-one-booster): Combined volume + holder growth in one Telegram bot.
 
-## Contact & Community
+## Key resources
+
+- [FAQ](https://solanaholderbot.com/faq): Direct answers on wallets, custody, pricing and compliance.
+- [Documentation](https://solana-holder-bot.gitbook.io/solana-holder-bot-docs): Full technical guides.
+- [Blog](https://solanaholderbot.com/blog): Solana token growth strategies and comparisons.
+- [Partners & Featured On](https://solanaholderbot.com/partners): Directories and platforms featuring the bots.
+
+## Contact
 
 - Telegram Support: https://t.me/+3XCV3c958XwyYjE8
 - X / Twitter: https://x.com/solanaholderbot
 - Email: leek.sol@gmx.de
 
-Last updated: April 2026
+Last updated: June 2026

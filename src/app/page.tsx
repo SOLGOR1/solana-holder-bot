@@ -14,6 +14,7 @@ import dynamic from 'next/dynamic';
 import BelowFoldContent from './components/BelowFoldContent';
 import React, { memo } from 'react';
 import { blogPosts } from './data/blogs';  
+import Link from 'next/link';
 
 // Nur Above-the-Fold Komponenten (SSR erlaubt)
 const DynamicAllInOneBooster = dynamic(() => import('./components/AllInOneBooster'), { 
@@ -136,6 +137,14 @@ const Home = memo(function Home() {
           {/* Alles schwere kommt hier rein und wird client-seitig geladen */}
           <BelowFoldContent blogPosts={blogPosts} />
         </main>
+        <div className="mt-10 text-center">
+          <Link
+            href="/faq"
+            className="text-cyan-400 hover:text-cyan-300 font-semibold underline underline-offset-4"
+          >
+            View all frequently asked questions →
+          </Link>
+        </div>
         <Disclaimer />
         <Footer />
         <Widget1 />
