@@ -283,6 +283,27 @@ const usd2 = (n: number) =>
 const sol = (n: number) =>
   `${n.toLocaleString('en-US', { maximumFractionDigits: 1 })} SOL`;
 
+// id -> { name, category } for analytics tracking
+const ITEM_INDEX: Record<string, { name: string; category: string }> = (() => {
+  const m: Record<string, { name: string; category: string }> = {};
+  CATALOG.forEach((c) => c.items.forEach((i) => { m[i.id] = { name: i.name, category: c.title }; }));
+  return m;
+})();
+
+// fire-and-forget analytics ping (never blocks or breaks the UI)
+function track(payload: Record<string, unknown>) {
+  try {
+    fetch('/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      keepalive: true,
+    }).catch(() => {});
+  } catch {
+    /* ignore */
+  }
+}
+
 const WEEKS_PER_MONTH = 4;
 
 function billingMultiplier(billing: Billing, months: number, qty: number): number {
@@ -359,6 +380,9 @@ export default function PackageConfigurator() {
     return () => { active = false; clearInterval(t); };
   }, []);
 
+  // log one visit per page load
+  useEffect(() => { track({ type: 'visit' }); }, []);
+
   // exclusive groups: items inside the same category that share a "tier" are radio-like.
   // We treat backlinks (bl_*), assets (assets_*), pools (pool_*) and dextools boosts (dext_*) as exclusive by prefix.
   const groupOf = (id: string): string | null => {
@@ -383,7 +407,11 @@ export default function PackageConfigurator() {
       next[item.id] = turningOn;
       return next;
     });
-  }, []);
+    if (!selected[item.id]) {
+      const meta = ITEM_INDEX[item.id];
+      track({ type: 'select', id: item.id, name: meta?.name ?? item.name, category: meta?.category ?? '—' });
+    }
+  }, [selected]);
 
   const setQty = (id: string, v: number) =>
     setQtyMap((p) => ({ ...p, [id]: Math.max(1, Math.floor(v) || 1) }));
@@ -573,6 +601,23 @@ export default function PackageConfigurator() {
       doc.text('Submit this quote to finalize your package.', W - M, H - 30, { align: 'right' });
 
       doc.save(`LEEK-Quote-${ref}.pdf`);
+
+      track({
+        type: 'download',
+        snapshot: {
+          ref,
+          months,
+          itemCount: totals.count,
+          usdc: totals.usdcRequired,
+          solSOL: totals.solTotalSOL,
+          solUsd: totals.solTotalUSD,
+          teamFee: totals.teamFee,
+          grandUSD: totals.grandUSD,
+          items: totals.lines.map((l) => ({
+            name: l.name, config: l.config, settle: l.settle, usdValue: l.usdValue,
+          })),
+        },
+      });
     } finally {
       setGenerating(false);
     }
@@ -627,7 +672,7 @@ export default function PackageConfigurator() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setMonths((m) => Math.max(1, m - 1))}
-                    className="grid h-9 w-9 place-items-center rounded-lg border border-white/10 bg-white/3 text-lg text-slate-300 transition hover:border-blue-500/50 hover:text-white"
+                    className="grid h-9 w-9 place-items-center rounded-lg border border-white/10 bg-white/3-lg text-slate-300 transition hover:border-blue-500/50 hover:text-white"
                     aria-label="Decrease months"
                   >–</button>
                   <span className="w-24 text-center text-sm font-semibold tabular-nums text-white">
