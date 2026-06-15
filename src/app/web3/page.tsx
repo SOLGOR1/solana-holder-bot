@@ -25,6 +25,7 @@
  */
 
 import { useEffect, useMemo, useState, useCallback } from 'react';
+import { generateQuotePdf } from '../../lib/quotePdf';
 
 /* ============================ TYPES ============================ */
 
@@ -498,124 +499,38 @@ export default function PackageConfigurator() {
     if (totals.count === 0) return;
     setGenerating(true);
     try {
-      const { jsPDF } = await import('jspdf');
-      const autoTable = (await import('jspdf-autotable')).default;
-
-      const doc = new jsPDF({ unit: 'pt', format: 'a4' });
-      const W = doc.internal.pageSize.getWidth();
-      const M = 40;
-
-      const BLUE: [number, number, number] = [59, 130, 246];
-      const DARK: [number, number, number] = [13, 18, 28];
-      const MUTE: [number, number, number] = [120, 130, 148];
-
-      // header band
-      doc.setFillColor(...DARK);
-      doc.rect(0, 0, W, 92, 'F');
-      doc.setFillColor(...BLUE);
-      doc.rect(0, 92, W, 3, 'F');
-
-      doc.setTextColor(255, 255, 255);
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(26);
-      doc.text('LEEK', M, 48);
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(10);
-      doc.setTextColor(150, 170, 200);
-      doc.text('PROJECT PROPOSAL', M, 66);
-
       const ref = `LEEK-${new Date().getFullYear()}-${Math.floor(Math.random() * 9000 + 1000)}`;
-      doc.setTextColor(200, 210, 225);
-      doc.setFontSize(9);
-      doc.text(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }), W - M, 44, { align: 'right' });
-      doc.text(`Quote ref: ${ref}`, W - M, 60, { align: 'right' });
-      doc.text(`SOL @ ${usd2(solPrice)}`, W - M, 76, { align: 'right' });
+      const lines = totals.lines.map((l) => ({
+        name: l.name, config: l.config, settle: l.settle, usdValue: l.usdValue, solValue: l.solValue,
+      }));
 
-      // table
-      const body = totals.lines.map((l) => [
-        l.name,
-        l.config,
-        l.settle,
-        l.settle === 'SOL' && l.solValue != null
-          ? `${usd(l.usdValue)}  (${sol(l.solValue)})`
-          : usd(l.usdValue),
-      ]);
-
-      autoTable(doc, {
-        startY: 120,
-        head: [['Item', 'Configuration', 'Pay in', 'Subtotal']],
-        body,
-        margin: { left: M, right: M },
-        styles: { font: 'helvetica', fontSize: 9, cellPadding: 6, textColor: [40, 48, 60] },
-        headStyles: { fillColor: DARK, textColor: [255, 255, 255], fontStyle: 'bold' },
-        alternateRowStyles: { fillColor: [244, 247, 252] },
-        columnStyles: { 2: { halign: 'center' }, 3: { halign: 'right' } },
+      await generateQuotePdf({
+        ref,
+        date: Date.now(),
+        months,
+        solPrice,
+        lines,
+        subtotalUSD: totals.subtotalUSD,
+        teamFee: totals.teamFee,
+        usdcRequired: totals.usdcRequired,
+        solTotalSOL: totals.solTotalSOL,
+        solTotalUSD: totals.solTotalUSD,
+        grandUSD: totals.grandUSD,
       });
-
-      // totals
-      // @ts-expect-error lastAutoTable is injected by the plugin
-      let y = (doc.lastAutoTable?.finalY ?? 140) + 24;
-      const right = W - M;
-      const labelX = right - 230;
-
-      const row = (label: string, value: string, bold = false, color: [number, number, number] = [40, 48, 60]) => {
-        doc.setFont('helvetica', bold ? 'bold' : 'normal');
-        doc.setFontSize(bold ? 12 : 10);
-        doc.setTextColor(...(bold ? DARK : MUTE));
-        doc.text(label, labelX, y);
-        doc.setTextColor(...color);
-        doc.text(value, right, y, { align: 'right' });
-        y += bold ? 22 : 18;
-      };
-
-      row('Subtotal (selected)', usd(totals.subtotalUSD));
-      row('Team fee (2%)', usd(totals.teamFee));
-      doc.setDrawColor(225, 230, 238);
-      doc.line(labelX, y - 6, right, y - 6);
-      y += 4;
-      row('USDC required', usd(totals.usdcRequired));
-      row('SOL required', `${sol(totals.solTotalSOL)}  (~${usd(totals.solTotalUSD)})`);
-      doc.setDrawColor(210, 216, 226);
-      doc.line(labelX, y - 6, right, y - 6);
-      y += 4;
-      row('Estimated total (USD)', usd(totals.grandUSD), true, BLUE);
-
-      // disclaimer
-      y += 14;
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(8.5);
-      doc.setTextColor(...MUTE);
-      const note =
-        'This is a self-configured estimate. Please submit it to the LEEK team for review — final pricing is confirmed after we check scope, market conditions and current SOL price. ' +
-        'A 2% base team fee is applied to the selected subtotal. SOL amounts are converted at the live rate shown above and will move with the market. "From" prices are starting points and may rise with scope. ' +
-        'Capital figures (liquidity, buywalls, moneyflow) are funds deployed on-chain, not agency fees.';
-      doc.text(doc.splitTextToSize(note, W - M * 2), M, y);
-
-      // footer
-      const H = doc.internal.pageSize.getHeight();
-      doc.setDrawColor(...BLUE);
-      doc.line(M, H - 46, W - M, H - 46);
-      doc.setFontSize(8);
-      doc.setTextColor(...MUTE);
-      doc.text('LEEK — leeksol.online', M, H - 30);
-      doc.text('Submit this quote to finalize your package.', W - M, H - 30, { align: 'right' });
-
-      doc.save(`LEEK-Quote-${ref}.pdf`);
 
       track({
         type: 'download',
         snapshot: {
           ref,
           months,
+          solPrice,
           itemCount: totals.count,
           usdc: totals.usdcRequired,
           solSOL: totals.solTotalSOL,
           solUsd: totals.solTotalUSD,
           teamFee: totals.teamFee,
           grandUSD: totals.grandUSD,
-          items: totals.lines.map((l) => ({
-            name: l.name, config: l.config, settle: l.settle, usdValue: l.usdValue,
-          })),
+          items: lines,
         },
       });
     } finally {
@@ -672,7 +587,7 @@ export default function PackageConfigurator() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setMonths((m) => Math.max(1, m - 1))}
-                    className="grid h-9 w-9 place-items-center rounded-lg border border-white/10 bg-white/3-lg text-slate-300 transition hover:border-blue-500/50 hover:text-white"
+                    className="grid h-9 w-9 place-items-center rounded-lg border border-white/10 bg-white/3 text-lg text-slate-300 transition hover:border-blue-500/50 hover:text-white"
                     aria-label="Decrease months"
                   >–</button>
                   <span className="w-24 text-center text-sm font-semibold tabular-nums text-white">

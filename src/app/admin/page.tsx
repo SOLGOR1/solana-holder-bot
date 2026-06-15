@@ -7,6 +7,7 @@
  * Wallet-gated: only the admin wallet can read the data. The UI is gated on the
  * connected pubkey, and the data API additionally verifies a signed message
  * server-side — so a spoofed front-end can't pull the numbers.
+ *
  * Deps (client): bs58. Make sure your app is wrapped in the Solana
  * WalletProvider + WalletModalProvider (same setup the LEEK app already uses),
  * and that '@solana/wallet-adapter-react-ui/styles.css' is imported once globally.
@@ -68,25 +69,33 @@ export default function AdminDashboard() {
   const [error, setError] = useState<string | null>(null);
   const [updatedAt, setUpdatedAt] = useState(0);
   const [auth, setAuth] = useState<{ message: string; signature: string; signedAt: number } | null>(null);
+  const [deletingRef, setDeletingRef] = useState<string | null>(null);
 
   const address = publicKey?.toBase58() ?? null;
   const isAdmin = address === ADMIN_WALLET;
+
+  // returns signed credentials, re-signing only when needed (cached ~4 min)
+  const ensureAuth = useCallback(async (forceSign = false) => {
+    if (!publicKey || !signMessage) throw new Error('Wallet not ready.');
+    let a = auth;
+    if (!a || forceSign || Date.now() - a.signedAt > 4 * 60 * 1000) {
+      const message = `LEEK Admin Dashboard\nWallet: ${publicKey.toBase58()}\nts:${Date.now()}`;
+      const sig = await signMessage(new TextEncoder().encode(message));
+      a = { message, signature: bs58.encode(sig), signedAt: Date.now() };
+      setAuth(a);
+    }
+    return { pubkey: publicKey.toBase58(), message: a.message, signature: a.signature };
+  }, [publicKey, signMessage, auth]);
 
   const fetchStats = useCallback(async (forceSign = false) => {
     if (!publicKey || !signMessage) return;
     setLoading(true); setError(null);
     try {
-      let a = auth;
-      if (!a || forceSign || Date.now() - a.signedAt > 4 * 60 * 1000) {
-        const message = `LEEK Admin Dashboard\nWallet: ${publicKey.toBase58()}\nts:${Date.now()}`;
-        const sig = await signMessage(new TextEncoder().encode(message));
-        a = { message, signature: bs58.encode(sig), signedAt: Date.now() };
-        setAuth(a);
-      }
+      const creds = await ensureAuth(forceSign);
       const res = await fetch('/api/admin/stats', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ pubkey: publicKey.toBase58(), message: a.message, signature: a.signature }),
+        body: JSON.stringify(creds),
       });
       if (!res.ok) {
         const j = await res.json().catch(() => ({}));
@@ -101,7 +110,57 @@ export default function AdminDashboard() {
     } finally {
       setLoading(false);
     }
-  }, [publicKey, signMessage, auth]);
+  }, [publicKey, signMessage, ensureAuth]);
+
+  // re-download the branded PDF for a stored quote
+  const downloadEntry = useCallback(async (snap: DownloadSnapshot) => {
+    const price = snap.solPrice && snap.solPrice > 0
+      ? snap.solPrice
+      : (snap.solSOL > 0 ? snap.solUsd / snap.solSOL : 0);
+    const lines = snap.items.map((it) => ({
+      name: it.name,
+      config: it.config,
+      settle: it.settle as Settle,
+      usdValue: it.usdValue,
+      solValue: it.settle === 'SOL'
+        ? (it.solValue ?? (price > 0 ? it.usdValue / price : 0))
+        : null,
+    }));
+    await generateQuotePdf({
+      ref: snap.ref,
+      date: snap.ts,
+      months: snap.months,
+      solPrice: price,
+      lines,
+      subtotalUSD: snap.grandUSD - snap.teamFee,
+      teamFee: snap.teamFee,
+      usdcRequired: snap.usdc,
+      solTotalSOL: snap.solSOL,
+      solTotalUSD: snap.solUsd,
+      grandUSD: snap.grandUSD,
+    });
+  }, []);
+
+  // delete a stored quote (signature-gated), then refresh
+  const deleteEntry = useCallback(async (snap: DownloadSnapshot) => {
+    setDeletingRef(snap.ref); setError(null);
+    try {
+      const creds = await ensureAuth();
+      const res = await fetch('/api/admin/delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...creds, ref: snap.ref, ts: snap.ts }),
+      });
+      if (!res.ok) throw new Error('Delete failed.');
+      // optimistic local removal, then refresh totals
+      setStats((prev) => prev ? { ...prev, recent: prev.recent.filter((r) => !(r.ref === snap.ref && r.ts === snap.ts)) } : prev);
+      fetchStats(false);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Delete failed.');
+    } finally {
+      setDeletingRef(null);
+    }
+  }, [ensureAuth, fetchStats]);
 
   /* ---------------- gates ---------------- */
 
@@ -265,7 +324,7 @@ export default function AdminDashboard() {
           {s.recent.length === 0 ? (
             <Empty />
           ) : (
-            <RecentTable rows={s.recent} />
+            <RecentTable rows={s.recent} onDownload={downloadEntry} onDelete={deleteEntry} deletingRef={deletingRef} />
           )}
         </Card>
       </div>
@@ -389,8 +448,18 @@ function Area({ points, labels }: { points: number[]; labels: string[] }) {
   );
 }
 
-function RecentTable({ rows }: { rows: DownloadSnapshot[] }) {
+function RecentTable({
+  rows, onDownload, onDelete, deletingRef,
+}: {
+  rows: DownloadSnapshot[];
+  onDownload: (s: DownloadSnapshot) => void;
+  onDelete: (s: DownloadSnapshot) => void;
+  deletingRef: string | null;
+}) {
   const [open, setOpen] = useState<number | null>(null);
+  const [confirm, setConfirm] = useState<string | null>(null);
+  const stop = (e: React.MouseEvent) => e.stopPropagation();
+
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-sm">
@@ -401,43 +470,86 @@ function RecentTable({ rows }: { rows: DownloadSnapshot[] }) {
             <th className="pb-2 pr-3 font-medium">Items</th>
             <th className="pb-2 pr-3 text-right font-medium">USDC</th>
             <th className="pb-2 pr-3 text-right font-medium">SOL</th>
-            <th className="pb-2 text-right font-medium">Total</th>
+            <th className="pb-2 pr-3 text-right font-medium">Total</th>
+            <th className="pb-2 text-right font-medium">Actions</th>
           </tr>
         </thead>
         <tbody>
-          {rows.map((r, i) => (
-            <Fragment key={i}>
-              <tr
-                onClick={() => setOpen(open === i ? null : i)}
-                className="cursor-pointer border-t border-white/5 transition hover:bg-white/3"
-              >
-                <td className="py-2.5 pr-3 text-slate-400">{ago(r.ts)}</td>
-                <td className="py-2.5 pr-3 font-mono text-[11px] text-slate-300">{r.ref || '—'}</td>
-                <td className="py-2.5 pr-3 text-slate-300">{r.itemCount}</td>
-                <td className="py-2.5 pr-3 text-right tabular-nums text-slate-200">{usd(r.usdc)}</td>
-                <td className="py-2.5 pr-3 text-right tabular-nums text-cyan-300">{sol(r.solSOL)}</td>
-                <td className="py-2.5 text-right font-semibold tabular-nums text-white">{usd(r.grandUSD)}</td>
-              </tr>
-              {open === i && (
-                <tr className="bg-white/1.5">
-                  <td colSpan={6} className="px-2 pb-3 pt-1">
-                    <div className="grid gap-1 rounded-lg border border-white/5 bg-black/20 p-3 sm:grid-cols-2">
-                      {r.items.map((it, j) => (
-                        <div key={j} className="flex items-center justify-between gap-3 text-xs">
-                          <span className="flex min-w-0 items-center gap-2">
-                            <span className="truncate text-slate-300">{it.name}</span>
-                            <span className="shrink-0 text-slate-500">{it.config}</span>
-                          </span>
-                          <span className="shrink-0 tabular-nums text-slate-400">{usd(it.usdValue)}</span>
-                        </div>
-                      ))}
-                      {r.items.length === 0 && <span className="text-xs text-slate-500">No item detail stored.</span>}
-                    </div>
+          {rows.map((r, i) => {
+            const isDeleting = deletingRef === r.ref;
+            const isConfirming = confirm === r.ref;
+            return (
+              <Fragment key={i}>
+                <tr
+                  onClick={() => setOpen(open === i ? null : i)}
+                  className="cursor-pointer border-t border-white/5 transition hover:bg-white/3"
+                >
+                  <td className="py-2.5 pr-3 text-slate-400">{ago(r.ts)}</td>
+                  <td className="py-2.5 pr-3 font-mono text-[11px] text-slate-300">{r.ref || '—'}</td>
+                  <td className="py-2.5 pr-3 text-slate-300">{r.itemCount}</td>
+                  <td className="py-2.5 pr-3 text-right tabular-nums text-slate-200">{usd(r.usdc)}</td>
+                  <td className="py-2.5 pr-3 text-right tabular-nums text-cyan-300">{sol(r.solSOL)}</td>
+                  <td className="py-2.5 pr-3 text-right font-semibold tabular-nums text-white">{usd(r.grandUSD)}</td>
+                  <td className="py-2 text-right" onClick={stop}>
+                    {isDeleting ? (
+                      <span className="text-[11px] text-slate-500">Deleting…</span>
+                    ) : isConfirming ? (
+                      <span className="inline-flex items-center gap-1">
+                        <span className="mr-1 text-[11px] text-slate-400">Delete?</span>
+                        <button
+                          onClick={() => { setConfirm(null); onDelete(r); }}
+                          className="rounded-md bg-red-500/20 px-2 py-1 text-[11px] font-medium text-red-300 hover:bg-red-500/30"
+                        >Yes</button>
+                        <button
+                          onClick={() => setConfirm(null)}
+                          className="rounded-md border border-white/10 px-2 py-1 text-[11px] text-slate-400 hover:text-white"
+                        >No</button>
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center justify-end gap-1.5">
+                        <button
+                          onClick={() => onDownload(r)}
+                          title="Download PDF"
+                          className="grid h-7 w-7 place-items-center rounded-md border border-white/10 bg-white/3 text-slate-300 transition hover:border-blue-500/50 hover:text-white"
+                        >
+                          <svg viewBox="0 0 20 20" className="h-3.5 w-3.5" fill="none">
+                            <path d="M10 3v9m0 0l-3-3m3 3l3-3M4 15h12" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </button>
+                        <button
+                          onClick={() => setConfirm(r.ref)}
+                          title="Delete entry"
+                          className="grid h-7 w-7 place-items-center rounded-md border border-white/10 bg-white/3 text-slate-400 transition hover:border-red-500/50 hover:text-red-300"
+                        >
+                          <svg viewBox="0 0 20 20" className="h-3.5 w-3.5" fill="none">
+                            <path d="M5 6h10M8 6V4.5h4V6m-6 0v9.5a1 1 0 001 1h6a1 1 0 001-1V6M9 9v5M11 9v5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </button>
+                      </span>
+                    )}
                   </td>
                 </tr>
-              )}
-            </Fragment>
-          ))}
+                {open === i && (
+                  <tr className="bg-white/1.5">
+                    <td colSpan={7} className="px-2 pb-3 pt-1">
+                      <div className="grid gap-1 rounded-lg border border-white/5 bg-black/20 p-3 sm:grid-cols-2">
+                        {r.items.map((it, j) => (
+                          <div key={j} className="flex items-center justify-between gap-3 text-xs">
+                            <span className="flex min-w-0 items-center gap-2">
+                              <span className="truncate text-slate-300">{it.name}</span>
+                              <span className="shrink-0 text-slate-500">{it.config}</span>
+                            </span>
+                            <span className="shrink-0 tabular-nums text-slate-400">{usd(it.usdValue)}</span>
+                          </div>
+                        ))}
+                        {r.items.length === 0 && <span className="text-xs text-slate-500">No item detail stored.</span>}
+                      </div>
+                    </td>
+                  </tr>
+                )}
+              </Fragment>
+            );
+          })}
         </tbody>
       </table>
     </div>
