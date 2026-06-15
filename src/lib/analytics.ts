@@ -53,13 +53,14 @@ export interface DownloadSnapshot {
   ref: string;
   ts: number;
   months: number;
+  solPrice: number; // SOL price used at creation
   itemCount: number;
   usdc: number;     // USDC required (incl. team fee)
   solSOL: number;   // SOL required
   solUsd: number;   // USD value of the SOL
   teamFee: number;
   grandUSD: number;
-  items: { name: string; config: string; settle: string; usdValue: number }[];
+  items: { name: string; config: string; settle: string; usdValue: number; solValue?: number | null }[];
 }
 
 export interface AdminStats {
@@ -115,6 +116,39 @@ export async function recordDownload(snap: DownloadSnapshot): Promise<void> {
     ['LPUSH', K.log, JSON.stringify(snap)],
     ['LTRIM', K.log, 0, 99],
   ]);
+}
+
+/** Remove a single download entry (by ref + ts) and roll back its counters. */
+export async function deleteDownload(ref: string, ts: number): Promise<boolean> {
+  if (!storageReady()) return false;
+  const res = await pipeline([['LRANGE', K.log, 0, -1]]);
+  const list = Array.isArray(res[0]) ? (res[0] as string[]) : [];
+
+  const raw = list.find((s) => {
+    try {
+      const o = JSON.parse(s) as DownloadSnapshot;
+      return o.ref === ref && o.ts === ts;
+    } catch {
+      return false;
+    }
+  });
+  if (!raw) return false;
+
+  let snap: DownloadSnapshot;
+  try {
+    snap = JSON.parse(raw) as DownloadSnapshot;
+  } catch {
+    return false;
+  }
+  const date = new Date(snap.ts).toISOString().slice(0, 10);
+
+  await pipeline([
+    ['LREM', K.log, 1, raw],
+    ['DECR', K.downloads],
+    ['HINCRBY', K.daily, date, -1],
+    ['INCRBYFLOAT', K.pipelineUsd, String(-Math.round(snap.grandUSD || 0))],
+  ]);
+  return true;
 }
 
 /* ---------- reader ---------- */

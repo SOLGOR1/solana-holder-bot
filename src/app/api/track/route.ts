@@ -31,16 +31,17 @@ export async function POST(req: NextRequest) {
         if (body.snapshot) {
           const s = body.snapshot as Partial<DownloadSnapshot>;
           await recordDownload({
-            ref: String(s.ref ?? ''),
-            ts: Date.now(),
-            months: Number(s.months ?? 0),
-            itemCount: Number(s.itemCount ?? 0),
-            usdc: Number(s.usdc ?? 0),
-            solSOL: Number(s.solSOL ?? 0),
-            solUsd: Number(s.solUsd ?? 0),
-            teamFee: Number(s.teamFee ?? 0),
-            grandUSD: Number(s.grandUSD ?? 0),
-            items: Array.isArray(s.items) ? s.items.slice(0, 60) : [],
+              ref: String(s.ref ?? ''),
+              ts: Date.now(),
+              months: Number(s.months ?? 0),
+              itemCount: Number(s.itemCount ?? 0),
+              usdc: Number(s.usdc ?? 0),
+              solSOL: Number(s.solSOL ?? 0),
+              solUsd: Number(s.solUsd ?? 0),
+              teamFee: Number(s.teamFee ?? 0),
+              grandUSD: Number(s.grandUSD ?? 0),
+              items: Array.isArray(s.items) ? s.items.slice(0, 60) : [],
+              solPrice: 0
           });
         }
         break;

@@ -7,7 +7,6 @@
  * Wallet-gated: only the admin wallet can read the data. The UI is gated on the
  * connected pubkey, and the data API additionally verifies a signed message
  * server-side — so a spoofed front-end can't pull the numbers.
- *
  * Deps (client): bs58. Make sure your app is wrapped in the Solana
  * WalletProvider + WalletModalProvider (same setup the LEEK app already uses),
  * and that '@solana/wallet-adapter-react-ui/styles.css' is imported once globally.
@@ -17,6 +16,7 @@ import { Fragment, useCallback, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useWallet } from '@solana/wallet-adapter-react';
 import bs58 from 'bs58';
+import { generateQuotePdf, type Settle } from '../../lib/quotePdf';
 
 const WalletMultiButton = dynamic(
   () => import('@solana/wallet-adapter-react-ui').then((m) => m.WalletMultiButton),
@@ -29,9 +29,9 @@ const ACCENTS = ['#3b82f6', '#22d3ee', '#8b5cf6', '#06b6d4', '#60a5fa', '#a78bfa
 
 /* ---------- types (mirror lib/analytics) ---------- */
 interface DownloadSnapshot {
-  ref: string; ts: number; months: number; itemCount: number;
+  ref: string; ts: number; months: number; solPrice: number; itemCount: number;
   usdc: number; solSOL: number; solUsd: number; teamFee: number; grandUSD: number;
-  items: { name: string; config: string; settle: string; usdValue: number }[];
+  items: { name: string; config: string; settle: string; usdValue: number; solValue?: number | null }[];
 }
 interface AdminStats {
   visits: number; downloads: number; conversion: number;
