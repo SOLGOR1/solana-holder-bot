@@ -513,13 +513,12 @@ export default function PackageConfigurator() {
 
   return (
     <div className="min-h-screen bg-[#05070d] text-slate-100 antialiased">
-      {/* ambient background */}
+
       <div className="pointer-events-none fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_-10%,rgba(59,130,246,0.18),transparent_55%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-size-[46px_46px]" />
       </div>
 
-      {/* hero */}
       <header className="border-b border-white/5">
         <div className="mx-auto max-w-7xl px-6 pt-14 pb-10">
           <div className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.25em] text-blue-400">
@@ -536,8 +535,7 @@ export default function PackageConfigurator() {
             branded quote to submit back to us.
           </p>
 
-          {/* live price */}
-          <div className="mt-7 inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/3 py-2.5">
+          <div className="mt-7 inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/3 px-4 py-2.5">
             <span className={`inline-block h-2 w-2 rounded-full ${priceLive ? 'bg-cyan-400 shadow-[0_0_10px_2px_rgba(34,211,238,0.7)]' : 'bg-slate-500'}`} />
             <span className="text-sm text-slate-400">SOL</span>
             <span className="text-sm font-semibold tabular-nums text-white">{usd2(solPrice)}</span>
@@ -546,12 +544,11 @@ export default function PackageConfigurator() {
         </div>
       </header>
 
-      {/* body */}
       <main className="mx-auto max-w-7xl px-6 py-10">
         <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
-          {/* catalog */}
+
           <div className="space-y-12">
-            {/* global duration control */}
+
             <section className="rounded-2xl border border-white/10 bg-white/2 p-5">
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div>
@@ -640,7 +637,6 @@ export default function PackageConfigurator() {
                           </span>
                         </button>
 
-                        {/* per-item controls */}
                         {on && (item.qty || item.amountEditable) && (
                           <div className="flex flex-wrap items-center gap-4 border-t border-white/10 px-4 py-3">
                             {item.qty && (
@@ -681,7 +677,6 @@ export default function PackageConfigurator() {
             ))}
           </div>
 
-          {/* summary */}
           <aside className="lg:sticky lg:top-6 lg:h-fit">
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-linear-to-b from-white/6 to-white/2">
               <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
