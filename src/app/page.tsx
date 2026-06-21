@@ -140,7 +140,7 @@ const Home = memo(function Home() {
         <div className="mt-10 text-center">
           <Link
             href="/faq"
-            className="text-cyan-200 hover:text-cyan-100 font-semibold underline underline-offset-4"
+            className="text-cyan-800 hover:text-cyan-400 font-semibold underline underline-offset-4"
           >
             View all frequently asked questions →
           </Link>
