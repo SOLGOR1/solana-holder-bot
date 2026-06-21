@@ -1,11 +1,6 @@
 // src/components/MarkdownRenderer.tsx
-"use client";
-
-import dynamic from "next/dynamic";
+import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-
-// Dynamically import ReactMarkdown with SSR disabled
-const ReactMarkdown = dynamic(() => import("react-markdown"), { ssr: false });
 
 type MarkdownRendererProps = {
   content: string;
