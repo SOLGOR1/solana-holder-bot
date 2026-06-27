@@ -4,7 +4,7 @@
 // FAQPage JSON-LD. They mirror the FAQ blocks rendered in the MDX bodies --
 // keep both in sync if you edit them.
 
-import type { BlogFaq } from "../lib/structured-data";
+import type { BlogFaq } from "../../lib/structured-data";
 
 export const blogFaqs: Record<string, BlogFaq[]> = {
   "solana-2026-network-upgrades": [

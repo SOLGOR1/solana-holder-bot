@@ -2,7 +2,7 @@
 //
 // Single source of truth for origin, post base path, and brand for the JSON-LD.
 
-import type { SiteConfig } from "../lib/structured-data";
+import type { SiteConfig } from "../../lib/structured-data";
 
 export const siteConfig: SiteConfig = {
   origin: "https://solanaholderbot.com",
