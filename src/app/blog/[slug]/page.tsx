@@ -9,6 +9,11 @@ import { compileMDX } from 'next-mdx-remote/rsc';
 // MDX Components direkt importieren (ohne Hook in async Function)
 import * as mdxComponents from '../../../../mdx-components';
 
+// JSON-LD structured data (Article + FAQPage + BreadcrumbList)
+import { JsonLd } from "../../components/JsonLd";
+import { siteConfig } from "../../config/site";
+import { blogFaqs } from "../../data/blog-faqs";
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -72,7 +77,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (postIndex === -1) notFound();
 
-  // ✅ Lade nur Content wenn nötig
+  // Lade nur Content wenn noetig
   const fullPost = getBlogPostBySlug(resolvedParams.slug);
   if (!fullPost) notFound();
 
@@ -83,12 +88,15 @@ export default async function BlogPostPage({ params }: Props) {
     const result = await compileMDX({
       source: fullPost.content,
       options: {
+        // Strip YAML frontmatter from the MDX body before rendering. Safe for
+        // posts without frontmatter (it is simply a no-op for them).
+        parseFrontmatter: true,
         mdxOptions: {
           remarkPlugins: [],
           rehypePlugins: [],
         },
       },
-      components: mdxComponents,        // ← hier direkt das Objekt übergeben
+      components: mdxComponents,        // direkt das Objekt uebergeben
     });
     compiledContent = result.content;
   }
@@ -101,6 +109,20 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="flex flex-col min-h-screen pt-16 bg-black overflow-hidden">
+      {/* JSON-LD: emits Article + FAQPage + BreadcrumbList script tags. */}
+      <JsonLd
+        frontmatter={{
+          title: fullPost.title,
+          description: fullPost.excerpt,
+          slug: fullPost.slug,
+          date: fullPost.date,
+          author: "Solana Holder Bot Team",
+          ogImage: fullPost.image,
+          faqs: blogFaqs[fullPost.slug],
+        }}
+        site={siteConfig}
+      />
+
       <Navbar />
       <main className="grow py-5 relative z-10">
         <div className="container mx-auto px-6 md:px-12 lg:px-24">

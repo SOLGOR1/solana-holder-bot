@@ -1,0 +1,142 @@
+---
+title: "How Fast Is Solana in 2026? TPS, Compute Limits, Throughput"
+description: "What Solana's real throughput looks like in 2026: actual TPS versus stress-test numbers, block compute limits, the SIMD-0286 and SIMD-0370 proposals, and why vote transactions distort the figures."
+slug: "solana-throughput-tps-2026"
+date: "2026-06-10"
+dateModified: "2026-06-27"
+author: "Dr. Frankenfurter"
+category: "Solana"
+tags:
+  - "Solana"
+  - "Solana TPS"
+  - "throughput"
+  - "compute units"
+  - "block limit"
+  - "scalability"
+keywords:
+  - "how fast is solana"
+  - "solana tps"
+  - "solana throughput"
+  - "solana block limit"
+  - "solana compute units"
+canonical: "https://solanaholderbot.com/blog/solana-throughput-tps-2026"
+ogImage: "/blogthumb/solana-throughput-tps-2026.png"
+readingTime: "9 min read"
+featured: false
+schemaType: "Article"
+faqs:
+  - question: "How many transactions per second can Solana do?"
+    answer: "Sustained real-world throughput rose from roughly 1,700 transactions per second in mid-2025 toward several thousand per second in 2026. Stress tests have briefly exceeded 100,000 transactions per second, and the Firedancer client has demonstrated over one million per second in testing, though that is a hardware ceiling rather than typical mainnet load."
+  - question: "What is Solana's block limit?"
+    answer: "The per-block compute limit was raised to 60 million compute units in mid-2025 via SIMD-0256. Further proposals are in progress: SIMD-0286 to raise it toward 100 million, and SIMD-0370 to remove the static cap entirely so blocks scale with the most performant validators."
+  - question: "Why are Solana's TPS numbers confusing?"
+    answer: "Historically a large share of Solana transactions were validator votes, which inflated raw TPS figures relative to actual user activity. The Alpenglow upgrade moves votes off-chain, so headline TPS numbers measured before and after activation are not directly comparable."
+  - question: "How long is a Solana slot?"
+    answer: "A Solana slot is roughly 400 milliseconds, and an epoch is about 432,000 slots, which works out to roughly two to three days. The slot cadence itself is not changing under the planned 2026 consensus upgrade."
+  - question: "What limits Solana's throughput, the software or the hardware?"
+    answer: "Increasingly the protocol's block limits and validator hardware, not the client software. The Firedancer client can process far more than current block limits allow, which is why proposals like SIMD-0370 aim to let block size scale with validator capacity rather than a fixed cap."
+sources:
+  - title: "CoinDesk: Solana eyes 66% block size bump (SIMD-0286)"
+    url: "https://www.coindesk.com/markets/2025/07/24/solana-eyes-66-block-size-bump-with-new-developer-proposal-as-network-demand-grows"
+  - title: "Solana Improvement Documents (SIMD repository)"
+    url: "https://github.com/solana-foundation/solana-improvement-documents"
+  - title: "Solana Documentation: Fees and compute"
+    url: "https://solana.com/docs/core/fees"
+---
+
+"How fast is Solana?" is one of the most-searched questions about the network, and one of the most poorly answered. Headline numbers range from a few thousand transactions per second to over a million, and they are all "true" in different senses. This guide separates real-world throughput from stress-test ceilings, explains the block-limit changes driving capacity in 2026, and clears up why Solana's TPS figures are so easy to misread.
+
+<div className="not-prose my-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5">
+  <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Quick answer</p>
+  <p className="mt-2 text-sm leading-relaxed">In 2026, Solana sustains <strong>several thousand transactions per second</strong> in normal production, up from roughly 1,700 per second in mid-2025. Stress tests have briefly passed <strong>100,000 per second</strong>, and the Firedancer client has shown over <strong>one million per second</strong> in testing. The gap exists because real throughput is limited by demand and protocol block limits, not by the software's ceiling.</p>
+</div>
+
+<div className="not-prose my-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+  <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana 2026 series</p>
+  <ul className="mt-3 space-y-2 text-sm text-zinc-400">
+    <li><a className="hover:text-emerald-400" href="/blog/solana-2026-network-upgrades">Overview: Solana in 2026</a></li>
+    <li><a className="hover:text-emerald-400" href="/blog/what-is-firedancer">Firedancer: Solana's independent validator client</a></li>
+    <li><a className="hover:text-emerald-400" href="/blog/what-is-alpenglow">Alpenglow: sub-150 ms finality</a></li>
+    <li><a className="hover:text-emerald-400" href="/blog/solana-transaction-fees-local-fee-markets">Fees and local fee markets</a></li>
+    <li className="text-zinc-200">Throughput, TPS and block limits (you are here)</li>
+  </ul>
+</div>
+
+## Real throughput versus stress-test ceilings
+
+The first thing to understand is that there are several different "TPS" numbers, and they measure different things.
+
+| Number | What it measures | Approximate value |
+| --- | --- | --- |
+| Sustained production TPS | Normal day-to-day mainnet load | ~1,700 in mid-2025, rising toward several thousand in 2026 |
+| Stress-test peak | Controlled tests and extreme events | Briefly past 100,000 |
+| Frankendancer live demo | Hybrid client in live conditions | Several hundred thousand |
+| Firedancer test ceiling | Independent client on commodity hardware | Over 1,000,000 |
+
+The headline million-per-second figure is a hardware-and-software capability, not a description of typical mainnet traffic. Real throughput is constrained by how many transactions users actually submit and by the protocol's block limits, both of which sit far below the client's raw capacity. A useful real-world data point: during the large market sell-off in October 2025, the network sustained very high packet rates and full blocks without service degradation, which is exactly the kind of stress that used to break it.
+
+## What is a compute unit, and what is the block limit?
+
+Solana meters work in compute units (CUs), roughly analogous to Ethereum's gas. Every transaction requests a compute-unit limit up front, and each block has a maximum total compute budget. Block limits exist primarily to ensure the vast majority of validators can keep pace with block production: they cap how much work a leader is allowed to pack into a block.
+
+The block limit has been rising. In mid-2025, [SIMD-0256](https://github.com/solana-foundation/solana-improvement-documents) raised the per-block ceiling to 60 million compute units, which at the time helped the network process around 1,700 transactions per second during daytime traffic. Each block spans roughly 400 milliseconds, so this budget is consumed and refreshed several times per second.
+
+## SIMD-0286 and SIMD-0370: where block capacity is heading
+
+Two proposals define the next stage of Solana's capacity story.
+
+**SIMD-0286** proposes raising the per-block limit from 60 million to 100 million compute units, a 66% increase, authored by Jito Labs' Lucas Bruder. The motivation is that recent mainnet performance suggests blocks are no longer constrained by execution time, so heavy applications such as order-book exchanges and complex multi-step DeFi transactions can be given more room before they hit "compute budget exceeded" errors. Crucially, SIMD-0286 raises only the total block limit; the per-account write limit (roughly 12 million compute units) stays the same, so the extra capacity benefits parallelizable transactions like swaps and mints rather than adding pressure on any single account.
+
+**SIMD-0370**, from the Firedancer team at Jump Crypto, goes further: it proposes removing the fixed block limit entirely so that block size scales dynamically, bounded only by the processing capability of the most performant validators. The idea is a "performance flywheel," where well-resourced block producers upgrade hardware to pack more transactions and earn more rewards, lifting overall network capacity. This proposal is positioned to build on the foundational improvements from the [Alpenglow upgrade](/blog/what-is-alpenglow).
+
+<div className="not-prose my-6 rounded-xl border-l-4 border-amber-500 bg-zinc-900/40 p-4">
+  <p className="text-sm leading-relaxed text-zinc-300"><strong>A real debate, not just hype:</strong> dynamic or larger blocks raise legitimate centralization concerns. If keeping up requires ever more expensive hardware, smaller validators could be squeezed out, concentrating stake among a few powerful operators. This trade-off between raw throughput and decentralization is actively contested in Solana governance.</p>
+</div>
+
+## Why Solana's TPS numbers are so easy to misread
+
+Here is the nuance that almost every "Solana does X TPS" claim ignores: historically, a large majority of Solana's transactions were validator votes, not user activity. Votes have made up roughly three-quarters of transactions, which means raw TPS figures substantially overstate genuine user throughput.
+
+This matters enormously for 2026, because the [Alpenglow upgrade](/blog/what-is-alpenglow) moves validator votes off-chain. Once that happens, vote transactions stop appearing in the count, so the raw TPS number will drop even as usable capacity for real transactions rises. In other words, headline TPS before and after Alpenglow will not be comparing the same thing. When you read a Solana throughput statistic, always ask whether it includes vote transactions.
+
+## How the client and the protocol interact
+
+It is worth being clear about what limits throughput today. The [Firedancer client](/blog/what-is-firedancer) can already process far more than current block limits permit, so in 2026 the binding constraint is increasingly the protocol's block limits and validator hardware, not the client software. That is precisely why the block-limit proposals above exist: the software outran the protocol's caps.
+
+Beyond block limits, the network's longer-term scaling work targets the physical layer too. An initiative often summarized as "increase bandwidth, reduce latency" underpins much of this roadmap, and a dedicated low-latency networking layer for validators (delivering block data over private fiber) has been rolling out to improve propagation. The Solana Foundation has tied these efforts to an explicit ambition to support internet-scale capital markets later this decade.
+
+<div className="not-prose my-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+  <p className="text-sm font-semibold text-zinc-200">Key takeaways</p>
+  <ul className="mt-3 space-y-2 text-sm text-zinc-400">
+    <li>Sustained production throughput is several thousand TPS in 2026, up from ~1,700 in mid-2025.</li>
+    <li>Stress tests exceed 100,000 TPS, and Firedancer has shown over 1,000,000 TPS in testing.</li>
+    <li>The block limit reached 60 million compute units; SIMD-0286 and SIMD-0370 push it higher or remove it.</li>
+    <li>Most historical TPS was validator votes; Alpenglow's vote removal changes the accounting.</li>
+    <li>The bottleneck is now block limits and hardware, not the client software.</li>
+  </ul>
+</div>
+
+## Frequently asked questions
+
+**How many transactions per second can Solana do?**
+Sustained real-world throughput rose from roughly 1,700 per second in mid-2025 toward several thousand per second in 2026. Stress tests have briefly exceeded 100,000 per second, and Firedancer has demonstrated over one million per second in testing, which is a hardware ceiling rather than typical load.
+
+**What is Solana's block limit?**
+The per-block compute limit was raised to 60 million compute units in mid-2025. SIMD-0286 proposes raising it toward 100 million, and SIMD-0370 proposes removing the static cap entirely so blocks scale with the most performant validators.
+
+**Why are Solana's TPS numbers confusing?**
+Historically a large share of transactions were validator votes, which inflated raw TPS relative to user activity. Alpenglow moves votes off-chain, so figures before and after activation are not directly comparable.
+
+**How long is a Solana slot?**
+A slot is roughly 400 milliseconds, and an epoch is about 432,000 slots (roughly two to three days). The slot cadence is not changing under the planned 2026 consensus upgrade.
+
+**What limits Solana's throughput, the software or the hardware?**
+Increasingly the protocol's block limits and validator hardware. Firedancer can process far more than current block limits allow, which is why proposals like SIMD-0370 aim to let block size scale with validator capacity.
+
+## Sources and further reading
+
+- Solana Foundation, [Solana Improvement Documents](https://github.com/solana-foundation/solana-improvement-documents) (primary source for SIMD-0256, SIMD-0286, and SIMD-0370)
+- CoinDesk, [Solana eyes 66% block size bump](https://www.coindesk.com/markets/2025/07/24/solana-eyes-66-block-size-bump-with-new-developer-proposal-as-network-demand-grows)
+- Solana Documentation, [Fees and compute](https://solana.com/docs/core/fees)
+
+<p className="mt-10 text-xs text-zinc-500">Last updated 27 June 2026. Throughput figures and block-limit proposals change frequently; verify current values against the SIMD repository and live network explorers before relying on specifics.</p>
