@@ -8,7 +8,7 @@ import {
   buildStructuredData,
   type BlogFrontmatter,
   type SiteConfig,
-} from "../lib/structured-data";
+} from "../../lib/structured-data";
 
 // Escape "<" so no value can close the script tag or inject markup. Consumers
 // run JSON.parse, which turns \u003c back into "<", so the data is unchanged.
