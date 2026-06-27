@@ -47,108 +47,229 @@ sources:
     url: "https://www.helius.dev/blog/solana-local-fee-markets"
 ---
 
-Solana entered 2026 in the middle of the deepest set of infrastructure changes in its history. A second validator client is producing mainnet blocks, a consensus rewrite that targets sub-second finality has cleared governance, the fee model has been reworked, and block capacity keeps rising. This guide pulls those threads together: what each change is, what it actually changes, and where to read the detail.
+<div className="space-y-14">
 
-<div className="not-prose my-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5">
+<p className="text-lg leading-relaxed text-zinc-300">Solana entered 2026 in the middle of the deepest set of infrastructure changes in its history. A second validator client is producing mainnet blocks, a consensus rewrite that targets sub-second finality has cleared governance, the fee model has been reworked, and block capacity keeps rising. This guide pulls those threads together: what each change is, what it actually changes, and where to read the detail.</p>
+
+<div className="not-prose rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5">
   <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Quick answer</p>
-  <p className="mt-2 text-sm leading-relaxed">The four upgrades that matter most in 2026 are <strong>Firedancer</strong> (client diversity and higher performance ceilings), <strong>Alpenglow</strong> (roughly 100 to 150 ms finality and the removal of on-chain vote transactions), the maturing <strong>local fee market</strong> (which keeps fees low and localized), and steady <strong>throughput</strong> gains from larger blocks. Together they target a faster, more reliable, and more predictable network.</p>
+  <p className="mt-2 text-sm leading-relaxed text-zinc-300">The four upgrades that matter most in 2026 are <strong className="text-white">Firedancer</strong> (client diversity and higher performance ceilings), <strong className="text-white">Alpenglow</strong> (roughly 100 to 150 ms finality and the removal of on-chain vote transactions), the maturing <strong className="text-white">local fee market</strong> (which keeps fees low and localized), and steady <strong className="text-white">throughput</strong> gains from larger blocks. Together they target a faster, more reliable, and more predictable network.</p>
 </div>
 
-<div className="not-prose my-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
-  <p className="text-sm font-semibold text-zinc-200">On this page</p>
-  <ul className="mt-3 space-y-2 text-sm text-zinc-400">
-    <li><a className="hover:text-emerald-400" href="#why-2026">Why 2026 is a turning point</a></li>
-    <li><a className="hover:text-emerald-400" href="#firedancer">Firedancer: a second validator client</a></li>
-    <li><a className="hover:text-emerald-400" href="#alpenglow">Alpenglow: sub-150 ms finality</a></li>
-    <li><a className="hover:text-emerald-400" href="#fees">Local fee markets: why fees stay low</a></li>
-    <li><a className="hover:text-emerald-400" href="#throughput">Throughput: how much can Solana process</a></li>
-    <li><a className="hover:text-emerald-400" href="#together">How the upgrades fit together</a></li>
-    <li><a className="hover:text-emerald-400" href="#faq">FAQ</a></li>
+<div className="not-prose grid grid-cols-2 gap-4 md:grid-cols-4">
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">~150 ms</p>
+    <p className="mt-1 text-xs text-zinc-500">Target finality, from 12.8 s</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">1M+</p>
+    <p className="mt-1 text-xs text-zinc-500">Firedancer TPS in testing</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">60M</p>
+    <p className="mt-1 text-xs text-zinc-500">Compute units per block</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">5,000</p>
+    <p className="mt-1 text-xs text-zinc-500">Lamports base fee per signature</p>
+  </div>
+</div>
+
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+  <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">On this page</p>
+  <ul className="mt-3 grid gap-2 text-sm text-zinc-400 sm:grid-cols-2">
+    <li><a className="transition hover:text-emerald-400" href="#why-2026">Why 2026 is a turning point</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#firedancer">Firedancer: a second validator client</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#alpenglow">Alpenglow: sub-150 ms finality</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#fees">Local fee markets: why fees stay low</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#throughput">Throughput: how much Solana can process</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#together">How the upgrades fit together</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#faq">Frequently asked questions</a></li>
   </ul>
 </div>
 
-<h2 id="why-2026">Why 2026 is a turning point</h2>
+<section id="why-2026" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Why 2026 is a turning point</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>For most of its life, Solana ran on a single family of validator software and a consensus design built around Proof of History. That design made Solana fast, but it also concentrated risk: a bug in one client could stall the whole network, and several high-profile outages in earlier years made reliability the chain's defining criticism.</p>
+    <p>The 2026 upgrades attack that criticism from three directions at once. Firedancer adds an independent codebase so the network no longer depends on one implementation. Alpenglow replaces the aging consensus path with a modern, formally analyzed design. And a series of smaller protocol changes keep raising capacity and tightening the fee market. The Solana Foundation has framed the longer-term goal as "increase bandwidth, reduce latency" (often shortened to IBRL), with an explicit ambition to support global, internet-scale capital markets later this decade.</p>
+    <p>The sections below summarize each change. Each links to a full, sourced explainer.</p>
+  </div>
+</section>
 
-For most of its life, Solana ran on a single family of validator software and a consensus design built around Proof of History. That design made Solana fast, but it also concentrated risk: a bug in one client could stall the whole network, and several high-profile outages in earlier years made reliability the chain's defining criticism.
+<section id="firedancer" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Firedancer: a second, independent validator client</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Firedancer is a Solana validator client built from scratch by Jump Crypto in C and C++. Because it shares no code with the original Rust client (now called Agave), it gives Solana genuine client diversity, the same property that Ethereum relies on to avoid single-client failures.</p>
+    <p>The rollout has been deliberately staged. A hybrid build called Frankendancer, which combines Firedancer's high-performance networking and block-production code with Agave's proven consensus, has run on testnet and mainnet-beta since 2024. The fully independent Firedancer client has since begun a cautious, gradual mainnet rollout, with broad validator migration intentionally held back until security audits are complete. In testing, Firedancer has demonstrated more than one million transactions per second on commodity hardware.</p>
+  </div>
+  <a href="/blog/what-is-firedancer" className="not-prose mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">
+    Read the full Firedancer guide
+    <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4"><path fillRule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clipRule="evenodd" /></svg>
+  </a>
+</section>
 
-The 2026 upgrades attack that criticism from three directions at once. Firedancer adds an independent codebase so the network no longer depends on one implementation. Alpenglow replaces the aging consensus path with a modern, formally analyzed design. And a series of smaller protocol changes keep raising capacity and tightening the fee market. The Solana Foundation has framed the longer-term goal as "increase bandwidth, reduce latency" (often shortened to IBRL), with an explicit ambition to support global, internet-scale capital markets later this decade.
+<section id="alpenglow" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Alpenglow: sub-150 ms finality and the end of on-chain votes</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Alpenglow is the codename for SIMD-0326, the largest consensus change in Solana's history. It replaces Proof of History and Tower BFT (as consensus mechanisms) with a new direct-voting protocol called Votor.</p>
+    <p>Two numbers capture the impact. First, deterministic finality drops from roughly 12.8 seconds to a target of about 100 to 150 ms. Second, validator votes move off-chain and are aggregated using BLS signatures, which removes vote transactions that today consume around three-quarters of block space. The proposal passed governance in September 2025 with 98.27% approval and went live on a community test cluster in May 2026. Mainnet activation is expected later in 2026.</p>
+  </div>
+  <a href="/blog/what-is-alpenglow" className="not-prose mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">
+    Read the full Alpenglow guide
+    <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4"><path fillRule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clipRule="evenodd" /></svg>
+  </a>
+</section>
 
-The sections below summarize each change. Each links to a full, sourced explainer.
+<section id="fees" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Local fee markets: why Solana fees stay low</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Solana fees have two parts: a fixed base fee of 5,000 lamports (0.000005 SOL) per signature, and an optional priority fee you bid to improve ordering. The detail that most guides miss is that fee pressure on Solana is local: contention attaches to the specific accounts a transaction writes to, not to the network as a whole.</p>
+    <p>This is why a simple transfer can stay nearly free during a chaotic token launch happening elsewhere on the chain. It also explains why "the network is congested" headlines are usually misleading, and why blindly raising your priority fee often just wastes SOL. A 2025 protocol change (SIMD-0096) also redirected all priority-fee revenue to validators, sharpening their incentive to include high-priority transactions.</p>
+  </div>
+  <a href="/blog/solana-transaction-fees-local-fee-markets" className="not-prose mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">
+    Read the full fees and local fee markets guide
+    <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4"><path fillRule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clipRule="evenodd" /></svg>
+  </a>
+</section>
 
-<h2 id="firedancer"> Firedancer: a second, independent validator client</h2>
+<section id="throughput" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Throughput: how much can Solana actually process?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Raw throughput has climbed steadily. The per-block compute limit was raised to 60 million compute units in mid-2025, with further proposals (SIMD-0286 toward 100 million, and SIMD-0370 to remove the static cap entirely) under way. Sustained real-world throughput rose from roughly 1,700 transactions per second in mid-2025 toward several thousand per second in 2026, and stress tests have briefly pushed past 100,000 transactions per second.</p>
+    <p>There is an important caveat to every Solana "TPS" figure: historically a large share of transactions were validator votes. Removing those votes under Alpenglow will change how throughput is measured and reported, so headline numbers before and after activation will not be directly comparable.</p>
+  </div>
+  <a href="/blog/solana-throughput-tps-2026" className="not-prose mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">
+    Read the full throughput and TPS guide
+    <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4"><path fillRule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clipRule="evenodd" /></svg>
+  </a>
+</section>
 
-Firedancer is a Solana validator client built from scratch by Jump Crypto in C and C++. Because it shares no code with the original Rust client (now called Agave), it gives Solana genuine client diversity, the same property that Ethereum relies on to avoid single-client failures.
+<section id="together" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">How the upgrades fit together</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>These changes are complementary rather than independent. Alpenglow's simpler consensus is also easier to reimplement in a second client, which helps Firedancer reach multi-client parity. Removing vote transactions frees block space, which compounds with larger block limits to raise usable throughput. And a healthier fee market makes that extra capacity actually useful instead of being absorbed by spam.</p>
+  </div>
 
-The rollout has been deliberately staged. A hybrid build called Frankendancer, which combines Firedancer's high-performance networking and block-production code with Agave's proven consensus, has run on testnet and mainnet-beta since 2024. The fully independent Firedancer client has since begun a cautious, gradual mainnet rollout, with broad validator migration intentionally held back until security audits are complete. In testing, Firedancer has demonstrated more than one million transactions per second on commodity hardware.
+  <div className="not-prose mt-6 overflow-x-auto rounded-2xl border border-zinc-800">
+    <table className="w-full border-collapse text-left text-sm">
+      <thead className="bg-zinc-900/60">
+        <tr>
+          <th className="px-4 py-3 font-semibold text-emerald-400">Upgrade</th>
+          <th className="px-4 py-3 font-semibold text-emerald-400">What it is</th>
+          <th className="px-4 py-3 font-semibold text-emerald-400">What it changes</th>
+          <th className="px-4 py-3 font-semibold text-emerald-400">Status (mid-2026)</th>
+        </tr>
+      </thead>
+      <tbody className="text-zinc-300">
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Firedancer</td>
+          <td className="px-4 py-3">Independent C/C++ validator client</td>
+          <td className="px-4 py-3">Client diversity, higher performance ceiling</td>
+          <td className="px-4 py-3">Gradual mainnet rollout; audits ongoing</td>
+        </tr>
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Alpenglow (SIMD-0326)</td>
+          <td className="px-4 py-3">Consensus rewrite (Votor)</td>
+          <td className="px-4 py-3">Finality from ~12.8 s to ~100 to 150 ms; removes on-chain votes</td>
+          <td className="px-4 py-3">Passed governance; on test cluster; mainnet expected later 2026</td>
+        </tr>
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Local fee market / SIMD-0096</td>
+          <td className="px-4 py-3">Per-account fee pricing and fee routing</td>
+          <td className="px-4 py-3">Keeps fees low and localized; priority fees go to validators</td>
+          <td className="px-4 py-3">Live</td>
+        </tr>
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Block capacity (SIMD-0256 / -0286 / -0370)</td>
+          <td className="px-4 py-3">Larger or dynamic block limits</td>
+          <td className="px-4 py-3">More transactions per block, higher sustained throughput</td>
+          <td className="px-4 py-3">60M CU live; larger limits in progress</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-[Read the full Firedancer guide](/blog/what-is-firedancer)
-
-<h2 id="alpenglow"> Alpenglow: sub-150 ms finality and the end of on-chain votes</h2>
-
-Alpenglow is the codename for [SIMD-0326](https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0326-alpenglow.md), the largest consensus change in Solana's history. It replaces Proof of History and Tower BFT (as consensus mechanisms) with a new direct-voting protocol called Votor.
-
-Two numbers capture the impact. First, deterministic finality drops from roughly 12.8 seconds to a target of about 100 to 150 ms. Second, validator votes move off-chain and are aggregated using BLS signatures, which removes vote transactions that today consume around three-quarters of block space. The proposal passed governance in September 2025 with 98.27% approval and went live on a community test cluster in May 2026. Mainnet activation is expected later in 2026.
-
-[Read the full Alpenglow guide](/blog/what-is-alpenglow)
-
-<h2 id="fees"> Local fee markets: why Solana fees stay low</h2>
-
-Solana fees have two parts: a fixed base fee of 5,000 lamports (0.000005 SOL) per signature, and an optional priority fee you bid to improve ordering. The detail that most guides miss is that fee pressure on Solana is local: contention attaches to the specific accounts a transaction writes to, not to the network as a whole.
-
-This is why a simple transfer can stay nearly free during a chaotic token launch happening elsewhere on the chain. It also explains why "the network is congested" headlines are usually misleading, and why blindly raising your priority fee often just wastes SOL. A 2025 protocol change (SIMD-0096) also redirected all priority-fee revenue to validators, sharpening their incentive to include high-priority transactions.
-
-[Read the full fees and local fee markets guide](/blog/solana-transaction-fees-local-fee-markets)
-
-<h2 id="throughput"> Throughput: how much can Solana actually process?</h2>
-
-Raw throughput has climbed steadily. The per-block compute limit was raised to 60 million compute units in mid-2025, with further proposals (SIMD-0286 toward 100 million, and SIMD-0370 to remove the static cap entirely) under way. Sustained real-world throughput rose from roughly 1,700 transactions per second in mid-2025 toward several thousand per second in 2026, and stress tests have briefly pushed past 100,000 transactions per second.
-
-There is an important caveat to every Solana "TPS" figure: historically a large share of transactions were validator votes. Removing those votes under Alpenglow will change how throughput is measured and reported, so headline numbers before and after activation will not be directly comparable.
-
-[Read the full throughput and TPS guide](/blog/solana-throughput-tps-2026)
-
-<h2 id="together"> How the upgrades fit together</h2>
-
-These changes are complementary rather than independent. Alpenglow's simpler consensus is also easier to reimplement in a second client, which helps Firedancer reach multi-client parity. Removing vote transactions frees block space, which compounds with larger block limits to raise usable throughput. And a healthier fee market makes that extra capacity actually useful instead of being absorbed by spam.
-
-| Upgrade | What it is | What it changes | Status (mid-2026) |
-| --- | --- | --- | --- |
-| Firedancer | Independent C/C++ validator client | Client diversity, higher performance ceiling | Gradual mainnet rollout; audits ongoing |
-| Alpenglow (SIMD-0326) | Consensus rewrite (Votor) | Finality from ~12.8 s to ~100 to 150 ms; removes on-chain votes | Passed governance; on test cluster; mainnet expected later 2026 |
-| Local fee market / SIMD-0096 | Per-account fee pricing and fee routing | Keeps fees low and localized; priority fees go to validators | Live |
-| Block capacity (SIMD-0256 / -0286 / -0370) | Larger or dynamic block limits | More transactions per block, higher sustained throughput | 60M CU live; larger limits in progress |
-
-<div className="not-prose my-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
   <p className="text-sm font-semibold text-zinc-200">Key takeaways</p>
   <ul className="mt-3 space-y-2 text-sm text-zinc-400">
-    <li>Firedancer ends Solana's single-client dependency and raises its performance ceiling.</li>
-    <li>Alpenglow targets sub-150 ms finality and removes the vote transactions that fill most of today's blocks.</li>
-    <li>Fees stay low because contention is local to accounts, not global to the network.</li>
-    <li>Throughput keeps rising through larger blocks, but vote removal will change how "TPS" is measured.</li>
-    <li>The upgrades reinforce each other: simpler consensus, more capacity, and a cleaner fee market.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Firedancer ends Solana's single-client dependency and raises its performance ceiling.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Alpenglow targets sub-150 ms finality and removes the vote transactions that fill most of today's blocks.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Fees stay low because contention is local to accounts, not global to the network.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Throughput keeps rising through larger blocks, but vote removal will change how "TPS" is measured.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> The upgrades reinforce each other: simpler consensus, more capacity, and a cleaner fee market.</li>
   </ul>
 </div>
 
-<h2 id="faq"> Frequently asked questions</h2>
+<section id="faq" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Frequently asked questions</h2>
+  <div className="not-prose space-y-3">
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">What are the biggest Solana upgrades in 2026?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">The four most consequential are Firedancer (a second, independent validator client), Alpenglow (a consensus rewrite targeting roughly 100 to 150 ms finality), the maturing local fee market and priority-fee model, and ongoing block-capacity increases that raise sustained throughput.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Is Solana getting faster in 2026?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Yes. Real-world throughput has risen from roughly 1,700 transactions per second in mid-2025 to several thousand per second in 2026, block compute limits have been raised, and the planned Alpenglow upgrade targets sub-150 ms finality versus about 12.8 seconds today.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Is Alpenglow live on Solana mainnet yet?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Not as of mid-2026. Alpenglow passed governance in September 2025 and went live on a community test cluster in May 2026, but mainnet activation is expected later in 2026 after further client releases, testing, and security audits.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Does any of this change how SOL works as a token?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">No. Firedancer is validator software, not a protocol change, so SOL economics are unchanged. Alpenglow adjusts how validator votes are handled and introduces related economic proposals, but it does not change SOL issuance in the core consensus proposal.</p>
+    </div>
+  </div>
+</section>
 
-**What are the biggest Solana upgrades in 2026?**
-The four most consequential are Firedancer (a second, independent validator client), Alpenglow (a consensus rewrite targeting roughly 100 to 150 ms finality), the maturing local fee market and priority-fee model, and ongoing block-capacity increases that raise sustained throughput.
+<div className="not-prose rounded-2xl border border-emerald-500/20 bg-linear-to-br from-emerald-500/10 to-zinc-900/40 p-8 text-center">
+  <h2 className="text-2xl font-bold text-white md:text-3xl">Track any Solana token's holders in real time</h2>
+  <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-zinc-300">SolanaHolderBot monitors holder growth, whale movements, and distribution changes the moment they happen, so you see what is really going on behind the price. Set it up in minutes.</p>
+  <a href="https://solanaholderbot.com" className="mt-6 inline-flex items-center justify-center gap-1.5 rounded-xl bg-emerald-500 px-6 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-emerald-400">
+    Try SolanaHolderBot
+    <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4"><path fillRule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clipRule="evenodd" /></svg>
+  </a>
+</div>
 
-**Is Solana getting faster in 2026?**
-Yes. Real-world throughput has risen from roughly 1,700 transactions per second in mid-2025 to several thousand per second in 2026, block compute limits have been raised, and the planned Alpenglow upgrade targets sub-150 ms finality versus about 12.8 seconds today.
+<div className="not-prose">
+  <p className="mb-4 text-sm font-semibold text-zinc-200">Continue the Solana 2026 series</p>
+  <div className="grid gap-4 sm:grid-cols-2">
+    <a href="/blog/what-is-firedancer" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Firedancer: Solana's independent validator client</p>
+      <p className="mt-1 text-sm text-zinc-500">Jump Crypto's from-scratch C/C++ client and the Frankendancer stepping stone.</p>
+    </a>
+    <a href="/blog/what-is-alpenglow" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Alpenglow: sub-150 ms finality</p>
+      <p className="mt-1 text-sm text-zinc-500">How Votor replaces Tower BFT and cuts finality by two orders of magnitude.</p>
+    </a>
+    <a href="/blog/solana-transaction-fees-local-fee-markets" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Fees and local fee markets</p>
+      <p className="mt-1 text-sm text-zinc-500">Why fees stay low, how priority fees work, and why transactions fail.</p>
+    </a>
+    <a href="/blog/solana-throughput-tps-2026" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Throughput, TPS and block limits</p>
+      <p className="mt-1 text-sm text-zinc-500">Real numbers versus stress-test ceilings, and where block capacity is heading.</p>
+    </a>
+  </div>
+</div>
 
-**Is Alpenglow live on Solana mainnet yet?**
-Not as of mid-2026. Alpenglow passed governance in September 2025 and went live on a community test cluster in May 2026, but mainnet activation is expected later in 2026 after further client releases, testing, and security audits.
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+  <p className="text-sm font-semibold text-zinc-200">Sources and further reading</p>
+  <ul className="mt-3 space-y-2 text-sm text-zinc-400">
+    <li><a href="https://github.com/solana-foundation/solana-improvement-documents" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Solana Improvement Documents</a> (primary source for every SIMD referenced above)</li>
+    <li><a href="https://solana.com/docs/core/fees" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Solana Documentation: Fees</a></li>
+    <li><a href="https://www.anza.xyz/alpenglow-1-1" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Anza: Alpenglow White Paper v1.1</a></li>
+    <li><a href="https://github.com/firedancer-io/firedancer" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Firedancer (firedancer-io) repository</a></li>
+    <li><a href="https://www.helius.dev/blog/solana-local-fee-markets" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Helius: Solana Local Fee Markets</a></li>
+  </ul>
+</div>
 
-**Does any of this change how SOL works as a token?**
-No. Firedancer is validator software, not a protocol change, so SOL economics are unchanged. Alpenglow adjusts how validator votes are handled and introduces related economic proposals, but it does not change SOL issuance in the core consensus proposal.
+<p className="text-xs text-zinc-500">Last updated 27 June 2026. Solana's protocol changes quickly; figures and upgrade statuses are point-in-time and should be re-checked against the primary sources above.</p>
 
-## Sources and further reading
-
-- Solana Foundation, [Solana Improvement Documents](https://github.com/solana-foundation/solana-improvement-documents) (primary source for every SIMD referenced above)
-- Solana Documentation, [Fees](https://solana.com/docs/core/fees)
-- Anza, [Alpenglow White Paper v1.1](https://www.anza.xyz/alpenglow-1-1)
-- Firedancer, [firedancer-io repository](https://github.com/firedancer-io/firedancer)
-- Helius, [Solana Local Fee Markets](https://www.helius.dev/blog/solana-local-fee-markets)
-
-<p className="mt-10 text-xs text-zinc-500">Last updated 27 June 2026. Solana's protocol changes quickly; figures and upgrade statuses are point-in-time and should be re-checked against the primary sources above.</p>
+</div>

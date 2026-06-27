@@ -44,121 +44,276 @@ sources:
     url: "https://forum.solana.com/t/simd-0326-proposal-for-the-new-alpenglow-consensus-protocol/4236"
 ---
 
-Alpenglow is the most ambitious change to Solana's core design since the network launched. It rewrites how validators agree on the state of the chain, cutting deterministic finality by roughly two orders of magnitude and removing the vote transactions that currently fill most of every block. This guide explains what Alpenglow is, how Votor works, the economics around it, and exactly where it stands on the road to mainnet.
+<div className="space-y-14">
 
-<div className="not-prose my-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5">
+<p className="text-lg leading-relaxed text-zinc-300">Alpenglow is the most ambitious change to Solana's core design since the network launched. It rewrites how validators agree on the state of the chain, cutting deterministic finality by roughly two orders of magnitude and removing the vote transactions that currently fill most of every block. This guide explains what Alpenglow is, how Votor works, the economics around it, and exactly where it stands on the road to mainnet.</p>
+
+<div className="not-prose rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5">
   <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Quick answer</p>
-  <p className="mt-2 text-sm leading-relaxed"><strong>Alpenglow</strong> (SIMD-0326) is Solana's consensus rewrite. It replaces Proof of History and Tower BFT with a direct-voting protocol called <strong>Votor</strong>, reducing deterministic finality from about 12.8 seconds to roughly 100 to 150 ms and moving validator votes off-chain so they no longer consume block space. It passed governance in September 2025 and is expected on mainnet later in 2026.</p>
+  <p className="mt-2 text-sm leading-relaxed text-zinc-300"><strong className="text-white">Alpenglow</strong> (SIMD-0326) is Solana's consensus rewrite. It replaces Proof of History and Tower BFT with a direct-voting protocol called <strong className="text-white">Votor</strong>, reducing deterministic finality from about 12.8 seconds to roughly 100 to 150 ms and moving validator votes off-chain so they no longer consume block space. It passed governance in September 2025 and is expected on mainnet later in 2026.</p>
 </div>
 
-<div className="not-prose my-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
-  <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana 2026 series</p>
-  <ul className="mt-3 space-y-2 text-sm text-zinc-400">
-    <li><a className="hover:text-emerald-400" href="/blog/solana-2026-network-upgrades">Overview: Solana in 2026</a></li>
-    <li><a className="hover:text-emerald-400" href="/blog/what-is-firedancer">Firedancer: Solana's independent validator client</a></li>
-    <li className="text-zinc-200">Alpenglow: sub-150 ms finality (you are here)</li>
-    <li><a className="hover:text-emerald-400" href="/blog/solana-transaction-fees-local-fee-markets">Fees and local fee markets</a></li>
-    <li><a className="hover:text-emerald-400" href="/blog/solana-throughput-tps-2026">Throughput, TPS and block limits</a></li>
+<div className="not-prose grid grid-cols-2 gap-4 md:grid-cols-4">
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">~150 ms</p>
+    <p className="mt-1 text-xs text-zinc-500">Target finality, from 12.8 s</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">98.27%</p>
+    <p className="mt-1 text-xs text-zinc-500">Governance approval</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">~75%</p>
+    <p className="mt-1 text-xs text-zinc-500">Block space freed by votes off-chain</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">May 2026</p>
+    <p className="mt-1 text-xs text-zinc-500">Live on community test cluster</p>
+  </div>
+</div>
+
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+  <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">On this page</p>
+  <ul className="mt-3 grid gap-2 text-sm text-zinc-400 sm:grid-cols-2">
+    <li><a className="transition hover:text-emerald-400" href="#problem">What problem Alpenglow solves</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#changes">What Alpenglow changes</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#votor">How Votor reaches finality</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#security">Is it more secure?</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#economics">The economic changes</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#rollout">Road to mainnet</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#connect">How it connects to other upgrades</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#faq">Frequently asked questions</a></li>
   </ul>
 </div>
 
-## What problem does Alpenglow solve?
+<section id="problem" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">What problem does Alpenglow solve?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>To understand Alpenglow, you need to know how Solana confirms transactions today. The current system combines Proof of History (a cryptographic clock) with Tower BFT (a Byzantine-fault-tolerant voting protocol). Under this design a transaction reaches an early "optimistic" confirmation within a few hundred milliseconds, but full, irreversible finality takes roughly 12.8 seconds.</p>
+    <p>That gap creates two problems. First, the long road to finality slows down any application that needs certainty, from cross-border settlement to high-frequency trading. Second, the voting process itself is expensive: validators broadcast their votes as on-chain transactions, and those vote transactions consume around three-quarters of all block space. Alpenglow tackles both at once.</p>
+  </div>
+</section>
 
-To understand Alpenglow, you need to know how Solana confirms transactions today. The current system combines Proof of History (a cryptographic clock) with Tower BFT (a Byzantine-fault-tolerant voting protocol). Under this design a transaction reaches an early "optimistic" confirmation within a few hundred milliseconds, but full, irreversible finality takes roughly 12.8 seconds.
+<section id="changes" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">What exactly does Alpenglow change?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Alpenglow, formalized as SIMD-0326, replaces the consensus layer with two new components and a different notion of time.</p>
+  </div>
 
-That gap creates two problems. First, the long road to finality slows down any application that needs certainty, from cross-border settlement to high-frequency trading. Second, the voting process itself is expensive: validators broadcast their votes as on-chain transactions, and those vote transactions consume around three-quarters of all block space. Alpenglow tackles both at once.
+  <div className="not-prose mt-6 grid gap-4 md:grid-cols-3">
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Component</p>
+      <p className="mt-2 font-semibold text-white">Votor</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">A lightweight, direct-vote finality protocol that collapses Tower BFT's lengthy, multi-step confirmation into one or two quick voting rounds.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Component</p>
+      <p className="mt-2 font-semibold text-white">Rotor</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">A new block-propagation layer intended to eventually replace Turbine. Rotor is deferred to its own separate proposal; at activation, Turbine stays in place, so day-one breaking changes are confined to consensus.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Component</p>
+      <p className="mt-2 font-semibold text-white">A new sense of time</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Proof of History is removed as a consensus mechanism and replaced by a fixed roughly 400 ms block time plus local timeout timers on each validator. The 400 ms slot cadence itself does not change.</p>
+    </div>
+  </div>
 
-## What exactly does Alpenglow change?
+  <p className="mt-6 leading-relaxed text-zinc-300">The single biggest user-facing effect is speed: finality drops from about 12.8 seconds to a target of 100 to 150 ms.</p>
+</section>
 
-Alpenglow, formalized as [SIMD-0326](https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0326-alpenglow.md), replaces the consensus layer with two new components and a different notion of time.
+<section id="votor" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">How does Votor reach finality so quickly?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Votor uses two paths depending on network conditions.</p>
+  </div>
 
-- **Votor** is a lightweight, direct-vote finality protocol that collapses Tower BFT's lengthy, multi-step confirmation into one or two quick voting rounds.
-- **Rotor** is a new block-propagation layer intended to eventually replace Turbine. Importantly, Rotor is deferred to its own separate proposal; at Alpenglow's activation, Turbine stays in place, so the day-one breaking changes are confined to consensus.
-- **A new sense of time.** Proof of History is removed as a consensus mechanism and replaced by a fixed roughly 400 ms block time plus local timeout timers on each validator. The 400 ms slot cadence itself does not change.
+  <div className="not-prose mt-6 overflow-x-auto rounded-2xl border border-zinc-800">
+    <table className="w-full border-collapse text-left text-sm">
+      <thead className="bg-zinc-900/60">
+        <tr>
+          <th className="px-4 py-3 font-semibold text-emerald-400">Path</th>
+          <th className="px-4 py-3 font-semibold text-emerald-400">Finality time</th>
+          <th className="px-4 py-3 font-semibold text-emerald-400">Requirement</th>
+        </tr>
+      </thead>
+      <tbody className="text-zinc-300">
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Fast path</td>
+          <td className="px-4 py-3">~100 ms</td>
+          <td className="px-4 py-3">At least 80% of stake agrees in a single round</td>
+        </tr>
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Slow path</td>
+          <td className="px-4 py-3">~150 ms</td>
+          <td className="px-4 py-3">At least 60% agreement across two rounds</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-The single biggest user-facing effect is speed: finality drops from about 12.8 seconds to a target of 100 to 150 ms.
+  <div className="mt-6 space-y-4 leading-relaxed text-zinc-300">
+    <p>Instead of posting votes as on-chain transactions, validators exchange votes directly with one another. Once a block leader has collected enough votes, it aggregates the signatures using BLS signature aggregation, which compresses hundreds or thousands of signatures into a single compact "finality certificate." Only that certificate is published on-chain as proof. This is what frees up the roughly three-quarters of block space that vote transactions used to occupy.</p>
+  </div>
 
-## How does Votor reach finality so quickly?
+  <div className="not-prose mt-6 rounded-xl border-l-4 border-emerald-500 bg-zinc-900/40 p-4">
+    <p className="text-sm leading-relaxed text-zinc-300"><strong className="text-white">In plain terms:</strong> today, every vote is a letter mailed through the post office (the chain). Alpenglow lets validators talk directly, then mails a single signed summary instead of thousands of separate letters.</p>
+  </div>
+</section>
 
-Votor uses two paths depending on network conditions:
+<section id="security" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Is Alpenglow more secure than the old design?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>That is part of the motivation. Alpenglow comes with a formal academic analysis and a clearer resilience model, often summarized as "20 plus 20": the protocol is designed to remain safe with under 20% of stake acting maliciously, and under stronger assumptions can keep making progress even if a further roughly 20% of validators are simply offline.</p>
+    <p>The work comes from Anza's research division, led by Professor Roger Wattenhofer of ETH Zurich, alongside Quentin Kniep and Kobi Sliwinski. Notably, Wattenhofer co-authored a 2024 paper that identified liveness weaknesses in Solana's existing consensus, so Alpenglow is in part a direct response to known shortcomings of the old design. The full technical details are in the <a href="https://www.anza.xyz/alpenglow-1-1" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Alpenglow White Paper v1.1</a>.</p>
+  </div>
+</section>
 
-| Path | Finality time | Requirement |
-| --- | --- | --- |
-| Fast path | ~100 ms | At least 80% of stake agrees in a single round |
-| Slow path | ~150 ms | At least 60% agreement across two rounds |
+<section id="economics" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">What are the economic changes around Alpenglow?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Removing on-chain votes changes validator economics, and a set of companion proposals handle the details. Today validators pay a small fee for every vote transaction, which adds up to roughly two SOL per epoch for an active validator. Once votes move off-chain, that cost disappears.</p>
+  </div>
 
-Instead of posting votes as on-chain transactions, validators exchange votes directly with one another. Once a block leader has collected enough votes, it aggregates the signatures using BLS signature aggregation, which compresses hundreds or thousands of signatures into a single compact "finality certificate." Only that certificate is published on-chain as proof. This is what frees up the roughly three-quarters of block space that vote transactions used to occupy.
+  <div className="not-prose mt-6 grid gap-4 md:grid-cols-2">
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Validator Admission Ticket (VAT)</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">A separate proposal introduces a fixed fee charged per epoch to validators eligible for the next epoch's consensus set, in the region of 1.6 SOL, which would be burned.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">BLS key management (SIMD-0387)</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">A prerequisite proposal covers BLS keys. After activation, a validator that has not registered a BLS key is treated as unstaked: still online, but not counted in consensus and not earning rewards.</p>
+    </div>
+  </div>
 
-<div className="not-prose my-6 rounded-xl border-l-4 border-emerald-500 bg-zinc-900/40 p-4">
-  <p className="text-sm leading-relaxed text-zinc-300"><strong>In plain terms:</strong> today, every vote is a letter mailed through the post office (the chain). Alpenglow lets validators talk directly, then mails a single signed summary instead of thousands of separate letters.</p>
-</div>
+  <p className="mt-6 leading-relaxed text-zinc-300">The core SIMD-0326 keeps existing vote-reward mechanics intact while removing some harmful incentives (such as the incentive to delay a vote). Broader economic redesign is left to future, dedicated proposals.</p>
+</section>
 
-## Is Alpenglow more secure than the old design?
+<section id="rollout" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Where does Alpenglow stand on the road to mainnet?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>This is where accuracy matters, because Alpenglow has moved unusually fast for a Solana protocol change but is still not on mainnet.</p>
+  </div>
 
-That is part of the motivation. Alpenglow comes with a formal academic analysis and a clearer resilience model, often summarized as "20 plus 20": the protocol is designed to remain safe with under 20% of stake acting maliciously, and under stronger assumptions can keep making progress even if a further roughly 20% of validators are simply offline.
+  <div className="not-prose mt-6 space-y-3">
+    <div className="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 sm:flex-row sm:items-baseline sm:gap-4">
+      <span className="inline-flex w-fit flex-none rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-400">May 2025</span>
+      <p className="text-sm leading-relaxed text-zinc-300">Unveiled at Solana Accelerate in New York.</p>
+    </div>
+    <div className="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 sm:flex-row sm:items-baseline sm:gap-4">
+      <span className="inline-flex w-fit flex-none rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-400">Sep 2025</span>
+      <p className="text-sm leading-relaxed text-zinc-300">Governance vote passed with 98.27% approval and roughly 52% of total stake participating. The threshold required at least 33% participation and a two-thirds majority, so the result was decisive.</p>
+    </div>
+    <div className="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 sm:flex-row sm:items-baseline sm:gap-4">
+      <span className="inline-flex w-fit flex-none rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-400">Dec 2025</span>
+      <p className="text-sm leading-relaxed text-zinc-300">Demonstrated publicly at Breakpoint.</p>
+    </div>
+    <div className="flex flex-col gap-1 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 sm:flex-row sm:items-baseline sm:gap-4">
+      <span className="inline-flex w-fit flex-none rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-400">May 2026</span>
+      <p className="text-sm leading-relaxed text-zinc-300">Went live on a dedicated Anza community test cluster, including a live "Alpenswitch" migration that moved the cluster from Tower BFT to Alpenglow.</p>
+    </div>
+    <div className="flex flex-col gap-1 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-5 sm:flex-row sm:items-baseline sm:gap-4">
+      <span className="inline-flex w-fit flex-none rounded-full bg-emerald-500/20 px-3 py-1 text-xs font-semibold text-emerald-300">Later 2026</span>
+      <p className="text-sm leading-relaxed text-zinc-300">Expected mainnet activation, following further client releases (an Agave 4.1 release is the relevant milestone), community testing, and security audits.</p>
+    </div>
+  </div>
 
-The work comes from Anza's research division, led by Professor Roger Wattenhofer of ETH Zurich, alongside Quentin Kniep and Kobi Sliwinski. Notably, Wattenhofer co-authored a 2024 paper that identified liveness weaknesses in Solana's existing consensus, so Alpenglow is in part a direct response to known shortcomings of the old design. The full technical details are in the [Alpenglow White Paper v1.1](https://www.anza.xyz/alpenglow-1-1).
+  <div className="mt-6 space-y-4 leading-relaxed text-zinc-300">
+    <p>A practical signal to watch is the BLS key-management proposal landing on public testnet, which would mark the move from a private community cluster to a public network. The other key variable is multi-client parity: <a href="/blog/what-is-firedancer" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Firedancer</a> has endorsed the design but did not yet have a production Votor implementation on any cluster at the time of writing, and both major clients need a working implementation before mainnet activation.</p>
+  </div>
 
-## What are the economic changes around Alpenglow?
+  <div className="not-prose mt-6 rounded-xl border-l-4 border-amber-500 bg-zinc-900/40 p-4">
+    <p className="text-sm leading-relaxed text-zinc-300"><strong className="text-white">Note on older articles:</strong> some 2025 coverage predicted a Q1 2026 mainnet launch. That timeline slipped. The current expectation, based on the most recent client and testing milestones, is mainnet activation later in 2026. Always check the primary proposal for the latest status.</p>
+  </div>
+</section>
 
-Removing on-chain votes changes validator economics, and a set of companion proposals handle the details.
+<section id="connect" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">How does Alpenglow connect to the other 2026 upgrades?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Alpenglow is the consensus piece of a larger picture. By freeing the block space that vote transactions consumed, it directly complements <a href="/blog/solana-throughput-tps-2026" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Solana's throughput and block-limit changes</a>, since more usable space means more room for real transactions. It also eases <a href="/blog/solana-transaction-fees-local-fee-markets" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">fee pressure during congestion</a> for the same reason. And because Votor is a simpler protocol than Tower BFT, it is easier to reimplement in a second client, which helps <a href="/blog/what-is-firedancer" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Firedancer</a> reach the multi-client parity Solana needs.</p>
+  </div>
+</section>
 
-Today validators pay a small fee for every vote transaction, which adds up to roughly two SOL per epoch for an active validator. Once votes move off-chain, that cost disappears, so a separate proposal introduces a Validator Admission Ticket (VAT): a fixed fee charged per epoch to validators eligible for the next epoch's consensus set, in the region of 1.6 SOL, which would be burned. A second prerequisite proposal (SIMD-0387) covers BLS key management. After Alpenglow activates, a validator that has not registered a BLS key will be treated as unstaked: still online, but not counted in consensus and not earning rewards.
-
-The core SIMD-0326 keeps existing vote-reward mechanics intact while removing some harmful incentives (such as the incentive to delay a vote). Broader economic redesign is left to future, dedicated proposals.
-
-## Where does Alpenglow stand on the road to mainnet?
-
-This is where accuracy matters, because Alpenglow has moved unusually fast for a Solana protocol change but is still not on mainnet.
-
-- **May 2025:** unveiled at Solana Accelerate in New York.
-- **September 2025:** governance vote passed with 98.27% approval and roughly 52% of total stake participating. The threshold required at least 33% participation and a two-thirds majority, so the result was decisive.
-- **December 2025:** demonstrated publicly at Breakpoint.
-- **May 2026:** went live on a dedicated Anza community test cluster, including a live "Alpenswitch" migration that moved the cluster from Tower BFT to Alpenglow.
-- **Later in 2026 (expected):** mainnet activation, following further client releases (an Agave 4.1 release is the relevant milestone), community testing, and security audits.
-
-A practical signal to watch is the BLS key-management proposal landing on public testnet, which would mark the move from a private community cluster to a public network. The other key variable is multi-client parity: [Firedancer](/blog/what-is-firedancer) has endorsed the design but did not yet have a production Votor implementation on any cluster at the time of writing, and both major clients need a working implementation before mainnet activation.
-
-<div className="not-prose my-6 rounded-xl border-l-4 border-amber-500 bg-zinc-900/40 p-4">
-  <p className="text-sm leading-relaxed text-zinc-300"><strong>Note on older articles:</strong> some 2025 coverage predicted a Q1 2026 mainnet launch. That timeline slipped. The current expectation, based on the most recent client and testing milestones, is mainnet activation later in 2026. Always check the primary proposal for the latest status.</p>
-</div>
-
-## How does Alpenglow connect to the other 2026 upgrades?
-
-Alpenglow is the consensus piece of a larger picture. By freeing the block space that vote transactions consumed, it directly complements [Solana's throughput and block-limit changes](/blog/solana-throughput-tps-2026), since more usable space means more room for real transactions. It also eases [fee pressure during congestion](/blog/solana-transaction-fees-local-fee-markets) for the same reason. And because Votor is a simpler protocol than Tower BFT, it is easier to reimplement in a second client, which helps [Firedancer](/blog/what-is-firedancer) reach the multi-client parity Solana needs.
-
-<div className="not-prose my-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
   <p className="text-sm font-semibold text-zinc-200">Key takeaways</p>
   <ul className="mt-3 space-y-2 text-sm text-zinc-400">
-    <li>Alpenglow (SIMD-0326) replaces Proof of History and Tower BFT with the Votor protocol.</li>
-    <li>Finality drops from about 12.8 seconds to a target of 100 to 150 ms.</li>
-    <li>Votes move off-chain and are aggregated with BLS signatures, freeing roughly 75% of block space.</li>
-    <li>It passed governance with 98.27% approval and reached a community test cluster in May 2026.</li>
-    <li>Mainnet activation is expected later in 2026, not yet live as of mid-2026.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Alpenglow (SIMD-0326) replaces Proof of History and Tower BFT with the Votor protocol.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Finality drops from about 12.8 seconds to a target of 100 to 150 ms.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Votes move off-chain and are aggregated with BLS signatures, freeing roughly 75% of block space.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> It passed governance with 98.27% approval and reached a community test cluster in May 2026.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Mainnet activation is expected later in 2026, not yet live as of mid-2026.</li>
   </ul>
 </div>
 
-## Frequently asked questions
+<section id="faq" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Frequently asked questions</h2>
+  <div className="not-prose space-y-3">
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">What is Alpenglow on Solana?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Alpenglow is Solana's consensus upgrade, formalized as SIMD-0326. It replaces Proof of History and Tower BFT (as consensus mechanisms) with a direct-voting protocol called Votor, reducing deterministic finality from about 12.8 seconds to roughly 100 to 150 ms and moving validator votes off-chain.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">How fast is Alpenglow finality?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">It targets roughly 100 to 150 ms. A fast path finalizes at about 100 ms when at least 80% of stake agrees in one round, and a slow path finalizes at about 150 ms with at least 60% agreement across two rounds.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Does Alpenglow remove Proof of History?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">It removes Proof of History as a consensus mechanism, replacing it with a fixed roughly 400 ms block time plus local timeout timers. The 400 ms slot cadence itself does not change.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Is Alpenglow live on mainnet?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Not as of mid-2026. It passed governance in September 2025 and went live on a community test cluster in May 2026. Mainnet activation is expected later in 2026.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">How does Alpenglow change block space and fees?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">By moving votes off-chain, it removes vote transactions that today consume roughly three-quarters of block space, freeing capacity for user transactions and easing fee pressure during busy periods.</p>
+    </div>
+  </div>
+</section>
 
-**What is Alpenglow on Solana?**
-Alpenglow is Solana's consensus upgrade, formalized as SIMD-0326. It replaces Proof of History and Tower BFT (as consensus mechanisms) with a direct-voting protocol called Votor, reducing deterministic finality from about 12.8 seconds to roughly 100 to 150 ms and moving validator votes off-chain.
+<div className="not-prose rounded-2xl border border-emerald-500/20 bg-linear-to-br from-emerald-500/10 to-zinc-900/40 p-8 text-center">
+  <h2 className="text-2xl font-bold text-white md:text-3xl">Finality in milliseconds. Holder data in real time.</h2>
+  <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-zinc-300">Solana moves fast, and so should your view of it. SolanaHolderBot tracks holder growth, whales, and distribution shifts the instant they happen. Set it up in minutes.</p>
+  <a href="https://solanaholderbot.com" className="mt-6 inline-flex items-center justify-center gap-1.5 rounded-xl bg-emerald-500 px-6 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-emerald-400">
+    Try SolanaHolderBot
+    <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4"><path fillRule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clipRule="evenodd" /></svg>
+  </a>
+</div>
 
-**How fast is Alpenglow finality?**
-It targets roughly 100 to 150 ms. A fast path finalizes at about 100 ms when at least 80% of stake agrees in one round, and a slow path finalizes at about 150 ms with at least 60% agreement across two rounds.
+<div className="not-prose">
+  <p className="mb-4 text-sm font-semibold text-zinc-200">More from the Solana 2026 series</p>
+  <div className="grid gap-4 sm:grid-cols-2">
+    <a href="/blog/solana-2026-network-upgrades" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Overview: Solana in 2026</p>
+      <p className="mt-1 text-sm text-zinc-500">Every major network upgrade, summarized and cross-linked.</p>
+    </a>
+    <a href="/blog/what-is-firedancer" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Firedancer: independent validator client</p>
+      <p className="mt-1 text-sm text-zinc-500">The second client that needs a working Votor implementation.</p>
+    </a>
+    <a href="/blog/solana-transaction-fees-local-fee-markets" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Fees and local fee markets</p>
+      <p className="mt-1 text-sm text-zinc-500">Why freeing block space eases fee pressure during congestion.</p>
+    </a>
+    <a href="/blog/solana-throughput-tps-2026" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Throughput, TPS and block limits</p>
+      <p className="mt-1 text-sm text-zinc-500">Why removing votes changes how Solana TPS is measured.</p>
+    </a>
+  </div>
+</div>
 
-**Does Alpenglow remove Proof of History?**
-It removes Proof of History as a consensus mechanism, replacing it with a fixed roughly 400 ms block time plus local timeout timers. The 400 ms slot cadence itself does not change.
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+  <p className="text-sm font-semibold text-zinc-200">Sources and further reading</p>
+  <ul className="mt-3 space-y-2 text-sm text-zinc-400">
+    <li><a href="https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0326-alpenglow.md" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">SIMD-0326: Alpenglow</a> (primary proposal)</li>
+    <li><a href="https://www.anza.xyz/alpenglow-1-1" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Anza: Alpenglow White Paper v1.1</a></li>
+    <li><a href="https://forum.solana.com/t/simd-0326-proposal-for-the-new-alpenglow-consensus-protocol/4236" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Solana Developer Forum: SIMD-0326 discussion thread</a></li>
+  </ul>
+</div>
 
-**Is Alpenglow live on mainnet?**
-Not as of mid-2026. It passed governance in September 2025 and went live on a community test cluster in May 2026. Mainnet activation is expected later in 2026.
+<p className="text-xs text-zinc-500">Last updated 27 June 2026. Alpenglow is an in-progress upgrade; timelines and parameters can change. Verify against SIMD-0326 and Anza's publications before relying on specifics.</p>
 
-**How does Alpenglow change block space and fees?**
-By moving votes off-chain, it removes vote transactions that today consume roughly three-quarters of block space, freeing capacity for user transactions and easing fee pressure during busy periods.
-
-## Sources and further reading
-
-- Solana Foundation, [SIMD-0326: Alpenglow](https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0326-alpenglow.md) (primary proposal)
-- Anza, [Alpenglow White Paper v1.1](https://www.anza.xyz/alpenglow-1-1)
-- Solana Developer Forum, [SIMD-0326 discussion thread](https://forum.solana.com/t/simd-0326-proposal-for-the-new-alpenglow-consensus-protocol/4236)
-
-<p className="mt-10 text-xs text-zinc-500">Last updated 27 June 2026. Alpenglow is an in-progress upgrade; timelines and parameters can change. Verify against SIMD-0326 and Anza's publications before relying on specifics.</p>
+</div>

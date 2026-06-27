@@ -44,133 +44,316 @@ sources:
     url: "https://www.helius.dev/blog/solana-fees-in-theory-and-practice"
 ---
 
-Solana is famous for fees of a fraction of a cent, but "Solana fees are cheap" is only half the story. The mechanism behind those low fees, the local fee market, is one of the most misunderstood parts of the network, and misunderstanding it is exactly why some users overpay while others watch their transactions silently fail. This guide explains how fees actually work in 2026, account by account.
+<div className="space-y-14">
 
-<div className="not-prose my-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5">
+<p className="text-lg leading-relaxed text-zinc-300">Solana is famous for fees of a fraction of a cent, but "Solana fees are cheap" is only half the story. The mechanism behind those low fees, the local fee market, is one of the most misunderstood parts of the network, and misunderstanding it is exactly why some users overpay while others watch their transactions silently fail. This guide explains how fees actually work in 2026, account by account.</p>
+
+<div className="not-prose rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5">
   <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Quick answer</p>
-  <p className="mt-2 text-sm leading-relaxed">A Solana fee has two parts: a fixed <strong>base fee</strong> of 5,000 lamports (0.000005 SOL) per signature, and an optional <strong>priority fee</strong> you bid to improve ordering. The crucial detail is that fee pressure is <strong>local</strong>: it attaches to the specific accounts your transaction writes to, not the whole network. That is why fees stay low even when one part of the chain is congested.</p>
+  <p className="mt-2 text-sm leading-relaxed text-zinc-300">A Solana fee has two parts: a fixed <strong className="text-white">base fee</strong> of 5,000 lamports (0.000005 SOL) per signature, and an optional <strong className="text-white">priority fee</strong> you bid to improve ordering. The crucial detail is that fee pressure is <strong className="text-white">local</strong>: it attaches to the specific accounts your transaction writes to, not the whole network. That is why fees stay low even when one part of the chain is congested.</p>
 </div>
 
-<div className="not-prose my-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
-  <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana 2026 series</p>
-  <ul className="mt-3 space-y-2 text-sm text-zinc-400">
-    <li><a className="hover:text-emerald-400" href="/blog/solana-2026-network-upgrades">Overview: Solana in 2026</a></li>
-    <li><a className="hover:text-emerald-400" href="/blog/what-is-firedancer">Firedancer: Solana's independent validator client</a></li>
-    <li><a className="hover:text-emerald-400" href="/blog/what-is-alpenglow">Alpenglow: sub-150 ms finality</a></li>
-    <li className="text-zinc-200">Fees and local fee markets (you are here)</li>
-    <li><a className="hover:text-emerald-400" href="/blog/solana-throughput-tps-2026">Throughput, TPS and block limits</a></li>
+<div className="not-prose grid grid-cols-2 gap-4 md:grid-cols-4">
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">5,000</p>
+    <p className="mt-1 text-xs text-zinc-500">Lamports base fee per signature</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">100%</p>
+    <p className="mt-1 text-xs text-zinc-500">Priority fee to validator (SIMD-0096)</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">~12M</p>
+    <p className="mt-1 text-xs text-zinc-500">CU per-account write ceiling</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">~150</p>
+    <p className="mt-1 text-xs text-zinc-500">Blocks a blockhash stays valid</p>
+  </div>
+</div>
+
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+  <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">On this page</p>
+  <ul className="mt-3 grid gap-2 text-sm text-zinc-400 sm:grid-cols-2">
+    <li><a className="transition hover:text-emerald-400" href="#fee-parts">The two parts of a fee</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#formula">How the priority fee is calculated</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#local-market">What a local fee market is</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#ordering">Ordering without a mempool</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#failures">Why transactions fail or drop</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#estimate">Estimating the right fee</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#jito-tips">Priority fees versus Jito tips</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#connect">How the 2026 upgrades affect fees</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#faq">Frequently asked questions</a></li>
   </ul>
 </div>
 
-## What are the two parts of a Solana fee?
+<section id="fee-parts" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">What are the two parts of a Solana fee?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Every Solana transaction fee, as described in the <a href="https://solana.com/docs/core/fees" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">official documentation</a>, has two components.</p>
+  </div>
 
-Every Solana transaction fee, as described in the [official documentation](https://solana.com/docs/core/fees), has two components.
+  <div className="not-prose mt-6 grid gap-4 md:grid-cols-2">
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Fixed</p>
+      <p className="mt-2 font-semibold text-white">Base fee</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Fixed at 5,000 lamports (0.000005 SOL) per signature. Most transactions carry a single signature, so this is what you usually pay. At a SOL price of 100 dollars that is 0.0005 dollars, half a tenth of a cent. It is split 50% burned and 50% paid to the validator, and it does not rise with demand the way Ethereum gas does.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Optional</p>
+      <p className="mt-2 font-semibold text-white">Priority fee</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Also called the prioritization fee. You add it to improve the chance that the current leader schedules your transaction ahead of competing ones. Following a 2025 protocol change (SIMD-0096), 100% of the priority fee now goes to the validator rather than being partly burned, which sharpens validators' incentive to include high-priority transactions.</p>
+    </div>
+  </div>
 
-The **base fee** is fixed at 5,000 lamports (0.000005 SOL) per signature. Most transactions carry a single signature, so this is what you usually pay. At a SOL price of 100 dollars that is 0.0005 dollars, half a tenth of a cent. The base fee is split 50% burned and 50% paid to the validator, and it does not rise with demand the way Ethereum gas does.
+  <div className="not-prose mt-6 rounded-xl border-l-4 border-emerald-500 bg-zinc-900/40 p-4">
+    <p className="text-sm leading-relaxed text-zinc-300"><strong className="text-white">Not really a fee:</strong> there is also a small refundable deposit, often called rent, of roughly 0.002 SOL to open a new account such as a token account. It is returned when the account is closed, so it is not a cost in the way the base and priority fees are.</p>
+  </div>
+</section>
 
-The **priority fee** (also called the prioritization fee) is optional. You add it to improve the chance that the current leader schedules your transaction ahead of competing ones. Following a 2025 protocol change (SIMD-0096), 100% of the priority fee now goes to the validator rather than being partly burned, which sharpens validators' incentive to include high-priority transactions.
+<section id="formula" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">How is the priority fee calculated?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>The priority fee follows a single formula.</p>
+  </div>
 
-There is also a small refundable deposit, often called rent, of roughly 0.002 SOL to open a new account such as a token account. It is returned when the account is closed, so it is not really a fee.
+  <div className="not-prose mt-6 overflow-x-auto rounded-2xl border border-zinc-800 bg-zinc-950/60 p-5">
+    <code className="text-sm text-emerald-300">{"priority fee (lamports) = ceil( CU_price * CU_limit / 1,000,000 )"}</code>
+  </div>
 
-## How is the priority fee calculated?
+  <div className="mt-6 space-y-4 leading-relaxed text-zinc-300">
+    <p>Here <code className="rounded bg-zinc-800 px-1.5 py-0.5 text-xs text-emerald-300">{"CU_price"}</code> is the compute-unit price you set, in micro-lamports per compute unit, and <code className="rounded bg-zinc-800 px-1.5 py-0.5 text-xs text-emerald-300">{"CU_limit"}</code> is the compute-unit limit you request for the transaction. The single most important and counter-intuitive point: the priority fee scales with the compute-unit limit you <strong className="text-white">request</strong>, not the compute you actually <strong className="text-white">use</strong>. Request a huge limit "to be safe" and you pay for that headroom whether or not the transaction needs it.</p>
+  </div>
 
-The priority fee follows a single formula:
+  <div className="not-prose mt-6 rounded-xl border-l-4 border-emerald-500 bg-zinc-900/40 p-4">
+    <p className="text-sm leading-relaxed text-zinc-300"><strong className="text-white">The practical rule:</strong> raise the compute-unit price before the compute-unit limit. Price buys priority; limit only buys headroom, and over-requesting headroom just inflates your fee.</p>
+  </div>
+</section>
 
-```
-priority fee (lamports) = ceil( CU_price * CU_limit / 1,000,000 )
-```
+<section id="local-market" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">What is a local fee market, and why does it matter?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>This is the concept almost no consumer guide explains properly, and it is the key to understanding Solana fees.</p>
+    <p>On Solana, fee pressure is <strong className="text-white">local to the writable accounts a transaction touches</strong>. When many transactions compete to write to the same account at the same time, a local fee market forms around that specific account, and only transactions touching that congested account need to pay elevated priority fees. Someone sending a simple transfer, or swapping on a quiet pool during a chaotic token launch elsewhere, pays essentially nothing extra, because the fee spike is isolated to the accounts the launch is writing to.</p>
+    <p>This is structurally different from Ethereum, where a single popular mint raises gas for every transaction on the network, including unrelated transfers. On Solana the congestion is real but contained.</p>
+  </div>
 
-Here `CU_price` is the compute-unit price you set, in micro-lamports per compute unit, and `CU_limit` is the compute-unit limit you request for the transaction. The single most important and counter-intuitive point: the priority fee scales with the compute-unit limit you **request**, not the compute you actually **use**. Request a huge limit "to be safe" and you pay for that headroom whether or not the transaction needs it.
+  <div className="not-prose mt-6 rounded-xl border-l-4 border-emerald-500 bg-zinc-900/40 p-4">
+    <p className="text-sm leading-relaxed text-zinc-300"><strong className="text-white">The trap behind most overpaying:</strong> people see a "Solana is congested" headline, crank their priority fee, and waste SOL. Because fee markets are local, you only compete with other transactions writing to the same accounts you do. If your target account is not the hot one, a modest priority fee is plenty.</p>
+  </div>
 
-The practical rule that follows is: raise the compute-unit price before the compute-unit limit. Price buys priority; limit only buys headroom, and over-requesting headroom just inflates your fee.
+  <div className="mt-6 space-y-4 leading-relaxed text-zinc-300">
+    <p>A concrete example: there is a per-account ceiling of roughly 12 million compute units per block (the Max Writable Account Units limit), well under the full block limit. During very high-profile token launches, the hot token accounts pushed toward that 12 million ceiling while the broader network had plenty of room. A bot pricing off a network-wide number walked straight into a fully contended account with a bid set for an empty one.</p>
+  </div>
+</section>
 
-## What is a local fee market, and why does it matter?
+<section id="ordering" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">How does Solana order transactions without a mempool?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Unlike Ethereum, Solana has no global mempool, no shared waiting room where every transaction bids against every other. Instead, a mechanism called Gulf Stream forwards transactions directly to upcoming block leaders, using a leader schedule that is published a full epoch in advance. The current leader orders pending transactions by priority fee within their local fee markets and includes as many as fit the block's compute budget.</p>
+    <p>This design is efficient, but it has a consequence: a returned transaction signature only means your node accepted the bytes, not that a leader did. If your transaction is priced correctly but submitted through a lagging node, it can still be dropped.</p>
+  </div>
+</section>
 
-This is the concept almost no consumer guide explains properly, and it is the key to understanding Solana fees.
+<section id="failures" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Why do Solana transactions fail or get dropped?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>There are four common causes. Diagnosing which one is hitting you is the whole game.</p>
+  </div>
 
-On Solana, fee pressure is **local to the writable accounts a transaction touches**. When many transactions compete to write to the same account at the same time, a local fee market forms around that specific account, and only transactions touching that congested account need to pay elevated priority fees. Someone sending a simple transfer, or swapping on a quiet pool during a chaotic token launch elsewhere, pays essentially nothing extra, because the fee spike is isolated to the accounts the launch is writing to.
+  <div className="not-prose mt-6 overflow-x-auto rounded-2xl border border-zinc-800">
+    <table className="w-full border-collapse text-left text-sm">
+      <thead className="bg-zinc-900/60">
+        <tr>
+          <th className="px-4 py-3 font-semibold text-emerald-400">Cause</th>
+          <th className="px-4 py-3 font-semibold text-emerald-400">Type</th>
+          <th className="px-4 py-3 font-semibold text-emerald-400">Fix</th>
+        </tr>
+      </thead>
+      <tbody className="text-zinc-300">
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Priority fee too low for its local market</td>
+          <td className="px-4 py-3">Construction</td>
+          <td className="px-4 py-3">Price from recent fees on the accounts you touch, not a network-wide number</td>
+        </tr>
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Compute budget set incorrectly</td>
+          <td className="px-4 py-3">Construction</td>
+          <td className="px-4 py-3">Set a realistic compute-unit limit using simulation, not a blanket maximum</td>
+        </tr>
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Slot congested, packet never reached the leader</td>
+          <td className="px-4 py-3">Infrastructure</td>
+          <td className="px-4 py-3">Use a faster or stake-weighted submission path</td>
+        </tr>
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Blockhash expired before inclusion</td>
+          <td className="px-4 py-3">Infrastructure</td>
+          <td className="px-4 py-3">Submit promptly; a blockhash is valid for roughly 150 blocks (about 60 to 90 seconds)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-This is structurally different from Ethereum, where a single popular mint raises gas for every transaction on the network, including unrelated transfers. On Solana the congestion is real but contained.
+  <div className="mt-6 space-y-4 leading-relaxed text-zinc-300">
+    <p>The first two are construction problems: the transaction was built wrong. The last two are infrastructure problems: the transaction was fine but could not reach the leader in time or referenced state that aged out. It is worth stressing that dropped transactions are usually not the network failing. During congested periods in 2025, network-wide failure rates ran high, yet Solana also maintained continuous uptime for well over a year, which means most drops trace to how transactions were built or submitted, not to outages.</p>
+  </div>
+</section>
 
-<div className="not-prose my-6 rounded-xl border-l-4 border-emerald-500 bg-zinc-900/40 p-4">
-  <p className="text-sm leading-relaxed text-zinc-300"><strong>The trap behind most overpaying:</strong> people see a "Solana is congested" headline, crank their priority fee, and waste SOL. Because fee markets are local, you only compete with other transactions writing to the same accounts you do. If your target account is not the hot one, a modest priority fee is plenty.</p>
-</div>
+<section id="estimate" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">How should you estimate the right priority fee?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>The native method, <code className="rounded bg-zinc-800 px-1.5 py-0.5 text-xs text-emerald-300">getRecentPrioritizationFees</code>, checks a cache of recent blocks and returns fees paid by transactions locking the accounts in your list. This is account-aware, which is exactly what you want. By contrast, the default fee call in the standard web3 client returns a single network-wide value, which is the misleading global number that causes overpaying.</p>
+    <p>A reasonable approach:</p>
+  </div>
 
-A concrete example: there is a per-account ceiling of roughly 12 million compute units per block (the Max Writable Account Units limit), well under the full block limit. During very high-profile token launches, the hot token accounts pushed toward that 12 million ceiling while the broader network had plenty of room. A bot pricing off a network-wide number walked straight into a fully contended account with a bid set for an empty one.
+  <div className="not-prose mt-6 space-y-4">
+    <div className="flex gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-emerald-500/10 text-base font-bold text-emerald-400">1</div>
+      <div>
+        <p className="font-semibold text-white">Query the right accounts</p>
+        <p className="mt-1 text-sm leading-relaxed text-zinc-400">Query recent priority fees for the specific accounts your transaction writes to, not a network-wide figure.</p>
+      </div>
+    </div>
+    <div className="flex gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-emerald-500/10 text-base font-bold text-emerald-400">2</div>
+      <div>
+        <p className="font-semibold text-white">Price to a percentile</p>
+        <p className="mt-1 text-sm leading-relaxed text-zinc-400">Set your compute-unit price to a percentile of that distribution: a middle percentile in normal conditions, a higher percentile when competing for a contested account.</p>
+      </div>
+    </div>
+    <div className="flex gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-emerald-500/10 text-base font-bold text-emerald-400">3</div>
+      <div>
+        <p className="font-semibold text-white">Size the compute limit honestly</p>
+        <p className="mt-1 text-sm leading-relaxed text-zinc-400">Set a realistic compute-unit limit using simulation rather than a blanket maximum, so you do not pay for headroom you never use.</p>
+      </div>
+    </div>
+    <div className="flex gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-emerald-500/10 text-base font-bold text-emerald-400">4</div>
+      <div>
+        <p className="font-semibold text-white">Recalculate dynamically</p>
+        <p className="mt-1 text-sm leading-relaxed text-zinc-400">Recalculate as conditions change, because fees that worked an hour ago may not work now.</p>
+      </div>
+    </div>
+  </div>
 
-## How does Solana order transactions without a mempool?
+  <div className="mt-6 space-y-4 leading-relaxed text-zinc-300">
+    <p>Several infrastructure providers expose congestion-indexed priority-fee estimates if you prefer not to build the logic yourself.</p>
+  </div>
+</section>
 
-Unlike Ethereum, Solana has no global mempool, no shared waiting room where every transaction bids against every other. Instead, a mechanism called Gulf Stream forwards transactions directly to upcoming block leaders, using a leader schedule that is published a full epoch in advance. The current leader orders pending transactions by priority fee within their local fee markets and includes as many as fit the block's compute budget.
+<section id="jito-tips" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Priority fees versus Jito tips</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>These are frequently confused, and using the wrong one quietly burns money.</p>
+  </div>
 
-This design is efficient, but it has a consequence: a returned transaction signature only means your node accepted the bytes, not that a leader did. If your transaction is priced correctly but submitted through a lagging node, it can still be dropped.
+  <div className="not-prose mt-6 grid gap-4 md:grid-cols-2">
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Priority fee</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">A native scheduler signal: it improves your ordering inside the leader's normal transaction queue. This is the right tool for ordinary ordering.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Jito tip</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">A separate payment for bundle inclusion through an auction path, used when you specifically need atomic execution of a bundle. Reach for it only when atomicity is the point.</p>
+    </div>
+  </div>
 
-## Why do Solana transactions fail or get dropped?
+  <div className="mt-6 space-y-4 leading-relaxed text-zinc-300">
+    <p>They are not interchangeable. For ordinary ordering, the native priority fee is the correct tool; a Jito tip is for cases where a bundle must execute atomically or not at all.</p>
+  </div>
+</section>
 
-There are four common causes. Diagnosing which one is hitting you is the whole game.
+<section id="connect" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">How do the 2026 upgrades affect fees?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Fees do not exist in isolation from Solana's other changes. The <a href="/blog/what-is-alpenglow" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Alpenglow upgrade</a> removes on-chain vote transactions that currently consume most of every block, which frees space and eases congestion that would otherwise push up priority fees. <a href="/blog/solana-throughput-tps-2026" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Larger block limits</a> do the same by adding capacity for parallelizable transactions. And <a href="/blog/what-is-firedancer" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Firedancer</a> has been observed to fill blocks more evenly, smoothing the spikes that force users into priority-fee competition in the first place.</p>
+  </div>
+</section>
 
-| Cause | Type | Fix |
-| --- | --- | --- |
-| Priority fee too low for its local market | Construction | Price from recent fees on the accounts you touch, not a network-wide number |
-| Compute budget set incorrectly | Construction | Set a realistic compute-unit limit using simulation, not a blanket maximum |
-| Slot congested, packet never reached the leader | Infrastructure | Use a faster or stake-weighted submission path |
-| Blockhash expired before inclusion | Infrastructure | Submit promptly; a blockhash is valid for roughly 150 blocks (about 60 to 90 seconds) |
-
-The first two are construction problems: the transaction was built wrong. The last two are infrastructure problems: the transaction was fine but could not reach the leader in time or referenced state that aged out. It is worth stressing that dropped transactions are usually not the network failing. During congested periods in 2025, network-wide failure rates ran high, yet Solana also maintained continuous uptime for well over a year, which means most drops trace to how transactions were built or submitted, not to outages.
-
-## How should you estimate the right priority fee?
-
-The native method, `getRecentPrioritizationFees`, checks a cache of recent blocks and returns fees paid by transactions locking the accounts in your list. This is account-aware, which is exactly what you want. By contrast, the default fee call in the standard web3 client returns a single network-wide value, which is the misleading global number that causes overpaying.
-
-A reasonable approach:
-
-1. Query recent priority fees for the specific accounts your transaction writes to.
-2. Set your compute-unit price to a percentile of that distribution: a middle percentile in normal conditions, a higher percentile when competing for a contested account.
-3. Set a realistic compute-unit limit using simulation rather than a blanket maximum.
-4. Recalculate dynamically, because fees that worked an hour ago may not work now.
-
-Several infrastructure providers expose congestion-indexed priority-fee estimates if you prefer not to build the logic yourself.
-
-## Priority fees versus Jito tips
-
-These are frequently confused, and using the wrong one quietly burns money. A **priority fee** is a native scheduler signal: it improves your ordering inside the leader's normal transaction queue. A **Jito tip** is a separate payment for bundle inclusion through an auction path, used when you specifically need atomic execution of a bundle. Reach for a Jito tip only when atomicity is the point; for ordinary ordering, the native priority fee is the right tool.
-
-## How do the 2026 upgrades affect fees?
-
-Fees do not exist in isolation from Solana's other changes. The [Alpenglow upgrade](/blog/what-is-alpenglow) removes on-chain vote transactions that currently consume most of every block, which frees space and eases congestion that would otherwise push up priority fees. [Larger block limits](/blog/solana-throughput-tps-2026) do the same by adding capacity for parallelizable transactions. And [Firedancer](/blog/what-is-firedancer) has been observed to fill blocks more evenly, smoothing the spikes that force users into priority-fee competition in the first place.
-
-<div className="not-prose my-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
   <p className="text-sm font-semibold text-zinc-200">Key takeaways</p>
   <ul className="mt-3 space-y-2 text-sm text-zinc-400">
-    <li>A Solana fee is a base fee (5,000 lamports per signature) plus an optional priority fee.</li>
-    <li>Priority fee scales with the compute-unit limit you request, not the compute you use.</li>
-    <li>Fee pressure is local to the accounts you write to, not the whole network.</li>
-    <li>Most "dropped" transactions are build or submission errors, not network failures.</li>
-    <li>Price from recent fees on your specific accounts, and use Jito tips only for atomic bundles.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> A Solana fee is a base fee (5,000 lamports per signature) plus an optional priority fee.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Priority fee scales with the compute-unit limit you request, not the compute you use.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Fee pressure is local to the accounts you write to, not the whole network.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Most "dropped" transactions are build or submission errors, not network failures.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Price from recent fees on your specific accounts, and use Jito tips only for atomic bundles.</li>
   </ul>
 </div>
 
-## Frequently asked questions
+<section id="faq" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Frequently asked questions</h2>
+  <div className="not-prose space-y-3">
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">How much does a Solana transaction cost?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Every transaction pays a base fee of 5,000 lamports (0.000005 SOL) per signature, a fraction of a cent at typical SOL prices. An optional priority fee is added during congestion. Even in busy periods, total fees usually stay well under one cent.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">What is a local fee market on Solana?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Fee pressure attaches to the specific writable accounts a transaction touches, not the whole network. If a token launch congests one pool, transactions touching unrelated accounts still pay almost nothing. This differs from Ethereum's global gas market.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Why do Solana transactions fail or get dropped?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Four common causes: the priority fee was too low for the transaction's local fee market, the compute budget was set wrong, the slot was congested so the packet never reached the leader, or the blockhash expired before inclusion.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">How is the Solana priority fee calculated?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Priority fee in lamports equals the ceiling of compute-unit price (in micro-lamports) times the requested compute-unit limit, divided by 1,000,000. It scales with the limit you request, not the compute you use, and 100% goes to the validator.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">What is the difference between a priority fee and a Jito tip?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">A priority fee improves your ordering in the leader's normal queue. A Jito tip pays for bundle inclusion through an auction path, used when you need atomic execution. They are not interchangeable.</p>
+    </div>
+  </div>
+</section>
 
-**How much does a Solana transaction cost?**
-Every transaction pays a base fee of 5,000 lamports (0.000005 SOL) per signature, a fraction of a cent at typical SOL prices. An optional priority fee is added during congestion. Even in busy periods, total fees usually stay well under one cent.
+<div className="not-prose rounded-2xl border border-emerald-500/20 bg-linear-to-br from-emerald-500/10 to-zinc-900/40 p-8 text-center">
+  <h2 className="text-2xl font-bold text-white md:text-3xl">Stop guessing at the chain. Start watching it.</h2>
+  <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-zinc-300">Fees, whales, and holder shifts move together during a launch. SolanaHolderBot tracks holder growth, whale moves, and distribution changes in real time, so you see what is happening before it shows up in the price. Set it up in minutes.</p>
+  <a href="https://solanaholderbot.com" className="mt-6 inline-flex items-center justify-center gap-1.5 rounded-xl bg-emerald-500 px-6 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-emerald-400">
+    Try SolanaHolderBot
+    <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4"><path fillRule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clipRule="evenodd" /></svg>
+  </a>
+</div>
 
-**What is a local fee market on Solana?**
-Fee pressure attaches to the specific writable accounts a transaction touches, not the whole network. If a token launch congests one pool, transactions touching unrelated accounts still pay almost nothing. This differs from Ethereum's global gas market.
+<div className="not-prose">
+  <p className="mb-4 text-sm font-semibold text-zinc-200">More from the Solana 2026 series</p>
+  <div className="grid gap-4 sm:grid-cols-2">
+    <a href="/blog/solana-2026-network-upgrades" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Overview: Solana in 2026</p>
+      <p className="mt-1 text-sm text-zinc-500">Every major network upgrade, summarized and cross-linked.</p>
+    </a>
+    <a href="/blog/what-is-alpenglow" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Alpenglow: sub-150 ms finality</p>
+      <p className="mt-1 text-sm text-zinc-500">Removing on-chain votes frees block space and eases fee pressure.</p>
+    </a>
+    <a href="/blog/what-is-firedancer" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Firedancer: independent validator client</p>
+      <p className="mt-1 text-sm text-zinc-500">Fills blocks more evenly, smoothing the spikes behind fee competition.</p>
+    </a>
+    <a href="/blog/solana-throughput-tps-2026" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Throughput, TPS and block limits</p>
+      <p className="mt-1 text-sm text-zinc-500">How larger blocks add capacity for parallelizable transactions.</p>
+    </a>
+  </div>
+</div>
 
-**Why do Solana transactions fail or get dropped?**
-Four common causes: the priority fee was too low for the transaction's local fee market, the compute budget was set wrong, the slot was congested so the packet never reached the leader, or the blockhash expired before inclusion.
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+  <p className="text-sm font-semibold text-zinc-200">Sources and further reading</p>
+  <ul className="mt-3 space-y-2 text-sm text-zinc-400">
+    <li><a href="https://solana.com/docs/core/fees" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Solana Documentation: Fees</a> (primary reference for the fee formula and distribution)</li>
+    <li><a href="https://www.helius.dev/blog/solana-local-fee-markets" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Helius: Solana Local Fee Markets</a></li>
+    <li><a href="https://www.helius.dev/blog/solana-fees-in-theory-and-practice" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Helius: Solana Fees in Theory and Practice</a></li>
+    <li><a href="https://solana.com/learn/understanding-solana-transaction-fees" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Solana: Understanding Solana Transaction Fees</a></li>
+  </ul>
+</div>
 
-**How is the Solana priority fee calculated?**
-Priority fee in lamports equals the ceiling of compute-unit price (in micro-lamports) times the requested compute-unit limit, divided by 1,000,000. It scales with the limit you request, not the compute you use, and 100% goes to the validator.
+<p className="text-xs text-zinc-500">Last updated 27 June 2026. Fee parameters and protocol behavior can change with new SIMDs; verify against the official Solana documentation before relying on specifics. SOL-denominated fees mean the dollar cost moves with the SOL price.</p>
 
-**What is the difference between a priority fee and a Jito tip?**
-A priority fee improves your ordering in the leader's normal queue. A Jito tip pays for bundle inclusion through an auction path, used when you need atomic execution. They are not interchangeable.
-
-## Sources and further reading
-
-- Solana Documentation, [Fees](https://solana.com/docs/core/fees) (primary reference for the fee formula and distribution)
-- Helius, [Solana Local Fee Markets](https://www.helius.dev/blog/solana-local-fee-markets)
-- Helius, [Solana Fees in Theory and Practice](https://www.helius.dev/blog/solana-fees-in-theory-and-practice)
-- Solana, [Understanding Solana Transaction Fees](https://solana.com/learn/understanding-solana-transaction-fees)
-
-<p className="mt-10 text-xs text-zinc-500">Last updated 27 June 2026. Fee parameters and protocol behavior can change with new SIMDs; verify against the official Solana documentation before relying on specifics. SOL-denominated fees mean the dollar cost moves with the SOL price.</p>
+</div>

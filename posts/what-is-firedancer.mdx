@@ -44,119 +44,262 @@ sources:
     url: "https://www.theblock.co/post/382411/jump-cryptos-firedancer-hits-solana-mainnet-as-the-network-aims-to-unlock-1-million-tps"
 ---
 
-Firedancer is one of the most-watched infrastructure projects in Solana's history, and in 2026 it finally moved from a long testing phase into production. This guide explains what Firedancer is, how it differs from the hybrid Frankendancer build, exactly where the rollout stands, and why client diversity matters for a network whose biggest historical weakness was reliability.
+<div className="space-y-14">
 
-<div className="not-prose my-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5">
+<p className="text-lg leading-relaxed text-zinc-300">Firedancer is one of the most-watched infrastructure projects in Solana's history, and in 2026 it finally moved from a long testing phase into production. This guide explains what Firedancer is, how it differs from the hybrid Frankendancer build, exactly where the rollout stands, and why client diversity matters for a network whose biggest historical weakness was reliability.</p>
+
+<div className="not-prose rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5">
   <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Quick answer</p>
-  <p className="mt-2 text-sm leading-relaxed"><strong>Firedancer</strong> is a Solana validator client built from scratch by Jump Crypto in C and C++. It performs the same role as Solana's original client (Agave) but shares none of its code, giving the network independent client diversity and a far higher performance ceiling. It has demonstrated over one million transactions per second in testing.</p>
+  <p className="mt-2 text-sm leading-relaxed text-zinc-300"><strong className="text-white">Firedancer</strong> is a Solana validator client built from scratch by Jump Crypto in C and C++. It performs the same role as Solana's original client (Agave) but shares none of its code, giving the network independent client diversity and a far higher performance ceiling. It has demonstrated over one million transactions per second in testing.</p>
 </div>
 
-<div className="not-prose my-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
-  <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana 2026 series</p>
-  <ul className="mt-3 space-y-2 text-sm text-zinc-400">
-    <li><a className="hover:text-emerald-400" href="/blog/solana-2026-network-upgrades">Overview: Solana in 2026</a></li>
-    <li className="text-zinc-200">Firedancer: Solana's independent validator client (you are here)</li>
-    <li><a className="hover:text-emerald-400" href="/blog/what-is-alpenglow">Alpenglow: sub-150 ms finality</a></li>
-    <li><a className="hover:text-emerald-400" href="/blog/solana-transaction-fees-local-fee-markets">Fees and local fee markets</a></li>
-    <li><a className="hover:text-emerald-400" href="/blog/solana-throughput-tps-2026">Throughput, TPS and block limits</a></li>
+<div className="not-prose grid grid-cols-2 gap-4 md:grid-cols-4">
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">C / C++</p>
+    <p className="mt-1 text-xs text-zinc-500">Built from scratch</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">1M+</p>
+    <p className="mt-1 text-xs text-zinc-500">TPS in testing</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">~25%</p>
+    <p className="mt-1 text-xs text-zinc-500">Validators on FD / Frankendancer</p>
+  </div>
+  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 text-center">
+    <p className="text-3xl font-bold text-emerald-400">2024</p>
+    <p className="mt-1 text-xs text-zinc-500">Frankendancer on mainnet-beta</p>
+  </div>
+</div>
+
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+  <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">On this page</p>
+  <ul className="mt-3 grid gap-2 text-sm text-zinc-400 sm:grid-cols-2">
+    <li><a className="transition hover:text-emerald-400" href="#validator-client">What a validator client is</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#who-built">Who built Firedancer</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#architecture">How the architecture differs</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#frankendancer">Frankendancer vs Firedancer</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#rollout">Where the rollout stands</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#why-matters">Why Firedancer matters</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#relate">How it relates to other upgrades</a></li>
+    <li><a className="transition hover:text-emerald-400" href="#faq">Frequently asked questions</a></li>
   </ul>
 </div>
 
-## What is a validator client, and why does diversity matter?
+<section id="validator-client" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">What is a validator client, and why does diversity matter?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>A validator client is the software that node operators run to participate in a blockchain. It receives transactions, executes them, votes on the canonical chain, and produces blocks when it is that validator's turn. Different clients are like different web browsers reaching the same internet: they follow the same rules but are written independently.</p>
+    <p>For most of Solana's life, almost every validator ran software descended from a single original implementation. Historically Agave (maintained by Anza) and the Jito-Agave fork (maintained by Jito Labs, with added MEV features) together accounted for well over 95% of validators, and both are written in Rust. That concentration is a centralization risk: a single critical bug in that shared lineage could cause a network-wide liveness failure. Solana's research community has been explicit that relying on one client implementation is a significant vector of centralization.</p>
+    <p>Firedancer addresses this directly by introducing a second, fully independent code path.</p>
+  </div>
+</section>
 
-A validator client is the software that node operators run to participate in a blockchain. It receives transactions, executes them, votes on the canonical chain, and produces blocks when it is that validator's turn. Different clients are like different web browsers reaching the same internet: they follow the same rules but are written independently.
+<section id="who-built" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Who built Firedancer, and in what language?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Firedancer is developed by Jump Crypto, the crypto arm of trading firm Jump Trading, with collaboration from the Solana Foundation. It is written from scratch in C and C++, drawing on Jump's background in low-latency, high-frequency trading systems. Key figures include Kevin Bowers, Chief Scientist at Jump Trading, who demonstrated Firedancer's throughput publicly, and founding engineer Ritchie Patel.</p>
+    <p>The choice of C and C++ is deliberate. Low-level languages give fine-grained control over hardware, which lets Firedancer push performance close to the physical limits of the machine.</p>
+  </div>
+</section>
 
-For most of Solana's life, almost every validator ran software descended from a single original implementation. Historically Agave (maintained by Anza) and the Jito-Agave fork (maintained by Jito Labs, with added MEV features) together accounted for well over 95% of validators, and both are written in Rust. That concentration is a centralization risk: a single critical bug in that shared lineage could cause a network-wide liveness failure. Solana's research community has been explicit that relying on one client implementation is a significant vector of centralization.
+<section id="architecture" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">How is Firedancer's architecture different from Agave?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Agave runs as a single monolithic application. Firedancer instead uses a modular, tile-based architecture that splits validator work into separate units running in parallel across CPU cores. Several design choices stand out.</p>
+  </div>
 
-Firedancer addresses this directly by introducing a second, fully independent code path.
+  <div className="not-prose mt-6 grid gap-4 md:grid-cols-2">
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Tile-based parallelism</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Distinct tasks (networking, signature verification, block packing, and so on) run as independent tiles, improving throughput and isolation.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Kernel-bypass networking</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">A custom QUIC and UDP networking stack ingests and broadcasts transactions at hardware limits, avoiding operating-system bottlenecks. The networking layer alone has demonstrated over one million transactions per second of ingress capacity.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Optimized cryptography</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">A custom AVX512 implementation of Ed25519 signature verification spreads work across many cores in parallel.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">A restrictive sandbox</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">The architecture is designed to run with very few system calls, reducing the attack surface.</p>
+    </div>
+  </div>
 
-## Who built Firedancer, and in what language?
+  <p className="mt-6 leading-relaxed text-zinc-300">The practical effect is that hardware and bandwidth, not validator software, become the throughput bottleneck.</p>
+</section>
 
-Firedancer is developed by Jump Crypto, the crypto arm of trading firm Jump Trading, with collaboration from the Solana Foundation. It is written from scratch in C and C++, drawing on Jump's background in low-latency, high-frequency trading systems. Key figures include Kevin Bowers, Chief Scientist at Jump Trading, who demonstrated Firedancer's throughput publicly, and founding engineer Ritchie Patel.
+<section id="frankendancer" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Frankendancer vs Firedancer: what is the difference?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>This is the most common point of confusion. The Firedancer project produces two validators from one codebase.</p>
+  </div>
 
-The choice of C and C++ is deliberate. Low-level languages give fine-grained control over hardware, which lets Firedancer push performance close to the physical limits of the machine.
+  <div className="not-prose mt-6 overflow-x-auto rounded-2xl border border-zinc-800">
+    <table className="w-full border-collapse text-left text-sm">
+      <thead className="bg-zinc-900/60">
+        <tr>
+          <th className="px-4 py-3 font-semibold text-zinc-400"></th>
+          <th className="px-4 py-3 font-semibold text-emerald-400">Frankendancer</th>
+          <th className="px-4 py-3 font-semibold text-emerald-400">Full Firedancer</th>
+        </tr>
+      </thead>
+      <tbody className="text-zinc-300">
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">What it is</td>
+          <td className="px-4 py-3">Hybrid: Firedancer networking and block production plus Agave consensus and execution</td>
+          <td className="px-4 py-3">Fully independent client, no Agave code</td>
+        </tr>
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Purpose</td>
+          <td className="px-4 py-3">De-risk the rollout by reusing proven consensus</td>
+          <td className="px-4 py-3">Deliver complete client diversity</td>
+        </tr>
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Mainnet status (mid-2026)</td>
+          <td className="px-4 py-3">Live on testnet and mainnet-beta</td>
+          <td className="px-4 py-3">Staged, cautious rollout in progress</td>
+        </tr>
+        <tr className="border-t border-zinc-800">
+          <td className="px-4 py-3 font-medium text-white">Risk profile</td>
+          <td className="px-4 py-3">Low, because consensus is battle-tested Agave code</td>
+          <td className="px-4 py-3">Higher, so migration is gradual and audit-gated</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-## How is Firedancer's architecture different from Agave?
+  <p className="mt-6 leading-relaxed text-zinc-300">Frankendancer shipped first specifically so the most novel parts of Firedancer (its networking and block-production pipeline) could be proven in production while the riskier consensus layer stayed on Agave's tested code.</p>
+</section>
 
-Agave runs as a single monolithic application. Firedancer instead uses a modular, tile-based architecture that splits validator work into separate units running in parallel across CPU cores. Several design choices stand out:
+<section id="rollout" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Where does the Firedancer rollout actually stand?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Here it is worth being precise, because hype and reality differ.</p>
+    <p>Frankendancer has been available on Solana testnet and mainnet-beta since 2024, and adoption grew steadily: by late 2025, a meaningful share of stake was running it, and by 2026 roughly a quarter of validators were running Firedancer or Frankendancer.</p>
+    <p>The fully independent Firedancer client has entered a careful, staged mainnet rollout. The Solana Foundation announced at its Breakpoint conference that Firedancer had been running quietly on a small set of mainnet validators, producing tens of thousands of blocks over an extended period, and reports through 2026 describe pure-Firedancer validators producing live blocks and processing tens of millions of transactions. Importantly, Jump Crypto has repeatedly stated that validators should not switch at scale until full security audits are complete, and the project ran a public audit contest with a large bug-bounty pool. The official Firedancer repository still reflects this caution and lists no general release for the full client.</p>
+  </div>
 
-- **Tile-based parallelism.** Distinct tasks (networking, signature verification, block packing, and so on) run as independent tiles, improving throughput and isolation.
-- **Kernel-bypass networking.** A custom QUIC and UDP networking stack ingests and broadcasts transactions at hardware limits, avoiding operating-system bottlenecks. The networking layer alone has demonstrated over one million transactions per second of ingress capacity.
-- **Optimized cryptography.** A custom AVX512 implementation of Ed25519 signature verification spreads work across many cores in parallel.
-- **A restrictive sandbox.** The architecture is designed to run with very few system calls, reducing the attack surface.
+  <div className="not-prose mt-6 rounded-xl border-l-4 border-emerald-500 bg-zinc-900/40 p-4">
+    <p className="text-sm leading-relaxed text-zinc-300"><strong className="text-white">The honest summary:</strong> Frankendancer is production-ready and widely run. Full Firedancer is real and producing mainnet blocks, but it is mid-rollout and broad validator migration is being kept deliberately gradual until audits finish. Treat any claim that "Firedancer fully took over Solana" with skepticism.</p>
+  </div>
+</section>
 
-The practical effect is that hardware and bandwidth, not validator software, become the throughput bottleneck.
+<section id="why-matters" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Why does Firedancer matter for Solana?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Two reasons dominate.</p>
+  </div>
 
-## Frankendancer vs Firedancer: what is the difference?
+  <div className="not-prose mt-6 space-y-4">
+    <div className="flex gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-emerald-500/10 text-base font-bold text-emerald-400">1</div>
+      <div>
+        <p className="font-semibold text-white">Reliability through client diversity</p>
+        <p className="mt-1 text-sm leading-relaxed text-zinc-400">Solana's defining criticism after several earlier outages was that the network was fragile. With an independent second client, a bug in one implementation no longer threatens the whole network, because the other can keep producing blocks. This moves Solana toward the multi-client resilience model that Ethereum relies on.</p>
+      </div>
+    </div>
+    <div className="flex gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-emerald-500/10 text-base font-bold text-emerald-400">2</div>
+      <div>
+        <p className="font-semibold text-white">Headroom</p>
+        <p className="mt-1 text-sm leading-relaxed text-zinc-400">Firedancer's design targets more than one million transactions per second, ensuring the network's long-term performance story is not capped by software. That headroom matters as activity grows and as proposals like SIMD-0370 (authored by the Firedancer team) push to remove static block limits entirely. The Firedancer and Anza teams have also begun preparing clients for future quantum risk by adding early support for post-quantum signature schemes.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-This is the most common point of confusion. The Firedancer project produces two validators from one codebase.
+<section id="relate" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">How does Firedancer relate to the other 2026 upgrades?</h2>
+  <div className="space-y-4 leading-relaxed text-zinc-300">
+    <p>Firedancer is the performance and resilience layer, but it works alongside Solana's consensus and capacity changes. The <a href="/blog/what-is-alpenglow" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Alpenglow consensus rewrite</a> simplifies the consensus logic that a second client has to reimplement, which makes multi-client parity easier to reach. And Firedancer's raw speed only translates into user-visible throughput when paired with <a href="/blog/solana-throughput-tps-2026" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">larger block limits</a> and a <a href="/blog/solana-transaction-fees-local-fee-markets" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">healthy fee market</a> that keeps blocks full of real demand rather than spam.</p>
+  </div>
+</section>
 
-| | Frankendancer | Full Firedancer |
-| --- | --- | --- |
-| What it is | Hybrid: Firedancer networking and block production plus Agave consensus and execution | Fully independent client, no Agave code |
-| Purpose | De-risk the rollout by reusing proven consensus | Deliver complete client diversity |
-| Mainnet status (mid-2026) | Live on testnet and mainnet-beta | Staged, cautious rollout in progress |
-| Risk profile | Low, because consensus is battle-tested Agave code | Higher, so migration is gradual and audit-gated |
-
-Frankendancer shipped first specifically so the most novel parts of Firedancer (its networking and block-production pipeline) could be proven in production while the riskier consensus layer stayed on Agave's tested code.
-
-## Where does the Firedancer rollout actually stand?
-
-Here it is worth being precise, because hype and reality differ.
-
-Frankendancer has been available on Solana testnet and mainnet-beta since 2024, and adoption grew steadily: by late 2025, a meaningful share of stake was running it, and by 2026 roughly a quarter of validators were running Firedancer or Frankendancer.
-
-The fully independent Firedancer client has entered a careful, staged mainnet rollout. The Solana Foundation announced at its Breakpoint conference that Firedancer had been running quietly on a small set of mainnet validators, producing tens of thousands of blocks over an extended period, and reports through 2026 describe pure-Firedancer validators producing live blocks and processing tens of millions of transactions. Importantly, Jump Crypto has repeatedly stated that validators should not switch at scale until full security audits are complete, and the project ran a public audit contest with a large bug-bounty pool. The official Firedancer repository still reflects this caution and lists no general release for the full client.
-
-<div className="not-prose my-6 rounded-xl border-l-4 border-emerald-500 bg-zinc-900/40 p-4">
-  <p className="text-sm leading-relaxed text-zinc-300"><strong>The honest summary:</strong> Frankendancer is production-ready and widely run. Full Firedancer is real and producing mainnet blocks, but it is mid-rollout and broad validator migration is being kept deliberately gradual until audits finish. Treat any claim that "Firedancer fully took over Solana" with skepticism.</p>
-</div>
-
-## Why does Firedancer matter for Solana?
-
-Two reasons dominate.
-
-First, reliability through client diversity. Solana's defining criticism after several earlier outages was that the network was fragile. With an independent second client, a bug in one implementation no longer threatens the whole network, because the other can keep producing blocks. This moves Solana toward the multi-client resilience model that Ethereum relies on.
-
-Second, headroom. Firedancer's design targets more than one million transactions per second, ensuring the network's long-term performance story is not capped by software. That headroom matters as activity grows and as proposals like [SIMD-0370](https://github.com/solana-foundation/solana-improvement-documents) (authored by the Firedancer team) push to remove static block limits entirely. The Firedancer and Anza teams have also begun preparing clients for future quantum risk by adding early support for post-quantum signature schemes.
-
-## How does Firedancer relate to the other 2026 upgrades?
-
-Firedancer is the performance and resilience layer, but it works alongside Solana's consensus and capacity changes. The [Alpenglow consensus rewrite](/blog/what-is-alpenglow) simplifies the consensus logic that a second client has to reimplement, which makes multi-client parity easier to reach. And Firedancer's raw speed only translates into user-visible throughput when paired with [larger block limits](/blog/solana-throughput-tps-2026) and a [healthy fee market](/blog/solana-transaction-fees-local-fee-markets) that keeps blocks full of real demand rather than spam.
-
-<div className="not-prose my-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
   <p className="text-sm font-semibold text-zinc-200">Key takeaways</p>
   <ul className="mt-3 space-y-2 text-sm text-zinc-400">
-    <li>Firedancer is an independent Solana validator client written in C/C++ by Jump Crypto.</li>
-    <li>Frankendancer is the hybrid stepping stone; full Firedancer is the fully independent client.</li>
-    <li>Frankendancer is live on mainnet-beta; full Firedancer is mid-rollout and audit-gated.</li>
-    <li>It brings client diversity (resilience) and a very high performance ceiling.</li>
-    <li>It is software, not a protocol change, so SOL and transaction rules are unaffected.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Firedancer is an independent Solana validator client written in C/C++ by Jump Crypto.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Frankendancer is the hybrid stepping stone; full Firedancer is the fully independent client.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> Frankendancer is live on mainnet-beta; full Firedancer is mid-rollout and audit-gated.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> It brings client diversity (resilience) and a very high performance ceiling.</li>
+    <li className="flex gap-2"><span className="text-emerald-400">&bull;</span> It is software, not a protocol change, so SOL and transaction rules are unaffected.</li>
   </ul>
 </div>
 
-## Frequently asked questions
+<section id="faq" className="scroll-mt-24">
+  <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Frequently asked questions</h2>
+  <div className="not-prose space-y-3">
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">What is Firedancer in simple terms?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Firedancer is a new Solana validator client built from scratch by Jump Crypto in C and C++. It does the same job as Solana's original Agave client but is an entirely separate codebase, which gives the network client diversity and a much higher performance ceiling.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">What is the difference between Firedancer and Frankendancer?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Frankendancer is a hybrid that pairs Firedancer's high-performance networking and block-production code with Agave's proven consensus and execution. Full Firedancer is the completely independent client with no Agave code. Frankendancer shipped first to de-risk the rollout.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Is Firedancer live on Solana mainnet?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">Frankendancer has run on testnet and mainnet-beta since 2024. The fully independent Firedancer client has begun a cautious, staged mainnet rollout and has produced live blocks, but broad validator migration is intentionally gradual until security audits are complete.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">Does Firedancer change SOL or how transactions work?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">No. Firedancer is validator software, not a protocol change. SOL economics and transaction rules are identical regardless of which client a validator runs.</p>
+    </div>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+      <p className="font-semibold text-white">How fast is Firedancer?</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">In demonstrations on commodity hardware, Firedancer has processed more than one million transactions per second, and Frankendancer has shown several hundred thousand per second in live conditions. Real mainnet throughput is far lower because it is limited by demand and protocol block limits, not the client.</p>
+    </div>
+  </div>
+</section>
 
-**What is Firedancer in simple terms?**
-Firedancer is a new Solana validator client built from scratch by Jump Crypto in C and C++. It does the same job as Solana's original Agave client but is an entirely separate codebase, which gives the network client diversity and a much higher performance ceiling.
+<div className="not-prose rounded-2xl border border-emerald-500/20 bg-linear-to-br from-emerald-500/10 to-zinc-900/40 p-8 text-center">
+  <h2 className="text-2xl font-bold text-white md:text-3xl">Watch your Solana token like a validator watches blocks</h2>
+  <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-zinc-300">SolanaHolderBot tracks holder counts, whale wallets, and distribution shifts in real time, so you catch the moves that matter before they hit the chart. Set it up in minutes.</p>
+  <a href="https://solanaholderbot.com" className="mt-6 inline-flex items-center justify-center gap-1.5 rounded-xl bg-emerald-500 px-6 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-emerald-400">
+    Try SolanaHolderBot
+    <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4"><path fillRule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clipRule="evenodd" /></svg>
+  </a>
+</div>
 
-**What is the difference between Firedancer and Frankendancer?**
-Frankendancer is a hybrid that pairs Firedancer's high-performance networking and block-production code with Agave's proven consensus and execution. Full Firedancer is the completely independent client with no Agave code. Frankendancer shipped first to de-risk the rollout.
+<div className="not-prose">
+  <p className="mb-4 text-sm font-semibold text-zinc-200">More from the Solana 2026 series</p>
+  <div className="grid gap-4 sm:grid-cols-2">
+    <a href="/blog/solana-2026-network-upgrades" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Overview: Solana in 2026</p>
+      <p className="mt-1 text-sm text-zinc-500">Every major network upgrade, summarized and cross-linked.</p>
+    </a>
+    <a href="/blog/what-is-alpenglow" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Alpenglow: sub-150 ms finality</p>
+      <p className="mt-1 text-sm text-zinc-500">The consensus rewrite that makes a second client easier to build.</p>
+    </a>
+    <a href="/blog/solana-transaction-fees-local-fee-markets" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Fees and local fee markets</p>
+      <p className="mt-1 text-sm text-zinc-500">Why fees stay low and why transactions actually fail.</p>
+    </a>
+    <a href="/blog/solana-throughput-tps-2026" className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-emerald-500/40">
+      <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Solana</p>
+      <p className="mt-2 font-semibold text-white transition group-hover:text-emerald-400">Throughput, TPS and block limits</p>
+      <p className="mt-1 text-sm text-zinc-500">Real numbers versus the million-TPS headline figure.</p>
+    </a>
+  </div>
+</div>
 
-**Is Firedancer live on Solana mainnet?**
-Frankendancer has run on testnet and mainnet-beta since 2024. The fully independent Firedancer client has begun a cautious, staged mainnet rollout and has produced live blocks, but broad validator migration is intentionally gradual until security audits are complete.
+<div className="not-prose rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">
+  <p className="text-sm font-semibold text-zinc-200">Sources and further reading</p>
+  <ul className="mt-3 space-y-2 text-sm text-zinc-400">
+    <li><a href="https://github.com/firedancer-io/firedancer" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Firedancer (firedancer-io) repository</a> (primary source for client status and architecture)</li>
+    <li><a href="https://jumpcrypto.com/build/firedancer" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Jump Crypto: Firedancer project page</a></li>
+    <li><a href="https://www.theblock.co/post/382411/jump-cryptos-firedancer-hits-solana-mainnet-as-the-network-aims-to-unlock-1-million-tps" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">The Block: Firedancer hits Solana mainnet</a></li>
+    <li><a href="https://github.com/solana-foundation/solana-improvement-documents" className="text-emerald-400 underline-offset-4 transition hover:text-emerald-300 hover:underline">Solana Improvement Documents</a> (for SIMD-0370 and related proposals)</li>
+  </ul>
+</div>
 
-**Does Firedancer change SOL or how transactions work?**
-No. Firedancer is validator software, not a protocol change. SOL economics and transaction rules are identical regardless of which client a validator runs.
+<p className="text-xs text-zinc-500">Last updated 27 June 2026. Validator-client rollouts move quickly; verify the current status against the Firedancer repository and official Solana communications before relying on specifics.</p>
 
-**How fast is Firedancer?**
-In demonstrations on commodity hardware, Firedancer has processed more than one million transactions per second, and Frankendancer has shown several hundred thousand per second in live conditions. Real mainnet throughput is far lower because it is limited by demand and protocol block limits, not the client.
-
-## Sources and further reading
-
-- Firedancer, [firedancer-io repository](https://github.com/firedancer-io/firedancer) (primary source for client status and architecture)
-- Jump Crypto, [Firedancer project page](https://jumpcrypto.com/build/firedancer)
-- The Block, [Firedancer hits Solana mainnet](https://www.theblock.co/post/382411/jump-cryptos-firedancer-hits-solana-mainnet-as-the-network-aims-to-unlock-1-million-tps)
-- Solana Foundation, [Solana Improvement Documents](https://github.com/solana-foundation/solana-improvement-documents) (for SIMD-0370 and related proposals)
-
-<p className="mt-10 text-xs text-zinc-500">Last updated 27 June 2026. Validator-client rollouts move quickly; verify the current status against the Firedancer repository and official Solana communications before relying on specifics.</p>
+</div>
