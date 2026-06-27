@@ -67,7 +67,7 @@ Solana entered 2026 in the middle of the deepest set of infrastructure changes i
   </ul>
 </div>
 
-## Why 2026 is a turning point {#why-2026}
+<h2 id="why-2026">Why 2026 is a turning point</h2>
 
 For most of its life, Solana ran on a single family of validator software and a consensus design built around Proof of History. That design made Solana fast, but it also concentrated risk: a bug in one client could stall the whole network, and several high-profile outages in earlier years made reliability the chain's defining criticism.
 
@@ -75,7 +75,7 @@ The 2026 upgrades attack that criticism from three directions at once. Firedance
 
 The sections below summarize each change. Each links to a full, sourced explainer.
 
-## Firedancer: a second, independent validator client {#firedancer}
+<h2 id="firedancer"> Firedancer: a second, independent validator client</h2>
 
 Firedancer is a Solana validator client built from scratch by Jump Crypto in C and C++. Because it shares no code with the original Rust client (now called Agave), it gives Solana genuine client diversity, the same property that Ethereum relies on to avoid single-client failures.
 
@@ -83,7 +83,7 @@ The rollout has been deliberately staged. A hybrid build called Frankendancer, w
 
 [Read the full Firedancer guide](/blog/what-is-firedancer)
 
-## Alpenglow: sub-150 ms finality and the end of on-chain votes {#alpenglow}
+<h2 id="alpenglow"> Alpenglow: sub-150 ms finality and the end of on-chain votes</h2>
 
 Alpenglow is the codename for [SIMD-0326](https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0326-alpenglow.md), the largest consensus change in Solana's history. It replaces Proof of History and Tower BFT (as consensus mechanisms) with a new direct-voting protocol called Votor.
 
@@ -91,7 +91,7 @@ Two numbers capture the impact. First, deterministic finality drops from roughly
 
 [Read the full Alpenglow guide](/blog/what-is-alpenglow)
 
-## Local fee markets: why Solana fees stay low {#fees}
+<h2 id="fees"> Local fee markets: why Solana fees stay low</h2>
 
 Solana fees have two parts: a fixed base fee of 5,000 lamports (0.000005 SOL) per signature, and an optional priority fee you bid to improve ordering. The detail that most guides miss is that fee pressure on Solana is local: contention attaches to the specific accounts a transaction writes to, not to the network as a whole.
 
@@ -99,7 +99,7 @@ This is why a simple transfer can stay nearly free during a chaotic token launch
 
 [Read the full fees and local fee markets guide](/blog/solana-transaction-fees-local-fee-markets)
 
-## Throughput: how much can Solana actually process? {#throughput}
+<h2 id="throughput"> Throughput: how much can Solana actually process?</h2>
 
 Raw throughput has climbed steadily. The per-block compute limit was raised to 60 million compute units in mid-2025, with further proposals (SIMD-0286 toward 100 million, and SIMD-0370 to remove the static cap entirely) under way. Sustained real-world throughput rose from roughly 1,700 transactions per second in mid-2025 toward several thousand per second in 2026, and stress tests have briefly pushed past 100,000 transactions per second.
 
@@ -107,7 +107,7 @@ There is an important caveat to every Solana "TPS" figure: historically a large 
 
 [Read the full throughput and TPS guide](/blog/solana-throughput-tps-2026)
 
-## How the upgrades fit together {#together}
+<h2 id="together"> How the upgrades fit together</h2>
 
 These changes are complementary rather than independent. Alpenglow's simpler consensus is also easier to reimplement in a second client, which helps Firedancer reach multi-client parity. Removing vote transactions frees block space, which compounds with larger block limits to raise usable throughput. And a healthier fee market makes that extra capacity actually useful instead of being absorbed by spam.
 
